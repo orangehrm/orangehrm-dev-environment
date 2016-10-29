@@ -25,21 +25,5 @@ script:
   - docker ps | grep -q blog
   - python tests.py
 
-after_success:
-  - docker ps
 
-after_failure:
-  - docker ps
-
-before_deploy:
-  - docker ps
-
-deploy:
-  - docker ps
-
-after_deploy:
-  - docker ps
-
-after_script:
-  - docker ps
 
