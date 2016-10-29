@@ -10,13 +10,10 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-
   libpng12-dev \
   libjpeg-dev \
   mysql-client \
-  pecl \
   phpmyadmin \
   poppler-utils \
   unzip \
-  zip \
-  && yes "" | pecl install channel://pecl.php.net/APCu-4.0.11 \
-  && docker-php-ext-enable apcu \
+  zip
   && rm -rf /var/lib/apt/lists/*
 
 #Install PHP extenstions
