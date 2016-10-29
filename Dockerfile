@@ -10,6 +10,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-
   libpng12-dev \
   libjpeg-dev \
   mysql-client \
+  pecl \
   phpmyadmin \
   poppler-utils \
   unzip \
