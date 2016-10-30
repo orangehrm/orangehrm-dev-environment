@@ -13,12 +13,16 @@ before_install:
 
 install:
   - docker build -t rshariffdeen/web-dev-env .
+  - apt-get update && apt-get install --no-install-recommends -y curl
 
 before_script:
   - docker run -d --name="dev" rshariffdeen/web-dev-env
 
 script:
   - docker ps | grep -q dev
+
+after_success:
+  - curl -H "Content-Type: application/json" --data '{"docker_tag": "latest"}' -X POST https://registry.hub.docker.com/u/rshariffdeen/web-dev-env/trigger/f042ad17-4d7e-49cf-aad4-c314f44c0adf/
 
 
 
