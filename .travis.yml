@@ -13,12 +13,13 @@ before_install:
 
 install:
   - docker build -t rshariffdeen/web-dev-env .
-  - apt-get update && apt-get install --no-install-recommends -y curl
 
 before_script:
-  - docker run -d --name="dev" rshariffdeen/web-dev-env
+  - sudo apt-get update
+  - sudo apt-get install --no-install-recommends -y curl
 
 script:
+  - docker run -d --name="dev" rshariffdeen/web-dev-env
   - docker ps | grep -q dev
 
 after_success:
