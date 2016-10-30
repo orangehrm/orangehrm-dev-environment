@@ -15,15 +15,11 @@ install:
   - docker build -t web-env .
 
 before_script:
-  - pip install mock
-  - pip install requests
-  - pip install feedparser
+  - docker run -d --name="dev" rshariffdeen/web-dev-env
 
-before_script: 
-  - docker ps 
 script:
-  - docker ps | grep -q blog
-  - python tests.py
+  - docker ps | grep -q dev
+
 
 
 
