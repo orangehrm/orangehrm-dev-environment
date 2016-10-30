@@ -8,12 +8,6 @@ ENV INITRD No
 
 # Our user in the container
 USER root
-WORKDIR /root
-
-# Need to generate our locale.
-RUN locale-gen de_DE de_DE.UTF-8
-ENV LANG de_DE.UTF-8
-ENV LANGUAGE de_DE.UTF-8
 
 # Update system
 RUN apt-get update
