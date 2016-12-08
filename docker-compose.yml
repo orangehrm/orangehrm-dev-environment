@@ -6,5 +6,15 @@ services:
       - "9090:80"
     volumes:
       - ./ohrm_dev:/var/www/html
+    depends_on:
+      - mysql
     container_name: dev_web
     command: /usr/sbin/apache2ctl -D FOREGROUND
+
+  mysql:
+    image: mysql:5.5
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+    container_name: dev_mysql

@@ -11,7 +11,7 @@ before_install:
   - docker version
 
 install:
-  - docker-compose up
+  - docker-compose up -d
 
 script:
   - docker ps | grep -q dev_web
