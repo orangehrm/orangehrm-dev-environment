@@ -1,5 +1,4 @@
 FROM ubuntu:14.04
-MAINTAINER rshariffdeen@gmail.com
 
 # Set correct environment variables.
 ENV HOME /root
@@ -26,8 +25,5 @@ RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
 # Enable apache mods.
 RUN a2enmod  rewrite expires headers ssl
 
-
-WORKDIR /var/www/
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 

@@ -1,7 +1,6 @@
 language: python
 dist: trusty
-env:
-  - SYMFONY_VERSION="dev-master" DB=mysql
+
 python:
   - 2.7
 
@@ -12,15 +11,10 @@ before_install:
   - docker version
 
 install:
-  - docker build -t rshariffdeen/web-dev-env .
-
-before_script:
-  - sudo apt-get update
-  - sudo apt-get install --no-install-recommends -y curl
+  - docker-compose up
 
 script:
-  - docker run -d --name="dev" rshariffdeen/web-dev-env
-  - docker ps | grep -q dev
+  - docker ps | grep -q dev_web
 
 after_success:
   - ./automate-docker-hub-build.sh

@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: ./docker_setup
+    ports:
+      - "9090:80"
+    volumes:
+      - ./ohrm_dev:/var/www/html
+    container_name: dev_web
+    command: /usr/sbin/apache2ctl -D FOREGROUND

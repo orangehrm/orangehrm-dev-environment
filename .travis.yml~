@@ -1,0 +1,29 @@
+language: python
+dist: trusty
+
+python:
+  - 2.7
+
+services:
+  - docker
+
+before_install:
+  - docker version
+
+install:
+  - docker-compose build -t ohrm/web-dev-env .
+
+before_script:
+  - sudo apt-get update
+  - sudo apt-get install --no-install-recommends -y curl
+
+script:
+  - docker run -d --name="dev" ohrm/web-dev-env
+  - docker ps | grep -q dev
+
+after_success:
+  - ./automate-docker-hub-build.sh
+
+
+
+
