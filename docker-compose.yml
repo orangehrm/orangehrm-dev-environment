@@ -6,11 +6,15 @@ services:
       - "8080:80"
     volumes:
       - ./ohrm_dev:/var/www/html
+      - ./config/php5/apache2:/etc/php5/apache2
+      - ./config/php5/cli:/etc/php5/cli
     depends_on:
       - mysql
       - phpmyadmin
     container_name: dev_web
-    command: /usr/sbin/apache2ctl -D FOREGROUND
+    command:
+      - composer
+      - /usr/sbin/apache2ctl -D FOREGROUND
 
   mysql:
     image: mysql:5.5
