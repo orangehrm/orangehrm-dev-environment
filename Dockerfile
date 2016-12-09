@@ -84,7 +84,7 @@ RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
 RUN a2enmod  rewrite expires headers ssl
 
 # set up iconcube
-COPY  ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
+COPY  iconcube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
 
 WORKDIR /var/www/
 
