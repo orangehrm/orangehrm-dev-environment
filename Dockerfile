@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+MAINTAINER orangehrm.com
+
 # Our user in the container
 USER root
 
