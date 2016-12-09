@@ -13,7 +13,6 @@ services:
       - phpmyadmin
     container_name: dev_web
     command:
-      - composer
       - /usr/sbin/apache2ctl -D FOREGROUND
 
   mysql:
