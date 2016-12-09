@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    build: ./docker_setup
+    image: rshariffdeen/web-dev-env
     ports:
       - "8080:80"
     volumes:

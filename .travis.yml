@@ -9,15 +9,13 @@ services:
 
 before_install:
   - docker version
+  - ./automate-docker-hub-build.sh
 
 install:
   - docker-compose up -d
 
 script:
   - docker ps | grep -q dev_web
-
-after_success:
-  - ./automate-docker-hub-build.sh
 
 
 
