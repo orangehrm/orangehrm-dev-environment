@@ -9,7 +9,6 @@ services:
 
 before_install:
   - docker version
-  - ./docker_setup/automate-docker-hub-build.sh
 
 install:
   - docker-compose up -d
