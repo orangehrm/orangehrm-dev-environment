@@ -18,6 +18,7 @@ RUN apt-get install --no-install-recommends -y \
 		php5-json \
 		php5-memcached php5-memcache \
 		php5-mysql php5-pgsql \
+		php5-mysqli \
 		php5-mongo \
 		php5-sqlite php5-sybase php5-interbase php5-adodb php5-odbc \
 		php5-gearman \
