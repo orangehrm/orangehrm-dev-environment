@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-curl -H "Content-Type: application/json" --data '{"docker_tag": "latest"}' -X POST https://registry.hub.docker.com/u/rshariffdeen/web-dev-env/trigger/f042ad17-4d7e-49cf-aad4-c314f44c0adf
