@@ -8,6 +8,7 @@ services:
       - ./ohrm_dev:/var/www/html
     depends_on:
       - mysql
+      - phpmyadmin
     container_name: dev_web
     command: /usr/sbin/apache2ctl -D FOREGROUND
 
@@ -18,3 +19,9 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=1234
     container_name: dev_mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - mysql
+    container_name: deb_phpmyadmin
