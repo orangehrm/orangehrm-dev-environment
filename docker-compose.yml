@@ -14,10 +14,8 @@ services:
 
   mysql:
     image: mysql:5.5
-    expose:
-      - "3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=1234
+      MYSQL_ROOT_PASSWORD: 1234
     container_name: dev_mysql
 
   phpmyadmin:
@@ -26,4 +24,6 @@ services:
       - mysql
     ports:
       - "9090:80"
-    container_name: deb_phpmyadmin
+    environment:
+      PMA_HOST: mysql
+    container_name: dev_phpmyadmin
