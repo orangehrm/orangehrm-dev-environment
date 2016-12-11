@@ -8,6 +8,20 @@ USER root
 # Update system
 RUN apt-get update
 
+#Install dependent software
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
+      apache2 \
+      cron \
+      libreoffice-common \
+      libreoffice-draw \
+      libreoffice-writer \
+      libpng12-dev \
+      libjpeg-dev \
+      poppler-utils \
+      unzip \
+      zip \
+      git
+
 # Install and Test PHP
 RUN apt-get install --no-install-recommends -y \
 		curl ca-certificates \
@@ -58,20 +72,6 @@ RUN apt-get install --no-install-recommends -y \
 		php-pear && \
 		php --version && \
 		php -m
-
-#Install dependent software
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
-      apache2 \
-      cron \
-      libreoffice-common \
-      libreoffice-draw \
-      libreoffice-writer \
-      libpng12-dev \
-      libjpeg-dev \
-      poppler-utils \
-      unzip \
-      zip \
-      git
 
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
