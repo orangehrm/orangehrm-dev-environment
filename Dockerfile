@@ -11,6 +11,7 @@ RUN apt-get update
 #Install dependent software
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
       apache2 \
+      libapache2-mod-php5 \
       cron \
       libreoffice-common \
       libreoffice-draw \
@@ -72,6 +73,10 @@ RUN apt-get install --no-install-recommends -y \
 		php-pear && \
 		php --version && \
 		php -m
+
+#installing nodejs
+RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash
+RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon
 
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
