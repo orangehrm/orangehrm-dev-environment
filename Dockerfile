@@ -13,6 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
       apache2 \
       libapache2-mod-php5 \
       cron \
+      mysql-client \
       libreoffice-common \
       libreoffice-draw \
       libreoffice-writer \
