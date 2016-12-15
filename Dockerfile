@@ -22,6 +22,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
       poppler-utils \
       unzip \
       zip \
+      phpunit \
       git
 
 # Install and Test PHP
@@ -81,9 +82,6 @@ RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon
 
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# install phpunit
-RUN composer global require "phpunit/phpunit=4.8.*"
 
 # Tidy up
 RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
