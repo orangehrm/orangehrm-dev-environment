@@ -8,25 +8,28 @@ services:
       - ./ohrm_dev:/var/www/html
       - ./config/php5/apache2:/etc/php5/apache2
       - ./config/php5/cli:/etc/php5/cli
-    depends_on:
-      - mysql
+      - ./config/mysql-client:/etc/mysql
+      - ./config/apache2:/etc/apache2
+    links:
+      - db
       - phpmyadmin
     container_name: dev_web
-    command:
-      - /usr/sbin/apache2ctl -D FOREGROUND
+    command: /usr/sbin/apache2ctl -D FOREGROUND
 
-  mysql:
+  db:
     image: mysql:5.5
+    expose:
+      - "3306"
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     container_name: dev_mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    depends_on:
-      - mysql
+    links:
+      - db
     ports:
       - "9090:80"
     environment:
-      PMA_HOST: mysql
+      PMA_HOST: db
     container_name: dev_phpmyadmin
