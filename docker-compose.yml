@@ -14,12 +14,14 @@ services:
       - db
       - phpmyadmin
     container_name: dev_web
-    command: /usr/sbin/apache2ctl -D FOREGROUND
+    entrypoint: /usr/sbin/apache2ctl -D FOREGROUND
 
   db:
     image: mysql:5.5
     expose:
       - "3306"
+    volumes:
+      - ./config/mysql-server:/etc/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     container_name: dev_mysql
