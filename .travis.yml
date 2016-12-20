@@ -1,8 +1,17 @@
-language: python
 dist: trusty
+
+language: php
+php:
+  - 5.5
+  - hhvm
 
 services:
   - docker
+
+cache:
+    directories:
+        - vendor
+        - $HOME/.composer/cache
 
 before_install:
   - docker version
@@ -10,8 +19,13 @@ before_install:
 install:
   - docker-compose up -d
 
+before-script:
+  - composer self-update
+  - composer install
+
 script:
   - docker ps | grep -q dev_web
+  - php vendor/bin/codecept run acceptance
 
 
 
