@@ -1,8 +1,7 @@
 dist: trusty
 
 language: php
-php:
-  - 5.5.9
+php: 5.5
 
 services:
   - docker
