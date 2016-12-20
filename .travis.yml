@@ -13,10 +13,10 @@ cache:
 
 before_install:
   - docker version
-  - curl -LsS http://codeception.com/codecept.phar -o /usr/local/bin/codecept
-  - chmod a+x /usr/local/bin/codecept
+  - composer self-update
 
 install:
+  - composer install
   - docker-compose up -d
 
 script:
