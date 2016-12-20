@@ -22,4 +22,16 @@ class UbuntuContainerCest
         $I->runShellCommand("docker exec dev_web php --version");
         $I->seeInShellOutput('PHP 5.5.9');
     }
+
+    public function nodeTest(AcceptanceTester $I){
+        $I->wantTo("verify node v4 is installed in the container");
+        $I->runShellCommand("docker exec dev_web node -v");
+        $I->seeInShellOutput('v4');
+    }
+
+    public function mysqlServerTest(AcceptanceTester $I){
+        $I->wantTo("verify mysql server container is linked properly");
+        $I->runShellCommand("docker exec dev_web mysqladmin -hdb -uroot -p1234 ping");
+        $I->seeInShellOutput('is alive');
+    }
 }
