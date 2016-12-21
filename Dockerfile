@@ -95,5 +95,7 @@ RUN a2enmod rewrite expires headers ssl
 
 WORKDIR /var/www/
 
+ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
 
 
