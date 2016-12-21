@@ -10,6 +10,7 @@ services:
       - ./config/php5/cli:/etc/php5/cli
       - ./config/mysql-client:/etc/mysql
       - ./config/apache2:/etc/apache2
+      - ./logs/ubuntu_logs:/var/log
     links:
       - db
       - phpmyadmin
@@ -21,12 +22,15 @@ services:
       - "3306"
     volumes:
       - ./config/mysql-server:/etc/mysql
+      - ./logs/mysql_logs:/var/log
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     container_name: dev_mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    volumes:
+      - ./logs/phpmyadmin_logs:/var/log
     links:
       - db
     ports:

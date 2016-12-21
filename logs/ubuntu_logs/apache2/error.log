@@ -1,0 +1,9 @@
+[Wed Dec 21 05:45:44.261484 2016] [ssl:warn] [pid 7] AH01909: RSA certificate configured for localhost:443 does NOT include an ID which matches the server name
+[Wed Dec 21 05:45:44.473448 2016] [ssl:warn] [pid 7] AH01909: RSA certificate configured for localhost:443 does NOT include an ID which matches the server name
+[Wed Dec 21 05:45:44.482603 2016] [mpm_prefork:notice] [pid 7] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.20 OpenSSL/1.0.1f configured -- resuming normal operations
+[Wed Dec 21 05:45:44.482654 2016] [core:notice] [pid 7] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed Dec 21 05:56:58.234357 2016] [ssl:warn] [pid 8] AH01909: RSA certificate configured for localhost:443 does NOT include an ID which matches the server name
+[Wed Dec 21 05:56:58.411680 2016] [ssl:warn] [pid 8] AH01909: RSA certificate configured for localhost:443 does NOT include an ID which matches the server name
+[Wed Dec 21 05:56:58.411890 2016] [core:warn] [pid 8] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 21 05:56:58.421098 2016] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.20 OpenSSL/1.0.1f configured -- resuming normal operations
+[Wed Dec 21 05:56:58.421148 2016] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

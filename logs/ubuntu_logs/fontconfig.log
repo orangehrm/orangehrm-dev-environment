@@ -1,0 +1,19 @@
+/usr/share/fonts: caching, new cache contents: 0 fonts, 3 dirs
+/usr/share/fonts/X11: caching, new cache contents: 0 fonts, 3 dirs
+/usr/share/fonts/X11/Type1: caching, new cache contents: 1 fonts, 0 dirs
+/usr/share/fonts/X11/encodings: caching, new cache contents: 0 fonts, 1 dirs
+/usr/share/fonts/X11/encodings/large: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/X11/util: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/truetype: caching, new cache contents: 0 fonts, 2 dirs
+/usr/share/fonts/truetype/dejavu: caching, new cache contents: 6 fonts, 0 dirs
+/usr/share/fonts/truetype/openoffice: caching, new cache contents: 1 fonts, 0 dirs
+/usr/share/fonts/type1: caching, new cache contents: 0 fonts, 1 dirs
+/usr/share/fonts/type1/mathml: caching, new cache contents: 1 fonts, 0 dirs
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/.local/share/fonts: skipping, no such directory
+/usr/share/fonts: caching, new cache contents: 0 fonts, 3 dirs
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/.local/share/fonts: skipping, no such directory
+/var/cache/fontconfig: cleaning cache directory
+/.cache/fontconfig: not cleaning non-existent cache directory
+fc-cache: succeeded

@@ -1,0 +1,24 @@
+2016-12-21 05:45:41,507 CRIT Supervisor running as root (no user in config file)
+2016-12-21 05:45:41,507 WARN Included extra file "/etc/supervisor.d/nginx.ini" during parsing
+2016-12-21 05:45:41,507 WARN Included extra file "/etc/supervisor.d/php.ini" during parsing
+2016-12-21 05:45:41,528 INFO RPC interface 'supervisor' initialized
+2016-12-21 05:45:41,528 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2016-12-21 05:45:41,529 INFO supervisord started with pid 1
+2016-12-21 05:45:42,531 INFO spawned: 'php-fpm' with pid 23
+2016-12-21 05:45:42,533 INFO spawned: 'nginx' with pid 24
+2016-12-21 05:45:43,569 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-12-21 05:45:43,570 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-12-21 05:56:12,319 WARN received SIGTERM indicating exit request
+2016-12-21 05:56:12,323 INFO waiting for nginx, php-fpm to die
+2016-12-21 05:56:12,324 INFO stopped: nginx (exit status 0)
+2016-12-21 05:56:12,334 INFO stopped: php-fpm (exit status 0)
+2016-12-21 05:56:57,468 CRIT Supervisor running as root (no user in config file)
+2016-12-21 05:56:57,469 WARN Included extra file "/etc/supervisor.d/nginx.ini" during parsing
+2016-12-21 05:56:57,469 WARN Included extra file "/etc/supervisor.d/php.ini" during parsing
+2016-12-21 05:56:57,489 INFO RPC interface 'supervisor' initialized
+2016-12-21 05:56:57,489 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2016-12-21 05:56:57,489 INFO supervisord started with pid 1
+2016-12-21 05:56:58,492 INFO spawned: 'php-fpm' with pid 15
+2016-12-21 05:56:58,495 INFO spawned: 'nginx' with pid 16
+2016-12-21 05:56:59,527 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-12-21 05:56:59,528 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

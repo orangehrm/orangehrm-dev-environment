@@ -20,10 +20,7 @@ install:
   - docker-compose up -d
 
 script:
-  - docker ps
   - php vendor/bin/codecept run acceptance
-  - docker ps -a
-  - docker logs dev_mysql
 
 
 
