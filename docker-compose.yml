@@ -14,7 +14,6 @@ services:
       - db
       - phpmyadmin
     container_name: dev_web
-    entrypoint: /usr/sbin/apache2ctl -D FOREGROUND
 
   db:
     image: mysql:5.5
