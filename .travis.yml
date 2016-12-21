@@ -22,7 +22,8 @@ install:
 script:
   - docker ps
   - php vendor/bin/codecept run acceptance
-  - docker ps
+  - docker ps -a
+  - docker logs dev_mysql
 
 
 
