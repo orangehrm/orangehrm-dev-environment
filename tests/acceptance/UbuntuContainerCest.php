@@ -31,7 +31,7 @@ class UbuntuContainerCest
 
     public function mysqlServerTest(AcceptanceTester $I){
         $I->wantTo("verify mysql server container is linked properly");
-        $I->runShellCommand("docker exec dev_web mysqladmin -hdb -uroot -p1234 ping");
-        $I->seeInShellOutput('is alive');
+            $I->runShellCommand("docker exec dev_web ping db -c 2");
+        $I->seeInShellOutput('2 packets transmitted, 2 received');
     }
 }
