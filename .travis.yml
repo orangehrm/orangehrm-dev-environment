@@ -20,8 +20,9 @@ install:
   - docker-compose up -d
 
 script:
-  - docker ps | grep -q dev_web
+  - docker ps
   - php vendor/bin/codecept run acceptance
+  - docker ps
 
 
 
