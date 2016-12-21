@@ -17,6 +17,12 @@ class UbuntuContainerCest
         $I->seeInShellOutput("true");
     }
 
+    public function mySqlContainerTest(AcceptanceTester $I){
+        $I->wantTo("verify mysql container up and running");
+        $I->runShellCommand("docker inspect -f {{.State.Running}} dev_mysql");
+        $I->seeInShellOutput("true");
+    }
+
     public function phpTest(AcceptanceTester $I){
         $I->wantTo("verify php 5.5 is installed in the container");
         $I->runShellCommand("docker exec dev_web php --version");
