@@ -15,15 +15,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
       cron \
       mysql-client \
       libreoffice-common \
-      libreoffice-draw \
-      libreoffice-writer \
       libpng12-dev \
       libjpeg-dev \
       poppler-utils \
       unzip \
       zip \
       phpunit \
-      git
+      git	
 
 # Install and Test PHP
 RUN apt-get install --no-install-recommends -y \
