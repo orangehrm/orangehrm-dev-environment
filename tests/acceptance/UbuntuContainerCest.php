@@ -29,10 +29,22 @@ class UbuntuContainerCest
         $I->seeInShellOutput('v4');
     }
 
-    public function mysqldTest(AcceptanceTester $I){
-        $I->wantTo("verify mysql server is alive");
-        $I->runShellCommand("docker exec dev_web mysqladmin -hdb -uroot -p1234 ping");
-        $I->seeInShellOutput("mysqld is alive");
+    public function npmTest(AcceptanceTester $I){
+        $I->wantTo("verify npm is installed in the container");
+        $I->runShellCommand("docker exec dev_web npm --version");
+        $I->seeInShellOutput("2");
+    }
+
+    public function nodemonTest(AcceptanceTester $I){
+        $I->wantTo("verify nodemon is installed in the container");
+        $I->runShellCommand("docker exec dev_web nodemon");
+        $I->seeInShellOutput('Usage: nodemon');
+    }
+
+    public function bowerTest(AcceptanceTester $I){
+        $I->wantTo("verify bower is installed in the container");
+        $I->runShellCommand("docker exec dev_web bower --version");
+        $I->seeInShellOutput('1');
     }
 
     public function phpTest(AcceptanceTester $I){
