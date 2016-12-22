@@ -22,3 +22,27 @@
 2016-12-21 05:56:58,495 INFO spawned: 'nginx' with pid 16
 2016-12-21 05:56:59,527 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2016-12-21 05:56:59,528 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-12-21 16:57:02,784 CRIT Supervisor running as root (no user in config file)
+2016-12-21 16:57:02,837 WARN Included extra file "/etc/supervisor.d/nginx.ini" during parsing
+2016-12-21 16:57:02,838 WARN Included extra file "/etc/supervisor.d/php.ini" during parsing
+2016-12-21 16:57:03,436 INFO RPC interface 'supervisor' initialized
+2016-12-21 16:57:03,436 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2016-12-21 16:57:03,437 INFO supervisord started with pid 1
+2016-12-21 16:57:04,439 INFO spawned: 'php-fpm' with pid 22
+2016-12-21 16:57:04,441 INFO spawned: 'nginx' with pid 23
+2016-12-21 16:57:06,161 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-12-21 16:57:06,161 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-12-21 17:05:18,710 WARN received SIGTERM indicating exit request
+2016-12-21 17:05:18,711 INFO waiting for nginx, php-fpm to die
+2016-12-21 17:05:18,712 INFO stopped: nginx (exit status 0)
+2016-12-21 17:05:19,723 INFO stopped: php-fpm (exit status 0)
+2016-12-22 05:04:25,061 CRIT Supervisor running as root (no user in config file)
+2016-12-22 05:04:25,097 WARN Included extra file "/etc/supervisor.d/nginx.ini" during parsing
+2016-12-22 05:04:25,097 WARN Included extra file "/etc/supervisor.d/php.ini" during parsing
+2016-12-22 05:04:25,739 INFO RPC interface 'supervisor' initialized
+2016-12-22 05:04:25,739 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2016-12-22 05:04:25,740 INFO supervisord started with pid 1
+2016-12-22 05:04:26,742 INFO spawned: 'php-fpm' with pid 22
+2016-12-22 05:04:26,745 INFO spawned: 'nginx' with pid 23
+2016-12-22 05:04:27,836 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-12-22 05:04:27,836 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
