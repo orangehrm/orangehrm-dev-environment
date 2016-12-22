@@ -15,3 +15,7 @@
 [Thu Dec 22 05:04:34.469654 2016] [ssl:warn] [pid 8] AH01909: RSA certificate configured for localhost:443 does NOT include an ID which matches the server name
 [Thu Dec 22 05:04:34.480196 2016] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.20 OpenSSL/1.0.1f configured -- resuming normal operations
 [Thu Dec 22 05:04:34.480241 2016] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu Dec 22 10:27:19.314652 2016] [ssl:warn] [pid 7] AH01909: RSA certificate configured for localhost:443 does NOT include an ID which matches the server name
+[Thu Dec 22 10:27:29.118381 2016] [ssl:warn] [pid 7] AH01909: RSA certificate configured for localhost:443 does NOT include an ID which matches the server name
+[Thu Dec 22 10:27:29.133154 2016] [mpm_prefork:notice] [pid 7] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.20 OpenSSL/1.0.1f configured -- resuming normal operations
+[Thu Dec 22 10:27:29.133218 2016] [core:notice] [pid 7] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
