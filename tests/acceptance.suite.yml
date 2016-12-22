@@ -7,8 +7,7 @@
 class_name: AcceptanceTester
 modules:
     enabled:
-        - WebDriver:
-            url: 'http://127.0.0.1:9090'
-            browser: phantomjs
+        - PhpBrowser:
+            url: http://localhost:9090
         - Cli
         - \Helper\Acceptance

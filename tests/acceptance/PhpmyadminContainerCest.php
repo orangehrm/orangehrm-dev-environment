@@ -18,12 +18,12 @@ class PhpmyadminContainerCest
         $I->seeInShellOutput("true");
     }
 
-    public function phpmyadminLinkTest(AcceptanceTester $I){
-        $I->wantTo("verify that phpmyadmin is linked with mysql container properly");
-        $I->amOnPage("/");
-        $I->fillField('pma_username','root');
-        $I->fillField('pma_password','1234');
-        $I->click('Go');
-        $I->seeInCurrentUrl('/index.php?token');
-    }
+//    public function phpmyadminLinkTest(AcceptanceTester $I){
+//        $I->wantTo("verify that phpmyadmin is linked with mysql container properly");
+//        $I->amOnPage("/");
+//        $I->fillField('pma_username','root');
+//        $I->fillField('pma_password','1234');
+//        $I->click('Go');
+//        $I->seeInCurrentUrl('/index.php?token');
+//    }
 }
