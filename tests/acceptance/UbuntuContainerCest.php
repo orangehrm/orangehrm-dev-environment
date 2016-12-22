@@ -23,9 +23,15 @@ class UbuntuContainerCest
         $I->seeInShellOutput('2 packets transmitted, 2 received');
     }
 
+    public function nodeTest(AcceptanceTester $I){
+        $I->wantTo("verify node v4 is installed in the container");
+        $I->runShellCommand("docker exec dev_web node -v");
+        $I->seeInShellOutput('v4');
+    }
+
     public function mysqldTest(AcceptanceTester $I){
         $I->wantTo("verify mysql server is alive");
-        $I->runShellCommand("docker exec dev_web mysqladmin -uroot -p1234 ping");
+        $I->runShellCommand("docker exec dev_web mysqladmin -hdb -uroot -p1234 ping");
         $I->seeInShellOutput("mysqld is alive");
     }
 
@@ -35,11 +41,7 @@ class UbuntuContainerCest
         $I->seeInShellOutput('PHP 5.5.9');
     }
 
-    public function nodeTest(AcceptanceTester $I){
-        $I->wantTo("verify node v4 is installed in the container");
-        $I->runShellCommand("docker exec dev_web node -v");
-        $I->seeInShellOutput('v4');
-    }
+
 
 
 }
