@@ -46,3 +46,7 @@
 2016-12-22 05:04:26,745 INFO spawned: 'nginx' with pid 23
 2016-12-22 05:04:27,836 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2016-12-22 05:04:27,836 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-12-22 06:49:26,941 WARN received SIGTERM indicating exit request
+2016-12-22 06:49:26,963 INFO waiting for nginx, php-fpm to die
+2016-12-22 06:49:26,974 INFO stopped: nginx (exit status 0)
+2016-12-22 06:49:27,035 INFO stopped: php-fpm (exit status 0)

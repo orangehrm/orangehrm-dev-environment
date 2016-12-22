@@ -18,6 +18,12 @@ class PhpmyadminContainerCest
         $I->seeInShellOutput("true");
     }
 
+    public function mysqlServerTest(AcceptanceTester $I){
+        $I->wantTo("verify mysql container is linked with phpmyadmin container properly");
+        $I->runShellCommand("docker exec dev_phpmyadmin ping db -c 1");
+        $I->seeInShellOutput('1 packets transmitted, 1 packets received');
+    }
+
 //    public function phpmyadminLinkTest(AcceptanceTester $I){
 //        $I->wantTo("verify that phpmyadmin is linked with mysql container properly");
 //        $I->amOnPage("/");
