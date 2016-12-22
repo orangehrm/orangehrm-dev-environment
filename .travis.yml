@@ -19,12 +19,6 @@ install:
   - composer install
   - docker-compose up -d
 
-before-script:
-  # Start up a web server.
-  - php -S 127.0.0.1:9090 -t /path/to/web/root >/dev/null 2>&1 &
-  # Start up the webdriver.
-  - phantomjs --webdriver=4444 >/dev/null 2>&1 &
-
 script:
   - php vendor/bin/codecept run acceptance
 
