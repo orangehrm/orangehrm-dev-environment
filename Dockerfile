@@ -88,6 +88,10 @@ RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
 # set up iconcube
 COPY iconcube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
 
+# Enable automated virtual hosts
+RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled/
+sudo a2ensite orangehrm.conf
+
 # Enable apache mods.
 RUN a2enmod rewrite expires headers ssl
 
