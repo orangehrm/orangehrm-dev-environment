@@ -20,7 +20,7 @@ install:
   - docker-compose up -d
 
 script:
-  - php vendor/bin/codecept run acceptance
+  - php vendor/bin/codecept run functional
 
 
 

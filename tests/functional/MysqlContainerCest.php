@@ -1,13 +1,13 @@
 <?php
 
 
-class MySqlContainerCest
+class MysqlContainerCest
 {
-    public function _before(AcceptanceTester $I)
+    public function _before(FunctionalTester $I)
     {
     }
 
-    public function _after(AcceptanceTester $I)
+    public function _after(FunctionalTester $I)
     {
     }
 
