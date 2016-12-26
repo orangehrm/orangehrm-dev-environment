@@ -93,7 +93,7 @@ RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled
 sudo a2ensite orangehrm.conf
 
 # Enable apache mods.
-RUN a2enmod rewrite expires headers ssl
+RUN a2enmod rewrite expires headers ssl vhost_alias
 
 WORKDIR /var/www/
 
