@@ -88,7 +88,8 @@ RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
 # set up iconcube
 COPY iconcube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
 
-# Enable automated virtual hosts
+# Enable virtual hosts
+COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.conf
 RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled/
 RUN a2ensite orangehrm.conf
 
