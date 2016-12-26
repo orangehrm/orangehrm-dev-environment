@@ -90,7 +90,7 @@ COPY iconcube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-n
 
 # Enable automated virtual hosts
 RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled/
-sudo a2ensite orangehrm.conf
+RUN a2ensite orangehrm.conf
 
 # Enable apache mods.
 RUN a2enmod rewrite expires headers ssl vhost_alias
