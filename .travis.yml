@@ -9,6 +9,9 @@ matrix:
           dist: trusty
           sudo: required
           php: 5.6
+        - OS_TYPE=centos OS_VERSION=6
+          sudo: required
+          php: 5.6
         - OS_TYPE=centos OS_VERSION=7
           sudo: required
           php: 5.6
