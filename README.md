@@ -10,6 +10,7 @@ This environment will depends on containers of [orangehrm-dev-image](https://hub
 
 ## How to use ?
 Make sure mentioned prerequisites are there in your host machine.
+
 1. go to release tab and download the latest release.
 2. open terminal and go to the cloned directory
 3. run the command `docker-compose up -d`
