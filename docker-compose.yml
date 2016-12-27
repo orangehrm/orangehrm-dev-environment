@@ -1,9 +1,9 @@
 version: '2'
 services:
   web:
-    image: rshariffdeen/orangehrm-dev-image
+    image: orangehrm/orangehrm-dev-image
     ports:
-      - "8080:443"
+      - "443:443"
     volumes:
       - ./ohrm_dev:/var/www/html
       - ./config/php5/apache2:/etc/php5/apache2
