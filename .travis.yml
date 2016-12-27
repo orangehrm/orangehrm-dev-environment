@@ -1,12 +1,6 @@
 dist: trusty
 sudo: required
 
-language: php
-php: 5.5
-
-services:
-  - docker
-
 cache:
     directories:
         - vendor
