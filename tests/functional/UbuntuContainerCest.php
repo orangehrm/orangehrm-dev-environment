@@ -24,11 +24,11 @@ class UbuntuContainerCest
         $I->seeInShellOutput('2 packets transmitted, 2 received');
     }
 
-    public function mysqlServerMySalAdminTest(AcceptanceTester $I){
-        $I->wantTo("verify mysql container is linked with ubuntu container properly using mysqladmin");
-        $I->runShellCommand("docker exec dev_web mysqladmin -uroot -p1234 ping");
-        $I->seeInShellOutput('alive');
-    }
+//    public function mysqlServerMySalAdminTest(AcceptanceTester $I){
+//        $I->wantTo("verify mysql container is linked with ubuntu container properly using mysqladmin");
+//        $I->runShellCommand("docker exec dev_web mysqladmin -uroot -p1234 ping");
+//        $I->seeInShellOutput('alive');
+//    }
 
     public function apacheInstalledTest(AcceptanceTester $I){
         $I->wantTo("verify apache is installed in the container");

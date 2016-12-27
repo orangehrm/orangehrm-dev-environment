@@ -21,9 +21,7 @@ install:
   - docker-compose up -d
 
 script:
-  - php vendor/bin/codecept run
-  - docker ps
-  - docker exec dev_web ping db -c 2
+  - php vendor/bin/codecept run functional
 
 
 
