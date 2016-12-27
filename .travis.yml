@@ -1,9 +1,14 @@
 language: php
+sudo: required
+env:
+  matrix:
+  - OS_TYPE=centos OS_VERSION=6
+  - OS_TYPE=centos OS_VERSION=7
+  
 matrix:
     include:
         - os: linux
-          dist: trusty
-          sudo: required
+          dist: trusty          
           php: 5.5
         - os: linux
           dist: trusty
