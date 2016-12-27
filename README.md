@@ -36,7 +36,7 @@ volumes:
     - ./config/apache2:/etc/apache2
     - ./logs/ubuntu_logs:/var/log
 ```
->Example - How to change port 80 to 8080. Replace the line `"80:80"` by `"8080:80"`. By doing that developer no need to disable the localhost ports. If you want to change any default apache or php configurations you can fins them under _/config_ folder.
+>Example - How to change port 80 to 8080. Replace the line `"80:80"` by `"8080:80"`. By doing that developer no need to disable the localhost ports. If you want to change any default apache or php configurations you can find them under _/config_ folder.
 
 ### 2 Default configurations in dev_mysql container
 ```
