@@ -5,11 +5,6 @@ matrix:
     include:
         - os: linux
           dist: trusty          
-        - os: linux
-          dist: vivid
-        - os: linux
-          dist: xenial
-          
 services:
   - docker
 
