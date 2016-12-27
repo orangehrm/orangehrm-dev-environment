@@ -12,6 +12,7 @@ cache:
         - $HOME/.composer/cache
 
 before_install:
+  - php --version
   - docker version
   - composer self-update
 
