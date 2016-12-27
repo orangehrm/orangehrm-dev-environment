@@ -81,7 +81,7 @@ RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Tidy up
+# Tidy up the container
 RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
