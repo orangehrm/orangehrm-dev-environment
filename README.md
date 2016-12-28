@@ -6,6 +6,8 @@ orangehrm-dev-environment is a dockerized development environment for OrangeHRM.
 This environment will depends on containers of [orangehrm-dev-image](https://hub.docker.com/r/orangehrm/orangehrm-dev-image/),[mysql](https://hub.docker.com/_/mysql/) and [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/).
 ## Prerequisites
 - Docker engine installed.([Get docker](https://docs.docker.com/engine/installation/))
+- Minimum docker version 1.12
+- Minimum docker-compose vsersion 1.9 
 - Disable ports 80 and 443 if they are used by localhost.
 
 ## How to use ?
