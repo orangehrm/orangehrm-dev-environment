@@ -11,6 +11,7 @@ Orangehrm-dev-image is a docker image to deploy Apache server with PHP and other
 7. gulp
 8. phpunit
 9. composer
+10. enabled virtual hosts for orangehrm ([more info](https://hub.docker.com/r/orangehrm/orangehrm-dev-image/))
 
 # Addional note
 The development environment that created using this image can find [here](https://github.com/orangehrm/orangehrm-dev-environment).
