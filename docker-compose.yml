@@ -4,6 +4,7 @@ services:
     image: orangehrm/orangehrm-dev-image
     ports:
       - "443:443"
+      - "80:80"
     volumes:
       - ./ohrm_dev:/var/www/html
       - ./config/php5/apache2:/etc/php5/apache2
