@@ -19,6 +19,8 @@ Make sure mentioned prerequisites are there in your host machine.
 4. run `docker ps` and make sure all the containers are up and running.
 5. Your web root will be _/ohrm_dev_ directory and make sure to put your project in that folder. 
 
+**Note** : [Vedio Tutorials](https://www.youtube.com/watch?v=5CWRY0-KZb0&list=PLUISqLWW-TB746M49LMh2G1aO8AiCjEcW)
+
 ## Install orangehrm eagle-core inside the container
 1. get a checkout from svn to ohrm_dev directory (`svn checkout https://repos.orangehrm.com/enterprise/branch/eagle-core/`).
 2. to make a virtual host add the project folder name to /etc/hosts file (`127.0.0.1 folderName`).
