@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 
 MAINTAINER orangehrm
+LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 
 # Our user in the container
 USER root
