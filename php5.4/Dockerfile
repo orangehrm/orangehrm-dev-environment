@@ -86,11 +86,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# set up iconcube
+# set up ioncube
 <<<<<<< HEAD
-COPY iconcube/ioncube_loader_lin_5.4.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.4.so
+COPY ioncube/ioncube_loader_lin_5.4.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.4.so
 =======
-COPY iconcube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
+COPY ioncube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
 >>>>>>> aa0d559e1203e03c16ff38bbbcedd36b54d75a00
 
 # Enable virtual hosts

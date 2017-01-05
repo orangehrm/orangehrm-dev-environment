@@ -5,12 +5,19 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 
 # Our user in the container
 USER root
+WORKDIR /var/www/
+
+# Need to generate our locale.
+RUN locale-gen de_DE de_DE.UTF-8
+ENV LANG de_DE.UTF-8
+ENV LANGUAGE de_DE.UTF-8
+
+# Enable PHP 5.6 repo and update apt-get
+RUN echo "deb http://ppa.launchpad.net/ondrej/php5-5.6/ubuntu trusty main" >> /etc/apt/sources.list && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-key E5267A6C
 
 # Update system
-RUN apt-get update && \
-    apt-get install -y software-properties-common && \
-    LANG=C.UTF-8 add-apt-repository ppa:ondrej/php5-5.6 && \
-    apt-get update
+RUN apt-get update
 
 #Install dependent software
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
@@ -89,11 +96,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# set up iconcube
+# set up ioncube
 <<<<<<< HEAD
-COPY iconcube/ioncube_loader_lin_5.6.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.6.so
+COPY ioncube/ioncube_loader_lin_5.6.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.6.so
 =======
-COPY iconcube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
+COPY ioncube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
 >>>>>>> aa0d559e1203e03c16ff38bbbcedd36b54d75a00
 
 # Enable virtual hosts
@@ -104,7 +111,6 @@ RUN a2ensite orangehrm.conf
 # Enable apache mods.
 RUN a2enmod rewrite expires headers ssl vhost_alias
 
-WORKDIR /var/www/
 
 ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
