@@ -7,15 +7,12 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 USER root
 WORKDIR /var/www/
 
-# add PHP5.6 unofficial repository (https://launchpad.net/~ondrej/+archive/ubuntu/php)
-RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/php.list
+# add PHP5.6 official repository
+RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php && apt-get update
 
-
-# Update system
-RUN apt-get update
 
 #Install dependent software
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y --force-yes \
       apache2 \
       libapache2-mod-php5 \
       cron \
@@ -26,57 +23,48 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
       poppler-utils \
       unzip \
       zip \
-      phpunit \
       git	
 
 # Install and Test PHP
-RUN apt-get install --no-install-recommends -y \
+RUN apt-get install --no-install-recommends --force-yes -y \
 		curl ca-certificates \
-		php5-cli \
-		php5-dev \
-		php5-xdebug php5-xhprof \
-		php5-apcu \
-		php5-json \
-		php5-memcached php5-memcache \
-		php5-mysql php5-pgsql \
-		php5-mongo \
-		php5-sqlite php5-sybase php5-interbase php5-adodb php5-odbc \
-		php5-gearman \
-		php5-mcrypt  \
-		php5-ldap \
-		php5-gmp  \
-		php5-intl \
-		php5-geoip \
-		php5-imagick php5-gd php5-exactimage \
-		php5-imap \
-		php5-curl \
-		php5-gdcm php5-vtkgdcm \
-		php5-gnupg \
-		php5-librdf \
-		php5-mapscript \
-		php5-midgard2 \
-		php5-msgpack \
-		php5-oauth \
-		php5-pinba \
-		php5-radius \
-		php5-redis \
-		php5-remctl \
-		php5-sasl \
-		php5-stomp \
-		php5-svn \
-		php5-tokyo-tyrant \
-		php5-rrd \
-		php5-ps \
-		php5-ming \
-		php5-lasso \
-		php5-enchant \
-		php5-xsl \
-		php5-xmlrpc \
-		php5-tidy \
-		php5-recode \
-		php5-readline \
-		php5-pspell \
-		php-pear && \
+		php5.6 \
+		php5.6-cli \
+		php5.6-dev \
+		php5.6-xdebug php5.6-xhprof \
+		php5.6-apcu \
+		php5.6-json \
+		php5.6-memcached php5.6-memcache \
+		php5.6-mysql php5.6-pgsql \
+		php5.6-mongo \
+		php5.6-sqlite php5.6-sybase php5.6-interbase php5.6-odbc \
+		php5.6-gearman \
+		php5.6-mcrypt  \
+		php5.6-ldap \
+		php5.6-gmp  \
+		php5.6-intl \
+		php5.6-geoip \
+		php5.6-imagick \
+		php5.6-imap \
+		php5.6-curl \
+		php5.6-gd \
+		php5.6-gnupg \
+		php5.6-msgpack \
+		php5.6-oauth \
+		php5.6-radius \
+		php5.6-redis \
+		php5.6-stomp \
+		php5.6-rrd \
+		php5.6-ps \
+		php5.6-enchant \
+		php5.6-xsl \
+		php5.6-xmlrpc \
+		php5.6-tidy \
+		php5.6-recode \
+		php5.6-readline \
+		php5.6-pspell \
+		php-pear \
+                phpunit  && \
 		php --version && \
 		php -m
 
