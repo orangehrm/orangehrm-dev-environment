@@ -8,13 +8,12 @@ USER root
 WORKDIR /var/www/
 
 # add PHP5.6 official repository
-RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php && apt-get update
-
+RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php && apt-get update && apt-get purge php5-common
 
 #Install dependent software
 RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y --force-yes \
       apache2 \
-      libapache2-mod-php5 \
+      libapache2-mod-php5.6 \
       cron \
       mysql-client \
       libreoffice-common \
@@ -23,7 +22,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y --
       poppler-utils \
       unzip \
       zip \
-      git	
+      git
 
 # Install and Test PHP
 RUN apt-get install --no-install-recommends --force-yes -y \
@@ -45,8 +44,7 @@ RUN apt-get install --no-install-recommends --force-yes -y \
         php5.6-xhprof \
         php5.6-xmlrpc \
 		php-pear \
-		phpunit  \
-		&& rm -rf /var/lib/apt/lists/*
+		phpunit
 
 #installing nodejs
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash
@@ -72,6 +70,3 @@ RUN a2enmod rewrite expires headers ssl vhost_alias
 
 
 ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
-
-

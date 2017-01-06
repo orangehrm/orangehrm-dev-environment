@@ -5,6 +5,7 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chanaka Rathnaya
 
 # Our user in the container
 USER root
+WORKDIR /var/www/
 
 # Update system
 RUN apt-get update
@@ -22,11 +23,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
       unzip \
       zip \
       phpunit \
-      git	
+      git
 
 # Install and Test PHP
 RUN apt-get install --no-install-recommends -y \
-        curl ca-certificates \
+		curl ca-certificates \
         php5-cli \
         php5-curl \
         php5-gd \
@@ -66,9 +67,5 @@ RUN a2ensite orangehrm.conf
 # Enable apache mods.
 RUN a2enmod rewrite expires headers ssl vhost_alias
 
-WORKDIR /var/www/
 
 ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
-
-
