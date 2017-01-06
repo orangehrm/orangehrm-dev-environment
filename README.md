@@ -2,7 +2,7 @@
 Orangehrm-dev-image is a docker, image created by extending ubuntu:14.04 image and enabled apache server with PHP and other development tools for OrangeHRM.
 
 # how to use 
-1. run `docker pull orangehrm/orangehrm-dev-image`
+- run `docker pull orangehrm/orangehrm-dev-image -p 8080:80 -v /home/webroot:/var/www
 
 **Note** : You can find development environment used by this image from [here](https://github.com/orangehrm/orangehrm-dev-environment)
 
