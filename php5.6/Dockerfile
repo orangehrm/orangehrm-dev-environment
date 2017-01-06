@@ -28,6 +28,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y --
 # Install and Test PHP
 RUN apt-get install --no-install-recommends --force-yes -y \
 		curl ca-certificates \
+		php5.6 \
+		php5.6-dev \
         php5.6-cli \
         php5.6-curl \
         php5.6-gd \
@@ -42,10 +44,9 @@ RUN apt-get install --no-install-recommends --force-yes -y \
         php5.6-xdebug \
         php5.6-xhprof \
         php5.6-xmlrpc \
-		php-pear && \
-		phpunit  && \
-		php --version && \
-		php -m
+		php-pear \
+		phpunit  \
+		&& rm -rf /var/lib/apt/lists/*
 
 #installing nodejs
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash

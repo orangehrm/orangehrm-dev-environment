@@ -41,9 +41,8 @@ RUN apt-get install --no-install-recommends -y \
         php5-xdebug \
         php5-xhprof \
         php5-xmlrpc \
-		php-pear && \
-		php --version && \
-		php -m
+		php-pear  \
+		&& rm -rf /var/lib/apt/lists/*
 
 #installing nodejs
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash
