@@ -28,43 +28,22 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y --
 # Install and Test PHP
 RUN apt-get install --no-install-recommends --force-yes -y \
 		curl ca-certificates \
-		php5.6 \
-		php5.6-cli \
-		php5.6-dev \
-		php5.6-xdebug php5.6-xhprof \
-		php5.6-apcu \
-		php5.6-json \
-		php5.6-memcached php5.6-memcache \
-		php5.6-mysql php5.6-pgsql \
-		php5.6-mongo \
-		php5.6-sqlite php5.6-sybase php5.6-interbase php5.6-odbc \
-		php5.6-gearman \
-		php5.6-mcrypt  \
-		php5.6-ldap \
-		php5.6-gmp  \
-		php5.6-intl \
-		php5.6-geoip \
-		php5.6-imagick \
-		php5.6-imap \
-		php5.6-curl \
-		php5.6-gd \
-		php5.6-gnupg \
-		php5.6-msgpack \
-		php5.6-oauth \
-		php5.6-radius \
-		php5.6-redis \
-		php5.6-stomp \
-		php5.6-rrd \
-		php5.6-ps \
-		php5.6-enchant \
-		php5.6-xsl \
-		php5.6-xmlrpc \
-		php5.6-tidy \
-		php5.6-recode \
-		php5.6-readline \
-		php5.6-pspell \
-		php-pear \
-                phpunit  && \
+        php5.6-cli \
+        php5.6-curl \
+        php5.6-gd \
+        php5.6-json \
+        php5.6-ldap \
+        php5.6-mcrypt  \
+        php5.6-memcache \
+        php5.6-memcached \
+        php5.6-mysql \
+        php5.6-readline \
+        php5.6-sqlite \
+        php5.6-xdebug \
+        php5.6-xhprof \
+        php5.6-xmlrpc \
+		php-pear && \
+		phpunit  && \
 		php --version && \
 		php -m
 
