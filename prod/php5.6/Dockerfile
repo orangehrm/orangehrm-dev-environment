@@ -67,7 +67,7 @@ COPY apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 EXPOSE 443
 
 # Copy files
-COPY ioncube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.6.so
+COPY ioncube/ioncube_loader_lin_5.6.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.6.so
 COPY php.ini /usr/local/etc/php/php.ini
 
 
