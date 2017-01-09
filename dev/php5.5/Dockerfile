@@ -49,7 +49,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && docker-php-ext-install \
      bcmath \
      calendar \
-
      exif \
      gd \
      gettext \
@@ -59,6 +58,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
      pdo \
      pdo_mysql \
      opcache \
+     xdebug \
   && docker-php-ext-install zip \
   && apt-get purge -y --auto-remove \
     libfreetype6-dev \
