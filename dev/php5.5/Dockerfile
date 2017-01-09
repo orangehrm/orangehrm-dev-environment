@@ -33,7 +33,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   && yes "" | pecl install channel://pecl.php.net/APCu-4.0.11 \
   && docker-php-ext-enable apcu
 
-
 #Install PHP extenstions
 RUN apt-get update && apt-get install -y --no-install-recommends \
   libfreetype6-dev \
@@ -58,7 +57,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
      pdo \
      pdo_mysql \
      opcache \
-     xdebug \
   && docker-php-ext-install zip \
   && apt-get purge -y --auto-remove \
     libfreetype6-dev \
@@ -69,6 +67,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libmcrypt-dev \
     libpng12-dev \
     zlib1g-dev
+
+# Enable and configure xdebug
+RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug
 
 # Tidy up the container
 RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
