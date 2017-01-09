@@ -70,9 +70,4 @@ EXPOSE 443
 COPY ioncube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
 COPY php.ini /usr/local/etc/php/php.ini
 
-
-# Add startup script
-COPY startup.sh /opt/startup.sh
-RUN chmod a+x /opt/startup.sh
-
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
