@@ -9,7 +9,7 @@ WORKDIR /var/www/
 
 
 #Install dependent software
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-install-recommends --force-yes \
   ca-certificates \
   cron \
   curl \
@@ -25,8 +25,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-
   unzip \
   zip \
   && yes "" | pecl install channel://pecl.php.net/APCu-4.0.11 \
-  && docker-php-ext-enable apcu \
-  && rm -rf /var/lib/apt/lists/*
+  && docker-php-ext-enable apcu
 
 
 #Install PHP extenstions
@@ -39,7 +38,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libmcrypt-dev \
   libpng12-dev \
   zlib1g-dev \
-  && rm -rf /var/lib/apt/lists/* \
   && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu  \
   && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib/x86_64-linux-gnu --with-png-dir=/usr/lib/x86_64-linux-gnu --with-freetype-dir=/usr/lib/x86_64-linux-gnu  \
   && docker-php-ext-install \
