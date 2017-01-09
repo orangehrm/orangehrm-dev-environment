@@ -1,5 +1,7 @@
 FROM php:5.5-apache
-MAINTAINER Ridwan Shariffdeen <ridwan@orangehrmlive.com>
+
+MAINTAINER orangehrm
+LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 
 WORKDIR /var/www/html
 
