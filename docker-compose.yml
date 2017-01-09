@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: orangehrm/orangehrm-environment-image:dev-5.5
+    image: orangehrm/orangehrm-environment-images:dev-5.5
     ports:
       - "443:443"
       - "80:80"
