@@ -28,6 +28,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
 # Install and Test PHP
 RUN apt-get install --no-install-recommends -y \
 		curl ca-certificates \
+		php5-apcu \
         php5-cli \
         php5-curl \
         php5-gd \
