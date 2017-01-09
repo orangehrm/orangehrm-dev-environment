@@ -7,6 +7,12 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chanaka Rathnaya
 USER root
 WORKDIR /var/www/
 
+#installing nodejs
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash
+RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon
+
+# installing composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 #Install dependent software
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-install-recommends --force-yes \
@@ -63,14 +69,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libmcrypt-dev \
     libpng12-dev \
     zlib1g-dev
-
-
-#installing nodejs
-RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash
-RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon
-
-# installing composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Tidy up the container
 RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
