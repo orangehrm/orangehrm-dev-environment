@@ -70,15 +70,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     zlib1g-dev
 
 # Enable and configure xdebug
-RUN pecl install xdebug
-RUN docker-php-ext-enable xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug
 
 # Tidy up the container
 RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # set up ioncube
-COPY ioncube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
+COPY ioncube/ioncube_loader_lin_5.6.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.6.so
+COPY php.ini /usr/local/etc/php/php.ini
 
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.conf
