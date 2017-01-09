@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM php:5.5-apache
 
 MAINTAINER orangehrm
 LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chanaka Rathnayaka <chanaka@orangehrmlive.com>"
@@ -7,43 +7,65 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chanaka Rathnaya
 USER root
 WORKDIR /var/www/
 
-# Update system
-RUN apt-get update
 
 #Install dependent software
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
-      apache2 \
-      libapache2-mod-php5 \
-      cron \
-      mysql-client \
-      libreoffice-common \
-      libpng12-dev \
-      libjpeg-dev \
-      poppler-utils \
-      unzip \
-      zip \
-      phpunit \
-      git
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
+  ca-certificates \
+  cron \
+  curl \
+  git \
+  libreoffice-common \
+  libreoffice-draw \
+  libreoffice-writer \
+  libpng12-dev \
+  libjpeg-dev \
+  mysql-client \
+  phpunit \
+  poppler-utils \
+  unzip \
+  zip \
+  && yes "" | pecl install channel://pecl.php.net/APCu-4.0.11 \
+  && docker-php-ext-enable apcu \
+  && rm -rf /var/lib/apt/lists/*
 
-# Install and Test PHP
-RUN apt-get install --no-install-recommends -y \
-		curl ca-certificates \
-        php5-cli \
-        php5-curl \
-        php5-gd \
-        php5-json \
-        php5-ldap \
-        php5-mcrypt  \
-        php5-memcache \
-        php5-memcached \
-        php5-mysql \
-        php5-readline \
-        php5-sqlite \
-        php5-xdebug \
-        php5-xhprof \
-        php5-xmlrpc \
-		php-pear \
-		&& rm -rf /var/lib/apt/lists/*
+
+#Install PHP extenstions
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  libfreetype6-dev \
+  libgd-tools \
+  libjpeg-dev \
+  libjpeg62-turbo-dev \
+  libldap2-dev \
+  libmcrypt-dev \
+  libpng12-dev \
+  zlib1g-dev \
+  && rm -rf /var/lib/apt/lists/* \
+  && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu  \
+  && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib/x86_64-linux-gnu --with-png-dir=/usr/lib/x86_64-linux-gnu --with-freetype-dir=/usr/lib/x86_64-linux-gnu  \
+  && docker-php-ext-install \
+     bcmath \
+     calendar \
+
+     exif \
+     gd \
+     gettext \
+     ldap \
+     mysql \
+     mysqli \
+     pdo \
+     pdo_mysql \
+     opcache \
+  && docker-php-ext-install zip \
+  && apt-get purge -y --auto-remove \
+    libfreetype6-dev \
+    libgd-tools \
+    libjpeg62-turbo-dev \
+    libjpeg-dev \
+    libldap2-dev \
+    libmcrypt-dev \
+    libpng12-dev \
+    zlib1g-dev
+
 
 #installing nodejs
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash
