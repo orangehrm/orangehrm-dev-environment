@@ -77,6 +77,6 @@ RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
 COPY config/mysql-client/my.cnf /etc/mysql/my.cnf
 COPY config/php.ini /etc/php5/cli/php.ini
 COPY config/db-check.sh /var/www/db-check.sh
-COPY phpunit-3.7.28.phar /usr/bin/phpunit
+COPY phpunit-3.7.28.phar /usr/bin/phpunit && chmod +x /usr/bin/phpunit
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

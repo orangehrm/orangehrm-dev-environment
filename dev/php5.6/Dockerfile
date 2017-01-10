@@ -88,6 +88,6 @@ COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.
 RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled/
 RUN a2ensite orangehrm.conf
 
-COPY phpunit-3.7.28.phar /usr/bin/phpunit
+COPY phpunit-3.7.28.phar /usr/bin/phpunit && chmod +x /usr/bin/phpunit
 
 ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
