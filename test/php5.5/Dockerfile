@@ -9,6 +9,9 @@ USER root
 # set working dir as the installer directory
 WORKDIR /var/www/html/installer/
 
+# Enable apache mods.
+RUN a2enmod rewrite expires headers ssl
+
 #Install dependent software
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-install-recommends --force-yes \
   ca-certificates \
@@ -74,8 +77,6 @@ RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
 COPY config/mysql-client/my.cnf /etc/mysql/my.cnf
 COPY config/php.ini /etc/php5/cli/php.ini
 COPY config/db-check.sh /var/www/db-check.sh
-
-# Enable apache mods.
-RUN a2enmod rewrite expires headers ssl
+COPY phpunit-3.7.28.phar /usr/bin/phpunit
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

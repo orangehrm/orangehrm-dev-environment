@@ -7,6 +7,9 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 USER root
 WORKDIR /var/www/
 
+# Enable apache mods.
+RUN a2enmod rewrite expires headers ssl vhost_alias
+
 #installing nodejs
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash
 RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon
@@ -85,8 +88,6 @@ COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.
 RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled/
 RUN a2ensite orangehrm.conf
 
-# Enable apache mods.
-RUN a2enmod rewrite expires headers ssl vhost_alias
-
+COPY phpunit-3.7.28.phar /usr/bin/phpunit
 
 ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
