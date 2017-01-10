@@ -7,8 +7,6 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 USER root
 WORKDIR /var/www/
 
-# installing composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 #Install dependent software
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-install-recommends --force-yes \
