@@ -1,76 +1,81 @@
-FROM ubuntu:14.04
+FROM php:5.5-apache
 
 MAINTAINER orangehrm
+LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chamin Wickramarathne  <chamin@orangehrmlive.com>"
 
 # Our user in the container
 USER root
 
-# Update system
-RUN apt-get update
+# set working dir as the installer directory
+WORKDIR /var/www/html/installer/
 
 #Install dependent software
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
-      apache2 \
-      libapache2-mod-php5 \
-      cron \
-      mysql-client \
-      libreoffice-common \
-      libreoffice-draw \
-      libreoffice-writer \
-      libpng12-dev \
-      libjpeg-dev \
-      poppler-utils \
-      unzip \
-      zip \
-      phpunit \
-      git
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-install-recommends --force-yes \
+  ca-certificates \
+  cron \
+  curl \
+  git \
+  libreoffice-common \
+  libreoffice-draw \
+  libreoffice-writer \
+  libpng12-dev \
+  libjpeg-dev \
+  mysql-client \
+  phpunit \
+  poppler-utils \
+  unzip \
+  zip \
+  && yes "" | pecl install channel://pecl.php.net/APCu-4.0.11 \
+  && docker-php-ext-enable apcu
 
-# Install and Test PHP
-RUN apt-get install --no-install-recommends -y \
-		curl ca-certificates \
-		php5-apcu \
-        php5-cli \
-        php5-curl \
-        php5-gd \
-        php5-json \
-        php5-ldap \
-        php5-mcrypt  \
-        php5-memcache \
-        php5-memcached \
-        php5-mysql \
-        php5-readline \
-        php5-sqlite \
-        php5-xdebug \
-        php5-xhprof \
-        php5-xmlrpc \
-		php-pear \
-        php --version && \
-        php -m
+#Install PHP extenstions
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  libfreetype6-dev \
+  libgd-tools \
+  libjpeg-dev \
+  libjpeg62-turbo-dev \
+  libldap2-dev \
+  libmcrypt-dev \
+  libpng12-dev \
+  zlib1g-dev \
+  && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu  \
+  && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib/x86_64-linux-gnu --with-png-dir=/usr/lib/x86_64-linux-gnu --with-freetype-dir=/usr/lib/x86_64-linux-gnu  \
+  && docker-php-ext-install \
+     bcmath \
+     calendar \
+     exif \
+     gd \
+     gettext \
+     ldap \
+     mysql \
+     mysqli \
+     pdo \
+     pdo_mysql \
+     opcache \
+  && docker-php-ext-install zip \
+  && apt-get purge -y --auto-remove \
+    libfreetype6-dev \
+    libgd-tools \
+    libjpeg62-turbo-dev \
+    libjpeg-dev \
+    libldap2-dev \
+    libmcrypt-dev \
+    libpng12-dev \
+    zlib1g-dev
 
+# Enable and configure xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug
 
-#installing nodejs
-#RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash
-#RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon
-
-# installing composer
-#RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# Tidy up
+# Tidy up the container
 RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# set up iconcube
-COPY ioncube/ioncube_loader_lin_5.5.so /usr/local/lib/php/extensions/no-debug-non-zts-20121212/ioncube_loader_lin_5.5.so
-
 # copy configuration files
-COPY config/mysql-client/my.cnf /etc/mysql/my.cnf 
+COPY config/mysql-client/my.cnf /etc/mysql/my.cnf
 COPY config/php.ini /etc/php5/cli/php.ini
 COPY config/db-check.sh /var/www/db-check.sh
 
 # Enable apache mods.
 RUN a2enmod rewrite expires headers ssl
-
-# set working dir as the installer directory
-WORKDIR /var/www/html/installer/
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
