@@ -7,11 +7,13 @@ services:
       - "80:80"
     volumes:
       - ./ohrm_dev:/var/www/html
-      - ./config/php5/apache2:/etc/php5/apache2
-      - ./config/php5/cli:/etc/php5/cli
+      - ./config/php5/apache2/php.ini:/etc/php5/apache2/php.ini
+      - ./config/php5/cli/php.ini:/etc/php5/cli/php.ini
       - ./config/mysql-client:/etc/mysql
-      - ./config/apache2:/etc/apache2
-      - ./logs/ubuntu_logs:/var/log
+      - ./config/apache2/sites-available:/etc/apache2/sites-available
+      - ./config/apache2/cert:/etc/apache2/cert
+      - ./logs/ubuntu_logs:/var/log/apache2
+      - /etc/localtime:/etc/localtime
     links:
       - db
       - phpmyadmin
@@ -25,6 +27,7 @@ services:
     volumes:
       - ./config/mysql-server:/etc/mysql
       - ./logs/mysql_logs:/var/log
+      - /etc/localtime:/etc/localtime
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     restart: always
@@ -33,7 +36,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     volumes:
-      - ./logs/phpmyadmin_logs:/var/log
+      - /etc/localtime:/etc/localtime
     links:
       - db
     ports:
