@@ -52,7 +52,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
      mysqli \
      pdo \
      pdo_mysql \
-     opcache \
   && docker-php-ext-install zip \
   && apt-get purge -y --auto-remove \
     libfreetype6-dev \
