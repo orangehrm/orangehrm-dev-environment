@@ -23,7 +23,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   curl \
   git \
   svn \
-  vim \
+  vim-tiny \
   poppler-utils
 
 # Enable and configure xdebug
