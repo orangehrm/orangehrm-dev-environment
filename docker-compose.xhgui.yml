@@ -1,0 +1,36 @@
+# Includes additional services needed to profile using xhprof and xhgui.
+#
+# Profiling application:
+# 1. Web: Need to add the following to apache virtual host setting
+#
+# php_admin_value auto_prepend_file "/usr/local/xhgui/external/header.php"
+# (Note: This can be done by the auto_prepend_file setting in php.ini as well)
+#
+# 2. CLI:
+#
+# Add a require to the script: require '/usr/local/xhgui/external/header.php';
+# or alternatively: use the -d flag when running php:
+#
+# php -d auto_prepend_file=/path/to/xhgui/external/header.php symfony o:publish-assets
+#
+# Usage:
+#
+# docker-compose  -f docker-compose.yml -f docker-compose.xhgui.yml up -d
+#
+version: '2'
+services:
+  web:
+    # volume with xhgui src
+    volumes_from: [xhgui]
+    links:
+      - mongodb
+  mongodb:
+    image: mongo:3.4
+    expose:
+     - "27017"
+    container_name: dev_mongodb
+  xhgui:
+    image: orangehrm/orangehrm-environment-images:dev-xhgui
+    expose:
+     - "80"
+    container_name: dev_xhgui
