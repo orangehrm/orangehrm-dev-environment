@@ -24,14 +24,18 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   git \
   subversion \
   vim-tiny \
-  poppler-utils
+  poppler-utils \
+  libmcrypt-dev libssl-dev
 
 # Enable and configure xdebug
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug && \
+  pecl install mongo && \
+  docker-php-ext-enable mongo
 
 # Tidy up the container
-RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
++RUN DEBIAN_FRONTEND=noninteractive apt-get purge libmcrypt-dev libssl-dev -y  && \
+     DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && apt-get clean && \
+     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.conf
