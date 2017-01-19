@@ -54,7 +54,7 @@ services:
       - "27017"
     container_name: dev_mongodb
   xhgui:
-    image: dev_xhgui
+    image: orangehrm/orangehrm-environment-images:dev-xhgui
     expose:
       - "80"
     container_name: dev_xhgui
