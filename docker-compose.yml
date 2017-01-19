@@ -18,6 +18,9 @@ services:
     links:
       - db
       - phpmyadmin
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.2
     restart: always
     container_name: dev_web
 
@@ -31,6 +34,9 @@ services:
       - /etc/localtime:/etc/localtime
     environment:
       MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.3
     restart: always
     container_name: dev_mysql
 
@@ -44,5 +50,15 @@ services:
       - "9090:80"
     environment:
       PMA_HOST: db
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.4
     restart: always
     container_name: dev_phpmyadmin
+networks:
+  ohrmdevnet:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
