@@ -5,7 +5,7 @@ services:
     ports:
       - "443:443"
       - "80:80"
-    volumes_from: [xhgui]
+#    volumes_from: [xhgui]
     volumes:
       - ./ohrm_dev:/var/www/html
       - ./config/php5/apache2/php.ini:/etc/php5/apache2/php.ini
@@ -19,7 +19,7 @@ services:
     links:
       - db
       - phpmyadmin
-      - mongodb
+#      - mongodb
     restart: always
     container_name: dev_web
 
@@ -48,13 +48,13 @@ services:
       PMA_HOST: db
     restart: always
     container_name: dev_phpmyadmin
-  mongodb:
-    image: mongo:3.4
-    expose:
-      - "27017"
-    container_name: dev_mongodb
-  xhgui:
-    image: orangehrm/orangehrm-environment-images:dev-xhgui
-    expose:
-      - "80"
-    container_name: dev_xhgui
+#  mongodb:
+#    image: mongo:3.4
+#    expose:
+#      - "27017"
+#    container_name: dev_mongodb
+#  xhgui:
+#    image: orangehrm/orangehrm-environment-images:dev-xhgui
+#    expose:
+#      - "80"
+#    container_name: dev_xhgui
