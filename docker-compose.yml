@@ -12,7 +12,7 @@ services:
       - ./config/mysql-client:/etc/mysql
       - ./config/apache2/sites-available:/etc/apache2/sites-available
       - ./config/apache2/cert:/etc/apache2/cert
-      - ./logs/ubuntu_logs:/var/log/apache2
+      - ./logs/web_logs:/var/log/apache2
       - /etc/localtime:/etc/localtime
       - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
     links:
