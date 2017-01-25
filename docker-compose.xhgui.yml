@@ -29,11 +29,16 @@ services:
     expose:
      - "27017"
     container_name: dev_mongodb
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.5
   xhgui:
     image: orangehrm/orangehrm-environment-images:dev-xhgui
     expose:
      - "80"
+    links:
+      - mongodb
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.5
+        ipv4_address: 10.5.0.6
     container_name: dev_xhgui
