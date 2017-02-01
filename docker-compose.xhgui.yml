@@ -8,10 +8,10 @@
 #
 # 2. CLI:
 #
-# Add a require to the script: require '/usr/local/xhgui/external/header.php';
+# Add a require to the script: require '/usr/local/src/xhgui/external/header.php';
 # or alternatively: use the -d flag when running php:
 #
-# php -d auto_prepend_file=/path/to/xhgui/external/header.php symfony o:publish-assets
+# php -d auto_prepend_file=/usr/local/src/xhgui/external/header.php symfony o:publish-assets
 #
 # Usage:
 #
@@ -28,6 +28,7 @@ services:
     image: mongo:3.4
     expose:
      - "27017"
+    restart: always
     container_name: dev_mongodb
     networks:
       ohrmdevnet:
@@ -41,4 +42,5 @@ services:
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.6
+    restart: always
     container_name: dev_xhgui
