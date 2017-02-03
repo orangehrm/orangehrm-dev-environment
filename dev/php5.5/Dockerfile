@@ -22,14 +22,21 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   ca-certificates \
   curl \
   git \
-  phpunit \
-  poppler-utils
+  subversion \
+  vim-tiny \
+  poppler-utils \
+  libmcrypt-dev libssl-dev
 
 # Enable and configure xdebug
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug && \
+  pecl install mongo && \
+  docker-php-ext-enable mongo && \
+  pecl install pecl.php.net/xhprof-0.9.4 && \
+  docker-php-ext-enable xhprof
 
 # Tidy up the container
-RUN apt-get -y autoremove && apt-get clean && apt-get autoclean && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get purge libmcrypt-dev libssl-dev -y  && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Enable virtual hosts
