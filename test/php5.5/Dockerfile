@@ -13,6 +13,7 @@ WORKDIR /var/www/html/installer/
 COPY config/mysql-client/my.cnf /etc/mysql/my.cnf
 COPY config/php.ini /etc/php5/cli/php.ini
 COPY config/db-check.sh /var/www/db-check.sh
-COPY phpunit-4.8.34.phar /usr/bin/phpunit && chmod +x /usr/bin/phpunit
-
+COPY phpunit-4.8.34.phar /usr/bin/phpunit
+RUN  chmod +x /usr/bin/phpunit
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
