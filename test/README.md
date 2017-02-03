@@ -6,7 +6,7 @@
 5. **nodemon** _version_ : 1.11
 6. **bower** _version_ : 1.8
 7. **gulp** _CLI version_ : 3.9
-8. **phpunit** _version_ : 3.7.28
+8. **phpunit** _version_ : 4.8.34
 9. **composer** _version_ : 1.3
 10. **git** _version_ : 1.9
 11. enabled **virtual hosts** for orangehrm ([more info](https://hub.docker.com/r/orangehrm/orangehrm-dev-image/))
