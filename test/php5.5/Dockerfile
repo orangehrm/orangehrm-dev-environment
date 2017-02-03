@@ -6,6 +6,12 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chamin Wickramar
 # install dependent software
 RUN apt-get update && apt-get install netcat-openbsd && rm -rf /var/lib/apt/lists/*
 
+# Enable and configure xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug && \
+  pecl install mongo && \
+  pecl install pecl.php.net/xhprof-0.9.4 && \
+  docker-php-ext-enable xhprof
+
 # Our user in the container
 USER root
 
