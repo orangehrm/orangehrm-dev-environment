@@ -3,6 +3,9 @@ FROM orangehrm/orangehrm-environment-images:prod-5.5
 MAINTAINER orangehrm
 LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chamin Wickramarathne  <chamin@orangehrmlive.com>"
 
+# install dependent software
+RUN apt-get update && apt-get install netcat-openbsd && rm -rf /var/lib/apt/lists/*
+
 # Our user in the container
 USER root
 
