@@ -4,7 +4,10 @@ MAINTAINER orangehrm
 LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chamin Wickramarathne  <chamin@orangehrmlive.com>"
 
 # install dependent software
-RUN apt-get update && apt-get install netcat-openbsd && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install \
+    bzip2 \
+    netcat-openbsd
+    && rm -rf /var/lib/apt/lists/*
 
 # Enable and configure xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug && \
