@@ -19,16 +19,20 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 #Install dependent software
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-install-recommends --force-yes \
+  bzip2 \
   ca-certificates \
   curl \
   git \
-  libmcrypt-dev libssl-dev \
+  libmcrypt-dev \
+  libssl-dev \
   openssh-server \
   poppler-utils \
   subversion \
   supervisor \
-  vim-tiny
+  vim
 
+#Fix locale issue for SVN
+RUN export LC_ALL=C
 # Enable and configure sshd
 RUN mkdir /var/run/sshd
 
