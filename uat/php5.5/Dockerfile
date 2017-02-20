@@ -24,7 +24,10 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   curl \
   git \
   libmcrypt-dev \
+  libnss-ldap \
+  libpam-ldap \
   libssl-dev \
+  nscd \
   openssh-server \
   poppler-utils \
   subversion \
