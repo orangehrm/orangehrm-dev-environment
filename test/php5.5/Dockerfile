@@ -6,7 +6,7 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Chamin Wickramar
 # install dependent software
 RUN apt-get update && apt-get install \
     bzip2 \
-    netcat-openbsd
+    netcat-openbsd \
     && rm -rf /var/lib/apt/lists/*
 
 # Enable and configure xdebug
