@@ -22,10 +22,11 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   ca-certificates \
   curl \
   git \
-  subversion \
-  vim-tiny \
+  libmcrypt-dev \
+  libssl-dev \
   poppler-utils \
-  libmcrypt-dev libssl-dev
+  subversion \
+  vim
 
 # Enable and configure xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug && \
