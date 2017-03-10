@@ -12,6 +12,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-
   libreoffice-writer \
   libpng12-dev \
   libjpeg-dev \
+  libxml2-dev \
   mysql-client \
   poppler-utils \
   unzip \
@@ -45,6 +46,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
      pdo \
      pdo_mysql \
      opcache \
+     soap \
   && docker-php-ext-install zip \
   && apt-get purge -y --auto-remove \
     libfreetype6-dev \
