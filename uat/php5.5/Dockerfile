@@ -33,7 +33,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   poppler-utils \
   subversion \
   supervisor \
-  vim
+  vim \
+  wget
 
 #Fix locale issue for SVN
 RUN export LC_ALL=C
