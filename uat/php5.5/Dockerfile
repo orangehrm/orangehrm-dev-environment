@@ -28,6 +28,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   libpam-ldap \
   libssl-dev \
   nscd \
+  openjdk-7-jre \
   openssh-server \
   poppler-utils \
   subversion \
