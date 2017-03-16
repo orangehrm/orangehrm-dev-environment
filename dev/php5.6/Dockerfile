@@ -44,5 +44,6 @@ RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled
 RUN a2ensite orangehrm.conf
 
 COPY phpunit-3.7.28.phar /usr/bin/phpunit
+COPY phing-2.16.0.phar /usr/bin/phing
 
 ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
