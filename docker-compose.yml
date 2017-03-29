@@ -5,7 +5,7 @@ services:
     ports:
       - "443:443"
     volumes:
-      - webroot:/var/www/html
+      - ./ohrm_dev:/var/www/html
       - ./config/php5/apache2/php.ini:/etc/php5/apache2/php.ini
       - ./config/php5/cli/php.ini:/etc/php5/cli/php.ini
       - ./config/mysql-client:/etc/mysql
@@ -27,7 +27,7 @@ services:
     ports:
       - "8443:443"
     volumes:
-      - webroot:/var/www/html
+      - ./ohrm_dev:/var/www/html
       - ./config/php5/apache2/php.ini:/etc/php5/apache2/php.ini
       - ./config/php5/cli/php.ini:/etc/php5/cli/php.ini
       - ./config/mysql-client:/etc/mysql
@@ -79,7 +79,6 @@ services:
 
 volumes:
   mysql:
-  webroot: ./ohrm_dev
 
 networks:
   ohrmdevnet:
