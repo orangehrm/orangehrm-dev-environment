@@ -6,7 +6,7 @@ services:
       - "443:443"
     volumes:
       - ./ohrm_dev:/var/www/html
-      - ./config/php5/apache2/php.ini:/usr/local/etc/php/php.ini
+      - ./config/php/php.ini:/usr/local/etc/php/php56.ini
       - ./config/mysql-client:/etc/mysql
       - ./config/apache2/sites-available:/etc/apache2/sites-available
       - ./config/apache2/cert:/etc/apache2/cert
@@ -27,8 +27,7 @@ services:
       - "8443:443"
     volumes:
       - ./ohrm_dev:/var/www/html
-      - ./config/php5/apache2/php.ini:/etc/php5/apache2/php.ini
-      - ./config/php5/cli/php.ini:/etc/php5/cli/php.ini
+      - ./config/php/php.ini:/usr/local/etc/php/php55.ini
       - ./config/mysql-client:/etc/mysql
       - ./config/apache2/sites-available:/etc/apache2/sites-available
       - ./config/apache2/cert:/etc/apache2/cert
