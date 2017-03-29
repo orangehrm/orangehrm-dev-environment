@@ -148,6 +148,7 @@ class Web55ContainerCest
             $I->seeInShellOutput('Reflection');
             $I->seeInShellOutput('session');
             $I->seeInShellOutput('SimpleXML');
+            $I->seeInShellOutput('stats');
             $I->seeInShellOutput('xdebug');
             $I->seeInShellOutput('xml');
             $I->seeInShellOutput('zip');
