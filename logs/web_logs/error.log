@@ -1,5 +1,0 @@
-[Thu Jan 19 15:45:02.284868 2017] [ssl:warn] [pid 8] AH01906: orangehrm.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.5.0.2. Set the 'ServerName' directive globally to suppress this message
-[Thu Jan 19 15:45:02.406701 2017] [ssl:warn] [pid 8] AH01906: orangehrm.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
-[Thu Jan 19 15:45:02.410277 2017] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.10 (Debian) PHP/5.5.38 OpenSSL/1.0.1t configured -- resuming normal operations
-[Thu Jan 19 15:45:02.410324 2017] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
