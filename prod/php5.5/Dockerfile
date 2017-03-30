@@ -43,13 +43,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
      gd \
      gettext \
      ldap \
+     mcrypt \
      mysql \
      mysqli \
      pdo \
      pdo_mysql \
      opcache \
      soap \
-  && docker-php-ext-install zip \
+     zip \
+  && pecl install stats \
+  && docker-php-ext-enable stats \
   && apt-get purge -y --auto-remove \
     libfreetype6-dev \
     libgd-tools \
