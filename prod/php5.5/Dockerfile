@@ -43,7 +43,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
      gd \
      gettext \
      ldap \
-     mcrypt \
      mysql \
      mysqli \
      pdo \
