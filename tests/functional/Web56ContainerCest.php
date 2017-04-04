@@ -12,7 +12,7 @@ class Web56ContainerCest
     }
 
 
-  public function ContainerTest(AcceptanceTester $I){
+    public function ContainerTest(AcceptanceTester $I){
         $I->wantTo("verify ubuntu container up and running");
         $I->runShellCommand("docker inspect -f {{.State.Running}} dev_web_56");
         $I->seeInShellOutput("true");
@@ -88,6 +88,7 @@ class Web56ContainerCest
         $I->wantTo("verify php 5.6 is installed in the container");
         $I->runShellCommand("docker exec dev_web_56 php --version");
         $I->seeInShellOutput('PHP 5.6');
+        $I->dontSeeInShellOutput('PHP Warning');
     }
 
     public function nodeTest(AcceptanceTester $I){
@@ -112,6 +113,12 @@ class Web56ContainerCest
         $I->wantTo("verify bower is installed in the container");
         $I->runShellCommand("docker exec dev_web_56 bower --version");
         $I->seeInShellOutput('1');
+    }
+
+    public function bzip2Test(AcceptanceTester $I){
+        $I->wantTo("verify bzip2 is installed in the container");
+        $I->runShellCommand("docker exec dev_web_56 bzip2 -V");
+        $I->seeInShellOutput('Version 1.0.6');
     }
 
     public function phpModuleTest(AcceptanceTester $I){
@@ -160,5 +167,7 @@ class Web56ContainerCest
             $I->runShellCommand("docker exec dev_web_56 ping db -c 2");
             $I->seeInShellOutput('2 packets transmitted, 2 packets received');
     }
+
+
 
 }

@@ -12,7 +12,7 @@ class Web55ContainerCest
     }
 
 
-  public function ContainerTest(AcceptanceTester $I){
+    public function ContainerTest(AcceptanceTester $I){
         $I->wantTo("verify ubuntu container up and running");
         $I->runShellCommand("docker inspect -f {{.State.Running}} dev_web_55");
         $I->seeInShellOutput("true");
@@ -88,6 +88,7 @@ class Web55ContainerCest
         $I->wantTo("verify php 5.5 is installed in the container");
         $I->runShellCommand("docker exec dev_web_55 php --version");
         $I->seeInShellOutput('PHP 5.5');
+        $I->dontSeeInShellOutput('PHP Warning');
     }
 
     public function nodeTest(AcceptanceTester $I){
@@ -112,6 +113,12 @@ class Web55ContainerCest
         $I->wantTo("verify bower is installed in the container");
         $I->runShellCommand("docker exec dev_web_55 bower --version");
         $I->seeInShellOutput('1');
+    }
+
+    public function bzip2Test(AcceptanceTester $I){
+        $I->wantTo("verify bzip2 is installed in the container");
+        $I->runShellCommand("docker exec dev_web_56 bzip2 -V");
+        $I->seeInShellOutput('Version 1.0.6');
     }
 
     public function phpModuleTest(AcceptanceTester $I){
