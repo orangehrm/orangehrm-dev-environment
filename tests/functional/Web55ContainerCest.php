@@ -117,8 +117,8 @@ class Web55ContainerCest
 
     public function bzip2Test(AcceptanceTester $I){
         $I->wantTo("verify bzip2 is installed in the container");
-        $I->runShellCommand("docker exec dev_web_56 bzip2 -V");
-        $I->seeInShellOutput('Version 1.0.6');
+        $I->runShellCommand("docker exec dev_web_55 apt list --installed | grep bzip2");
+        $I->seeInShellOutput("bzip2/stable,now 1.0.6");
     }
 
     public function phpModuleTest(AcceptanceTester $I){
