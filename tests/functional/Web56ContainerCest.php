@@ -33,13 +33,13 @@ class Web56ContainerCest
     public function cronTest(AcceptanceTester $I){
         $I->wantTo("verify cron is installed in the container");
         $I->runShellCommand("docker exec dev_web_56 apt list --installed | grep cron");
-        $I->seeInShellOutput('cron/now 3.0');
+        $I->seeInShellOutput('3.0');
     }
 
     public function mysqlClientTest(AcceptanceTester $I){
         $I->wantTo("verify mysql-client is installed in the container");
         $I->runShellCommand("docker exec dev_web_56 apt list --installed | grep mysql-client");
-        $I->seeInShellOutput('mysql-client/now 5.5');
+        $I->seeInShellOutput('5.5');
     }
 
     public function libreOfficeTest(AcceptanceTester $I){
@@ -118,7 +118,7 @@ class Web56ContainerCest
     public function bzip2Test(AcceptanceTester $I){
         $I->wantTo("verify bzip2 is installed in the container");
         $I->runShellCommand("docker exec dev_web_55 apt list --installed | grep bzip2");
-        $I->seeInShellOutput("bzip2/stable,now 1.0.6");
+        $I->seeInShellOutput("1.0.6");
     }
 
     public function phpModuleTest(AcceptanceTester $I){
