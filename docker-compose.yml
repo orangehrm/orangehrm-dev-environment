@@ -21,48 +21,48 @@ services:
         ipv4_address: 10.5.0.7
     restart: always
     container_name: dev_web_7
-  web56:
-    image: orangehrm/orangehrm-environment-images:dev-5.6
-    ports:
-      - "9443:443"
-    volumes:
-      - ./ohrm_dev:/var/www/html
-      - ./config/php/php.ini:/usr/local/etc/php/php56.ini
-      - ./config/mysql-client:/etc/mysql
-      - ./config/apache2/sites-available:/etc/apache2/sites-available
-      - ./config/apache2/cert:/etc/apache2/cert
-      - ./logs/web_logs/55:/var/log/apache2
-      - /etc/localtime:/etc/localtime
-      - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
-    links:
-      - db
-      - phpmyadmin
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.2
-    restart: always
-    container_name: dev_web_56
-  web55:
-    image: orangehrm/orangehrm-environment-images:dev-5.5
-    ports:
-      - "8443:443"
-    volumes:
-      - ./ohrm_dev:/var/www/html
-      - ./config/php/php.ini:/usr/local/etc/php/php55.ini
-      - ./config/mysql-client:/etc/mysql
-      - ./config/apache2/sites-available:/etc/apache2/sites-available
-      - ./config/apache2/cert:/etc/apache2/cert
-      - ./logs/web_logs/56:/var/log/apache2
-      - /etc/localtime:/etc/localtime
-      - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
-    links:
-      - db
-      - phpmyadmin
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.5
-    restart: always
-    container_name: dev_web_55
+  # web56:
+  #   image: orangehrm/orangehrm-environment-images:dev-5.6
+  #   ports:
+  #     - "9443:443"
+  #   volumes:
+  #     - ./ohrm_dev:/var/www/html
+  #     - ./config/php/php.ini:/usr/local/etc/php/php56.ini
+  #     - ./config/mysql-client:/etc/mysql
+  #     - ./config/apache2/sites-available:/etc/apache2/sites-available
+  #     - ./config/apache2/cert:/etc/apache2/cert
+  #     - ./logs/web_logs/55:/var/log/apache2
+  #     - /etc/localtime:/etc/localtime
+  #     - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
+  #   links:
+  #     - db
+  #     - phpmyadmin
+  #   networks:
+  #     ohrmdevnet:
+  #       ipv4_address: 10.5.0.2
+  #   restart: always
+  #   container_name: dev_web_56
+  # web55:
+  #   image: orangehrm/orangehrm-environment-images:dev-5.5
+  #   ports:
+  #     - "8443:443"
+  #   volumes:
+  #     - ./ohrm_dev:/var/www/html
+  #     - ./config/php/php.ini:/usr/local/etc/php/php55.ini
+  #     - ./config/mysql-client:/etc/mysql
+  #     - ./config/apache2/sites-available:/etc/apache2/sites-available
+  #     - ./config/apache2/cert:/etc/apache2/cert
+  #     - ./logs/web_logs/56:/var/log/apache2
+  #     - /etc/localtime:/etc/localtime
+  #     - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
+  #   links:
+  #     - db
+  #     - phpmyadmin
+  #   networks:
+  #     ohrmdevnet:
+  #       ipv4_address: 10.5.0.5
+  #   restart: always
+  #   container_name: dev_web_55
   db:
     image: mysql:5.5
     expose:
