@@ -1,7 +1,7 @@
 version: '2'
 services:
   web7:
-    image: orangehrm/orangehrm-environment-images:dev-7
+    image: orangehrm/orangehrm-environment-images:dev-7.0
     ports:
       - "7443:443"
     volumes:
