@@ -94,7 +94,7 @@ environment:
 More about phpmyadmin container can find in docker hub [phpmyadmin image](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
 
 ### Additional information
-1. Can access a shell inside of any containers by running `docker exec -it <containerID or ContainerName> /bin/bash`
+1. Can access a shell inside of any containers by running `docker exec -it <containerID or ContainerName> /bin/bash  -c "TERM=$TERM; exec bash"`
 2. Can restart containers using `docker-compose restart`
 3. Can stop containers using `docker-compose stop`
 2. Developer can find log files for each container from _/logs_ directory. ( Also possible to get logs of containers by running the command `docker logs <container ID>`)
