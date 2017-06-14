@@ -32,10 +32,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
 
 # Enable and configure xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug && \
-  pecl install mongo && \
-  docker-php-ext-enable mongo && \
-  pecl install pecl.php.net/xhprof-0.9.4 && \
-  docker-php-ext-enable xhprof
+  pecl install mongodb && \
+  docker-php-ext-enable mongodb
 
 # Tidy up the container
 RUN DEBIAN_FRONTEND=noninteractive apt-get purge libmcrypt-dev libssl-dev -y  && \
