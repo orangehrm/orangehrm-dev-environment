@@ -5,7 +5,7 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 
 # Our user in the container
 USER root
-WORKDIR /var/www/
+WORKDIR /var/www/html/
 
 # Enable apache mods.
 RUN a2enmod  vhost_alias
@@ -52,4 +52,8 @@ RUN pear channel-discover pear.phing.info && \
     pear install VersionControl_SVN-alpha && \
     pear install phing/phing-2.6.1
 
-ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+# Add supervisor conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Docker startup
+CMD ["/usr/bin/supervisord"]
