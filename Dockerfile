@@ -23,8 +23,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   ca-certificates \
   curl \
   git \
-  libmcrypt-dev \
-  libssl-dev \
   poppler-utils \
   subversion \
   vim
@@ -38,8 +36,7 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug && \
   docker-php-ext-enable xhprof
 
 # Tidy up the container
-RUN DEBIAN_FRONTEND=noninteractive apt-get purge libmcrypt-dev libssl-dev -y  && \
-     DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && apt-get clean && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && apt-get clean && \
      rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Enable virtual hosts
