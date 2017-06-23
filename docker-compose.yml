@@ -15,8 +15,8 @@ services:
     links:
       - db
     restart: always
-    hostname: orangehrm-prod-web
-    container_name: prod_web
+    hostname: orangehrm-dev-web
+    container_name: dev_web
 
   db:
     image: mysql:5.5
@@ -29,8 +29,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     restart: always
-    hostname: orangehrm-prod-db
-    container_name: prod_mysql
+    hostname: orangehrm-dev-db
+    container_name: dev_mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -43,4 +43,4 @@ services:
     environment:
       PMA_HOST: db
     restart: always
-    container_name: prod_phpmyadmin
+    container_name: dev_phpmyadmin
