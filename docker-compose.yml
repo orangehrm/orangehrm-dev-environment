@@ -23,8 +23,8 @@ services:
     expose:
       - "3306"
     volumes:
-      - ./config/mysql-server:/etc/mysql
-      - ./logs/mysql_logs:/var/log
+      - ./config/mariadb-server:/etc/mysql
+      - ./logs/mariadb_logs:/var/log
       - /etc/localtime:/etc/localtime
     environment:
       MYSQL_ROOT_PASSWORD: 1234
