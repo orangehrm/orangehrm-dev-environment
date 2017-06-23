@@ -13,7 +13,7 @@ class WebContainerCest
 
 
     public function checkConnectionWithDB(FunctionalTester $I){
-        $I->wantTo("verify mysql 5.5 container is linked with php 5.6 container properly");
+        $I->wantTo("verify mariadb 10.1 container is linked with php 7.1 container properly");
         $I->runShellCommand("docker exec dev_web ping db -c 2");
         $I->seeInShellOutput('2 packets transmitted, 2 packets received');
     }

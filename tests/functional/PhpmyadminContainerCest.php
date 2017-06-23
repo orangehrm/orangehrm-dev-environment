@@ -13,7 +13,7 @@ class PhpmyadminContainerCest
 
 
     public function checkConnectionWithDB(FunctionalTester $I){
-        $I->wantTo("verify mysql 5.5 container is linked with phpmyadmin container properly");
+        $I->wantTo("verify mariadb 10.1 container is linked with phpmyadmin container properly");
         $I->runShellCommand("docker exec dev_phpmyadmin ping db -c 1");
         $I->seeInShellOutput('1 packets transmitted, 1 packets received');
     }

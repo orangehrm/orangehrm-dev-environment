@@ -1,5 +1,5 @@
-# OrangeHRM Production Environment for PHP 5.5
-[![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=php-5.5)](https://travis-ci.org/orangehrm/orangehrm-dev-environment)
+# OrangeHRM Development Environment for PHP 7.1
+[![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=php-7.1)](https://travis-ci.org/orangehrm/orangehrm-dev-environment)
 
 ## Introduction
 orangehrm-dev-environment is a dockerized development environment for OrangeHRM. Usually it will take hours to configure and prepare the dev environment for orangehrm system. This project will save the support engineers / deployment time.
@@ -26,8 +26,8 @@ Make sure mentioned prerequisites are there in your host machine.
 
 | Container Name  | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
 |-----------------|------------------------------------|-------------|------------|------------|
-| dev_web         | web                                | PHP 5.5     | 10.5.0.2   | 443        |
-| dev_mysql       | db                                 | MySQL 5.5   | 10.5.0.3   | 3306       |
+| dev_web         | web                                | PHP 7.1     | 10.5.0.2   | 443        |
+| dev_mariadb     | db                                 | MariaDB 10.1| 10.5.0.3   | 3306       |
 | dev_phpmyadmin  | phpmyadmin                         | phpMyAdmin  | 10.5.0.4   | 9090       |
 
 ## Install orangehrm eagle-core inside the container
@@ -79,7 +79,7 @@ volumes:
 environment:
   MYSQL_ROOT_PASSWORD: 1234
 ```
-You can change exposed port as mentioned in dev_web_55 container configuration. For more information about this container refer into [mysql official image](https://hub.docker.com/_/mysql/).
+You can change exposed port as mentioned in dev_web container configuration. For more information about this container refer into [mysql official image](https://hub.docker.com/_/mysql/).
 ### Default configurations in dev_phpmyadmin container
 ```
 volumes:

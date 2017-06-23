@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: orangehrm/orangehrm-environment-images:dev-5.5
+    image: orangehrm/orangehrm-environment-images:dev-7.1
     ports:
       - "443:443"
     volumes:
@@ -19,7 +19,7 @@ services:
     container_name: dev_web
 
   db:
-    image: mysql:5.5
+    image: mariadb:10.1
     expose:
       - "3306"
     volumes:
@@ -30,7 +30,7 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
     restart: always
     hostname: orangehrm-dev-db
-    container_name: dev_mysql
+    container_name: dev_mariadb
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
