@@ -36,10 +36,16 @@ class WebContainerCest
         $I->seeInShellOutput('cron is running');
     }
 
-    public function checkMemcacheServiceIsRunning(UnitTester $I){
-        $I->wantTo("verify apache is up and running in the container");
+    public function checkSupervisorServiceIsRunning(UnitTester $I){
+        $I->wantTo("verify supervisor is up and running in the container");
         $I->runShellCommand("docker exec dev_web service supervisor status");
         $I->seeInShellOutput('supervisord is running');
+    }
+
+    public function checkMemcacheServiceIsRunning(UnitTester $I){
+        $I->wantTo("verify apache is up and running in the container");
+        $I->runShellCommand("docker exec prod_web ps aux | grep memcached");
+        $I->seeInShellOutput('/usr/bin/memcached');
     }
 
     public function checkPHPUnitVersion(UnitTester $I){
