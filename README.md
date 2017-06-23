@@ -1,4 +1,4 @@
-# OrangeHRM Production Environment for PHP 7.1
+# OrangeHRM Development Environment
 [![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=master)](https://travis-ci.org/orangehrm/orangehrm-dev-environment)
 
 ## Introduction
@@ -7,9 +7,9 @@ orangehrm-dev-environment is a dockerized development environment for OrangeHRM.
 This environment will depends on containers of [orangehrm-dev-image](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/),[mysql](https://hub.docker.com/_/mysql/) and [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/).
 ## Prerequisites
 - Docker engine installed.([Get docker](https://docs.docker.com/engine/installation/))
-- Minimum docker version 1.12
-- Minimum docker-compose version 2
-- Disable ports 443 and 8443 if they are used by localhost.
+- Minimum docker version 17.3
+- Minimum docker-compose version 1.12
+
 
 ## How to use ?
 Make sure mentioned prerequisites are there in your host machine.
