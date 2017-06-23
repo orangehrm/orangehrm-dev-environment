@@ -11,16 +11,22 @@ class PhpmyadminContainerCest
     {
     }
 
-    // tests
-    public function ContainerTest(AcceptanceTester $I){
-        $I->wantTo("verify phpmyadmin container is up and running");
-        $I->runShellCommand("docker inspect -f {{.State.Running}} dev_phpmyadmin");
-        $I->seeInShellOutput("true");
+
+    public function checkConnectionWithDB55(FunctionalTester $I){
+        $I->wantTo("verify mysql 5.5 container is linked with phpmyadmin container properly");
+        $I->runShellCommand("docker exec dev_phpmyadmin ping db55 -c 1");
+        $I->seeInShellOutput('1 packets transmitted, 1 packets received');
     }
 
-    public function mysqlServerTest(AcceptanceTester $I){
-        $I->wantTo("verify mysql container is linked with phpmyadmin container properly");
-        $I->runShellCommand("docker exec dev_phpmyadmin ping db -c 1");
+    public function checkConnectionWithDB57(FunctionalTester $I){
+        $I->wantTo("verify mysql 5.7 container is linked with phpmyadmin container properly");
+        $I->runShellCommand("docker exec dev_phpmyadmin ping db57 -c 1");
+        $I->seeInShellOutput('1 packets transmitted, 1 packets received');
+    }
+
+    public function checkConnectionWithDB101(FunctionalTester $I){
+        $I->wantTo("verify mariadb 10.1  container is linked with phpmyadmin container properly");
+        $I->runShellCommand("docker exec dev_phpmyadmin ping db101 -c 1");
         $I->seeInShellOutput('1 packets transmitted, 1 packets received');
     }
 }

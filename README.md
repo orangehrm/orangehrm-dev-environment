@@ -1,5 +1,6 @@
-# orangehrm-dev-environment
-[![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=master)](https://travis-ci.org/orangehrm/orangehrm-dev-environment)
+# OrangeHRM Production Environment for PHP 7.1
+[![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=master)](https://travis-ci.org/orangehrm/orangehrm-dev-environment)
+
 ## Introduction
 orangehrm-dev-environment is a dockerized development environment for OrangeHRM. Usually it will take hours to configure and prepare the development environment for orangehrm system. This project will save the developers time.
 
@@ -25,8 +26,9 @@ Make sure mentioned prerequisites are there in your host machine.
 
 | Container Name | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
 |----------------|------------------------------------|-------------|------------|------------|
-| dev_web_56     | web56                              | PHP 5.6     | 10.5.0.2   | 443        |
-| dev_web_55     | web55                              | PHP 5.5     | 10.5.0.5   | 8443       |
+| dev_web_56     | web56                              | PHP 5.5     | 10.5.0.2   | 9070       |
+| dev_web_56     | web55                              | PHP 5.6     | 10.5.0.3   | 9071       |
+| dev_web_71     | web55                              | PHP 7.1     | 10.5.0.4   | 9072       |
 | dev_mysql      | db                                 | MySQL 5.5   | 10.5.0.3   | 3306       |
 | dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.4   | 9090       |
 

@@ -16,6 +16,9 @@ services:
       - db55
       - db57
       - phpmyadmin
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.2
     restart: always
     container_name: dev_web_55
 
@@ -36,6 +39,9 @@ services:
       - db57
       - db101
       - phpmyadmin
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.3
     restart: always
     container_name: dev_web_56
 
@@ -56,6 +62,9 @@ services:
       - db57
       - db101
       - phpmyadmin
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.4
     restart: always
     container_name: dev_web_71
 
@@ -70,6 +79,9 @@ services:
       - mysql55:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.5
     restart: always
     container_name: dev_mysql_55
 
@@ -84,6 +96,9 @@ services:
       - mysql57:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.6
     restart: always
     container_name: dev_mysql_57
 
@@ -98,6 +113,9 @@ services:
       - mariadb101:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.7
     restart: always
     container_name: dev_mariadb_101
 
@@ -113,6 +131,9 @@ services:
       - "9092:80"
     environment:
       PMA_HOSTS: db55,db57,db101
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.8
     restart: always
     container_name: dev_phpmyadmin
 
@@ -120,3 +141,11 @@ volumes:
   mysql55:
   mysql57:
   mariadb101:
+
+networks:
+  ohrmdevnet:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
