@@ -1,15 +1,15 @@
-# OrangeHRM Production Environment for PHP 7.1
-[![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=master)](https://travis-ci.org/orangehrm/orangehrm-dev-environment)
+# OrangeHRM Production Environment for PHP 5.6
+[![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=php-5.6)](https://travis-ci.org/orangehrm/orangehrm-dev-environment)
 
 ## Introduction
-orangehrm-dev-environment is a dockerized development environment for OrangeHRM. Usually it will take hours to configure and prepare the development environment for orangehrm system. This project will save the developers time.
+orangehrm-dev-environment is a dockerized development environment for OrangeHRM. Usually it will take hours to configure and prepare the dev environment for orangehrm system. This project will save the support engineers / deployment time.
 
 This environment will depends on containers of [orangehrm-dev-image](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/),[mysql](https://hub.docker.com/_/mysql/) and [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/).
 ## Prerequisites
 - Docker engine installed.([Get docker](https://docs.docker.com/engine/installation/))
-- Minimum docker version 1.12
-- Minimum docker-compose version 2
-- Disable ports 443 and 8443 if they are used by localhost.
+- Minimum docker version 17.3
+- Minimum docker-compose version 1.12
+- Disable ports 443 and 9090 if they are used by localhost.
 
 ## How to use ?
 Make sure mentioned prerequisites are there in your host machine.
@@ -24,25 +24,21 @@ Make sure mentioned prerequisites are there in your host machine.
 
 ## Containers
 
-| Container Name | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
-|----------------|------------------------------------|-------------|------------|------------|
-| dev_web_56     | web56                              | PHP 5.5     | 10.5.0.2   | 9070       |
-| dev_web_56     | web55                              | PHP 5.6     | 10.5.0.3   | 9071       |
-| dev_web_71     | web55                              | PHP 7.1     | 10.5.0.4   | 9072       |
-| dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.0.5   | 3306       |
-| dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.0.6   | 3306       |
-| dev_mariadb_101| db10                               | MariaDB 10.1| 10.5.0.7   | 3306       |
-| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.8   | 9090       |
+| Container Name  | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
+|-----------------|------------------------------------|-------------|------------|------------|
+| dev_web         | web                                | PHP 5.6     | 10.5.0.2   | 443        |
+| dev_mysql       | db                                 | MySQL 5.5   | 10.5.0.3   | 3306       |
+| dev_phpmyadmin  | phpmyadmin                         | phpMyAdmin  | 10.5.0.4   | 9090       |
 
 ## Install orangehrm eagle-core inside the container
 1. Get a checkout from svn to ohrm_dev directory (`svn checkout https://repos.orangehrm.com/enterprise/branch/eagle-core/`).
 2. To get the named virtual hosts to work, add the project folder name to /etc/hosts file (`127.0.0.1 folderName`).
-3. access from your browser (`https://folderName`). If you have changed the default port configuration in dev_web container then you can access using `htttps://folderName:portNumber`
+3. access from your browser (`https://folderName`). If you have changed the default port configuration in dev_web container then you can access using `htttps://folderName`
 4. Continue installation by installing system as normal way. (you can have access to inside of dev_web_56 container by running the command `docker exec -it dev_web_56 bash`)
 
 ## Default configurations
 Developer can override the default configurations if they want by simply adding a docker-compose.override.yml file.It is better to have some knowledge on docker-compose file. ([docker-compose file reference](https://docs.docker.com/compose/compose-file/))
-### Default configurations in dev_web_56 container
+### Default configurations in dev_web container
 ```
 ports:
   - "443:443"

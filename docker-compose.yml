@@ -1,151 +1,46 @@
 version: '2'
 services:
-  web55:
-    image: orangehrm/orangehrm-environment-images:dev-5.5
-    ports:
-      - "9070:443"
-    volumes:
-      - ./html:/var/www/html
-      - ./config/web55/php/php.ini:/usr/local/etc/php/php.ini
-      - ./config/web55/mysql-client:/etc/mysql
-      - ./config/web55/apache2/sites-available:/etc/apache2/sites-available
-      - ./config/web55/apache2/cert:/etc/apache2/cert
-      - ./logs/apache_logs/web55:/var/log/apache2
-      - /etc/localtime:/etc/localtime
-    links:
-      - db55
-      - db57
-      - phpmyadmin
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.2
-    restart: always
-    container_name: dev_web_55
-
-  web56:
+  web:
     image: orangehrm/orangehrm-environment-images:dev-5.6
     ports:
-      - "9071:443"
+      - "443:443"
     volumes:
       - ./html:/var/www/html
-      - ./config/web56/php/php.ini:/usr/local/etc/php/php.ini
-      - ./config/web56/mysql-client:/etc/mysql
-      - ./config/web56/apache2/sites-available:/etc/apache2/sites-available
-      - ./config/web56/apache2/cert:/etc/apache2/cert
-      - ./logs/apache_logs/web56:/var/log/apache2
+      - ./config/php5/php.ini:/usr/local/etc/php/php.ini
+      - ./config/mysql-client:/etc/mysql
+      - ./config/apache2/sites-available:/etc/apache2/sites-available
+      - ./config/apache2/cert:/etc/apache2/cert
+      - ./logs/ubuntu_logs:/var/log/apache2
       - /etc/localtime:/etc/localtime
     links:
-      - db55
-      - db57
-      - db101
-      - phpmyadmin
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.3
+      - db
     restart: always
-    container_name: dev_web_56
+    hostname: orangehrm-prod-web
+    container_name: prod_web
 
-  web71:
-    image: orangehrm/orangehrm-environment-images:dev-7.1
-    ports:
-      - "9072:443"
-    volumes:
-      - ./html:/var/www/html
-      - ./config/web71/php/php.ini:/usr/local/etc/php/php.ini
-      - ./config/web71/mysql-client:/etc/mysql
-      - ./config/web71/apache2/sites-available:/etc/apache2/sites-available
-      - ./config/web71/apache2/cert:/etc/apache2/cert
-      - ./logs/apache_logs/web71:/var/log/apache2
-      - /etc/localtime:/etc/localtime
-    links:
-      - db55
-      - db57
-      - db101
-      - phpmyadmin
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.4
-    restart: always
-    container_name: dev_web_71
-
-  db55:
+  db:
     image: mysql:5.5
     expose:
       - "3306"
     volumes:
-      - ./config/db55:/etc/mysql
-      - ./logs/mysql_logs/db55:/var/log
+      - ./config/mysql-server:/etc/mysql
+      - ./logs/mysql_logs:/var/log
       - /etc/localtime:/etc/localtime
-      - mysql55:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.5
     restart: always
-    container_name: dev_mysql_55
-
-  db57:
-    image: mysql:5.7
-    expose:
-      - "3306"
-    volumes:
-      - ./config/db57:/etc/mysql
-      - ./logs/mysql_logs/db57:/var/log
-      - /etc/localtime:/etc/localtime
-      - mysql57:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.6
-    restart: always
-    container_name: dev_mysql_57
-
-  db101:
-    image: mariadb:10.1
-    expose:
-      - "3306"
-    volumes:
-      - ./config/db101:/etc/mysql
-      - ./logs/mariadb_logs/db101:/var/log
-      - /etc/localtime:/etc/localtime
-      - mariadb101:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.7
-    restart: always
-    container_name: dev_mariadb_101
+    hostname: orangehrm-prod-db
+    container_name: prod_mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     volumes:
       - /etc/localtime:/etc/localtime
     links:
-      - db55
-      - db57
-      - db101
+      - db
     ports:
-      - "9092:80"
+      - "9090:80"
     environment:
-      PMA_HOSTS: db55,db57,db101
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.8
+      PMA_HOST: db
     restart: always
-    container_name: dev_phpmyadmin
-
-volumes:
-  mysql55:
-  mysql57:
-  mariadb101:
-
-networks:
-  ohrmdevnet:
-    driver: bridge
-    ipam:
-     config:
-       - subnet: 10.5.0.0/16
-         gateway: 10.5.0.1
+    container_name: prod_phpmyadmin
