@@ -3,158 +3,87 @@
 
 class WebContainer55Cest
 {
-    public function _before(FunctionalTester $I)
+    public function _before(UnitTester $I)
     {
     }
 
-    public function _after(FunctionalTester $I)
+    public function _after(UnitTester $I)
     {
     }
 
 
-    public function checkContainerIsRunning(AcceptanceTester $I){
+    public function checkContainerIsRunning(UnitTester $I){
         $I->wantTo("verify ubuntu container up and running");
-        $I->runShellCommand("docker inspect -f {{.State.Running}} qa_web_55");
+        $I->runShellCommand("docker inspect -f {{.State.Running}} dev_web_55");
         $I->seeInShellOutput("true");
     }
 
-    public function checkApacheInstallation(AcceptanceTester $I){
-        $I->wantTo("verify apache is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 apache2 -v");
-        $I->seeInShellOutput('Server version: Apache/2.4.10');
-    }
-
-    public function checkApacheServiceIsRunning(AcceptanceTester $I){
-        $I->wantTo("verify apache is up and running in the container");
-        $I->runShellCommand("docker exec qa_web_55 service apache2 status");
-        $I->seeInShellOutput('apache2 is running');
-    }
-
-    public function checkCronServiceIsRunning(AcceptanceTester $I){
-        $I->wantTo("verify cron is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 apt list --installed | grep cron");
-        $I->seeInShellOutput('cron/now 3.0');
-    }
-
-    public function checkMySQLClientInstallation(AcceptanceTester $I){
-        $I->wantTo("verify mysql-client is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 apt list --installed | grep mysql-client");
-        $I->seeInShellOutput('mysql-client/now 5.5');
-    }
-
-    public function checkLibreOfficeInstallation(AcceptanceTester $I){
-        $I->wantTo("verify LibreOffice is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 libreoffice --version");
-        $I->seeInShellOutput('LibreOffice 4.3.3.2');
-    }
-
-
-    public function checkPopplerUtilInstallation(AcceptanceTester $I){
-        $I->wantTo("verify poppler-util is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 apt list --installed | grep poppler-util");
-        $I->seeInShellOutput('poppler-util');
-    }
-
-    public function checkZipInstallation(AcceptanceTester $I){
-        $I->wantTo("verify zip library is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 zip -v");
-        $I->seeInShellOutput('Zip 3');
-    }
-
-    public function checkUnzipIsInstallation(AcceptanceTester $I){
-        $I->wantTo("verify UnZip library is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 unzip -v");
-        $I->seeInShellOutput('UnZip 6');
-    }
-
-    public function checkPHPUnitVersion(AcceptanceTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 phpunit --version");
-        $I->seeInShellOutput('PHPUnit 3.7.28');
-    }
-
-    public function checkGitInstallation(AcceptanceTester $I){
-        $I->wantTo("verify git is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 git --version");
-        $I->seeInShellOutput('git version 2.1.4');
-    }
-
-    public function checkCurlInstallation(AcceptanceTester $I){
-        $I->wantTo("verify curl is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 curl --version");
-        $I->seeInShellOutput('curl 7.38');
-    }
-
-    public function checkPHPVersion(AcceptanceTester $I){
+    public function checkPHPVersion(UnitTester $I){
         $I->wantTo("verify php 5.5 is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 php --version");
+        $I->runShellCommand("docker exec dev_web_55 php --version");
         $I->seeInShellOutput('PHP 5.5');
     }
 
-    public function checkNodeVersion(AcceptanceTester $I){
+    public function checkApacheServiceIsRunning(UnitTester $I){
+        $I->wantTo("verify apache is up and running in the container");
+        $I->runShellCommand("docker exec dev_web_55 service apache2 status");
+        $I->seeInShellOutput('apache2 is running');
+    }
+
+    public function checkCronServiceIsRunning(UnitTester $I){
+        $I->wantTo("verify cron is installed in the container");
+        $I->runShellCommand("docker exec dev_web_55 apt list --installed | grep cron");
+        $I->seeInShellOutput('cron/now 3.0');
+    }
+
+    public function checkMemcacheServiceIsRunning(UnitTester $I){
+        $I->wantTo("verify apache is up and running in the container");
+        $I->runShellCommand("docker exec uat_web service supervisor status");
+        $I->seeInShellOutput('supervisord is running');
+    }
+
+    public function checkPHPUnitVersion(UnitTester $I){
+        $I->wantTo("verify phpunit library is installed in the container");
+        $I->runShellCommand("docker exec dev_web_55 phpunit --version");
+        $I->seeInShellOutput('PHPUnit 3.7.28');
+    }
+
+    public function checkGitInstallation(UnitTester $I){
+        $I->wantTo("verify git is installed in the container");
+        $I->runShellCommand("docker exec dev_web_55 git --version");
+        $I->seeInShellOutput('git version 2.1.4');
+    }
+
+    public function checkCurlInstallation(UnitTester $I){
+        $I->wantTo("verify curl is installed in the container");
+        $I->runShellCommand("docker exec dev_web_55 curl --version");
+        $I->seeInShellOutput('curl 7.38');
+    }
+
+
+    public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v4 is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 node -v");
+        $I->runShellCommand("docker exec dev_web_55 node -v");
         $I->seeInShellOutput('v4');
     }
 
-    public function checkNPMVersion(AcceptanceTester $I){
+    public function checkNPMVersion(UnitTester $I){
         $I->wantTo("verify npm is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 npm --version");
+        $I->runShellCommand("docker exec dev_web_55 npm --version");
         $I->seeInShellOutput("2");
     }
 
-    public function checkNodemonInstallation(AcceptanceTester $I){
+    public function checkNodemonInstallation(UnitTester $I){
         $I->wantTo("verify nodemon is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 nodemon");
+        $I->runShellCommand("docker exec dev_web_55 nodemon");
         $I->seeInShellOutput('Usage: nodemon');
     }
 
-    public function checkBowerVersion(AcceptanceTester $I){
+    public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
-        $I->runShellCommand("docker exec qa_web_55 bower --version");
+        $I->runShellCommand("docker exec dev_web_55 bower --version");
         $I->seeInShellOutput('1');
     }
 
-    public function checkPHPModules(AcceptanceTester $I){
-            $I->wantTo("verify required php modules are available");
-            $I->runShellCommand("docker exec qa_web_55 php -m");
-            $I->seeInShellOutput('bcmath');
-            $I->seeInShellOutput('calendar');
-            $I->seeInShellOutput('Core');
-            $I->seeInShellOutput('ctype');
-            $I->seeInShellOutput('curl');
-            $I->seeInShellOutput('date');
-            $I->seeInShellOutput('dom');
-            $I->seeInShellOutput('ereg');
-            $I->seeInShellOutput('exif');
-            $I->seeInShellOutput('fileinfo');
-            $I->seeInShellOutput('filter');
-            $I->seeInShellOutput('gd');
-            $I->seeInShellOutput('gettext');
-            $I->seeInShellOutput('hash');
-            $I->seeInShellOutput('iconv');
-            $I->seeInShellOutput('json');
-            $I->seeInShellOutput('ldap');
-            $I->seeInShellOutput('libxml');
-            $I->seeInShellOutput('mbstring');
-            $I->seeInShellOutput('mysql');
-            $I->seeInShellOutput('mysqli');
-            $I->seeInShellOutput('mysqlnd');
-            $I->seeInShellOutput('PDO');
-            $I->seeInShellOutput('pdo_mysql');
-            $I->seeInShellOutput('pdo_sqlite');
-            $I->seeInShellOutput('Phar');
-            $I->seeInShellOutput('posix');
-            $I->seeInShellOutput('readline');
-            $I->seeInShellOutput('Reflection');
-            $I->seeInShellOutput('session');
-            $I->seeInShellOutput('SimpleXML');
-            $I->seeInShellOutput('ssh2');
-            $I->seeInShellOutput('stats');
-            $I->seeInShellOutput('xdebug');
-            $I->seeInShellOutput('xml');
-            $I->seeInShellOutput('zip');
-            $I->seeInShellOutput('zlib');
-    }
 
 }
