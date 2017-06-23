@@ -1,87 +1,122 @@
 version: '2'
 services:
-  web56:
-    image: orangehrm/orangehrm-environment-images:dev-5.6
-    ports:
-      - "9443:443"
-    volumes:
-      - ./ohrm_dev:/var/www/html
-      - ./config/php/php.ini:/usr/local/etc/php/php56.ini
-      - ./config/mysql-client:/etc/mysql
-      - ./config/apache2/sites-available:/etc/apache2/sites-available
-      - ./config/apache2/cert:/etc/apache2/cert
-      - ./logs/web_logs/55:/var/log/apache2
-      - /etc/localtime:/etc/localtime
-      - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
-    links:
-      - db
-      - phpmyadmin
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.2
-    restart: always
-    container_name: dev_web_56
   web55:
     image: orangehrm/orangehrm-environment-images:dev-5.5
     ports:
-      - "8443:443"
+      - "9070:443"
     volumes:
-      - ./ohrm_dev:/var/www/html
-      - ./config/php/php.ini:/usr/local/etc/php/php55.ini
-      - ./config/mysql-client:/etc/mysql
-      - ./config/apache2/sites-available:/etc/apache2/sites-available
-      - ./config/apache2/cert:/etc/apache2/cert
-      - ./logs/web_logs/56:/var/log/apache2
+      - ./html:/var/www/html
+      - ./config/web55/php/php.ini:/usr/local/etc/php/php.ini
+      - ./config/web55/mysql-client:/etc/mysql
+      - ./config/web55/apache2/sites-available:/etc/apache2/sites-available
+      - ./config/web55/apache2/cert:/etc/apache2/cert
+      - ./logs/apache_logs/web55:/var/log/apache2
       - /etc/localtime:/etc/localtime
-      - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
     links:
-      - db
+      - db55
+      - db57
       - phpmyadmin
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.5
     restart: always
     container_name: dev_web_55
-  db:
+
+  web56:
+    image: orangehrm/orangehrm-environment-images:dev-5.6
+    ports:
+      - "9071:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./config/web56/php/php.ini:/usr/local/etc/php/php.ini
+      - ./config/web56/mysql-client:/etc/mysql
+      - ./config/web56/apache2/sites-available:/etc/apache2/sites-available
+      - ./config/web56/apache2/cert:/etc/apache2/cert
+      - ./logs/apache_logs/web56:/var/log/apache2
+      - /etc/localtime:/etc/localtime
+    links:
+      - db55
+      - db57
+      - db101
+      - phpmyadmin
+    restart: always
+    container_name: dev_web_56
+
+  web71:
+    image: orangehrm/orangehrm-environment-images:dev-7.1
+    ports:
+      - "9072:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./config/web71/php/php.ini:/usr/local/etc/php/php.ini
+      - ./config/web71/mysql-client:/etc/mysql
+      - ./config/web71/apache2/sites-available:/etc/apache2/sites-available
+      - ./config/web71/apache2/cert:/etc/apache2/cert
+      - ./logs/apache_logs/web71:/var/log/apache2
+      - /etc/localtime:/etc/localtime
+    links:
+      - db55
+      - db57
+      - db101
+      - phpmyadmin
+    restart: always
+    container_name: dev_web_71
+
+  db55:
     image: mysql:5.5
     expose:
       - "3306"
     volumes:
-      - ./config/mysql-server:/etc/mysql
-      - ./logs/mysql_logs:/var/log
+      - ./config/db55:/etc/mysql
+      - ./logs/mysql_logs/db55:/var/log
       - /etc/localtime:/etc/localtime
-      - mysql:/var/lib/mysql
+      - mysql55:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.3
     restart: always
-    container_name: dev_mysql
+    container_name: dev_mysql_55
+
+  db57:
+    image: mysql:5.7
+    expose:
+      - "3306"
+    volumes:
+      - ./config/db57:/etc/mysql
+      - ./logs/mysql_logs/db57:/var/log
+      - /etc/localtime:/etc/localtime
+      - mysql57:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    restart: always
+    container_name: dev_mysql_57
+
+  db101:
+    image: mariadb:10.1
+    expose:
+      - "3306"
+    volumes:
+      - ./config/db101:/etc/mysql
+      - ./logs/mariadb_logs/db101:/var/log
+      - /etc/localtime:/etc/localtime
+      - mariadb101:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    restart: always
+    container_name: dev_mariadb_101
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     volumes:
       - /etc/localtime:/etc/localtime
     links:
-      - db
+      - db55
+      - db57
+      - db101
     ports:
-      - "9595:80"
+      - "9092:80"
     environment:
-      PMA_HOST: db
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.4
+      PMA_HOSTS: db55,db57,db101
     restart: always
     container_name: dev_phpmyadmin
 
 volumes:
-  mysql:
-
-networks:
-  ohrmdevnet:
-    driver: bridge
-    ipam:
-     config:
-       - subnet: 10.5.0.0/16
-         gateway: 10.5.0.1
+  mysql55:
+  mysql57:
+  mariadb101:
