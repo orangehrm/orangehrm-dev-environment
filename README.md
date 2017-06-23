@@ -29,8 +29,10 @@ Make sure mentioned prerequisites are there in your host machine.
 | dev_web_56     | web56                              | PHP 5.5     | 10.5.0.2   | 9070       |
 | dev_web_56     | web55                              | PHP 5.6     | 10.5.0.3   | 9071       |
 | dev_web_71     | web55                              | PHP 7.1     | 10.5.0.4   | 9072       |
-| dev_mysql      | db                                 | MySQL 5.5   | 10.5.0.3   | 3306       |
-| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.4   | 9090       |
+| dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.0.5   | 3306       |
+| dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.0.6   | 3306       |
+| dev_mariadb_101| db10                               | MariaDB 10.1| 10.5.0.7   | 3306       |
+| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.8   | 9090       |
 
 ## Install orangehrm eagle-core inside the container
 1. Get a checkout from svn to ohrm_dev directory (`svn checkout https://repos.orangehrm.com/enterprise/branch/eagle-core/`).
