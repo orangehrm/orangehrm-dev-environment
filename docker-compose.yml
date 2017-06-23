@@ -6,7 +6,7 @@ services:
       - "443:443"
     volumes:
       - ./html:/var/www/html
-      - ./config/php5/php.ini:/usr/local/etc/php/php.ini
+      - ./config/php/php.ini:/usr/local/etc/php/php.ini
       - ./config/mysql-client:/etc/mysql
       - ./config/apache2/sites-available:/etc/apache2/sites-available
       - ./config/apache2/cert:/etc/apache2/cert
