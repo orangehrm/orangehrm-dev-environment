@@ -3,7 +3,7 @@ services:
   web:
     image: orangehrm/orangehrm-environment-images:dev-7.1
     ports:
-      - "443:443"
+      - "9443:443"
     volumes:
       - ./html:/var/www/html
       - ./config/php/php.ini:/usr/local/etc/php/php.ini

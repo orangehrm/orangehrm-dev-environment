@@ -5,7 +5,7 @@ LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 
 # Our user in the container
 USER root
-WORKDIR /var/www/
+WORKDIR /var/www/html/
 
 # Enable apache mods.
 RUN a2enmod  vhost_alias
