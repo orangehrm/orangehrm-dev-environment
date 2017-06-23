@@ -50,4 +50,8 @@ RUN pear channel-discover pear.phing.info && \
     pear install VersionControl_SVN-alpha && \
     pear install phing/phing-2.6.1
 
-ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+# Add supervisor conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Docker startup
+CMD ["/usr/bin/supervisord"]
