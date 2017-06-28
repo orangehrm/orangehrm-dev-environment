@@ -119,6 +119,24 @@ services:
     restart: always
     container_name: dev_mariadb_101
 
+  db11:
+    image: orangehrm/docker-oracle-database
+    expose:
+      - "1521"
+      - "22"
+    volumes:
+      - ./logs/oracle_logs/db11:/var/log
+      - /etc/localtime:/etc/localtime
+      - oracle11:/u01/app/oracle/oradata
+    environment:
+      ORACLE_ALLOW_REMOTE: "true"
+      ORACLE_PWD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.8
+    restart: always
+    container_name: dev_oracle_11
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     volumes:
@@ -133,7 +151,7 @@ services:
       PMA_HOSTS: db55,db57,db101
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.8
+        ipv4_address: 10.5.0.20
     restart: always
     container_name: dev_phpmyadmin
 
@@ -141,6 +159,7 @@ volumes:
   mysql55:
   mysql57:
   mariadb101:
+  oracle11:
 
 networks:
   ohrmdevnet:
