@@ -29,4 +29,10 @@ class WebContainer56Cest
         $I->runShellCommand("docker exec dev_web_56 ping db101 -c 2");
         $I->seeInShellOutput('2 packets transmitted, 2 packets received');
     }
+
+    public function checkConnectionWithDB11(FunctionalTester $I){
+        $I->wantTo("verify Oracle 11.2 container is linked with php 5.6 container properly");
+        $I->runShellCommand("docker exec dev_web_56 ping db11 -c 2");
+        $I->seeInShellOutput('2 packets transmitted, 2 packets received');
+    }
 }
