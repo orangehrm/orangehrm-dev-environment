@@ -120,7 +120,7 @@ services:
     container_name: dev_mariadb_101
 
   db11:
-    image: orangehrm/docker-oracle-database
+    image: orangehrm/oracle-xe-11g
     expose:
       - "1521"
       - "22"
@@ -130,7 +130,6 @@ services:
       - oracle11:/u01/app/oracle/oradata
     environment:
       ORACLE_ALLOW_REMOTE: "true"
-      ORACLE_PWD: 1234
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.8
