@@ -103,7 +103,4 @@ More about phpmyadmin container can find in docker hub [phpmyadmin image](https:
 3. Can stop containers using `docker-compose stop`
 2. Developer can find log files for each container from _/logs_ directory. ( Also possible to get logs of containers by running the command `docker logs <container ID>`)
 3. Developer can find configurations for apache, php, mysql-client, mysql-server, etc from _/config directory.
-4. If user is using Linux, the docker commands may require sudo permissions. This can be fixed by adding the user to the docker user group.
-```
-sudo usermod -aG docker <username>
-```
+4. If user is using Linux, the docker commands may require sudo permissions. This can be fixed by adding the user to the docker user group.`sudo usermod -aG docker <username>`
