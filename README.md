@@ -8,7 +8,7 @@ This environment will depends on containers of [orangehrm-dev-image](https://hub
 ## Prerequisites
 - Docker engine installed.([Get docker](https://docs.docker.com/engine/installation/))
 - Minimum docker version 17.3
-- Minimum docker-compose version 1.12
+- Minimum docker-compose version 1.12. ([Get docker compose](https://docs.docker.com/compose/install/))
 
 
 ## How to use ?
@@ -103,3 +103,7 @@ More about phpmyadmin container can find in docker hub [phpmyadmin image](https:
 3. Can stop containers using `docker-compose stop`
 2. Developer can find log files for each container from _/logs_ directory. ( Also possible to get logs of containers by running the command `docker logs <container ID>`)
 3. Developer can find configurations for apache, php, mysql-client, mysql-server, etc from _/config directory.
+4. If user is using Linux, the docker commands may require sudo permissions. This can be fixed by adding the user to the docker user group.
+```
+sudo usermod -aG docker <username>
+```
