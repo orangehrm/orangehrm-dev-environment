@@ -53,12 +53,6 @@ class WebContainerCest
         $I->runShellCommand("docker exec dev_web phpunit --version");
         $I->seeInShellOutput('PHPUnit 3.7.28');
     }
-
-    public function checkGitInstallation(UnitTester $I){
-        $I->wantTo("verify git is installed in the container");
-        $I->runShellCommand("docker exec dev_web git --version");
-        $I->seeInShellOutput('git version 2.1.4');
-    }
     
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
