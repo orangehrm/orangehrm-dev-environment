@@ -71,6 +71,7 @@ class WebContainerCest
         $I->runShellCommand("docker exec dev_web curl --version");
         $I->seeInShellOutput('curl 7.38');
     }
+    
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify nano is installed in the container");
         $I->runShellCommand("docker exec dev_web nano --version");
