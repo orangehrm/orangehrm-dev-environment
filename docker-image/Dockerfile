@@ -24,7 +24,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   curl \
   git \
   subversion \
-  vim 
+  vim \
+  nano
 
 
 # Enable and configure xdebug
