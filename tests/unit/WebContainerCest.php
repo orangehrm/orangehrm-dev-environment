@@ -59,11 +59,22 @@ class WebContainerCest
         $I->runShellCommand("docker exec dev_web git --version");
         $I->seeInShellOutput('git version 2.1.4');
     }
+    
+    public function checkGitInstallation(UnitTester $I){
+        $I->wantTo("verify git is installed in the container");
+        $I->runShellCommand("docker exec dev_web git --version");
+        $I->seeInShellOutput('git version 2.1.4');
+    }
 
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web curl --version");
         $I->seeInShellOutput('curl 7.38');
+    }
+    public function checkCurlInstallation(UnitTester $I){
+        $I->wantTo("verify nano is installed in the container");
+        $I->runShellCommand("docker exec dev_web nano --version");
+        $I->seeInShellOutput('nano, version 2.5.3');
     }
 
 
