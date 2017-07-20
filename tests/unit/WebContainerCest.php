@@ -69,7 +69,7 @@ class WebContainerCest
     public function checkNanoInstallation(UnitTester $I){
         $I->wantTo("verify nano is installed in the container");
         $I->runShellCommand("docker exec dev_web nano --version");
-        $I->seeInShellOutput('nano, version 2.5.3');
+        $I->seeInShellOutput('nano version 2.2.6');
     }
 
 
