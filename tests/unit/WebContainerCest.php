@@ -72,6 +72,12 @@ class WebContainerCest
         $I->runShellCommand("docker exec dev_web node -v");
         $I->seeInShellOutput('v4');
     }
+    
+    public function checkNanoInstallation(UnitTester $I){
+        $I->wantTo("verify nano is installed in the container");
+        $I->runShellCommand("docker exec dev_web nano --version");
+        $I->seeInShellOutput('nano version 2.2.6');
+    }
 
     public function checkNPMVersion(UnitTester $I){
         $I->wantTo("verify npm is installed in the container");
