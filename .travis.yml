@@ -2,6 +2,7 @@ language: php
 sudo: required
 
 env:
+  matrix:
   - TEST_SUITE=unit
   - TEST_SUITE=functional
   - TEST_SUITE=acceptance
