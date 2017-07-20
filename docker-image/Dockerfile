@@ -27,7 +27,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
   libssl-dev \
   poppler-utils \
   subversion \
-  vim
+  vim \
+  nano
 
 
 # Enable and configure xdebug
