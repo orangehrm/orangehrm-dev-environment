@@ -1,19 +1,16 @@
 language: php
 sudo: required
-matrix:
-    include:
-        - os: linux
-          dist: trusty 
+dist: trusty 
 
 stage: test
 env:
   global:
-    - REPO=orangehrm/orangehrm-environment-images
-    - TAG=dev-5.6
+  - REPO=orangehrm/orangehrm-environment-images
+  - TAG=dev-5.6
   matrix:
-    - TEST_SUITE=unit
-    - TEST_SUITE=functional
-    - TEST_SUITE=acceptance
+  - TEST=unit
+  - TEST=functional
+  - TEST=acceptance
 services:
   - docker
 
@@ -33,12 +30,14 @@ install:
   - composer install
   - docker-compose up -d
 
-script: php vendor/bin/codecept run $TEST_SUITE
+script: php vendor/bin/codecept run $TEST
 
 jobs:
   include:
     - stage: push to dockerhub
       env:
-      script:
+      script: skip
+      after_script:
         - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-        - docker push $REPO:$TAG     
+        - docker push $REPO:$TAG  
+           
