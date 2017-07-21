@@ -1,16 +1,19 @@
 language: php
 sudo: required
-
-env:
-  - TEST_SUITE=unit
-  - TEST_SUITE=functional
-  - TEST_SUITE=acceptance
-  
-
 matrix:
     include:
         - os: linux
-          dist: trusty          
+          dist: trusty 
+
+stage: test
+env:
+  global:
+    - REPO=orangehrm/orangehrm-environment-images
+    - TAG=dev-5.6
+  matrix:
+    - TEST_SUITE=unit
+    - TEST_SUITE=functional
+    - TEST_SUITE=acceptance
 services:
   - docker
 
@@ -36,8 +39,6 @@ jobs:
     - stage: push to dockerhub
       env: 
         - TEST_SUITE=none
-        - REPO=orangehrm/orangehrm-environment-images
-        - TAG=dev-5.6
       script:
         - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
         - docker push $REPO:$TAG     
