@@ -3,12 +3,14 @@ sudo: required
 
 
 env:
-- TEST_SUITE=unit
-- TEST_SUITE=functional
-- TEST_SUITE=acceptance
   global:
   - REPO=orangehrm/orangehrm-environment-images
   - TAG=dev-5.6
+  matrix:
+  - TEST_SUITE=unit
+  - TEST_SUITE=functional
+  - TEST_SUITE=acceptance
+  
 
 matrix:
     include:
