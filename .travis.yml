@@ -5,47 +5,39 @@ env:
   - TEST_SUITE=unit
   - TEST_SUITE=functional
   - TEST_SUITE=acceptance
-services:
-        - docker  
-        
+  
+
 matrix:
-  include:
-    - os: linux
-      dist: trusty   
+    include:
+        - os: linux
+          dist: trusty          
+services:
+  - docker
+
+cache:
+    directories:
+        - vendor
+        - $HOME/.composer/cache
+
+before_install:
+  - uname -a
+  - php --version
+  - docker version
+  - composer self-update
+  - docker build -t $REPO:$TAG docker-image
+
+install:
+  - composer install
+  - docker-compose up -d
+
+script: php vendor/bin/codecept run $TEST_SUITE
 jobs:
   include:
-    - stage: test
-      cache:
-        directories:
-          - vendor
-          - $HOME/.composer/cache
-      before_install:
-        - uname -a
-        - php --version
-        - docker version
-        - composer self-update
-        - docker build -t $REPO:$TAG docker-image
-         
-      install:
-        - composer install
-        - docker-compose up -d
-      script: php vendor/bin/codecept run $TEST_SUITE
-      
     - stage: push to dockerhub
       env: 
         - TEST_SUITE=none
         - REPO=orangehrm/orangehrm-environment-images
         - TAG=dev-5.6
-      services:
-        - docker
-      before_install:
-        - uname -a
-        - php --version
-        - docker version
-        - composer self-update
-        - docker build -t $REPO:$TAG docker-image
-      install: skip
       script:
         - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
         - docker push $REPO:$TAG     
-
