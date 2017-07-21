@@ -35,8 +35,10 @@ install:
 
 script: php vendor/bin/codecept run $TEST_SUITE
 
-stage: push to dockerhub
-
-script:
-  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker push $REPO:$TAG     
+jobs:
+  include:
+    - stage: push to dockerhub
+      env:
+      script:
+        - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+        - docker push $REPO:$TAG     
