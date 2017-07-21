@@ -18,6 +18,7 @@ class DevEnvironmentCest
 
     public function devWebTest(AcceptanceTester $I){
         $I->wantTo("verify dev environment is working properly with a php application");
+        $I->runShellCommand("ping -c 30 localhost");
         $I->runShellCommand("docker exec dev_web php /var/www/html/php-simple/app.php");
         $I->cantSeeInShellOutput("false");
     }
