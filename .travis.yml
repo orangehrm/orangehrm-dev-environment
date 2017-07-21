@@ -2,13 +2,9 @@ language: php
 sudo: required
 
 env:
-  global:
-    - REPO=orangehrm/orangehrm-environment-images
-    - TAG=dev-5.6
-  matrix:
-    - TEST_SUITE=unit
-    - TEST_SUITE=functional
-    - TEST_SUITE=acceptance
+  - TEST_SUITE=unit
+  - TEST_SUITE=functional
+  - TEST_SUITE=acceptance
 services:
         - docker  
         
@@ -36,7 +32,10 @@ jobs:
       script: php vendor/bin/codecept run $TEST_SUITE
       
     - stage: push to dockerhub
-      env: TEST_SUITE=none
+      env: 
+        - TEST_SUITE=none
+        - REPO=orangehrm/orangehrm-environment-images
+        - TAG=dev-5.6
       services:
         - docker
       before_install:
