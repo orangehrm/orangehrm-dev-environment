@@ -5,22 +5,20 @@ env:
   global:
     - REPO=orangehrm/orangehrm-environment-images
     - TAG=dev-5.6
-    
-  
-
+  matrix:
+    - TEST_SUITE=unit
+    - TEST_SUITE=functional
+    - TEST_SUITE=acceptance
+services:
+        - docker  
+        
+matrix:
+  include:
+    - os: linux
+      dist: trusty   
 jobs:
   include:
     - stage: test
-      matrix:
-        include:
-          - os: linux
-            dist: trusty  
-      services:
-        - docker
-      env:
-        - TEST_SUITE=unit
-        - TEST_SUITE=functional
-        - TEST_SUITE=acceptance
       cache:
         directories:
           - vendor
