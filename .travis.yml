@@ -2,7 +2,6 @@ language: php
 sudo: required
 
 env:
-  matrix:
   - TEST_SUITE=unit
   - TEST_SUITE=functional
   - TEST_SUITE=acceptance
@@ -33,12 +32,13 @@ install:
   - composer install
   - docker-compose up -d
 
-script:
-      - php vendor/bin/codecept run $TEST_SUITE
+script: php vendor/bin/codecept run $TEST_SUITE
 
 jobs:
   include:
     - stage: Push to dockerhub
+      env: TEST_SUITE=none
+      install: skip
       script:
       - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
       - docker push $REPO:$TAG     
