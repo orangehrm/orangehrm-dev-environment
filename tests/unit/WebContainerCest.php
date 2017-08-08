@@ -48,11 +48,11 @@ class WebContainerCest
         $I->seeInShellOutput('/usr/bin/memcached');
     }
 
-    public function checkPHPUnitVersion(UnitTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec dev_web phpunit --version");
-        $I->seeInShellOutput('PHPUnit 5.7.21');
-    }
+//    public function checkPHPUnitVersion(UnitTester $I){
+//        $I->wantTo("verify phpunit library is installed in the container");
+//        $I->runShellCommand("docker exec dev_web phpunit --version");
+//        $I->seeInShellOutput('PHPUnit 5.7.21');
+//    }
     
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
