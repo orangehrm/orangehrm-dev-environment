@@ -21,7 +21,7 @@ class WebContainer70Cest
     public function checkPHPVersion(UnitTester $I){
         $I->wantTo("verify php 7.0 is installed in the container");
         $I->runShellCommand("docker exec dev_web_70 php --version");
-        $I->seeInShellOutput('PHP 7.0');
+        $I->seeInShellOutput('PHP 7.0.22');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
@@ -33,7 +33,7 @@ class WebContainer70Cest
     public function checkCronServiceIsRunning(UnitTester $I){
         $I->wantTo("verify cron is installed in the container");
         $I->runShellCommand("docker exec dev_web_70 apt list --installed | grep cron");
-        $I->seeInShellOutput('cron/now 3.0');
+        $I->seeInShellOutput('cron/now 3.0pl1-127+deb8u1');
     }
 
     public function checkMemcacheServiceIsRunning(UnitTester $I){
