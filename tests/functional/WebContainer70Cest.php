@@ -1,7 +1,7 @@
 <?php
 
 
-class WebContainer71Cest
+class WebContainer70Cest
 {
     public function _before(FunctionalTester $I)
     {

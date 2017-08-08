@@ -26,7 +26,7 @@ Make sure mentioned prerequisites are there in your host machine.
 
 | Container Name | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
 |----------------|------------------------------------|-------------|------------|------------|
-| dev_web_55     | web55                              | PHP 5.5     | 10.5.0.2   | 9070       |
+| dev_web_70     | web70                              | PHP 7.0     | 10.5.0.2   | 9073       |
 | dev_web_56     | web56                              | PHP 5.6     | 10.5.0.3   | 9071       |
 | dev_web_71     | web71                              | PHP 7.1     | 10.5.0.4   | 9072       |
 | dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.0.5   | 3306       |
@@ -104,3 +104,4 @@ More about phpmyadmin container can find in docker hub [phpmyadmin image](https:
 2. Developer can find log files for each container from _/logs_ directory. ( Also possible to get logs of containers by running the command `docker logs <container ID>`)
 3. Developer can find configurations for apache, php, mysql-client, mysql-server, etc from _/config directory.
 4. If user is using Linux, the docker commands may require sudo permissions. This can be fixed by adding the user to the docker user group.`sudo usermod -aG docker <username>`
+5. web 7.0 container doesn't include memcache,ereg and stats PHP modules due to compatibility issues.
