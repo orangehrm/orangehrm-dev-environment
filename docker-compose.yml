@@ -1,26 +1,26 @@
 version: '2'
 services:
-  web55:
-    image: orangehrm/orangehrm-environment-images:dev-5.5
-    ports:
-      - "9070:443"
-    volumes:
-      - ./html:/var/www/html
-      - ./config/web55/php/php.ini:/usr/local/etc/php/php.ini
-      - ./config/web55/mysql-client:/etc/mysql
-      - ./config/web55/apache2/sites-available:/etc/apache2/sites-available
-      - ./config/web55/apache2/cert:/etc/apache2/cert
-      - ./logs/apache_logs/web55:/var/log/apache2
-      - /etc/localtime:/etc/localtime
-    links:
-      - db55
-      - db57
-      - phpmyadmin
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.2
-    restart: always
-    container_name: dev_web_55
+#  web55:
+#    image: orangehrm/orangehrm-environment-images:dev-5.5
+#    ports:
+#      - "9070:443"
+#    volumes:
+#      - ./html:/var/www/html
+#      - ./config/web55/php/php.ini:/usr/local/etc/php/php.ini
+#      - ./config/web55/mysql-client:/etc/mysql
+#      - ./config/web55/apache2/sites-available:/etc/apache2/sites-available
+#      - ./config/web55/apache2/cert:/etc/apache2/cert
+#      - ./logs/apache_logs/web55:/var/log/apache2
+#      - /etc/localtime:/etc/localtime
+#    links:
+#      - db55
+#      - db57
+#      - phpmyadmin
+#    networks:
+#      ohrmdevnet:
+#        ipv4_address: 10.5.0.2
+#    restart: always
+#    container_name: dev_web_55
 
   web56:
     image: orangehrm/orangehrm-environment-images:dev-5.6
@@ -67,6 +67,29 @@ services:
         ipv4_address: 10.5.0.4
     restart: always
     container_name: dev_web_71
+
+  web70:
+      image: orangehrm/orangehrm-environment-images:dev-7.0
+      ports:
+        - "9073:443"
+      volumes:
+        - ./html:/var/www/html
+        - ./config/web70/php/php.ini:/usr/local/etc/php/php.ini
+        - ./config/web70/mysql-client:/etc/mysql
+        - ./config/web70/apache2/sites-available:/etc/apache2/sites-available
+        - ./config/web70/apache2/cert:/etc/apache2/cert
+        - ./logs/apache_logs/web70:/var/log/apache2
+        - /etc/localtime:/etc/localtime
+      links:
+        - db55
+        - db57
+        - db101
+        - phpmyadmin
+      networks:
+        ohrmdevnet:
+          ipv4_address: 10.5.0.5
+      restart: always
+      container_name: dev_web_70
 
   db55:
     image: mysql:5.5
