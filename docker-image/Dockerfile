@@ -36,7 +36,7 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug && \
   docker-php-ext-enable mongodb
 
 # Tidy up the container
-RUN DEBIAN_FRONTEND=noninteractive apt-get purge libmcrypt-dev libssl-dev -y  && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get purge libssl-dev -y  && \
      DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && apt-get clean && \
      rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
