@@ -46,7 +46,7 @@ COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.
 RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled/
 RUN a2ensite orangehrm.conf
 
-COPY phpunit-3.7.28.phar /usr/bin/phpunit
+COPY phpunit-5.7.21.phar /usr/bin/phpunit
 RUN pear channel-discover pear.phing.info && \
     pear install VersionControl_SVN-alpha && \
     pear install phing/phing-2.6.1
