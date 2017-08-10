@@ -29,11 +29,13 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y  --no-in
 
 
 # Enable and configure xdebug
-RUN pecl install xdebug && docker-php-ext-enable xdebug && \
+RUN apt-get install -y  --no-install-recommends --force-yes libssl-dev && \
+  pecl install xdebug && docker-php-ext-enable xdebug && \
   pecl install mongo && \
   docker-php-ext-enable mongo && \
   pecl install pecl.php.net/xhprof-0.9.4 && \
-  docker-php-ext-enable xhprof
+  docker-php-ext-enable xhprof && \
+  apt-get purge -y --auto-remove libssl-dev
 
 # Tidy up the container
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && apt-get clean && \
@@ -44,7 +46,8 @@ COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.
 RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled/
 RUN a2ensite orangehrm.conf
 
-COPY phpunit-3.7.28.phar /usr/bin/phpunit
+COPY phpunit-3.7.28.phar /usr/bin/phpunit3
+COPY phpunit-5.7.21.phar /usr/bin/phpunit
 RUN pear channel-discover pear.phing.info && \
     pear install VersionControl_SVN-alpha && \
     pear install phing/phing-2.6.1

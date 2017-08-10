@@ -48,12 +48,18 @@ class WebContainerCest
         $I->seeInShellOutput('/usr/bin/memcached');
     }
 
+    public function checkPHPUnit3Version(UnitTester $I){
+        $I->wantTo("verify phpunit library is installed in the container");
+        $I->runShellCommand("docker exec dev_web phpunit3 --version");
+        $I->seeInShellOutput('PHPUnit 3.7.28');
+    }
+
     public function checkPHPUnitVersion(UnitTester $I){
         $I->wantTo("verify phpunit library is installed in the container");
         $I->runShellCommand("docker exec dev_web phpunit --version");
-        $I->seeInShellOutput('PHPUnit 3.7.28');
+        $I->seeInShellOutput('PHPUnit 5.7.21');
     }
-    
+
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
         $I->runShellCommand("docker exec dev_web git --version");
@@ -65,7 +71,7 @@ class WebContainerCest
         $I->runShellCommand("docker exec dev_web curl --version");
         $I->seeInShellOutput('curl 7.38');
     }
-    
+
     public function checkNanoInstallation(UnitTester $I){
         $I->wantTo("verify nano is installed in the container");
         $I->runShellCommand("docker exec dev_web nano --version");
