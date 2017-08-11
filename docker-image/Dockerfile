@@ -56,6 +56,7 @@ COPY phpunit-5.7.21.phar /usr/bin/phpunit
 
 # Add supervisor conf
 COPY supervisord.conf /etc/supervisord.conf
-
+RUN php -v
+RUN apachectl -S
 # Docker startup
 #CMD ["/usr/bin/supervisord"]
