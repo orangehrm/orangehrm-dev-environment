@@ -31,7 +31,7 @@ RUN yum -y install \
 #install bower and gulp
 RUN npm install bower -g
 RUN npm install gulp -g
-
+RUN npm install nodemon -g
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
