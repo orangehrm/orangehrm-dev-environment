@@ -24,6 +24,12 @@ class WebContainerCest
         $I->seeInShellOutput('PHP 5.6');
     }
 
+    public function checkXdebugStatus(UnitTester $I){
+        $I->wantTo("verify Xdebug is installed in the container");
+        $I->runShellCommand("docker exec dev_web php --version");
+        $I->seeInShellOutput('Xdebug v2.5.5');
+    }
+
     public function checkApacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
         //$I->runShellCommand("ping -c 10 localhost");
