@@ -9,6 +9,7 @@ WORKDIR /var/www/html/
 
 # Enable apache mods.
 #RUN a2enmod  vhost_alias
+RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
 
 #installing nodejs
 RUN yum -y install \
@@ -30,7 +31,6 @@ RUN npm install gulp -g
 RUN npm install nodemon -g
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
 
 # Enable and configure xdebug
 RUN pecl install Xdebug
