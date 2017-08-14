@@ -43,9 +43,9 @@ RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 # Enable virtual hosts
 RUN mkdir /etc/httpd/sites-available
 RUN mkdir /etc/httpd/sites-enabled
-RUN echo "IncludeOptional sites-enabled/*.conf" >> /etc/httpd/000-default.conf
+RUN echo "IncludeOptional sites-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
 COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
-RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/orangehrm.conf
+RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/
 
 
 COPY phpunit-3.7.28.phar /usr/bin/phpunit3
