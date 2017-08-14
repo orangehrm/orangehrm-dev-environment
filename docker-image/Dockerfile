@@ -1,4 +1,4 @@
-FROM thulana/orangehrm-environment-images:prod-5.6-centos7
+FROM orangehrm/orangehrm-environment-images:prod-5.6-centos
 
 MAINTAINER orangehrm
 LABEL authors = "Thulana Kannangara <thulana@orangehrm.us.com> , Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
