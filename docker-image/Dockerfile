@@ -14,14 +14,10 @@ WORKDIR /var/www/html/
 RUN yum -y install \
     nodejs \
     bzip2 \
-    ca-certificates \
-    curl \
     git \
     subversion \
     vim \
     gcc-c++ \
-    autoconf \
-    automake \
     nano \
     npm \
     && yum -y update bash \
