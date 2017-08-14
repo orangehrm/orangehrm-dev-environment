@@ -7,9 +7,10 @@ LABEL authors = "Thulana Kannangara <thulana@orangehrm.us.com> , Ridwan Shariffd
 USER root
 WORKDIR /var/www/html/
 
-# Enable apache mods.
-#RUN a2enmod  vhost_alias
-RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
+RUN yum install -y gcc-c++ make
+RUN curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+
+#RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
 
 #installing nodejs
 RUN yum -y install \
@@ -18,7 +19,6 @@ RUN yum -y install \
     git \
     subversion \
     vim \
-    gcc-c++ \
     nano \
     npm \
     && yum -y update bash \
