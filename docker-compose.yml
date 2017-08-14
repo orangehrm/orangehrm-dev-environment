@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: thulana/orangehrm-environment-images:dev-5.6-centos7
+    image: orangehrm/orangehrm-environment-images:dev-5.6-centos
     ports:
       - "443:443"
     volumes:
