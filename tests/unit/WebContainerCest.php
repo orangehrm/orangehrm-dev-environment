@@ -24,28 +24,37 @@ class WebContainerCest
         $I->seeInShellOutput('PHP 5.6');
     }
 
+    public function checkXdebugStatus(UnitTester $I){
+        $I->wantTo("verify Xdebug is installed in the container");
+        $I->runShellCommand("docker exec dev_web php --version");
+        $I->seeInShellOutput('Xdebug v2.5.5');
+    }
+
     public function checkApacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
-        $I->runShellCommand("docker exec dev_web service apache2 status");
-        $I->seeInShellOutput('apache2 is running');
+        //$I->runShellCommand("ping -c 10 localhost");
+        $I->runShellCommand("docker exec dev_web service httpd status");
+        $I->seeInShellOutput('active (running)');
     }
+
 
     public function checkCronServiceIsRunning(UnitTester $I){
         $I->wantTo("verify cron is up and running in the container");
-        $I->runShellCommand("docker exec dev_web service cron status");
-        $I->seeInShellOutput('cron is running');
+        $I->runShellCommand("docker exec dev_web service crond status");
+        $I->seeInShellOutput('active (running)');
     }
 
-    public function checkSupervisorServiceIsRunning(UnitTester $I){
-        $I->wantTo("verify supervisor is up and running in the container");
-        $I->runShellCommand("docker exec dev_web service supervisor status");
-        $I->seeInShellOutput('supervisord is running');
-    }
+
+//    public function checkSupervisorServiceIsRunning(UnitTester $I){
+//        $I->wantTo("verify supervisor is up and running in the container");
+//        $I->runShellCommand("docker exec dev_web service supervisor status");
+//        $I->seeInShellOutput('supervisord is running');
+//    }
 
     public function checkMemcacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify memcache is up and running in the container");
-        $I->runShellCommand("docker exec dev_web ps aux | grep memcached");
-        $I->seeInShellOutput('/usr/bin/memcached');
+        $I->runShellCommand("docker exec dev_web service memcached status");
+        $I->seeInShellOutput('active (running)');
     }
 
     public function checkPHPUnit3Version(UnitTester $I){
@@ -63,32 +72,32 @@ class WebContainerCest
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
         $I->runShellCommand("docker exec dev_web git --version");
-        $I->seeInShellOutput('git version 2.1.4');
+        $I->seeInShellOutput('git version 1.8.3.1');
     }
 
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web curl --version");
-        $I->seeInShellOutput('curl 7.38');
+        $I->seeInShellOutput('curl 7.29.0');
     }
 
     public function checkNanoInstallation(UnitTester $I){
         $I->wantTo("verify nano is installed in the container");
         $I->runShellCommand("docker exec dev_web nano --version");
-        $I->seeInShellOutput('nano version 2.2.6');
+        $I->seeInShellOutput('nano version 2.3.1');
     }
 
 
     public function checkNodeVersion(UnitTester $I){
-        $I->wantTo("verify node v4 is installed in the container");
+        $I->wantTo("verify node v6 is installed in the container");
         $I->runShellCommand("docker exec dev_web node -v");
-        $I->seeInShellOutput('v4');
+        $I->seeInShellOutput('v6.11.2');
     }
 
     public function checkNPMVersion(UnitTester $I){
         $I->wantTo("verify npm is installed in the container");
         $I->runShellCommand("docker exec dev_web npm --version");
-        $I->seeInShellOutput("2");
+        $I->seeInShellOutput("3.10.10");
     }
 
     public function checkNodemonInstallation(UnitTester $I){
