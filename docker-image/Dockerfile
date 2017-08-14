@@ -8,7 +8,7 @@ USER root
 WORKDIR /var/www/html/
 
 RUN yum install -y gcc-c++ make
-RUN curl -sL https://rpm.nodesource.com/setup_6.x | -E bash -
+RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
 
 #RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
 
