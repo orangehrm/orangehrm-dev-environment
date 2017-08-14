@@ -38,6 +38,7 @@ RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
+RUN rm /etc/httpd/sites-enabled/orangehrm.conf
 RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/orangehrm.conf
 
 
