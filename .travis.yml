@@ -6,7 +6,7 @@ stage: test
 env:
   global:
   - REPO=thulana/orangehrm-environment-images
-  - TAG=dev-5.6-centos7
+  - TAG=dev-7.0-centos
   matrix:
   - TEST=unit
   - TEST=functional
