@@ -5,8 +5,9 @@ dist: trusty
 stage: test
 env:
   global:
-  - REPO=thulana/orangehrm-environment-images
+  - REPO=orangehrm/orangehrm-environment-images
   - TAG=dev-7.0-centos
+
   matrix:
   - TEST=unit
   - TEST=functional
