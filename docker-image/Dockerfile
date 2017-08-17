@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:prod-5.6-centos
+FROM orangehrm/orangehrm-environment-images:prod-7.0-centos
 
 MAINTAINER orangehrm
 LABEL authors = "Thulana Kannangara <thulana@orangehrm.us.com> , Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
@@ -29,6 +29,7 @@ RUN yum -y install \
 RUN npm install bower -g
 RUN npm install gulp -g
 RUN npm install nodemon -g
+RUN npm install node-sass
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
