@@ -12,7 +12,7 @@ RUN a2enmod  vhost_alias
 
 #installing nodejs
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash
-RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon
+RUN apt-get install -y nodejs && npm install -y -g bower gulp nodemon pm2
 
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
