@@ -105,3 +105,5 @@ More about phpmyadmin container can find in docker hub [phpmyadmin image](https:
 3. Developer can find configurations for apache, php, mysql-client, mysql-server, etc from _/config directory.
 4. If user is using Linux, the docker commands may require sudo permissions. This can be fixed by adding the user to the docker user group.`sudo usermod -aG docker <username>`
 5. web 7.0 container doesn't include memcache,ereg and stats PHP modules due to compatibility issues.
+6. In web 5.6 container, port 3000 is mapped to 3000 port locally.
+7. In web 7.0 container, port 3000 is mapped to 3001 port locally.

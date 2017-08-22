@@ -26,6 +26,7 @@ services:
     image: orangehrm/orangehrm-environment-images:dev-5.6
     ports:
       - "9071:443"
+      - "3000:3000"
     volumes:
       - ./html:/var/www/html
       - ./config/web56/php/php.ini:/usr/local/etc/php/php.ini
@@ -72,6 +73,7 @@ services:
       image: orangehrm/orangehrm-environment-images:dev-7.0
       ports:
         - "9073:443"
+        - "3001:3000"
       volumes:
         - ./html:/var/www/html
         - ./config/web70/php/php.ini:/usr/local/etc/php/php.ini
