@@ -30,6 +30,7 @@ RUN npm install bower -g
 RUN npm install gulp -g
 RUN npm install nodemon -g
 RUN npm install node-sass
+RUN npm install pm2 -g
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
