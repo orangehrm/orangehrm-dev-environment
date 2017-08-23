@@ -6,7 +6,7 @@ stage: test
 env:
   global:
   - REPO=orangehrm/orangehrm-environment-images
-  - TAG=dev-7.0-centos
+  - TAG=dev-7.1-centos
 
   matrix:
   - TEST=unit
