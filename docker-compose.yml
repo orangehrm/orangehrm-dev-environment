@@ -3,7 +3,7 @@ services:
 #  web55:
 #    image: orangehrm/orangehrm-environment-images:dev-5.5
 #    ports:
-#      - "9070:443"
+#      - "9055:443"
 #    volumes:
 #      - ./html:/var/www/html
 #      - ./config/web55/php/php.ini:/usr/local/etc/php/php.ini
@@ -18,14 +18,14 @@ services:
 #      - phpmyadmin
 #    networks:
 #      ohrmdevnet:
-#        ipv4_address: 10.5.0.2
+#        ipv4_address: 10.5.0.55
 #    restart: always
 #    container_name: dev_web_55
 
   web56:
     image: orangehrm/orangehrm-environment-images:dev-5.6
     ports:
-      - "9071:443"
+      - "9056:443"
       - "3000:3000"
     volumes:
       - ./html:/var/www/html
@@ -42,14 +42,14 @@ services:
       - phpmyadmin
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.3
+        ipv4_address: 10.5.0.56
     restart: always
     container_name: dev_web_56
 
   web71:
     image: orangehrm/orangehrm-environment-images:dev-7.1
     ports:
-      - "9072:443"
+      - "9071:443"
     volumes:
       - ./html:/var/www/html
       - ./config/web71/php/php.ini:/usr/local/etc/php/php.ini
@@ -65,14 +65,14 @@ services:
       - phpmyadmin
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.4
+        ipv4_address: 10.5.0.71
     restart: always
     container_name: dev_web_71
 
   web70:
       image: orangehrm/orangehrm-environment-images:dev-7.0
       ports:
-        - "9073:443"
+        - "9070:443"
         - "3001:3000"
       volumes:
         - ./html:/var/www/html
@@ -89,7 +89,7 @@ services:
         - phpmyadmin
       networks:
         ohrmdevnet:
-          ipv4_address: 10.5.0.2
+          ipv4_address: 10.5.0.70
       restart: always
       container_name: dev_web_70
 
