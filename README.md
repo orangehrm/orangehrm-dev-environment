@@ -26,9 +26,9 @@ Make sure mentioned prerequisites are there in your host machine.
 
 | Container Name | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
 |----------------|------------------------------------|-------------|------------|------------|
-| dev_web_70     | web70                              | PHP 7.0     | 10.5.0.2   | 9073,3000  |
-| dev_web_56     | web56                              | PHP 5.6     | 10.5.0.3   | 9071,3001  |
-| dev_web_71     | web71                              | PHP 7.1     | 10.5.0.4   | 9072       |
+| dev_web_70     | web70                              | PHP 7.0     | 10.5.0.70  | 9070,3000  |
+| dev_web_56     | web56                              | PHP 5.6     | 10.5.0.56  | 9056,3001  |
+| dev_web_71     | web71                              | PHP 7.1     | 10.5.0.71  | 9071       |
 | dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.0.5   | 3306       |
 | dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.0.6   | 3306       |
 | dev_mariadb_101| db10                               | MariaDB 10.1| 10.5.0.7   | 3306       |
