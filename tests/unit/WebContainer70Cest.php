@@ -38,7 +38,7 @@ class WebContainer70Cest
 
     public function checkMemcacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
-        $I->runShellCommand("docker exec uat_web service supervisor status");
+        $I->runShellCommand("docker exec dev_web_56 service supervisor status");
         $I->seeInShellOutput('supervisord is running');
     }
 

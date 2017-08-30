@@ -32,13 +32,13 @@ class WebContainer56Cest
 
     public function checkCronServiceIsRunning(UnitTester $I){
         $I->wantTo("verify cron is up and running in the container");
-        $I->runShellCommand("docker exec uat_web service cron status");
+        $I->runShellCommand("docker exec dev_web_56 service cron status");
         $I->seeInShellOutput('cron is running');
     }
 
     public function checkMemcacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
-        $I->runShellCommand("docker exec uat_web service supervisor status");
+        $I->runShellCommand("docker exec dev_web_56 service supervisor status");
         $I->seeInShellOutput('supervisord is running');
     }
 
