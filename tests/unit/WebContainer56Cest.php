@@ -45,7 +45,7 @@ class WebContainer56Cest
     public function checkPHPUnitVersion(UnitTester $I){
         $I->wantTo("verify phpunit library is installed in the container");
         $I->runShellCommand("docker exec dev_web_56 phpunit --version");
-        $I->seeInShellOutput('PHPUnit 3.7.28');
+        $I->seeInShellOutput('PHPUnit 5.7.21');
     }
 
     public function checkGitInstallation(UnitTester $I){
