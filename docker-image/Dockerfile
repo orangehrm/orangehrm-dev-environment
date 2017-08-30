@@ -49,7 +49,7 @@ RUN a2ensite orangehrm.conf
 COPY phpunit-5.7.21.phar /usr/bin/phpunit
 RUN pear channel-discover pear.phing.info && \
     pear install VersionControl_SVN-alpha && \
-    pear install phing/phing-2.6.1
+    pear install phing/phing-2.16.0
 
 # Add supervisor conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
