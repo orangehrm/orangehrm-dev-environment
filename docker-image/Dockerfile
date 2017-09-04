@@ -14,21 +14,18 @@ RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
 RUN yum -y install \
     bzip2 \
     git \
+    nano \
     nodejs \
     subversion \
     vim \
-    nano \
     #npm \
     && yum -y update bash \
     && rm -rf /var/cache/yum/* \
     && yum clean all
 
 #install bower and gulp
-RUN npm install bower -g
-RUN npm install gulp -g
-RUN npm install nodemon -g
-RUN npm install node-sass
-RUN npm install pm2 -g
+RUN npm install bower gulp nodemon node-sass pm2 -g
+
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
