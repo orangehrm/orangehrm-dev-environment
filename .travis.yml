@@ -14,7 +14,9 @@ env:
   - TEST=acceptance
 services:
   - docker
-
+addons:
+  hosts:
+  - orangehrm
 cache:
     directories:
         - vendor
