@@ -150,7 +150,7 @@ class DevEnvironmentForOSCest
     public function cleanup(AcceptanceTester $I)
     {
         $I->comment("remove the project directory from /var/www/html");
-        $I->runShellCommand('docker exec dev_web rm -rf symfony');
+        $I->runShellCommand('docker exec dev_web rm -rf orangehrm');
         $I->runShellCommand('docker exec dev_web rm config.ini');
     }
 
