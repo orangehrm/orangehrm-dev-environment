@@ -10,27 +10,23 @@ WORKDIR /var/www/html/
 RUN yum install -y gcc-c++ make
 RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
 
-#RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
 
 #installing nodejs
 RUN yum -y install \
-    nodejs \
     bzip2 \
     git \
+    nano \
+    nodejs \
     subversion \
     vim \
-    nano \
     #npm \
     && yum -y update bash \
     && rm -rf /var/cache/yum/* \
     && yum clean all
 
 #install bower and gulp
-RUN npm install bower -g
-RUN npm install gulp -g
-RUN npm install nodemon -g
-RUN npm install node-sass
-RUN npm install pm2 -g
+RUN npm install bower gulp nodemon node-sass pm2 -g
+
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -46,11 +42,7 @@ RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/ora
 
 COPY phpunit-3.7.28.phar /usr/bin/phpunit3
 COPY phpunit-5.7.21.phar /usr/bin/phpunit
-#RUN pear channel-discover pear.phing.info && \
-#    pear install VersionControl_SVN-alpha && \
-#    pear install phing/phing-2.6.1
 
 # Add supervisor conf
 COPY supervisord.conf /etc/supervisord.conf
-# Docker startup
-#CMD ["/usr/bin/supervisord"]
+
