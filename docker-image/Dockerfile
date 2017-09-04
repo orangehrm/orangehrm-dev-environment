@@ -10,16 +10,15 @@ WORKDIR /var/www/html/
 RUN yum install -y gcc-c++ make
 RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
 
-#RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
-
 #installing nodejs
 RUN yum -y install \
-    nodejs \
+
     bzip2 \
     git \
+    nano \
+    nodejs \
     subversion \
     vim \
-    nano \
     #npm \
     && yum -y update bash \
     && rm -rf /var/cache/yum/* \
@@ -45,11 +44,6 @@ RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/ora
 
 COPY phpunit-3.7.28.phar /usr/bin/phpunit3
 COPY phpunit-5.7.21.phar /usr/bin/phpunit
-#RUN pear channel-discover pear.phing.info && \
-#    pear install VersionControl_SVN-alpha && \
-#    pear install phing/phing-2.6.1
 
-# Add supervisor conf
 COPY supervisord.conf /etc/supervisord.conf
-# Docker startup
-#CMD ["/usr/bin/supervisord"]
+
