@@ -91,7 +91,7 @@ class WebContainerCest
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v6 is installed in the container");
         $I->runShellCommand("docker exec dev_web node -v");
-        $I->seeInShellOutput('v6.11.2');
+        $I->seeInShellOutput('v6.11.3');
     }
 
     public function checkNPMVersion(UnitTester $I){
