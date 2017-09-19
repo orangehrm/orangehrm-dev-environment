@@ -16,9 +16,11 @@ Make sure mentioned prerequisites are there in your host machine.
 
 1. go to release tab and download the latest release.
 2. open terminal and go to the cloned directory
-3. run the command `docker-compose up -d`
-4. run `docker ps` and make sure all the containers are up and running.
-5. Your web root will be _/ohrm_dev_ directory and make sure to put your project in that folder.
+3. run the command `docker-compose up -d` - this command will only create three web containers and mysql 5.5 and 5.7 containers only.
+4. To start complete development environment run the command `docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d`
+5. Moving from complete version to basic version - `docker-compose up -d --remove-orphans`  
+6. run `docker ps` and make sure all the containers are up and running.
+7. Your web root will be _/ohrm_dev_ directory and make sure to put your project in that folder.
 
 **Note** : [Video Tutorial](https://www.youtube.com/watch?v=fURFe-tARyk)
 
