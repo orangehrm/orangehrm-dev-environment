@@ -38,6 +38,7 @@ services:
     links:
       - db55
       - db57
+      - db101
       - phpmyadmin
     networks:
       ohrmdevnet:
@@ -60,6 +61,7 @@ services:
     links:
       - db55
       - db57
+      - db101
       - phpmyadmin
     networks:
       ohrmdevnet:
@@ -83,6 +85,7 @@ services:
       links:
         - db55
         - db57
+        - db101
         - phpmyadmin
       networks:
         ohrmdevnet:
@@ -124,39 +127,39 @@ services:
     restart: always
     container_name: dev_mysql_57
 
-#  db101:
-#    image: mariadb:10.1
-#    expose:
-#      - "3306"
-#    volumes:
-#      - ./config/db101:/etc/mysql
-#      - ./logs/mariadb_logs/db101:/var/log
-#      - /etc/localtime:/etc/localtime
-#      - mariadb101:/var/lib/mysql
-#    environment:
-#      MYSQL_ROOT_PASSWORD: 1234
-#    networks:
-#      ohrmdevnet:
-#        ipv4_address: 10.5.0.7
-#    restart: always
-#    container_name: dev_mariadb_101
-#
-#  db11:
-#    image: orangehrm/oracle-xe-11g
-#    expose:
-#      - "1521"
-#      - "22"
-#    volumes:
-#      - ./logs/oracle_logs/db11:/var/log
-#      - /etc/localtime:/etc/localtime
-#      - oracle11:/u01/app/oracle/oradata
-#    environment:
-#      ORACLE_ALLOW_REMOTE: "true"
-#    networks:
-#      ohrmdevnet:
-#        ipv4_address: 10.5.0.8
-#    restart: always
-#    container_name: dev_oracle_11
+  db101:
+    image: mariadb:10.1
+    expose:
+      - "3306"
+    volumes:
+      - ./config/db101:/etc/mysql
+      - ./logs/mariadb_logs/db101:/var/log
+      - /etc/localtime:/etc/localtime
+      - mariadb101:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.7
+    restart: always
+    container_name: dev_mariadb_101
+
+  db11:
+    image: orangehrm/oracle-xe-11g
+    expose:
+      - "1521"
+      - "22"
+    volumes:
+      - ./logs/oracle_logs/db11:/var/log
+      - /etc/localtime:/etc/localtime
+      - oracle11:/u01/app/oracle/oradata
+    environment:
+      ORACLE_ALLOW_REMOTE: "true"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.8
+    restart: always
+    container_name: dev_oracle_11
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -169,23 +172,10 @@ services:
     ports:
       - "9092:80"
     environment:
-      PMA_HOSTS: db55,db57
+      PMA_HOSTS: db55,db57,db101
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.20
     restart: always
     container_name: dev_phpmyadmin
 
-volumes:
-  mysql55:
-  mysql57:
-  mariadb101:
-  oracle11:
-
-networks:
-  ohrmdevnet:
-    driver: bridge
-    ipam:
-     config:
-       - subnet: 10.5.0.0/16
-         gateway: 10.5.0.1
