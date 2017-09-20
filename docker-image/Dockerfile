@@ -10,13 +10,15 @@ WORKDIR /var/www/html/
 RUN yum install -y gcc-c++ make
 RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
 
+RUN touch /etc/yum.repos.d/wandisco-svn.repo
+RUN echo $'[WandiscoSVN] \nname=Wandisco SVN Repo \nbaseurl=http://opensource.wandisco.com/centos/7/svn-1.9/RPMS/$basearch/ \nenabled=1 \ngpgcheck=0 ' > /etc/yum.repos.d/wandisco-svn.repo
 #installing nodejs
 RUN yum -y install \
     bzip2 \
     git \
     nano \
     nodejs \
-    subversion \
+    subversion mod_dav_svn \
     vim \
     #npm \
     && yum -y update bash \

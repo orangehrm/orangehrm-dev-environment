@@ -75,6 +75,12 @@ class WebContainerCest
         $I->seeInShellOutput('git version 1.8.3.1');
     }
 
+    public function checkSVNInstallation(UnitTester $I){
+        $I->wantTo("verify svn is installed in the container");
+        $I->runShellCommand("docker exec dev_web svn --version");
+        $I->seeInShellOutput('version 1.9');
+    }
+
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web curl --version");
