@@ -11,11 +11,7 @@ RUN yum install -y gcc-c++ make
 RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
 
 RUN touch /etc/yum.repos.d/wandisco-svn.repo
-RUN echo "[WandiscoSVN]
-          name=Wandisco SVN Repo
-          baseurl=http://opensource.wandisco.com/centos/6/svn-1.9/RPMS/$basearch/
-          enabled=1
-          gpgcheck=0 " >> /etc/yum.repos.d/wandisco-svn.repo
+RUN echo "[WandiscoSVN] \nname=Wandisco SVN Repo\nbaseurl=http://opensource.wandisco.com/centos/6/svn-1.9/RPMS/$basearch/\nenabled=1\ngpgcheck=0 " >> /etc/yum.repos.d/wandisco-svn.repo
 #installing nodejs
 RUN yum -y install \
 
