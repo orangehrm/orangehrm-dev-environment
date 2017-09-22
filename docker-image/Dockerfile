@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:prod-7.0
+FROM orangehrm/orangehrm-environment-images:prod-7.0-debian
 
 MAINTAINER orangehrm
 LABEL authors = "Ridwan Shariffdeen <ridwan@orangehrmlive.com>, Thulana Kannangara<thulana@orangehrm.us.com>"
