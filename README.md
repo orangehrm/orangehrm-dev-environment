@@ -34,9 +34,10 @@ Make sure mentioned prerequisites are there in your host machine.
 | dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.0.5   | 3306       |
 | dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.0.6   | 3306       |
 | dev_mariadb_101| db10                               | MariaDB 10.1| 10.5.0.7   | 3306       |
-| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.8   | 9090       |
-
-## Install orangehrm eagle-core inside the container
+| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.20  | 9090       |
+| dev_openldap   | openldap                           | openldap    | 10.5.0.22  | 700,701    |
+|dev_phpldapadmin| phpldapadmin                       | ldapadmin   | 10.5.0.21  | 9093       |
+## Install orangehrm eagle-core inside the container 
 1. Get a checkout from svn to ohrm_dev directory.
 2. To get the named virtual hosts to work, add the project folder name to /etc/hosts file (`127.0.0.1 folderName`).
 3. access from your browser (`https://folderName`). If you have changed the default port configuration in dev_web container then you can access using `htttps://folderName:portNumber`
