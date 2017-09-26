@@ -40,6 +40,7 @@ services:
       - db57
       - db101
       - phpmyadmin
+      - openldap
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.56
@@ -63,6 +64,7 @@ services:
       - db57
       - db101
       - phpmyadmin
+      - openldap
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.71
@@ -87,6 +89,7 @@ services:
         - db57
         - db101
         - phpmyadmin
+        - openldap
       networks:
         ohrmdevnet:
           ipv4_address: 10.5.0.70
@@ -179,3 +182,61 @@ services:
     restart: always
     container_name: dev_phpmyadmin
 
+  openldap:
+    image: osixia/openldap:latest
+    container_name: dev_openldap
+    environment:
+      LDAP_LOG_LEVEL: "256"
+      LDAP_ORGANISATION: "Orangehrm Inc."
+      LDAP_DOMAIN: "orangehrm.com"
+      LDAP_BASE_DN: ""
+      LDAP_ADMIN_PASSWORD: "admin"
+      LDAP_CONFIG_PASSWORD: "config"
+      LDAP_READONLY_USER: "false"
+      #LDAP_READONLY_USER_USERNAME: "readonly"
+      #LDAP_READONLY_USER_PASSWORD: "readonly"
+      LDAP_RFC2307BIS_SCHEMA: "false"
+      LDAP_BACKEND: "hdb"
+      LDAP_TLS: "true"
+      LDAP_TLS_CRT_FILENAME: "ldap.crt"
+      LDAP_TLS_KEY_FILENAME: "ldap.key"
+      LDAP_TLS_CA_CRT_FILENAME: "ca.crt"
+      LDAP_TLS_ENFORCE: "false"
+      LDAP_TLS_CIPHER_SUITE: "SECURE256:-VERS-SSL3.0"
+      LDAP_TLS_PROTOCOL_MIN: "3.1"
+      LDAP_TLS_VERIFY_CLIENT: "demand"
+      LDAP_REPLICATION: "false"
+      KEEP_EXISTING_CONFIG: "true"
+      #LDAP_REPLICATION_CONFIG_SYNCPROV: "binddn="cn=admin,cn=config" bindmethod=simple credentials=$LDAP_CONFIG_PASSWORD searchbase="cn=config" type=refreshAndPersist retry="60 +" timeout=1 starttls=critical"
+      #LDAP_REPLICATION_DB_SYNCPROV: "binddn="cn=admin,$LDAP_BASE_DN" bindmethod=simple credentials=$LDAP_ADMIN_PASSWORD searchbase="$LDAP_BASE_DN" type=refreshAndPersist interval=00:00:00:10 retry="60 +" timeout=1 starttls=critical"
+      #LDAP_REPLICATION_HOSTS: "#PYTHON2BASH:['ldap://ldap.example.org','ldap://ldap2.example.org']"
+
+      LDAP_REMOVE_CONFIG_AFTER_SETUP: "true"
+      LDAP_SSL_HELPER_PREFIX: "ldap"
+    tty: true
+    stdin_open: true
+    volumes:
+      - /var/lib/ldap
+      - /etc/ldap/slapd.d
+      - /container/service/slapd/assets/certs/
+    ports:
+      - "700:389"
+      - "701:636"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.22
+    domainname: "example.org" # important: same as hostname
+    hostname: "example.org"
+  phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    container_name: phpldapadmin
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: "openldap"
+      PHPLDAPADMIN_HTTPS: "false"
+    ports:
+      - "9093:80"
+    depends_on:
+      - openldap
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.21
