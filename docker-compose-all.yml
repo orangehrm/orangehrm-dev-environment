@@ -192,7 +192,7 @@ services:
     image: osixia/openldap:latest
     container_name: dev_openldap
     environment:
-      LDAP_LOG_LEVEL: "256"
+      LDAP_LOG_LEVEL: "-1"
       LDAP_ORGANISATION: "Orangehrm Inc."
       LDAP_DOMAIN: "orangehrm.com"
       LDAP_BASE_DN: ""
@@ -210,7 +210,7 @@ services:
       LDAP_TLS_ENFORCE: "false"
       LDAP_TLS_CIPHER_SUITE: "SECURE256:-VERS-SSL3.0"
       LDAP_TLS_PROTOCOL_MIN: "3.1"
-      LDAP_TLS_VERIFY_CLIENT: "demand"
+      LDAP_TLS_VERIFY_CLIENT: "try"
       LDAP_REPLICATION: "false"
       KEEP_EXISTING_CONFIG: "true"
       #LDAP_REPLICATION_CONFIG_SYNCPROV: "binddn="cn=admin,cn=config" bindmethod=simple credentials=$LDAP_CONFIG_PASSWORD searchbase="cn=config" type=refreshAndPersist retry="60 +" timeout=1 starttls=critical"
@@ -231,8 +231,8 @@ services:
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.22
-    domainname: "example.org" # important: same as hostname
-    hostname: "example.org"
+    domainname: "orangehrm.com" # important: same as hostname
+    hostname: "orangehrm.com"
     restart: always
   phpldapadmin:
     image: osixia/phpldapadmin:latest
