@@ -72,7 +72,7 @@ class WebContainerCest
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
         $I->runShellCommand("docker exec dev_web git --version");
-        $I->seeInShellOutput('git version 1.8.3.1');
+        $I->seeInShellOutput('git version 1.8.3');
     }
 
     public function checkSvnInstallation(UnitTester $I){
@@ -84,26 +84,26 @@ class WebContainerCest
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web curl --version");
-        $I->seeInShellOutput('curl 7.29.0');
+        $I->seeInShellOutput('curl 7.29');
     }
 
     public function checkNanoInstallation(UnitTester $I){
         $I->wantTo("verify nano is installed in the container");
         $I->runShellCommand("docker exec dev_web nano --version");
-        $I->seeInShellOutput('nano version 2.3.1');
+        $I->seeInShellOutput('nano version 2.3');
     }
 
 
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v6 is installed in the container");
         $I->runShellCommand("docker exec dev_web node -v");
-        $I->seeInShellOutput('v6.11.3');
+        $I->seeInShellOutput('v6.11');
     }
 
     public function checkNPMVersion(UnitTester $I){
         $I->wantTo("verify npm is installed in the container");
         $I->runShellCommand("docker exec dev_web npm --version");
-        $I->seeInShellOutput("3.10.10");
+        $I->seeInShellOutput("3.10");
     }
 
     public function checkNodemonInstallation(UnitTester $I){
