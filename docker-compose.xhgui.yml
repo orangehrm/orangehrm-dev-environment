@@ -19,11 +19,11 @@
 #
 version: '2'
 services:
-  web55:
+ # web55:
     # volume with xhgui src
-    volumes_from: [xhgui]
-    links:
-      - mongodb
+  #  volumes_from: [xhgui]
+   # links:
+    #  - mongodb
   web56:
     # volume with xhgui src
     volumes_from: [xhgui]
@@ -37,13 +37,13 @@ services:
     container_name: dev_mongodb
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.6
+        ipv4_address: 10.5.0.14
   xhgui:
     image: orangehrm/orangehrm-environment-images:dev-xhgui
     expose:
      - "80"
     volumes:
-      - ./config/php5/apache2/php.ini:/usr/local/etc/php/php.ini
+      - .config/web56/php/php.ini:/usr/local/etc/php/php.ini
     links:
       - mongodb
     networks:
