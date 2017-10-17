@@ -43,7 +43,7 @@ services:
     expose:
      - "80"
     volumes:
-      - .config/web56/php/php.ini:/usr/local/etc/php/php.ini
+      - ./config/web56/php/php.ini:/usr/local/etc/php/php.ini
     links:
       - mongodb
     networks:
