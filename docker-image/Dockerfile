@@ -37,9 +37,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Enable and configure xdebug
 RUN pecl install Xdebug
-RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 RUN pecl config-set preferred_state beta
 RUN pecl install xhprof
+RUN echo "extension=xhprof.so" >>/etc/php.ini
+RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
+
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
 RUN rm /etc/httpd/sites-enabled/orangehrm.conf
