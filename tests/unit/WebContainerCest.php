@@ -93,6 +93,12 @@ class WebContainerCest
         $I->seeInShellOutput('nano version 2.3');
     }
 
+    public function checkXhprofInstallation(UnitTester $I){
+        $I->wantTo("verify Xhprof is installed in the container");
+        $I->runShellCommand("docker exec dev_web php --ri xhprof");
+        $I->seeInShellOutput('xhprof');
+    }
+
 
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v6 is installed in the container");
