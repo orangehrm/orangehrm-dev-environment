@@ -1,7 +1,7 @@
 <?php
 
 
-class DBContainer55Cest
+class RabbitMQCest
 {
     public function _before(FunctionalTester $I)
     {
