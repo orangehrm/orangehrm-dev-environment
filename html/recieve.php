@@ -15,6 +15,12 @@ $callback = function($msg) {
 
 $channel->basic_consume('Integration', '', false, true, false, false, $callback);
 
-while(count($channel->callbacks)) {
-    $channel->wait();
+while ($channel->callbacks) {
+    try {
+        $channel->wait(null, false, 3);
+    } catch (\PhpAmqpLib\Exception\AMQPTimeoutException $e) {
+        $channel->close();
+        $connection->close();
+        exit;
+    }
 }
