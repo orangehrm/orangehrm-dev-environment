@@ -178,7 +178,7 @@ services:
     links:
       - db55
       - db57
-
+      - db101
     ports:
       - "9092:80"
     environment:
