@@ -3,15 +3,15 @@
 # Profiling application:
 # 1. Web: Need to add the following to apache virtual host setting
 #
-# php_admin_value auto_prepend_file "/usr/local/xhgui/external/header.php"
+# php_admin_value auto_prepend_file "/var/www/xhgui/external/header.php"
 # (Note: This can be done by the auto_prepend_file setting in php.ini as well)
 #
 # 2. CLI:
 #
-# Add a require to the script: require '/usr/local/src/xhgui/external/header.php';
+# Add a require to the script: require '/var/www/xhgui/external/header.php';
 # or alternatively: use the -d flag when running php:
 #
-# php -d auto_prepend_file=/usr/local/src/xhgui/external/header.php symfony o:publish-assets
+# php -d auto_prepend_file=/var/www/xhgui/external/header.php symfony o:publish-assets
 #
 # Usage:
 #
@@ -39,13 +39,14 @@ services:
       ohrmdevnet:
         ipv4_address: 10.5.0.14
   xhgui:
-    image: orangehrm/orangehrm-environment-images:dev-xhgui
+    image: orangehrm/orangehrm-environment-images:dev-xhgui-centos
     expose:
      - "80"
     volumes:
-      - ./config/web56/php/php.ini:/usr/local/etc/php/php.ini
+      - ./config/xhprof/config/config.default.php:/var/www/xhgui/config/config.default.php
     links:
       - mongodb
+    privileged: true
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.7
