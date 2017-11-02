@@ -7,7 +7,7 @@ LABEL authors = "Thulana Kannangara <thulana@orangehrm.us.com> , Ridwan Shariffd
 USER root
 WORKDIR /var/www/
 
-RUN yum install -y gcc-c++ make
+RUN yum install -y gcc-c++ make git
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
