@@ -22,7 +22,7 @@ RUN echo "extension=xhprof.so" >>/etc/php.ini
 RUN echo "extension=mongodb.so" >>/etc/php.ini
 
 RUN mkdir -p /var/www/xhgui
-RUN clone https://github.com/perftools/xhgui.git xhgui
+RUN git clone https://github.com/perftools/xhgui.git xhgui
 
 RUN cd xhgui && php install.php
 
