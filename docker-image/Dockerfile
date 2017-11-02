@@ -26,7 +26,7 @@ RUN git clone https://github.com/perftools/xhgui.git xhgui
 
 RUN cd xhgui && php install.php
 
-VOLUME ["/usr/local/src/xhgui"]
+VOLUME ["/var/www/xhgui"]
 EXPOSE 80
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
