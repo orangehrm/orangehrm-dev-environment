@@ -8,14 +8,16 @@ USER root
 WORKDIR /var/www/
 
 RUN yum install -y gcc-c++ make
-RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
+# installing composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN touch /etc/yum.repos.d/wandisco-svn.repo
 RUN echo $'[WandiscoSVN] \nname=Wandisco SVN Repo \nbaseurl=http://opensource.wandisco.com/centos/7/svn-1.9/RPMS/$basearch/ \nenabled=1 \ngpgcheck=0 ' > /etc/yum.repos.d/wandisco-svn.repo
 RUN cat /etc/yum.repos.d/wandisco-svn.repo
 
-RUN pecl install xhprof
 RUN pecl install mongodb
+RUN pecl config-set preferred_state beta
+RUN pecl install xhprof
 RUN echo "extension=xhprof.so" >>/etc/php.ini
 RUN echo "extension=mongodb.so" >>/etc/php.ini
 
