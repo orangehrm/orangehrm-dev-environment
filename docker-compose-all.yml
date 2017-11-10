@@ -226,7 +226,7 @@ services:
       - /var/lib/ldap
       - /etc/ldap/slapd.d
       - ./config/openldap/certs:/container/service/slapd/assets/certs/
-      - ./config/openldap/data:/etc/ldap/
+#      - ./config/openldap/data:/etc/ldap/
     ports:
       - "700:389"
       - "701:636"
