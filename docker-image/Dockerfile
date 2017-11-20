@@ -17,6 +17,7 @@ RUN cat /etc/yum.repos.d/wandisco-svn.repo
 RUN yum -y install \
 
     bzip2 \
+    wget \
     git \
     nano \
     nodejs \
