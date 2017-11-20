@@ -53,16 +53,18 @@ RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/ora
 COPY phpunit-3.7.28.phar /usr/bin/phpunit3
 COPY phpunit-5.7.21.phar /usr/bin/phpunit
 
-##enable suhosin for php
-#RUN wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
-#RUN tar -xvf suhosin-0.9.38.tar.gz
-#RUN cd /var/www/html/suhosin-0.9.38; phpize
-#RUN cd /var/www/html/suhosin-0.9.38; bash configure
-#RUN cd /var/www/html/suhosin-0.9.38; make
-#RUN cd /var/www/html/suhosin-0.9.38; make install
-#RUN rm -rf suhosin-0.9.38
-#RUN rm suhosin-0.9.38.tar.gz
-#RUN echo "extension=suhosin.so" >>/etc/php.ini
+#enable suhosin for php
+RUN wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
+RUN tar -xvf suhosin-0.9.38.tar.gz
+RUN cd /var/www/html/suhosin-0.9.38; phpize
+RUN cd /var/www/html/suhosin-0.9.38; bash configure
+RUN cd /var/www/html/suhosin-0.9.38; make
+RUN cd /var/www/html/suhosin-0.9.38; make install
+RUN rm -rf suhosin-0.9.38
+RUN rm suhosin-0.9.38.tar.gz
+RUN echo "extension=suhosin.so" >>/etc/php.ini
+RUN echo "suhosin.executor.include.whitelist = phar" >>/etc/php.ini
+
 
 #COPY supervisord.conf /etc/supervisord.conf
 
