@@ -49,6 +49,8 @@ RUN tar -xvf suhosin-0.9.38.tar.gz
 RUN cd /var/www/html/suhosin-0.9.38; bash configure
 RUN cd /var/www/html/suhosin-0.9.38; make
 RUN cd /var/www/html/suhosin-0.9.38; make install
+RUN rm -rf suhosin-0.9.38
+RUN rm suhosin-0.9.38.tar.gz
 RUN echo "extension=suhosin.so" >>/etc/php.ini
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
