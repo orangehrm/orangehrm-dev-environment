@@ -46,6 +46,7 @@ RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 #enable suhosin for php
 RUN wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
 RUN tar -xvf suhosin-0.9.38.tar.gz
+RUN pwd
 RUN cd /var/www/html/suhosin-0.9.38; bash configure
 RUN cd /var/www/html/suhosin-0.9.38; make
 RUN cd /var/www/html/suhosin-0.9.38; make install
