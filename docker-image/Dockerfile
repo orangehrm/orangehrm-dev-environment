@@ -42,6 +42,13 @@ RUN pecl install xhprof
 RUN echo "extension=xhprof.so" >>/etc/php.ini
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
+#enable suhosin for php
+RUN wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
+RUN tar -xvf suhosin-0.9.38.tar.gz
+RUN cd suhosin-0.9.38; bash configure
+RUN cd suhosin-0.9.38; make
+RUN cd suhosin-0.9.38; make install
+RUN echo "extension=suhosin.so" >>/etc/php.ini
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
 RUN rm /etc/httpd/sites-enabled/orangehrm.conf
