@@ -17,11 +17,11 @@ RUN cat /etc/yum.repos.d/wandisco-svn.repo
 RUN yum -y install \
 
     bzip2 \
-    wget \
     git \
     nano \
     nodejs \
     subversion mod_dav_svn \
+    wget \
     vim \
     #npm \
     && yum -y update bash \
