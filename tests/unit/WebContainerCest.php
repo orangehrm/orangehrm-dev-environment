@@ -30,6 +30,13 @@ class WebContainerCest
         $I->seeInShellOutput('Xdebug v2.5.5');
     }
 
+    public function checkSuhosinStatus(UnitTester $I){
+        $I->wantTo("verify suhosin is installed in the container");
+        $I->runShellCommand("docker exec dev_web php --version");
+        $I->seeInShellOutput('Xdebug v2.5.5');
+    }
+
+
     public function checkApacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
         //$I->runShellCommand("ping -c 10 localhost");
