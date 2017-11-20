@@ -33,7 +33,7 @@ class WebContainerCest
     public function checkSuhosinStatus(UnitTester $I){
         $I->wantTo("verify suhosin is installed in the container");
         $I->runShellCommand("docker exec dev_web php --version");
-        $I->seeInShellOutput('Xdebug v2.5.5');
+        $I->seeInShellOutput('Suhosin');
     }
 
 
