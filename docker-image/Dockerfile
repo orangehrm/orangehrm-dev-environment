@@ -43,6 +43,16 @@ RUN pecl install xhprof
 RUN echo "extension=xhprof.so" >>/etc/php.ini
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
+
+# Enable virtual hosts
+COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
+RUN rm /etc/httpd/sites-enabled/orangehrm.conf
+RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/orangehrm.conf
+
+
+COPY phpunit-3.7.28.phar /usr/bin/phpunit3
+COPY phpunit-5.7.21.phar /usr/bin/phpunit
+
 #enable suhosin for php
 RUN wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
 RUN tar -xvf suhosin-0.9.38.tar.gz
@@ -53,14 +63,6 @@ RUN cd /var/www/html/suhosin-0.9.38; make install
 RUN rm -rf suhosin-0.9.38
 RUN rm suhosin-0.9.38.tar.gz
 RUN echo "extension=suhosin.so" >>/etc/php.ini
-# Enable virtual hosts
-COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
-RUN rm /etc/httpd/sites-enabled/orangehrm.conf
-RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/orangehrm.conf
-
-
-COPY phpunit-3.7.28.phar /usr/bin/phpunit3
-COPY phpunit-5.7.21.phar /usr/bin/phpunit
 
 COPY supervisord.conf /etc/supervisord.conf
 
