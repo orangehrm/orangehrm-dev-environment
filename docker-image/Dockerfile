@@ -44,6 +44,9 @@ RUN pecl install xhprof
 RUN echo "extension=xhprof.so" >>/etc/php.ini
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
+#install oci8 php module
+RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8-2.0.12
+RUN echo "extension=oci8.so" >>/etc/php.ini
 
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
