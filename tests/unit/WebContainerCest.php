@@ -123,4 +123,10 @@ class WebContainerCest
         $I->seeInShellOutput('1');
     }
 
+    public function checkOci8PHPmodule(UnitTester $I){
+        $I->wantTo("verify php module oci8 is installed in the container");
+        $I->runShellCommand("docker exec php -m");
+        $I->seeInShellOutput('oci8');
+    }
+
 }
