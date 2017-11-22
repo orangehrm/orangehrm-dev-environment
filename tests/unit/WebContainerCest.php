@@ -107,8 +107,8 @@ class WebContainerCest
     }
     public function checkSendMailVersion(UnitTester $I){
         $I->wantTo("verify sendmail is installed in the container");
-        $I->runShellCommand("docker exec dev_web sendmail -d0.1 -bt < /dev/null");
-        $I->seeInShellOutput("Version 8");
+        $I->runShellCommand("docker exec dev_web rpm -qa | grep -i sendmail");
+        $I->seeInShellOutput("sendmail-8");
     }
 
     public function checkNodemonInstallation(UnitTester $I){
