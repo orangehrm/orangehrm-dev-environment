@@ -105,6 +105,11 @@ class WebContainerCest
         $I->runShellCommand("docker exec dev_web npm --version");
         $I->seeInShellOutput("3.10.10");
     }
+    public function checkSendMailVersion(UnitTester $I){
+        $I->wantTo("verify sendmail is installed in the container");
+        $I->runShellCommand("docker exec dev_web sendmail -d0.1 -bt < /dev/null");
+        $I->seeInShellOutput("Version 8");
+    }
 
     public function checkNodemonInstallation(UnitTester $I){
         $I->wantTo("verify nodemon is installed in the container");

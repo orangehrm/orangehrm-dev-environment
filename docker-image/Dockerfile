@@ -18,6 +18,7 @@ RUN yum -y install \
     git \
     nano \
     nodejs \
+    sendmail \
     subversion mod_dav_svn \
     vim \
     #npm \
