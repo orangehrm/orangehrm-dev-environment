@@ -11,7 +11,7 @@ class VirtualDevEnvironmentCest
     public function installApp(AcceptanceTester $I)
     {
         $I->comment("Cloning project into /var/www/html/OHRMStandalone/dev");
-        $I->runShellCommand('docker exec dev_web_56 bash -c "mkdir -p OHRMStandalone/dev/orangehrm-dev.orangehrm.com && echo '.'"test html"'.' > index.html"');
+        $I->runShellCommand('docker exec dev_web_56 bash -c "mkdir -p /var/www/html/OHRMStandalone/dev/orangehrm-dev.orangehrm.com && echo '.'"test html"'.' > index.html"');
         $I->runShellCommand('docker exec dev_web_56 -c "echo '.'"127.0.0.1    orangehrm-dev.orangehrm.com"'.' >> /etc/hosts"');
     }
 
