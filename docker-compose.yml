@@ -32,6 +32,7 @@ services:
       - ./config/web56/php/php.ini:/etc/php.ini
       - ./config/web56/mysql-client:/etc/mysql
       - ./config/web56/apache2/sites-available:/etc/httpd/sites-available
+      - ./config/web56/apache2/sites-enabled:/etc/httpd/sites-enabled
       - ./config/web56/apache2/cert:/etc/httpd/cert
       - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
       - ./logs/apache_logs/web56:/var/log/httpd
