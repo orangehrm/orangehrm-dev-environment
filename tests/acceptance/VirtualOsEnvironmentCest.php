@@ -28,13 +28,6 @@ class VirtualOsEnvironmentCest
         $I->runShellCommand('docker exec dev_web_56 bash -c "curl -k https://orangehrm-os.orangehrm.com"');
         $I->seeInShellOutput("test");
 
-//        $I->runShellCommand('docker exec dev_web_56 bash -c "cat /etc/hosts"');
-//        $I->runShellCommand('docker exec dev_web_56 bash -c "ls /etc/httpd/sites-enabled/"');
-//        $I->runShellCommand('docker exec dev_web_56 bash -c "cat /etc/httpd/sites-enabled/os.conf"');
-//        $I->runShellCommand('docker exec dev_web_56 bash -c "service httpd restart"');
-//        $I->runShellCommand('docker exec dev_web_56 bash -c "service httpd status -l"');
-//        $I->runShellCommand('docker exec dev_web_56 bash -c "ls /var/log/httpd/OHRMStandalone"');
-//        $I->runShellCommand('docker exec dev_web_56 bash -c "cd /var/log/httpd/OHRMStandalone/opensource/ && cat %0-error.log && cat %0-access.log"');
     }
 
 }
