@@ -20,7 +20,6 @@ class VirtualDevEnvironmentCest
         $I->comment("Verify Header values");
 
         $I->runShellCommand('docker exec dev_web_56 bash -c "curl -k -i https://orangehrm-dev.orangehrm.com"');
-        $I->runShellCommand('docker exec dev_web_56 bash -c "cat /etc/hosts"');
         $I->seeInShellOutput("Content-Security-Policy: default-src 'self' *.projects-abroad.net native.testing.equest.com www.youtube.com sandbox.e-signlive.com player.vimeo.com fonts.googleapis.com fonts.gstatic.com 'unsafe-inline' 'unsafe-eval';img-src * 'self' data: blob: ;font-src 'self' fonts.gstatic.com sandbox.e-signlive.com data:");
         $I->seeInShellOutput("X-XSS-Protection: 1; mode=block");
         $I->seeInShellOutput("X-Content-Type-Options: nosniff");
