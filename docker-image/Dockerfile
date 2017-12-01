@@ -73,3 +73,6 @@ RUN echo "suhosin.executor.include.whitelist = phar" >>/etc/php.ini
 
 #COPY supervisord.conf /etc/supervisord.conf
 
+#COPY db check bash
+COPY config/db-check.sh /var/www/db-check.sh
+
