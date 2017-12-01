@@ -69,10 +69,3 @@ RUN rm -rf suhosin-0.9.38
 RUN rm suhosin-0.9.38.tar.gz
 RUN echo "extension=suhosin.so" >>/etc/php.ini
 RUN echo "suhosin.executor.include.whitelist = phar" >>/etc/php.ini
-
-
-#COPY supervisord.conf /etc/supervisord.conf
-
-#COPY db check bash
-COPY config/db-check.sh /var/www/db-check.sh
-
