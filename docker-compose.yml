@@ -49,56 +49,56 @@ services:
     restart: always
     container_name: dev_web_56
 
-#  web71:
-#    image: orangehrm/orangehrm-environment-images:dev-7.1-centos
-#    ports:
-#      - "9071:443"
-#    volumes:
-#      - ./html:/var/www/html
-#      - ./config/web71/php/php.ini:/etc/php.ini
-#      - ./config/web71/mysql-client:/etc/mysql
-#      - ./config/web71/apache2/sites-available:/etc/httpd/sites-available
-#      - ./config/web71/apache2/cert:/etc/httpd/cert
-#      - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-#      - ./logs/apache_logs/web70:/var/log/httpd
-#      - /etc/localtime:/etc/localtime
-#      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-#    privileged: true
-#    links:
-#      - db55
-#      - db57
-#      - phpmyadmin
-#    networks:
-#      ohrmdevnet:
-#        ipv4_address: 10.5.0.71
-#    restart: always
-#    container_name: dev_web_71
+  web71:
+    image: orangehrm/orangehrm-environment-images:dev-7.1-centos
+    ports:
+      - "9071:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./config/web71/php/php.ini:/etc/php.ini
+      - ./config/web71/mysql-client:/etc/mysql
+      - ./config/web71/apache2/sites-available:/etc/httpd/sites-available
+      - ./config/web71/apache2/cert:/etc/httpd/cert
+      - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+      - ./logs/apache_logs/web70:/var/log/httpd
+      - /etc/localtime:/etc/localtime
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    links:
+      - db55
+      - db57
+      - phpmyadmin
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.71
+    restart: always
+    container_name: dev_web_71
 
-#  web70:
-#      image: orangehrm/orangehrm-environment-images:dev-7.0-centos
-#      ports:
-#        - "9070:443"
-#        - "3001:3000"
-#      volumes:
-#        - ./html:/var/www/html
-#        - ./config/web70/php/php.ini:/etc/php.ini
-#        - ./config/web70/mysql-client:/etc/mysql
-#        - ./config/web70/apache2/sites-available:/etc/httpd/sites-available
-#        - ./config/web70/apache2/cert:/etc/httpd/cert
-#        - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-#        - ./logs/apache_logs/web70:/var/log/httpd
-#        - /etc/localtime:/etc/localtime
-#        - /sys/fs/cgroup:/sys/fs/cgroup:ro
-#      privileged: true
-#      links:
-#        - db55
-#        - db57
-#        - phpmyadmin
-#      networks:
-#        ohrmdevnet:
-#          ipv4_address: 10.5.0.70
-#      restart: always
-#      container_name: dev_web_70
+  web70:
+      image: orangehrm/orangehrm-environment-images:dev-7.0-centos
+      ports:
+        - "9070:443"
+        - "3001:3000"
+      volumes:
+        - ./html:/var/www/html
+        - ./config/web70/php/php.ini:/etc/php.ini
+        - ./config/web70/mysql-client:/etc/mysql
+        - ./config/web70/apache2/sites-available:/etc/httpd/sites-available
+        - ./config/web70/apache2/cert:/etc/httpd/cert
+        - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+        - ./logs/apache_logs/web70:/var/log/httpd
+        - /etc/localtime:/etc/localtime
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      privileged: true
+      links:
+        - db55
+        - db57
+        - phpmyadmin
+      networks:
+        ohrmdevnet:
+          ipv4_address: 10.5.0.70
+      restart: always
+      container_name: dev_web_70
 
 
   db55:
