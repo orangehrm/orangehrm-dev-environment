@@ -6,7 +6,7 @@ class DevEnvironmentCest
     public function _before(AcceptanceTester $I)
     {
         $I->comment("Cloning project into /var/www/html");
-        $I->runShellCommand("docker exec dev_web_56 git clone https://github.com/ChanakaR/php-simple.git /var/www/html/php-simple");
+        $I->runShellCommand("docker exec dev_web_56 git clone https://github.com/Nipuna-Sankalpa/php-simple.git /var/www/html/php-simple");
         $I->runShellCommand('docker exec dev_web_56 chmod 777 -R /var/www/html');
     }
 
