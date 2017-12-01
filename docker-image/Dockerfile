@@ -21,6 +21,7 @@ RUN yum -y install \
     git \
     nano \
     nodejs \
+    nmap \
     subversion mod_dav_svn \
     wget \
     vim \
