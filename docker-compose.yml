@@ -1,27 +1,5 @@
 version: '2'
 services:
-#  web55:
-#    image: orangehrm/orangehrm-environment-images:dev-5.5
-#    ports:
-#      - "9055:443"
-#    volumes:
-#      - ./html:/var/www/html
-#      - ./config/web55/php/php.ini:/usr/local/etc/php/php.ini
-#      - ./config/web55/mysql-client:/etc/mysql
-#      - ./config/web55/apache2/sites-available:/etc/apache2/sites-available
-#      - ./config/web55/apache2/cert:/etc/apache2/cert
-#      - ./logs/apache_logs/web55:/var/log/apache2
-#      - /etc/localtime:/etc/localtime
-#    links:
-#      - db55
-#      - db57
-#      - phpmyadmin
-#    networks:
-#      ohrmdevnet:
-#        ipv4_address: 10.5.0.55
-#    restart: always
-#    container_name: dev_web_55
-
   web56:
     image: orangehrm/orangehrm-environment-images:dev-5.6-centos
     ports:
@@ -39,10 +17,6 @@ services:
       - /etc/localtime:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
-    links:
-      - db55
-      - db57
-      - phpmyadmin
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.56
@@ -64,10 +38,6 @@ services:
       - /etc/localtime:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
-    links:
-      - db55
-      - db57
-      - phpmyadmin
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.71
@@ -90,10 +60,6 @@ services:
         - /etc/localtime:/etc/localtime
         - /sys/fs/cgroup:/sys/fs/cgroup:ro
       privileged: true
-      links:
-        - db55
-        - db57
-        - phpmyadmin
       networks:
         ohrmdevnet:
           ipv4_address: 10.5.0.70
@@ -135,47 +101,10 @@ services:
     restart: always
     container_name: dev_mysql_57
 
-#  db101:
-#    image: mariadb:10.1
-#    expose:
-#      - "3306"
-#    volumes:
-#      - ./config/db101:/etc/mysql
-#      - ./logs/mariadb_logs/db101:/var/log
-#      - /etc/localtime:/etc/localtime
-#      - mariadb101:/var/lib/mysql
-#    environment:
-#      MYSQL_ROOT_PASSWORD: 1234
-#    networks:
-#      ohrmdevnet:
-#        ipv4_address: 10.5.0.7
-#    restart: always
-#    container_name: dev_mariadb_101
-#
-#  db11:
-#    image: orangehrm/oracle-xe-11g
-#    expose:
-#      - "1521"
-#      - "22"
-#    volumes:
-#      - ./logs/oracle_logs/db11:/var/log
-#      - /etc/localtime:/etc/localtime
-#      - oracle11:/u01/app/oracle/oradata
-#    environment:
-#      ORACLE_ALLOW_REMOTE: "true"
-#    networks:
-#      ohrmdevnet:
-#        ipv4_address: 10.5.0.8
-#    restart: always
-#    container_name: dev_oracle_11
-
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     volumes:
       - /etc/localtime:/etc/localtime
-    links:
-      - db55
-      - db57
 
     ports:
       - "9092:80"

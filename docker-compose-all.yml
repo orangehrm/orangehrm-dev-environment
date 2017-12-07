@@ -1,142 +1,5 @@
 version: '2'
 services:
-#  web55:
-#    image: orangehrm/orangehrm-environment-images:dev-5.5
-#    ports:
-#      - "9055:443"
-#    volumes:
-#      - ./html:/var/www/html
-#      - ./config/web55/php/php.ini:/usr/local/etc/php/php.ini
-#      - ./config/web55/mysql-client:/etc/mysql
-#      - ./config/web55/apache2/sites-available:/etc/apache2/sites-available
-#      - ./config/web55/apache2/cert:/etc/apache2/cert
-#      - ./logs/apache_logs/web55:/var/log/apache2
-#      - /etc/localtime:/etc/localtime
-#    links:
-#      - db55
-#      - db57
-#      - phpmyadmin
-#    networks:
-#      ohrmdevnet:
-#        ipv4_address: 10.5.0.55
-#    restart: always
-#    container_name: dev_web_55
-
-  web56:
-    image: orangehrm/orangehrm-environment-images:dev-5.6-centos
-    ports:
-      - "9056:443"
-      - "3000:3000"
-    volumes:
-      - ./html:/var/www/html
-      - ./config/web56/php/php.ini:/etc/php.ini
-      - ./config/web56/mysql-client:/etc/mysql
-      - ./config/web56/apache2/sites-available:/etc/httpd/sites-available
-      - ./config/web56/apache2/sites-enabled:/etc/httpd/sites-enabled
-      - ./config/web56/apache2/cert:/etc/httpd/cert
-      - ./logs/apache_logs/web56:/var/log/httpd
-      - /etc/localtime:/etc/localtime
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - ./config/web56/hosts/hosts:/etc/hosts
-    privileged: true
-    links:
-      - db55
-      - db57
-      - db101
-      - phpmyadmin
-      - openldap
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.56
-    restart: always
-    container_name: dev_web_56
-
-  web71:
-    image: orangehrm/orangehrm-environment-images:dev-7.1-centos
-    ports:
-      - "9071:443"
-    volumes:
-      - ./html:/var/www/html
-      - ./config/web71/php/php.ini:/etc/php.ini
-      - ./config/web71/mysql-client:/etc/mysql
-      - ./config/web71/apache2/sites-available:/etc/httpd/sites-available
-      - ./config/web71/apache2/cert:/etc/httpd/cert
-      - ./logs/apache_logs/web70:/var/log/httpd
-      - /etc/localtime:/etc/localtime
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    links:
-      - db55
-      - db57
-      - db101
-      - phpmyadmin
-      - openldap
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.71
-    restart: always
-    container_name: dev_web_71
-
-  web70:
-      image: orangehrm/orangehrm-environment-images:dev-7.0-centos
-      ports:
-        - "9070:443"
-        - "3001:3000"
-      volumes:
-        - ./html:/var/www/html
-        - ./config/web70/php/php.ini:/etc/php.ini
-        - ./config/web70/mysql-client:/etc/mysql
-        - ./config/web70/apache2/sites-available:/etc/httpd/sites-available
-        - ./config/web70/apache2/cert:/etc/httpd/cert
-        - ./logs/apache_logs/web70:/var/log/httpd
-        - /etc/localtime:/etc/localtime
-        - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      privileged: true
-      links:
-        - db55
-        - db57
-        - db101
-        - phpmyadmin
-        - openldap
-      networks:
-        ohrmdevnet:
-          ipv4_address: 10.5.0.70
-      restart: always
-      container_name: dev_web_70
-
-  db55:
-    image: mysql:5.5
-    expose:
-      - "3306"
-    volumes:
-      - ./config/db55:/etc/mysql
-      - ./logs/mysql_logs/db55:/var/log
-      - /etc/localtime:/etc/localtime
-      - mysql55:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.5
-    restart: always
-    container_name: dev_mysql_55
-
-  db57:
-    image: mysql:5.7
-    expose:
-      - "3306"
-    volumes:
-      - ./config/db57:/etc/mysql
-      - ./logs/mysql_logs/db57:/var/log
-      - /etc/localtime:/etc/localtime
-      - mysql57:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.6
-    restart: always
-    container_name: dev_mysql_57
 
   db101:
     image: mariadb:10.1
@@ -237,6 +100,7 @@ services:
     domainname: "orangehrm.com" # important: same as hostname
     hostname: "orangehrm.com"
     restart: always
+
   phpldapadmin:
     image: osixia/phpldapadmin:latest
     container_name: dev_phpldapadmin
@@ -254,14 +118,23 @@ services:
   rabbitmq:
     image: rabbitmq:3.6-management
     container_name: dev_rabbitmq
-    #    environment:
-    #      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
-    #      RABBITMQ_DEFAULT_USER: "rabbitmq"
-    #      RABBITMQ_DEFAULT_PASS: "rabbitmq"
-    #      RABBITMQ_DEFAULT_VHOST: "/"
+    volumes:
+      - ./config/rabbitmq/certs:/cert_rabbitmq/
+    environment:
+      RABBITMQ_SSL_CERTFILE: /cert_rabbitmq/cert.pem
+      RABBITMQ_SSL_KEYFILE: /cert_rabbitmq/key.pem
+      RABBITMQ_SSL_CACERTFILE: /cert_rabbitmq/cacert.pem
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "orangehrm"
+      RABBITMQ_DEFAULT_PASS: "orangehrm"
+      RABBITMQ_DEFAULT_VHOST: "/"
     ports:
       - "15672:15672"
       - "5672:5672"
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.10
+
+volumes:
+  mariadb101:
+  oracle11:
