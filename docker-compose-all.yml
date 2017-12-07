@@ -84,13 +84,12 @@ services:
 
       LDAP_REMOVE_CONFIG_AFTER_SETUP: "true"
       LDAP_SSL_HELPER_PREFIX: "ldap"
-    tty: true
+    tty: true/etc/ldap/slapd.d
     stdin_open: true
     volumes:
-      - /var/lib/ldap
-      - /etc/ldap/slapd.d
+      - openldap-data:/var/lib/ldap
+      - openldap-config/etc/ldap/slapd.d
       - ./config/openldap/certs:/container/service/slapd/assets/certs/
-#      - ./config/openldap/data:/etc/ldap/
     ports:
       - "700:389"
       - "701:636"
@@ -138,3 +137,5 @@ services:
 volumes:
   mariadb101:
   oracle11:
+  openldap-data:
+  openldap-config:
