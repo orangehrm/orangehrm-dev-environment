@@ -57,6 +57,9 @@ RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/ora
 
 COPY phpunit-3.7.28.phar /usr/bin/phpunit3
 COPY phpunit-5.7.21.phar /usr/bin/phpunit
+RUN pear channel-discover pear.phing.info && \
+    pear install VersionControl_SVN-alpha && \
+    pear install phing/phing-2.16.0
 
 #enable suhosin for php
 RUN wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
