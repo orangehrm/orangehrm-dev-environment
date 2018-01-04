@@ -42,10 +42,12 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN pecl install Xdebug
 RUN pecl config-set preferred_state beta
 RUN pecl install xhprof
-RUN pecl install stats
-RUN echo "extension=stats.so" >>/etc/php.ini
 RUN echo "extension=xhprof.so" >>/etc/php.ini
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
+
+#enable php stats module
+RUN pecl install stats
+RUN echo "extension=stats.so" >>/etc/php.ini
 
 #install oci8 php module
 RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8-2.0.12
