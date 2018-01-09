@@ -29,15 +29,6 @@ services:
     volumes_from: [xhgui]
     links:
       - mongodb
-  mongodb:
-    image: mongo:3.4
-    expose:
-     - "27017"
-    restart: always
-    container_name: dev_mongodb
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.14
   xhgui:
     image: orangehrm/orangehrm-environment-images:dev-xhgui-centos
     expose:

@@ -134,8 +134,24 @@ services:
       ohrmdevnet:
         ipv4_address: 10.5.0.10
 
+  mongodb:
+    image: mongo:3.4
+    ports:
+      - "27017:27017"
+    restart: always
+    container_name: dev_mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=1234
+    volumes:
+        - mongodb:/data/db
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.14
+
 volumes:
   mariadb101:
   oracle11:
   openldap-data:
   openldap-config:
+  mongodb:
