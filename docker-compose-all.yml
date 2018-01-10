@@ -141,8 +141,8 @@ services:
     restart: always
     container_name: dev_mongodb
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=1234
+      - MONGO_INITDB_ROOT_USERNAME: admin
+      - MONGO_INITDB_ROOT_PASSWORD: 1234
     volumes:
         - mongodb:/data/db
     networks:
