@@ -32,8 +32,9 @@ services:
       - ./config/web71/php/php.ini:/etc/php.ini
       - ./config/web71/mysql-client:/etc/mysql
       - ./config/web71/apache2/sites-available:/etc/httpd/sites-available
-      - ./config/web71/apache2/cert:/etc/httpd/cert
+      - ./config/web71/apache2/sites-enabled:/etc/httpd/sites-enabled
       - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+      - ./config/web71/apache2/cert:/etc/httpd/cert
       - ./logs/apache_logs/web70:/var/log/httpd
       - /etc/localtime:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -54,8 +55,9 @@ services:
         - ./config/web70/php/php.ini:/etc/php.ini
         - ./config/web70/mysql-client:/etc/mysql
         - ./config/web70/apache2/sites-available:/etc/httpd/sites-available
-        - ./config/web70/apache2/cert:/etc/httpd/cert
+        - ./config/web70/apache2/sites-enabled:/etc/httpd/sites-enabled
         - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+        - ./config/web70/apache2/cert:/etc/httpd/cert
         - ./logs/apache_logs/web70:/var/log/httpd
         - /etc/localtime:/etc/localtime
         - /sys/fs/cgroup:/sys/fs/cgroup:ro
