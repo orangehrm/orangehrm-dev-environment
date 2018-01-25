@@ -63,4 +63,6 @@ class VirtualDevEnvironmentIndexCest
         $I->runShellCommand('docker exec dev_web_71 bash -c "curl -v -k -i https://index-os.orangehrmdev.com"');
 
     }
+
+    public function upto(AcceptanceTester $I){}
 }
