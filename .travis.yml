@@ -24,9 +24,9 @@ install:
   - docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d
 
 script:
-  - php vendor/bin/codecept run acceptance
+  - php vendor/bin/codecept --debug run acceptance
   - php vendor/bin/codecept run functional
-  --debug
+
 
 
 
