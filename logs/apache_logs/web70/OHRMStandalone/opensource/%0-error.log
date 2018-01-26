@@ -1,0 +1,30 @@
+[Thu Jan 18 10:52:03.491642 2018] [core:crit] [pid 445] (13)Permission denied: [client 10.5.0.1:45054] AH00529: /var/www/html/OHRMStandalone/opensource/orangehrmos-os.orangehrm.com/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable and that '/var/www/html/OHRMStandalone/opensource/orangehrmos-os.orangehrm.com/' is executable
+[Thu Jan 18 10:52:03.685354 2018] [core:crit] [pid 445] (13)Permission denied: [client 10.5.0.1:45054] AH00529: /var/www/html/OHRMStandalone/opensource/orangehrmos-os.orangehrm.com/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable and that '/var/www/html/OHRMStandalone/opensource/orangehrmos-os.orangehrm.com/' is executable
+[Thu Jan 18 11:01:28.276129 2018] [core:crit] [pid 464] (13)Permission denied: [client 10.5.0.1:45374] AH00529: /var/www/html/OHRMStandalone/opensource/orangehrmos-os.orangehrm.com/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable and that '/var/www/html/OHRMStandalone/opensource/orangehrmos-os.orangehrm.com/' is executable
+[Thu Jan 18 11:01:29.879085 2018] [core:crit] [pid 464] (13)Permission denied: [client 10.5.0.1:45374] AH00529: /var/www/html/OHRMStandalone/opensource/orangehrmos-os.orangehrm.com/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable and that '/var/www/html/OHRMStandalone/opensource/orangehrmos-os.orangehrm.com/' is executable
+[Mon Jan 22 13:30:15.342613 2018] [ssl:warn] [pid 310] AH01909: RSA certificate configured for orangehrm.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 13:30:15.380931 2018] [ssl:warn] [pid 310] AH01909: RSA certificate configured for orangehrm.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 13:49:52.247900 2018] [ssl:warn] [pid 373] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 13:49:52.283372 2018] [ssl:warn] [pid 373] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 13:57:58.815696 2018] [ssl:warn] [pid 195] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 13:57:58.891704 2018] [ssl:warn] [pid 195] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 13:59:19.541200 2018] [ssl:warn] [pid 266] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 13:59:19.577978 2018] [ssl:warn] [pid 266] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 14:03:08.607955 2018] [ssl:warn] [pid 31] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 14:03:08.643289 2018] [ssl:warn] [pid 31] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 14:03:52.586246 2018] [ssl:warn] [pid 96] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 14:03:52.619771 2018] [ssl:warn] [pid 96] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 14:29:06.388152 2018] [ssl:warn] [pid 155] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 14:29:06.441686 2018] [ssl:warn] [pid 155] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 15:17:52.655141 2018] [ssl:warn] [pid 424] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 15:17:52.717806 2018] [ssl:warn] [pid 424] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 15:20:28.665330 2018] [ssl:warn] [pid 234] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Mon Jan 22 15:20:28.723330 2018] [ssl:warn] [pid 234] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Wed Jan 24 12:18:46.950887 2018] [ssl:warn] [pid 869] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Wed Jan 24 12:18:47.004614 2018] [ssl:warn] [pid 869] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Wed Jan 24 12:19:06.291850 2018] [ssl:warn] [pid 590] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Wed Jan 24 12:19:06.347119 2018] [ssl:warn] [pid 590] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Wed Jan 24 12:43:28.877379 2018] [ssl:warn] [pid 984] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Wed Jan 24 12:43:28.911725 2018] [ssl:warn] [pid 984] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Wed Jan 24 12:43:41.286833 2018] [ssl:warn] [pid 706] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
+[Wed Jan 24 12:43:41.321165 2018] [ssl:warn] [pid 706] AH01909: RSA certificate configured for orangehrmdev.com:443 does NOT include an ID which matches the server name
