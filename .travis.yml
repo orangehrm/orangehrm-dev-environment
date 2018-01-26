@@ -21,7 +21,7 @@ before_install:
 
 install:
   - composer install
-  - docker-compose -f docker-compose.yml -f up -d
+  - docker-compose -f docker-compose.yml up -d
 
 script:
   - php vendor/bin/codecept --debug run acceptance
