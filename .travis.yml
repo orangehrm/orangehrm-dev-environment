@@ -18,17 +18,14 @@ before_install:
   - php --version
   - docker version
   - composer self-update
-  - sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-  - sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-  - ip addr # for confirmation. can be skipped
 
 install:
   - composer install
-  - docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d
+  - docker-compose -f docker-compose.yml -f up -d
 
 script:
   - php vendor/bin/codecept --debug run acceptance
-  - php vendor/bin/codecept run functional
+#  - php vendor/bin/codecept run functional
 
 
 
