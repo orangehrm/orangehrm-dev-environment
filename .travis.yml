@@ -18,6 +18,9 @@ before_install:
   - php --version
   - docker version
   - composer self-update
+  - sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+  - sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+  - ip addr # for confirmation. can be skipped
 
 install:
   - composer install
