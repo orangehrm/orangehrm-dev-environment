@@ -19,13 +19,14 @@ before_install:
   - docker version
   - composer self-update
 
+
 install:
   - composer install
-  - docker-compose -f docker-compose.yml up -d
+  - docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d
 
 script:
   - php vendor/bin/codecept --debug run acceptance
-#  - php vendor/bin/codecept run functional
+  - php vendor/bin/codecept run functional
 
 
 
