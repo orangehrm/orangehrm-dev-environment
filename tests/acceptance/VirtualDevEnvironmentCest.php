@@ -12,8 +12,8 @@ class VirtualDevEnvironmentCest
     {
         $I->comment("Create test project into /var/www/html/OHRMStandalone/test");
         $I->runShellCommand("docker exec dev_web_56 bash -c 'mkdir -p /var/www/html/OHRMStandalone/test/orangehrm-test.orangehrmdev.com/symfony/web && cd /var/www/html/OHRMStandalone/test/orangehrm-test.orangehrmdev.com/symfony/web && echo test >> index.html'");
-        $I->runShellCommand('docker exec dev_web_56 bash -c "echo   127.0.0.1 orangehrm-test.orangehrmdev.com >> /etc/hosts && cat /etc/hosts" ');
-
+     //   $I->runShellCommand('docker exec dev_web_56 bash -c "echo 127.0.0.1 orangehrm-test.orangehrmdev.com >> /etc/hosts && cat /etc/hosts" ');
+        $I->runShellCommand('docker exec dev_web_56 bash -c "echo 127.0.0.1    orangehrm-test.orangehrmdev.com >> /etc/hosts && cat /etc/hosts" ');
     }
 
     public function checkHeaders(AcceptanceTester $I)
