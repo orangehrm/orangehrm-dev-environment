@@ -12,7 +12,7 @@ class VirtualOsEnvironmentCest
     {
         $I->comment("Cloning project into /var/www/html/OHRMStandalone/opensource");
         $I->runShellCommand('docker exec dev_web_56 bash -c "cd /var/www/html/OHRMStandalone/opensource/ && mkdir -p orangehrm-os.orangehrmdev.com && cd orangehrm-os.orangehrmdev.com && echo test > index.html"');
-        $I->runShellCommand('docker exec dev_web_56 bash -c "echo 127.0.0.1 orangehrm-os.orangehrmdev.com >> /etc/hosts && cat /etc/hosts"');
+        $I->runShellCommand('docker exec dev_web_56 bash -c "echo 127.0.0.1 orangehrm-os.orangehrmdev.com >> /etc/hosts"');
     }
 
     public function checkHeaders(AcceptanceTester $I)
