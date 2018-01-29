@@ -4,5 +4,3 @@ vendor/
 docker-compose.override.yml
 tests/_output/*
 
-html/OHRMStandalone/opensource/*
-html/OHRMStandalone/tets*
