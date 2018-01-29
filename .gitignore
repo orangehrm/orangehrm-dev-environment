@@ -4,4 +4,3 @@ vendor/
 docker-compose.override.yml
 tests/_output/*
 logs/*
-html/*
