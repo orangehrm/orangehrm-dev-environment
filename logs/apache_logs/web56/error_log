@@ -1,7 +1,0 @@
-
-[Mon Jan 22 12:46:28.138513 2018] [suexec:notice] [pid 31] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
-AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
-[Mon Jan 22 12:46:28.184922 2018] [auth_digest:notice] [pid 31] AH01757: generating secret for digest authentication ...
-[Mon Jan 22 12:46:28.185916 2018] [lbmethod_heartbeat:notice] [pid 31] AH02282: No slotmem from mod_heartmonitor
-[Mon Jan 22 12:46:28.243214 2018] [mpm_prefork:notice] [pid 31] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.32 SVN/1.9.7 configured -- resuming normal operations
-[Mon Jan 22 12:46:28.243253 2018] [core:notice] [pid 31] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
