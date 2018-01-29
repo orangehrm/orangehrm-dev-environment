@@ -11,8 +11,8 @@ class VirtualDevEnvironmentIndexCest
     public function installationForDev56(AcceptanceTester $I)
     {
         $I->comment("Create projects into test and opensource ");
-        $I->runShellCommand("docker exec dev_web_56 bash -c 'mkdir -p /var/www/html/OHRMStandalone/test/index-test.orangehrmdev.com/symfony/web && cd /var/www/html/OHRMStandalone/test/index-test.orangehrmdev.com/symfony/web && echo NewTestDirectory > index.html'");
-        $I->runShellCommand('docker exec dev_web_56 bash -c "mkdir -p /var/www/html/OHRMStandalone/opensource/index-os.orangehrmdev.com && cd /var/www/html/OHRMStandalone/opensource/index-os.orangehrmdev.com && echo NewOsDirectory > index.html" ');
+        $I->runShellCommand("docker exec dev_web_56 bash -c 'cd /var/www/html/OHRMStandalone/test/ && mkdir index-test.orangehrmdev.com/symfony/web && cd index-test.orangehrmdev.com/symfony/web && echo NewTestDirectory > index.html'");
+        $I->runShellCommand('docker exec dev_web_56 bash -c "cd /var/www/html/OHRMStandalone/opensource/ && mkdir index-os.orangehrmdev.com && cd index-os.orangehrmdev.com && echo NewOsDirectory > index.html" ');
         $I->runShellCommand('docker exec dev_web_56 bash -c "echo 127.0.0.1 index-test.orangehrmdev.com >> /etc/hosts"');
         $I->runShellCommand('docker exec dev_web_56 bash -c "echo 127.0.0.1 index-os.orangehrmdev.com >> /etc/hosts"');
 
@@ -21,8 +21,8 @@ class VirtualDevEnvironmentIndexCest
     public function installationForDev70(AcceptanceTester $I)
     {
         $I->comment("Create projects into test and opensource ");
-        $I->runShellCommand("docker exec dev_web_70 bash -c 'mkdir -p /var/www/html/OHRMStandalone/test/index-test.orangehrmdev.com/symfony/web && cd /var/www/html/OHRMStandalone/test/index-test.orangehrmdev.com/symfony/web && echo NewTestDirectory > index.html'");
-        $I->runShellCommand('docker exec dev_web_70 bash -c "mkdir -p /var/www/html/OHRMStandalone/opensource/index-os.orangehrmdev.com && cd /var/www/html/OHRMStandalone/opensource/index-os.orangehrmdev.com && echo NewOsDirector > index.html" ');
+        $I->runShellCommand("docker exec dev_web_70 bash -c 'cd /var/www/html/OHRMStandalone/test/ && mkdir index-test.orangehrmdev.com/symfony/web && cd index-test.orangehrmdev.com/symfony/web && echo NewTestDirectory > index.html'");
+        $I->runShellCommand('docker exec dev_web_70 bash -c "cd /var/www/html/OHRMStandalone/opensource/ && mkdir index-os.orangehrmdev.com && cd index-os.orangehrmdev.com && echo NewOsDirector > index.html" ');
         $I->runShellCommand('docker exec dev_web_70 bash -c "echo 127.0.0.1 index-test.orangehrmdev.com >> /etc/hosts"');
         $I->runShellCommand('docker exec dev_web_70 bash -c "echo 127.0.0.1 index-os.orangehrmdev.com >> /etc/hosts"');
     }
@@ -30,8 +30,8 @@ class VirtualDevEnvironmentIndexCest
     public function installationForDev71(AcceptanceTester $I)
     {
         $I->comment("Create projects into test and opensource ");
-        $I->runShellCommand("docker exec dev_web_71 bash -c 'mkdir -p /var/www/html/OHRMStandalone/test/index-test.orangehrmdev.com/symfony/web && cd /var/www/html/OHRMStandalone/test/index-test.orangehrmdev.com/symfony/web && echo NewTestDirectory > index.html'");
-        $I->runShellCommand('docker exec dev_web_71 bash -c "mkdir -p /var/www/html/OHRMStandalone/opensource/index-os.orangehrmdev.com && cd /var/www/html/OHRMStandalone/opensource/index-os.orangehrmdev.com && echo NewOsDirector > index.html" ');
+        $I->runShellCommand("docker exec dev_web_71 bash -c 'cd /var/www/html/OHRMStandalone/test/  && mkdir index-test.orangehrmdev.com/symfony/web && cd index-test.orangehrmdev.com/symfony/web && echo NewTestDirectory > index.html'");
+        $I->runShellCommand('docker exec dev_web_71 bash -c "cd /var/www/html/OHRMStandalone/opensource/ && mkdir index-os.orangehrmdev.com && cd index-os.orangehrmdev.com && echo NewOsDirectory > index.html" ');
         $I->runShellCommand('docker exec dev_web_71 bash -c "echo 127.0.0.1 index-test.orangehrmdev.com >> /etc/hosts"');
         $I->runShellCommand('docker exec dev_web_71 bash -c "echo 127.0.0.1 index-os.orangehrmdev.com >> /etc/hosts"');
 
