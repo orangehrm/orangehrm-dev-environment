@@ -55,3 +55,10 @@ RUN pear channel-discover pear.phing.info && \
 # Add supervisor conf
 COPY supervisord.conf /etc/supervisord.conf
 
+#Installing php-ast using PECL
+RUN pecl install ast
+
+#Installing phan using composer
+RUN composer require --dev phan/phan
+
+
