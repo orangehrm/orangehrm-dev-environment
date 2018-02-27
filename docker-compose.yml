@@ -124,9 +124,9 @@ services:
       - "3306"
     volumes:
       - ./config/db102:/etc/mysql
-      - ./logs/mariadb_logs/db101:/var/log
+      - ./logs/mariadb_logs/db102:/var/log
       - /etc/localtime:/etc/localtime
-      - mariadb101:/var/lib/mysql
+      - mariadb102:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     networks:
