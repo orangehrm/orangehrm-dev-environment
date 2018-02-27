@@ -35,7 +35,7 @@ services:
       - ./config/web71/apache2/sites-enabled:/etc/httpd/sites-enabled
       - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
       - ./config/web71/apache2/cert:/etc/httpd/cert
-      - ./logs/apache_logs/web70:/var/log/httpd
+      - ./logs/apache_logs/web71:/var/log/httpd
       - /etc/localtime:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
