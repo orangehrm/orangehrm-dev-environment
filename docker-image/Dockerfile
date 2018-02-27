@@ -57,8 +57,10 @@ COPY supervisord.conf /etc/supervisord.conf
 
 #Installing php-ast using PECL
 RUN pecl install ast
+RUN echo "extension=/usr/lib64/php/modules/ast.so" >> /etc/php.ini
 
 #Installing phan using composer
-RUN composer require --dev phan/phan
+RUN cd /var/lib && composer require --dev phan/phan
+RUN ln -s /var/lib/vendor/bin/phan /usr/bin/phan
 
 
