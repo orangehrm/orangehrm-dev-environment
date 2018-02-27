@@ -118,10 +118,27 @@ services:
     restart: always
     container_name: dev_phpmyadmin
 
+  db102:
+    image: mariadb:10.2
+    expose:
+      - "3306"
+    volumes:
+      - ./config/db102:/etc/mysql
+      - ./logs/mariadb_logs/db101:/var/log
+      - /etc/localtime:/etc/localtime
+      - mariadb101:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.7
+    restart: always
+    container_name: dev_mariadb_102
+
 volumes:
   mysql55:
   mysql57:
-  mariadb101:
+  mariadb102:
   oracle11:
 
 networks:

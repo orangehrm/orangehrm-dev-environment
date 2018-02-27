@@ -1,23 +1,5 @@
 version: '2'
 services:
-
-  db101:
-    image: mariadb:10.1
-    expose:
-      - "3306"
-    volumes:
-      - ./config/db101:/etc/mysql
-      - ./logs/mariadb_logs/db101:/var/log
-      - /etc/localtime:/etc/localtime
-      - mariadb101:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.7
-    restart: always
-    container_name: dev_mariadb_101
-
   db11:
     image: orangehrm/oracle-xe-11g
     expose:
@@ -42,11 +24,11 @@ services:
     links:
       - db55
       - db57
-      - db101
+      - db102
     ports:
       - "9092:80"
     environment:
-      PMA_HOSTS: db55,db57,db101
+      PMA_HOSTS: db55,db57,db102
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.20

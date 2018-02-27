@@ -24,9 +24,9 @@ class PhpmyadminContainerCest
         $I->seeInShellOutput('1 packets transmitted, 1 packets received');
     }
 
-    public function checkConnectionWithDB101(FunctionalTester $I){
-        $I->wantTo("verify mariadb 10.1  container is linked with phpmyadmin container properly");
-        $I->runShellCommand("docker exec dev_phpmyadmin ping db101 -c 1");
+    public function checkConnectionWithDB102(FunctionalTester $I){
+        $I->wantTo("verify mariadb 10.2  container is linked with phpmyadmin container properly");
+        $I->runShellCommand("docker exec dev_phpmyadmin ping db102 -c 1");
         $I->seeInShellOutput('1 packets transmitted, 1 packets received');
     }
 }
