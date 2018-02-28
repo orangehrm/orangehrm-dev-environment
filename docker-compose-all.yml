@@ -24,7 +24,6 @@ services:
     links:
       - db55
       - db57
-      - db102
     ports:
       - "9092:80"
     environment:

@@ -111,7 +111,7 @@ services:
     ports:
       - "9092:80"
     environment:
-      PMA_HOSTS: db55,db57
+      PMA_HOSTS: db55,db57,db102
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.20
