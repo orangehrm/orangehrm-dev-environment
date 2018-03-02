@@ -29,7 +29,7 @@ class WebContainer71Cest
         $I->seeInShellOutput('2 packets transmitted, 2 received');
     }
 
-    public function checkConnectionWithDB101(FunctionalTester $I){
+    public function checkConnectionWithDB102(FunctionalTester $I){
         $I->wantTo("verify mariadb 10.2 container is linked with php 7.1 container properly");
         $I->runShellCommand("docker exec dev_web_71 ping db102 -c 2");
         $I->seeInShellOutput('2 packets transmitted, 2 received');
