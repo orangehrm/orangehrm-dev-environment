@@ -63,6 +63,8 @@ RUN echo "extension=/usr/lib64/php/modules/ast.so" >> /etc/php.ini
 RUN cd /var/lib && composer require --dev phan/phan
 RUN ln -s /var/lib/vendor/bin/phan /usr/bin/phan
 
-
+#Installing apt-stat module
+RUN pecl install stats-2.0.3
+RUN echo "extension=stats.so" >> /etc/php.ini
 
 
