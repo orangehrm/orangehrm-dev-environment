@@ -27,7 +27,6 @@ install:
 script:
   - php vendor/bin/codecept run acceptance
   - php vendor/bin/codecept run functional
-  - php vendor/bin/codecept run unit
 
 
 
