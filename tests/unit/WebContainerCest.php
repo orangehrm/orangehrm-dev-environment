@@ -129,6 +129,18 @@ class WebContainerCest
         $I->seeInShellOutput('oci8');
     }
 
+    public function checkAstExtention(UnitTester $I){
+        $I->wantTo("verify ast extention");
+        $I->runShellCommand("docker exec dev_web bash -c 'php -m | grep ast'");
+        $I->seeInShellOutput('ast');
+    }
+
+    public function checkPhanExtention(UnitTester $I){
+        $I->wantTo('Verify the phan');
+        $I->runShellCommand("docker exec dev_web bash -c 'phan -v | grep Phan'");
+        $I->seeInShellOutput('Phan');
+    }
+
     public function checkStatsPHPmodule(UnitTester $I){
         $I->wantTo("verify stats module");
         $I->runShellCommand("docker exec dev_web bash -c 'php -m | grep stats'");
