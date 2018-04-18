@@ -68,7 +68,6 @@ services:
       restart: always
       container_name: dev_web_70
 
-
   db55:
     image: mysql:5.5
     expose:
@@ -134,6 +133,28 @@ services:
         ipv4_address: 10.5.0.7
     restart: always
     container_name: dev_mariadb_102
+
+  web72:
+    image: orangehrm/orangehrm-environment-images:dev-7.2-centos
+    ports:
+      - "9072:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./config/web72/php/php.ini:/etc/php.ini
+      - ./config/web72/mysql-client:/etc/mysql
+      - ./config/web72/apache2/sites-available:/etc/httpd/sites-available
+      - ./config/web72/apache2/sites-enabled:/etc/httpd/sites-enabled
+      - ./config/web72/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+      - ./config/web72/apache2/cert:/etc/httpd/cert
+      - ./logs/apache_logs/web72:/var/log/httpd
+      - /etc/localtime:/etc/localtime
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.72
+    restart: always
+    container_name: dev_web_72
 
 volumes:
   mysql55:
