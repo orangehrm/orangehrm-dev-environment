@@ -66,7 +66,8 @@ RUN pear channel-discover pear.phing.info && \
     pear install phing/phing-2.16.0
 
 #enable suhosin for php
-RUN wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
+COPY suhosin-0.9.38.tar.gz /var/www/html/
+#RUN wget https://download.suhosin.org/suhosin-0.9.38.tar.gz
 RUN tar -xvf suhosin-0.9.38.tar.gz
 RUN cd /var/www/html/suhosin-0.9.38; phpize
 RUN cd /var/www/html/suhosin-0.9.38; bash configure
