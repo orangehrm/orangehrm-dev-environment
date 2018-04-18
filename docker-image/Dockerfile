@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:prod-7.1
+FROM orangehrm/orangehrm-environment-images:prod-7.2
 
 MAINTAINER orangehrm
 LABEL authors = "Thulana Kannangara <thulana@orangehrm.us.com> , Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
@@ -21,7 +21,6 @@ RUN yum -y install \
     sendmail \
     subversion mod_dav_svn \
     vim \
-    #npm \
     && yum -y update bash \
     && rm -rf /var/cache/yum/* \
     && yum clean all
@@ -32,7 +31,7 @@ RUN npm install bower gulp nodemon node-sass pm2 -g
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Enable and configure xdebug
-RUN pecl install Xdebug
+RUN pecl install Xdebug-2.6.0
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
 #install oci8 php module
