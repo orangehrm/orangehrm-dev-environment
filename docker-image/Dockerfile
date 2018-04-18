@@ -39,7 +39,7 @@ RUN npm install pm2 -g
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Enable and configure xdebug
-RUN pecl install Xdebug
+RUN pecl install Xdebug-2.5.5
 RUN pecl config-set preferred_state beta
 RUN pecl install xhprof
 RUN echo "extension=xhprof.so" >>/etc/php.ini
