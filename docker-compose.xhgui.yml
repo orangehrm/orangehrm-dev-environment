@@ -17,7 +17,7 @@
 #
 # docker-compose  -f docker-compose.yml -f docker-compose.xhgui.yml up -d
 #
-version: '2'
+version: '2.1'
 services:
  # web55:
     # volume with xhgui src

@@ -34,4 +34,11 @@ class WebContainer71Cest
         $I->runShellCommand("docker exec dev_web_71 ping db102 -c 2");
         $I->seeInShellOutput('2 packets transmitted, 2 received');
     }
+
+    public function kernalSHMValue(AcceptanceTester $I)
+    {
+        $I->comment("Checking the shmmax value");
+        $I->runShellCommand('docker exec dev_web_70 bash -c "cat /proc/sys/kernel/shmmax"');
+        $I->seeInShellOutput('67371264');
+    }
 }

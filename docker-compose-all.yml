@@ -1,4 +1,4 @@
-version: '2'
+version: '2.1'
 services:
   db11:
     image: orangehrm/oracle-xe-11g
