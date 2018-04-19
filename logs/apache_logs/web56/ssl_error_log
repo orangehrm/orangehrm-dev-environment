@@ -1,0 +1,1078 @@
+[Fri Mar 09 23:00:29.280497 2018] [suexec:notice] [pid 75] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 09 23:00:29.288569 2018] [ssl:warn] [pid 75] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 09 23:00:29.289169 2018] [ssl:warn] [pid 75] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 09 23:00:29.476717 2018] [auth_digest:notice] [pid 75] AH01757: generating secret for digest authentication ...
+[Fri Mar 09 23:00:29.478453 2018] [lbmethod_heartbeat:notice] [pid 75] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 09 23:00:29.483988 2018] [ssl:warn] [pid 75] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 09 23:00:29.484191 2018] [ssl:warn] [pid 75] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 09 23:00:29.804066 2018] [mpm_prefork:notice] [pid 75] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 09 23:00:29.804118 2018] [core:notice] [pid 75] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Mar 10 09:59:16.517039 2018] [suexec:notice] [pid 65] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Mar 10 09:59:16.523761 2018] [ssl:warn] [pid 65] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Mar 10 09:59:16.524135 2018] [ssl:warn] [pid 65] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sat Mar 10 09:59:16.617071 2018] [auth_digest:notice] [pid 65] AH01757: generating secret for digest authentication ...
+[Sat Mar 10 09:59:16.618374 2018] [lbmethod_heartbeat:notice] [pid 65] AH02282: No slotmem from mod_heartmonitor
+[Sat Mar 10 09:59:16.620948 2018] [ssl:warn] [pid 65] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Mar 10 09:59:16.621152 2018] [ssl:warn] [pid 65] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sat Mar 10 09:59:16.816074 2018] [mpm_prefork:notice] [pid 65] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Sat Mar 10 09:59:16.816900 2018] [core:notice] [pid 65] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Nov 21 11:08:22.662926 2023] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Nov 21 11:08:22.667483 2023] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Nov 21 11:08:22.667639 2023] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Nov 21 11:08:22.777410 2023] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Tue Nov 21 11:08:22.778703 2023] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Tue Nov 21 11:08:22.786985 2023] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Nov 21 11:08:22.787164 2023] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Nov 21 11:08:23.404440 2023] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Nov 21 11:08:23.404503 2023] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Mar 12 21:55:44.772633 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Mar 12 21:55:44.799453 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Mar 12 21:55:44.799695 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Mar 12 21:55:44.941719 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Mon Mar 12 21:55:44.942973 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Mon Mar 12 21:55:44.945438 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Mar 12 21:55:44.945616 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Mar 12 21:55:45.261506 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Mon Mar 12 21:55:45.261575 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 13 11:20:21.218238 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 13 11:20:21.240722 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 13 11:20:21.242925 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 13 11:20:21.678911 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Tue Mar 13 11:20:21.692260 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 13 11:20:21.709248 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 13 11:20:21.709432 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 13 11:20:22.654221 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 13 11:20:22.654287 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 13 16:09:52.794204 2018] [suexec:notice] [pid 61] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 13 16:09:52.804103 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 13 16:09:52.804263 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 13 16:09:53.801978 2018] [auth_digest:notice] [pid 61] AH01757: generating secret for digest authentication ...
+[Tue Mar 13 16:09:53.823163 2018] [lbmethod_heartbeat:notice] [pid 61] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 13 16:09:53.849989 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 13 16:09:53.850181 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 13 16:09:54.849202 2018] [mpm_prefork:notice] [pid 61] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 13 16:09:54.849263 2018] [core:notice] [pid 61] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 13 19:56:29.413617 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 13 19:56:29.465019 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 13 19:56:29.465203 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 13 19:56:29.991894 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Tue Mar 13 19:56:29.993155 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 13 19:56:30.008411 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 13 19:56:30.008591 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 13 19:56:30.474994 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 13 19:56:30.475026 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Mar 14 12:50:53.265373 2018] [suexec:notice] [pid 66] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Mar 14 12:50:53.362443 2018] [ssl:warn] [pid 66] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 14 12:50:53.362604 2018] [ssl:warn] [pid 66] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 14 12:50:54.626888 2018] [auth_digest:notice] [pid 66] AH01757: generating secret for digest authentication ...
+[Wed Mar 14 12:50:54.634657 2018] [lbmethod_heartbeat:notice] [pid 66] AH02282: No slotmem from mod_heartmonitor
+[Wed Mar 14 12:50:54.653067 2018] [ssl:warn] [pid 66] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 14 12:50:54.653240 2018] [ssl:warn] [pid 66] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Mar 14 12:50:55.624748 2018] [mpm_prefork:notice] [pid 66] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Mar 14 12:50:55.624826 2018] [core:notice] [pid 66] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Mar 14 09:37:52.354573 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Mar 14 09:37:52.387218 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 14 09:37:52.395538 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 14 09:37:52.924806 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Wed Mar 14 09:37:52.926072 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Wed Mar 14 09:37:52.985384 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 14 09:37:52.985568 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Mar 14 09:37:53.648143 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Mar 14 09:37:53.648195 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Mar 14 12:46:00.611759 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Mar 14 12:46:00.622105 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 14 12:46:00.622267 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 14 12:46:00.724001 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Wed Mar 14 12:46:00.725332 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Wed Mar 14 12:46:00.727780 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 14 12:46:00.727953 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Mar 14 12:46:00.974017 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Mar 14 12:46:00.974061 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Mar 14 21:06:52.856588 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Mar 14 21:06:52.864387 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 14 21:06:52.864575 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 14 21:06:52.996126 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Wed Mar 14 21:06:52.997408 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Wed Mar 14 21:06:52.999846 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 14 21:06:53.012500 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Mar 14 21:06:53.421972 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Mar 14 21:06:53.422010 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 15 08:51:44.434531 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Mar 15 08:51:44.438430 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Mar 15 08:51:44.438605 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 15 08:51:44.504719 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Thu Mar 15 08:51:44.506114 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 15 08:51:44.508442 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Mar 15 08:51:44.508616 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Mar 15 08:51:44.693096 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Thu Mar 15 08:51:44.693144 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 15 14:06:25.920766 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22
+[Thu Mar 15 14:06:25.921554 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP Stack trace:
+[Thu Mar 15 14:06:25.921579 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0
+[Thu Mar 15 14:06:25.921610 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22
+[Thu Mar 15 14:06:25.921632 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP Stack trace:
+[Thu Mar 15 14:06:25.921646 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0
+[Thu Mar 15 14:06:26.054456 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP Fatal error:  Class 'sfContext' not found in /var/www/html/security/symfony/apps/orangehrm/templates/_copyright.php on line 13
+[Thu Mar 15 14:06:26.054533 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP Stack trace:
+[Thu Mar 15 14:06:26.054566 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP   1. {main}() /var/www/html/security/symfony/web/installerUI.php:0
+[Thu Mar 15 14:06:26.054595 2018] [:error] [pid 91] [client 10.5.0.1:49104] PHP   2. include_once() /var/www/html/security/symfony/web/installerUI.php:138
+[Thu Mar 15 14:06:30.141691 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.142113 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.142151 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.142209 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.142248 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.142271 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.223654 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Fatal error:  Class 'sfContext' not found in /var/www/html/security/symfony/apps/orangehrm/templates/_copyright.php on line 13, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.223749 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.223822 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP   1. {main}() /var/www/html/security/symfony/web/installerUI.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:30.223878 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP   2. include_once() /var/www/html/security/symfony/web/installerUI.php:138, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.815374 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.815437 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.815455 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.815482 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.815492 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.815503 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.873726 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Fatal error:  Class 'sfContext' not found in /var/www/html/security/symfony/apps/orangehrm/templates/_copyright.php on line 13, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.873783 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.873815 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP   1. {main}() /var/www/html/security/symfony/web/installerUI.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:32.873843 2018] [:error] [pid 89] [client 10.5.0.1:49112] PHP   2. include_once() /var/www/html/security/symfony/web/installerUI.php:138, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.622976 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.623326 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.623347 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.623378 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.623397 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.623409 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.832100 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP Fatal error:  Class 'sfContext' not found in /var/www/html/security/symfony/apps/orangehrm/templates/_copyright.php on line 13, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.832197 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.832264 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP   1. {main}() /var/www/html/security/symfony/web/installerUI.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:51.832322 2018] [:error] [pid 88] [client 10.5.0.1:49132] PHP   2. include_once() /var/www/html/security/symfony/web/installerUI.php:138, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:06:52.835201 2018] [access_compat:error] [pid 88] [client 10.5.0.1:49132] AH01797: client denied by server configuration: /var/www/html/security/symfony/web/installer/images/dummy.jpg, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:19.062658 2018] [access_compat:error] [pid 90] [client 10.5.0.1:49170] AH01797: client denied by server configuration: /var/www/html/security/symfony/web/installer/images/dummy.jpg, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:25.811279 2018] [:error] [pid 90] [client 10.5.0.1:49170] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:25.811340 2018] [:error] [pid 90] [client 10.5.0.1:49170] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:25.811359 2018] [:error] [pid 90] [client 10.5.0.1:49170] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:25.811388 2018] [:error] [pid 90] [client 10.5.0.1:49170] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:25.811409 2018] [:error] [pid 90] [client 10.5.0.1:49170] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:25.811422 2018] [:error] [pid 90] [client 10.5.0.1:49170] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:42.578953 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:42.579415 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:42.579444 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:42.579479 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:42.579501 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:42.579513 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:45.650600 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:45.650728 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:45.650757 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:45.650801 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:45.650816 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:45.650835 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:48.676783 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:48.676860 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:48.676885 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:48.676925 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:48.676940 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:48.676957 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:53.537872 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:53.537929 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:53.537945 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:53.537971 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:53.537979 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:53.537990 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:56.718008 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:56.718075 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:56.718120 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:56.718149 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:56.718160 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:56.718177 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:59.395617 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:59.395684 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:59.395701 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:59.395730 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:59.395739 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:07:59.395751 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:03.135581 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:03.135651 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:03.135675 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:03.135713 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:03.135729 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:03.135745 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:05.933800 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:05.933857 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:05.933873 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:05.933899 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:05.933929 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:05.933942 2018] [:error] [pid 87] [client 10.5.0.1:49182] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:29.448980 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:29.449074 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:29.449090 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:29.449118 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:29.449136 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:29.449147 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:31.859790 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:31.859845 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:31.859862 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:31.859890 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/security/symfony/web/install.php on line 22, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:31.859900 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP Stack trace:, referer: https://security:9056/installerUI.php
+[Thu Mar 15 14:08:31.859911 2018] [:error] [pid 354] [client 10.5.0.1:49204] PHP   1. {main}() /var/www/html/security/symfony/web/install.php:0, referer: https://security:9056/installerUI.php
+[Thu Mar 15 21:37:21.188615 2018] [suexec:notice] [pid 66] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Mar 15 21:37:21.214055 2018] [ssl:warn] [pid 66] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Mar 15 21:37:21.214232 2018] [ssl:warn] [pid 66] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 15 21:37:21.645096 2018] [auth_digest:notice] [pid 66] AH01757: generating secret for digest authentication ...
+[Thu Mar 15 21:37:21.646381 2018] [lbmethod_heartbeat:notice] [pid 66] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 15 21:37:21.666238 2018] [ssl:warn] [pid 66] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Mar 15 21:37:21.666418 2018] [ssl:warn] [pid 66] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Mar 15 21:37:22.108672 2018] [mpm_prefork:notice] [pid 66] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Thu Mar 15 21:37:22.109305 2018] [core:notice] [pid 66] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 16 03:00:27.669328 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 16 03:00:27.702877 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 03:00:27.703074 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 16 03:00:28.233885 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Fri Mar 16 03:00:28.235185 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 16 03:00:28.282271 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 03:00:28.282454 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 16 03:00:29.642989 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 16 03:00:29.643036 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 16 07:58:56.429556 2018] [suexec:notice] [pid 73] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 16 07:58:56.439065 2018] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 07:58:56.439233 2018] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 16 07:58:56.577943 2018] [auth_digest:notice] [pid 73] AH01757: generating secret for digest authentication ...
+[Fri Mar 16 07:58:56.579228 2018] [lbmethod_heartbeat:notice] [pid 73] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 16 07:58:56.584021 2018] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 07:58:56.584207 2018] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 16 07:58:56.955811 2018] [mpm_prefork:notice] [pid 73] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 16 07:58:56.955852 2018] [core:notice] [pid 73] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 16 08:21:05.594643 2018] [suexec:notice] [pid 56] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 16 08:21:05.604877 2018] [ssl:warn] [pid 56] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 08:21:05.605052 2018] [ssl:warn] [pid 56] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 16 08:21:05.818104 2018] [auth_digest:notice] [pid 56] AH01757: generating secret for digest authentication ...
+[Fri Mar 16 08:21:05.819352 2018] [lbmethod_heartbeat:notice] [pid 56] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 16 08:21:05.862572 2018] [ssl:warn] [pid 56] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 08:21:05.862920 2018] [ssl:warn] [pid 56] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 16 08:21:06.938221 2018] [mpm_prefork:notice] [pid 56] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 16 08:21:06.938279 2018] [core:notice] [pid 56] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 16 09:37:50.825020 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 16 09:37:50.872308 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 09:37:50.872500 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 16 09:37:51.012921 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Fri Mar 16 09:37:51.014214 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 16 09:37:51.018745 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 09:37:51.018916 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 16 09:37:51.374400 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 16 09:37:51.374443 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 16 22:42:00.670155 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 16 22:42:00.757082 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 22:42:00.757247 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 16 22:42:01.761050 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Fri Mar 16 22:42:01.762310 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 16 22:42:01.776251 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 16 22:42:01.776427 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 16 22:42:02.617618 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 16 22:42:02.617679 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Mar 18 13:01:50.843542 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sun Mar 18 13:01:50.849878 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sun Mar 18 13:01:50.850071 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sun Mar 18 13:01:51.447911 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Sun Mar 18 13:01:51.449211 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Sun Mar 18 13:01:51.451560 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sun Mar 18 13:01:51.504717 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sun Mar 18 13:01:53.505097 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Sun Mar 18 13:01:53.505162 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Mar 18 08:38:01.117029 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22
+[Sun Mar 18 08:38:01.117672 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Stack trace:
+[Sun Mar 18 08:38:01.117692 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0
+[Sun Mar 18 08:38:01.117714 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22
+[Sun Mar 18 08:38:01.117724 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Stack trace:
+[Sun Mar 18 08:38:01.117730 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0
+[Sun Mar 18 08:38:04.413659 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:04.413708 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:04.413724 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:04.413749 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:04.413758 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:04.413768 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:06.502845 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:06.502886 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:06.502903 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:06.502951 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:06.502960 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:06.502967 2018] [:error] [pid 108] [client 10.5.0.1:34328] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:31.733945 2018] [:error] [pid 105] [client 10.5.0.1:34336] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:31.734051 2018] [:error] [pid 105] [client 10.5.0.1:34336] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:31.734077 2018] [:error] [pid 105] [client 10.5.0.1:34336] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:31.734112 2018] [:error] [pid 105] [client 10.5.0.1:34336] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:31.734128 2018] [:error] [pid 105] [client 10.5.0.1:34336] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:31.734140 2018] [:error] [pid 105] [client 10.5.0.1:34336] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:32.994982 2018] [access_compat:error] [pid 105] [client 10.5.0.1:34336] AH01797: client denied by server configuration: /var/www/html/ohrm612/symfony/web/installer/images/dummy.jpg, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:38:57.963344 2018] [access_compat:error] [pid 107] [client 10.5.0.1:34372] AH01797: client denied by server configuration: /var/www/html/ohrm612/symfony/web/installer/images/dummy.jpg, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:01.075537 2018] [:error] [pid 107] [client 10.5.0.1:34372] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:01.075585 2018] [:error] [pid 107] [client 10.5.0.1:34372] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:01.075601 2018] [:error] [pid 107] [client 10.5.0.1:34372] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:01.075625 2018] [:error] [pid 107] [client 10.5.0.1:34372] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:01.075641 2018] [:error] [pid 107] [client 10.5.0.1:34372] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:01.075650 2018] [:error] [pid 107] [client 10.5.0.1:34372] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:18.257518 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:18.257569 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:18.257602 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:18.257625 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:18.257633 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:18.257641 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:22.572237 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:22.572280 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:22.572291 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:22.572310 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:22.572317 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:22.572325 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:25.047122 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:25.047156 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:25.047164 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:25.047179 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:25.047183 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:25.047189 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:30.673869 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:30.673913 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:30.673925 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:30.673944 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:30.673969 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:30.673977 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:33.494241 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:33.494272 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:33.494281 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:33.494295 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:33.494300 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:33.494306 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:36.715828 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:36.715870 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:36.715884 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:36.715906 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:36.715913 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:36.715923 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:40.703188 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:40.703222 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:40.703231 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:40.703246 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:40.703265 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:40.703271 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:43.706420 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:43.706491 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:43.706515 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:43.706553 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:43.706570 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:43.706583 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:46.347949 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:46.347991 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:46.348004 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:46.348026 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:46.348033 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:46.348042 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:48.131465 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:48.131496 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:48.131505 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:48.131518 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrm612/symfony/web/install.php on line 22, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:48.131522 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP Stack trace:, referer: https://ohrm612:9056/installerUI.php
+[Sun Mar 18 08:39:48.131528 2018] [:error] [pid 108] [client 10.5.0.1:34386] PHP   1. {main}() /var/www/html/ohrm612/symfony/web/install.php:0, referer: https://ohrm612:9056/installerUI.php
+[Mon Sep 13 11:52:58.483332 2021] [suexec:notice] [pid 109] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Sep 13 11:52:58.488732 2021] [ssl:warn] [pid 109] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Sep 13 11:52:58.488889 2021] [ssl:warn] [pid 109] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Sep 13 11:52:58.604468 2021] [auth_digest:notice] [pid 109] AH01757: generating secret for digest authentication ...
+[Mon Sep 13 11:52:58.605885 2021] [lbmethod_heartbeat:notice] [pid 109] AH02282: No slotmem from mod_heartmonitor
+[Mon Sep 13 11:52:58.608161 2021] [ssl:warn] [pid 109] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Sep 13 11:52:58.608322 2021] [ssl:warn] [pid 109] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Sep 13 11:52:58.844112 2021] [mpm_prefork:notice] [pid 109] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Mon Sep 13 11:52:58.845020 2021] [core:notice] [pid 109] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 20 15:06:30.827434 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 20 15:06:30.836203 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 20 15:06:30.836395 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 20 15:06:31.013962 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Tue Mar 20 15:06:31.015590 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 20 15:06:31.019497 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 20 15:06:31.019667 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 20 15:06:31.532346 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 20 15:06:31.532389 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 20 14:14:52.608138 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 20 14:14:52.614919 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 20 14:14:52.615085 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 20 14:14:52.708093 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Tue Mar 20 14:14:52.709372 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 20 14:14:52.711651 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 20 14:14:52.711768 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 20 14:14:52.953381 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 20 14:14:52.953427 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 20 20:03:03.067463 2018] [suexec:notice] [pid 68] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 20 20:03:03.071877 2018] [ssl:warn] [pid 68] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 20 20:03:03.072048 2018] [ssl:warn] [pid 68] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 20 20:03:03.152631 2018] [auth_digest:notice] [pid 68] AH01757: generating secret for digest authentication ...
+[Tue Mar 20 20:03:03.153916 2018] [lbmethod_heartbeat:notice] [pid 68] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 20 20:03:03.156263 2018] [ssl:warn] [pid 68] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 20 20:03:03.156439 2018] [ssl:warn] [pid 68] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 20 20:03:03.357099 2018] [mpm_prefork:notice] [pid 68] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 20 20:03:03.357142 2018] [core:notice] [pid 68] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Mar 21 01:46:21.460994 2018] [suexec:notice] [pid 68] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Mar 21 01:46:21.497022 2018] [ssl:warn] [pid 68] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 21 01:46:21.497229 2018] [ssl:warn] [pid 68] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 21 01:46:21.946446 2018] [auth_digest:notice] [pid 68] AH01757: generating secret for digest authentication ...
+[Wed Mar 21 01:46:21.947750 2018] [lbmethod_heartbeat:notice] [pid 68] AH02282: No slotmem from mod_heartmonitor
+[Wed Mar 21 08:36:56.415957 2018] [ssl:warn] [pid 68] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 21 08:36:56.416141 2018] [ssl:warn] [pid 68] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Mar 21 08:36:57.315587 2018] [mpm_prefork:notice] [pid 68] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Mar 21 08:36:57.315655 2018] [core:notice] [pid 68] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Apr 01 14:56:31.359683 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sun Apr 01 14:56:31.393973 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sun Apr 01 14:56:31.398990 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 01 14:56:32.344043 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Sun Apr 01 14:56:32.404151 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Sun Apr 01 14:56:32.424216 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sun Apr 01 14:56:32.424440 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sun Apr 01 14:56:33.340044 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Sun Apr 01 14:56:33.340106 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 22 21:15:57.364475 2018] [suexec:notice] [pid 60] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Mar 22 21:15:57.449049 2018] [ssl:warn] [pid 60] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Mar 22 21:15:57.449237 2018] [ssl:warn] [pid 60] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 22 21:15:58.216553 2018] [auth_digest:notice] [pid 60] AH01757: generating secret for digest authentication ...
+[Thu Mar 22 21:15:58.222453 2018] [lbmethod_heartbeat:notice] [pid 60] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 22 21:15:58.224894 2018] [ssl:warn] [pid 60] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Mar 22 21:15:58.225067 2018] [ssl:warn] [pid 60] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Mar 22 21:15:59.348565 2018] [mpm_prefork:notice] [pid 60] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Thu Mar 22 21:15:59.348631 2018] [core:notice] [pid 60] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 23 01:29:56.847208 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 23 01:29:56.866274 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 23 01:29:56.866466 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 23 08:46:38.314664 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Fri Mar 23 08:46:38.315923 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 23 08:46:38.348659 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 23 08:46:38.348874 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 23 08:46:38.712497 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 23 08:46:38.712537 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 23 14:19:21.984782 2018] [mpm_prefork:notice] [pid 63] AH00170: caught SIGWINCH, shutting down gracefully
+[Fri Mar 23 14:19:28.644373 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 23 14:19:28.676836 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 23 14:19:28.677191 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 23 14:19:28.828850 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Fri Mar 23 14:19:28.830078 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 23 14:19:28.834572 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 23 14:19:28.834739 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 23 14:19:29.089389 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 23 14:19:29.089449 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 23 19:29:51.260591 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 23 19:29:51.357851 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 23 19:29:51.358022 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 23 19:29:52.380152 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Fri Mar 23 19:29:52.395480 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 23 19:29:52.402163 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 23 19:29:52.402329 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 23 19:29:54.322596 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 23 19:29:54.322655 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Mar 26 08:06:13.986379 2018] [suexec:notice] [pid 75] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Mar 26 08:06:13.995628 2018] [ssl:warn] [pid 75] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Mar 26 08:06:13.995831 2018] [ssl:warn] [pid 75] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Mar 26 08:06:14.192086 2018] [auth_digest:notice] [pid 75] AH01757: generating secret for digest authentication ...
+[Mon Mar 26 08:06:14.198519 2018] [lbmethod_heartbeat:notice] [pid 75] AH02282: No slotmem from mod_heartmonitor
+[Mon Mar 26 08:06:14.201032 2018] [ssl:warn] [pid 75] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Mar 26 08:06:14.201181 2018] [ssl:warn] [pid 75] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Mar 26 08:06:14.670616 2018] [mpm_prefork:notice] [pid 75] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Mon Mar 26 08:06:14.670656 2018] [core:notice] [pid 75] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Apr 01 14:46:56.180120 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sun Apr 01 14:46:56.217175 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sun Apr 01 14:46:56.217372 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 01 14:46:56.379155 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Sun Apr 01 14:46:56.380430 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Sun Apr 01 14:46:56.383491 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sun Apr 01 14:46:56.383659 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sun Apr 01 14:46:56.616276 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Sun Apr 01 14:46:56.616323 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 27 09:43:59.650902 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 27 09:43:59.667213 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 27 09:43:59.667488 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 27 09:43:59.758909 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Tue Mar 27 09:43:59.760218 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 27 09:43:59.762646 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 27 09:43:59.762815 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 27 09:43:59.922633 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 27 09:43:59.922677 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 27 09:46:53.540790 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 27 09:46:53.551841 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 27 09:46:53.552026 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 27 09:46:53.706201 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Tue Mar 27 09:46:53.707465 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 27 09:46:53.709893 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 27 09:46:53.710075 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 27 09:46:54.139113 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 27 09:46:54.139175 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Mar 27 23:45:48.338057 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Mar 27 23:45:48.377108 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 27 23:45:48.377290 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 27 23:45:49.385530 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Tue Mar 27 23:45:49.386836 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Tue Mar 27 23:45:49.417476 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Mar 27 23:45:49.431907 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Mar 27 23:45:49.968481 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Tue Mar 27 23:45:49.968531 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Mar 28 08:56:40.255249 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Mar 28 08:56:40.277270 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 28 08:56:40.277472 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 28 08:56:41.029215 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Wed Mar 28 08:56:41.036533 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Wed Mar 28 08:56:41.056291 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 28 08:56:41.056466 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Mar 28 08:56:41.958905 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Mar 28 08:56:41.958943 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Mar 28 21:14:03.304965 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Mar 28 21:14:03.309022 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 28 21:14:03.309198 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 28 21:14:03.387286 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Wed Mar 28 21:14:03.388599 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Wed Mar 28 21:14:03.390991 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 28 21:14:03.391149 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Mar 28 21:14:03.581087 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Mar 28 21:14:03.581130 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Mar 28 22:52:38.435919 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Mar 28 22:52:38.462803 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 28 22:52:38.462989 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 28 22:52:39.023820 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Wed Mar 28 22:52:39.025038 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Wed Mar 28 22:52:39.055869 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Mar 28 22:52:39.056035 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Mar 28 22:52:40.104777 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Mar 28 22:52:40.104840 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Mar 29 20:43:17.674554 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Mar 29 20:43:17.679870 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Mar 29 20:43:17.680208 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 29 20:43:18.381586 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Thu Mar 29 20:43:18.382850 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Thu Mar 29 20:43:18.389486 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Mar 29 20:43:18.389652 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Mar 29 20:43:19.428711 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Thu Mar 29 20:43:19.428774 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 30 07:34:33.495394 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 30 07:34:33.535481 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 30 07:34:33.535661 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 30 07:34:34.124951 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Fri Mar 30 07:34:34.126193 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 30 07:34:34.137492 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 30 07:34:34.137731 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 30 07:34:34.834228 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 30 07:34:34.834268 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Mar 30 08:59:45.162447 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Mar 30 08:59:45.188620 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 30 08:59:45.188791 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 30 08:59:45.545584 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Fri Mar 30 08:59:45.546829 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Fri Mar 30 08:59:45.564953 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Mar 30 08:59:45.565131 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Mar 30 08:59:46.076494 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Fri Mar 30 08:59:46.076559 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Mar 31 00:00:08.358369 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Mar 31 00:00:08.398285 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Mar 31 00:00:08.398484 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sat Mar 31 00:00:08.890464 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Sat Mar 31 00:00:08.915160 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Sat Mar 31 00:00:08.924895 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Mar 31 00:00:08.925068 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sat Mar 31 00:00:09.458080 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Sat Mar 31 00:00:09.458145 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Mar 31 08:53:44.801956 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Mar 31 08:53:44.818085 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Mar 31 08:53:44.820943 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sat Mar 31 08:53:45.558544 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Sat Mar 31 08:53:45.559895 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Sat Mar 31 08:53:45.562282 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Mar 31 08:53:45.562452 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sat Mar 31 08:53:46.641157 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Sat Mar 31 08:53:46.641218 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Mar 31 10:05:47.276511 2018] [suexec:notice] [pid 61] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Mar 31 10:05:48.143388 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Mar 31 10:05:48.236860 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sat Mar 31 10:05:48.280438 2018] [auth_digest:notice] [pid 61] AH01757: generating secret for digest authentication ...
+[Sat Mar 31 10:05:48.281231 2018] [lbmethod_heartbeat:notice] [pid 61] AH02282: No slotmem from mod_heartmonitor
+[Sat Mar 31 10:05:48.282630 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Mar 31 10:05:48.282728 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sat Mar 31 10:05:49.419637 2018] [mpm_prefork:notice] [pid 61] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Sat Mar 31 10:05:49.419694 2018] [core:notice] [pid 61] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 02 07:38:23.975708 2018] [suexec:notice] [pid 61] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 02 07:38:23.989031 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 02 07:38:23.989251 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 02 07:38:24.917039 2018] [auth_digest:notice] [pid 61] AH01757: generating secret for digest authentication ...
+[Mon Apr 02 07:38:24.928066 2018] [lbmethod_heartbeat:notice] [pid 61] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 02 07:38:24.958029 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 02 07:38:24.958256 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 02 07:38:26.444974 2018] [mpm_prefork:notice] [pid 61] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 02 07:38:26.445049 2018] [core:notice] [pid 61] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 02 11:16:51.294212 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 02 11:16:51.304722 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 02 11:16:51.304835 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 02 11:16:51.377038 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Mon Apr 02 11:16:51.378307 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 02 11:16:51.380534 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 02 11:16:51.380689 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 02 11:16:51.728089 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 02 11:16:51.728134 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 02 20:01:39.401894 2018] [:error] [pid 716] [client 10.5.0.1:57508] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22
+[Mon Apr 02 20:01:39.402647 2018] [:error] [pid 716] [client 10.5.0.1:57508] PHP Stack trace:
+[Mon Apr 02 20:01:39.402659 2018] [:error] [pid 716] [client 10.5.0.1:57508] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0
+[Mon Apr 02 20:01:39.402685 2018] [:error] [pid 716] [client 10.5.0.1:57508] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22
+[Mon Apr 02 20:01:39.402692 2018] [:error] [pid 716] [client 10.5.0.1:57508] PHP Stack trace:
+[Mon Apr 02 20:01:39.402698 2018] [:error] [pid 716] [client 10.5.0.1:57508] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0
+[Mon Apr 02 20:01:48.170702 2018] [:error] [pid 99] [client 10.5.0.1:57528] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22
+[Mon Apr 02 20:01:48.170776 2018] [:error] [pid 99] [client 10.5.0.1:57528] PHP Stack trace:
+[Mon Apr 02 20:01:48.170787 2018] [:error] [pid 99] [client 10.5.0.1:57528] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0
+[Mon Apr 02 20:01:48.170811 2018] [:error] [pid 99] [client 10.5.0.1:57528] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22
+[Mon Apr 02 20:01:48.170820 2018] [:error] [pid 99] [client 10.5.0.1:57528] PHP Stack trace:
+[Mon Apr 02 20:01:48.170827 2018] [:error] [pid 99] [client 10.5.0.1:57528] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0
+[Mon Apr 02 20:02:43.871889 2018] [:error] [pid 101] [client 10.5.0.1:57542] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22
+[Mon Apr 02 20:02:43.871951 2018] [:error] [pid 101] [client 10.5.0.1:57542] PHP Stack trace:
+[Mon Apr 02 20:02:43.871961 2018] [:error] [pid 101] [client 10.5.0.1:57542] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0
+[Mon Apr 02 20:02:43.872006 2018] [:error] [pid 101] [client 10.5.0.1:57542] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22
+[Mon Apr 02 20:02:43.872014 2018] [:error] [pid 101] [client 10.5.0.1:57542] PHP Stack trace:
+[Mon Apr 02 20:02:43.872020 2018] [:error] [pid 101] [client 10.5.0.1:57542] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0
+[Mon Apr 02 20:02:47.730074 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:47.730113 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:47.730121 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:47.730138 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:47.730145 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:47.730150 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:49.636664 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:49.636703 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:49.636715 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:49.636735 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:49.636741 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:02:49.636749 2018] [:error] [pid 100] [client 10.5.0.1:57554] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:10.011346 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:10.011385 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:10.011396 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:10.011415 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:10.011438 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:10.011447 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:10.989619 2018] [access_compat:error] [pid 716] [client 10.5.0.1:57562] AH01797: client denied by server configuration: /var/www/html/ohrmqbase/symfony/web/installer/images/dummy.jpg, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:13.597801 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:13.597841 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:13.597855 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:13.597877 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:13.597885 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:13.597894 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:20.187539 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:20.187591 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:20.187606 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:20.187627 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:20.187634 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:20.187642 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:22.478811 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:22.478852 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:22.478867 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:22.478887 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:22.478911 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:22.478920 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:24.953365 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:24.953408 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:24.953422 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:24.953441 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:24.953448 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:24.953454 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:29.556529 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:29.556560 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:29.556569 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:29.556582 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:29.556586 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:29.556592 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:32.556993 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:32.557077 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:32.557087 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:32.557101 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:32.557106 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:32.557124 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:35.574686 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:35.574726 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:35.574742 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:35.574762 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:35.574769 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:35.574777 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:38.559307 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:38.559334 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:38.559343 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:38.559357 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:38.559361 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:38.559366 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:41.555420 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:41.555465 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:41.555477 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:41.555492 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:41.555497 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:03:41.555502 2018] [:error] [pid 716] [client 10.5.0.1:57562] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:24.269530 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:24.269569 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:24.269578 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:24.269593 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:24.269598 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:24.269605 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:30.940191 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP Warning:  include_once(lib/confs/log_settings.php): failed to open stream: No such file or directory in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:30.940239 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:30.940252 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:30.940267 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP Warning:  include_once(): Failed opening 'lib/confs/log_settings.php' for inclusion (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/ohrmqbase/symfony/web/install.php on line 22, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:30.940272 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP Stack trace:, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 20:04:30.940278 2018] [:error] [pid 100] [client 10.5.0.1:57598] PHP   1. {main}() /var/www/html/ohrmqbase/symfony/web/install.php:0, referer: https://ohrmqbase:9056/installerUI.php
+[Mon Apr 02 22:44:35.516920 2018] [suexec:notice] [pid 94] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 02 22:44:35.531778 2018] [ssl:warn] [pid 94] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 02 22:44:35.531945 2018] [ssl:warn] [pid 94] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 02 22:44:35.741430 2018] [auth_digest:notice] [pid 94] AH01757: generating secret for digest authentication ...
+[Mon Apr 02 22:44:35.753046 2018] [lbmethod_heartbeat:notice] [pid 94] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 02 22:44:35.783275 2018] [ssl:warn] [pid 94] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 02 22:44:35.784102 2018] [ssl:warn] [pid 94] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 02 22:44:36.148008 2018] [mpm_prefork:notice] [pid 94] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 02 22:44:36.148074 2018] [core:notice] [pid 94] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Apr 03 09:26:09.092176 2018] [suexec:notice] [pid 73] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 03 09:26:09.101295 2018] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 03 09:26:09.101476 2018] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 03 09:26:09.272259 2018] [auth_digest:notice] [pid 73] AH01757: generating secret for digest authentication ...
+[Tue Apr 03 09:26:09.274084 2018] [lbmethod_heartbeat:notice] [pid 73] AH02282: No slotmem from mod_heartmonitor
+[Tue Apr 03 09:26:09.281427 2018] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 03 09:26:09.281596 2018] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Apr 03 09:26:09.881164 2018] [mpm_prefork:notice] [pid 73] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Tue Apr 03 09:26:09.881209 2018] [core:notice] [pid 73] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Apr 03 21:54:28.696963 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 03 21:54:28.727681 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 03 21:54:28.727881 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 03 21:54:28.936751 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Tue Apr 03 21:54:28.938053 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Tue Apr 03 21:54:28.940546 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 03 21:54:28.940723 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Apr 03 21:54:29.366057 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Tue Apr 03 21:54:29.366117 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Apr 04 21:38:30.784974 2018] [suexec:notice] [pid 61] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Apr 04 21:38:30.835574 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 04 21:38:30.835747 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 04 21:38:31.607066 2018] [auth_digest:notice] [pid 61] AH01757: generating secret for digest authentication ...
+[Wed Apr 04 21:38:31.627227 2018] [lbmethod_heartbeat:notice] [pid 61] AH02282: No slotmem from mod_heartmonitor
+[Wed Apr 04 21:38:31.643383 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 04 21:38:31.643554 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Apr 04 21:38:32.768087 2018] [mpm_prefork:notice] [pid 61] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Wed Apr 04 21:38:32.768154 2018] [core:notice] [pid 61] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Apr 05 07:00:49.213730 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Apr 05 07:00:49.219782 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 05 07:00:49.219962 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 05 07:00:49.447157 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Thu Apr 05 07:00:49.467330 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Thu Apr 05 07:00:49.471152 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 05 07:00:49.471340 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Apr 05 07:00:49.862249 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Thu Apr 05 07:00:49.862298 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Apr 05 08:28:30.822271 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Apr 05 08:28:30.893976 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 05 08:28:30.894663 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 05 08:28:31.681586 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Thu Apr 05 08:28:31.682914 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Thu Apr 05 08:28:31.685373 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 05 08:28:31.685547 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Apr 05 08:28:32.047117 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Thu Apr 05 08:28:32.047181 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Apr 05 22:08:09.228692 2018] [suexec:notice] [pid 69] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Apr 05 22:08:09.278572 2018] [ssl:warn] [pid 69] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 05 22:08:09.285230 2018] [ssl:warn] [pid 69] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 05 22:08:09.684826 2018] [auth_digest:notice] [pid 69] AH01757: generating secret for digest authentication ...
+[Thu Apr 05 22:08:09.686166 2018] [lbmethod_heartbeat:notice] [pid 69] AH02282: No slotmem from mod_heartmonitor
+[Thu Apr 05 22:08:09.696749 2018] [ssl:warn] [pid 69] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 05 22:08:09.696913 2018] [ssl:warn] [pid 69] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Apr 05 22:08:10.304608 2018] [mpm_prefork:notice] [pid 69] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Thu Apr 05 22:08:10.304675 2018] [core:notice] [pid 69] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Apr 06 09:15:50.114541 2018] [suexec:notice] [pid 71] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Apr 06 09:15:50.175309 2018] [ssl:warn] [pid 71] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Apr 06 09:15:50.175514 2018] [ssl:warn] [pid 71] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Apr 06 09:15:50.918213 2018] [auth_digest:notice] [pid 71] AH01757: generating secret for digest authentication ...
+[Fri Apr 06 09:15:50.919488 2018] [lbmethod_heartbeat:notice] [pid 71] AH02282: No slotmem from mod_heartmonitor
+[Fri Apr 06 09:15:50.921760 2018] [ssl:warn] [pid 71] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Apr 06 09:15:50.921928 2018] [ssl:warn] [pid 71] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Apr 06 09:15:51.429032 2018] [mpm_prefork:notice] [pid 71] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Fri Apr 06 09:15:51.429096 2018] [core:notice] [pid 71] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Apr 07 09:25:13.159827 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Apr 07 09:25:13.234635 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Apr 07 09:25:13.234833 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sat Apr 07 09:25:14.604280 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Sat Apr 07 09:25:14.605429 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Sat Apr 07 09:25:14.648825 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Apr 07 09:25:14.649054 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sat Apr 07 09:25:14.698597 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Sat Apr 07 09:25:14.698640 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Apr 07 15:56:50.537678 2018] [mpm_prefork:notice] [pid 64] AH00170: caught SIGWINCH, shutting down gracefully
+[Sat Apr 07 15:56:57.936739 2018] [suexec:notice] [pid 75] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Apr 07 15:56:57.963919 2018] [ssl:warn] [pid 75] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Apr 07 15:56:57.964090 2018] [ssl:warn] [pid 75] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Sat Apr 07 15:56:58.278266 2018] [auth_digest:notice] [pid 75] AH01757: generating secret for digest authentication ...
+[Sat Apr 07 15:56:58.279550 2018] [lbmethod_heartbeat:notice] [pid 75] AH02282: No slotmem from mod_heartmonitor
+[Sat Apr 07 15:56:58.282877 2018] [ssl:warn] [pid 75] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Sat Apr 07 15:56:58.283059 2018] [ssl:warn] [pid 75] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sat Apr 07 15:56:58.888063 2018] [mpm_prefork:notice] [pid 75] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Sat Apr 07 15:56:58.888114 2018] [core:notice] [pid 75] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 09 07:36:20.002050 2018] [mpm_prefork:notice] [pid 75] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Apr 09 07:36:28.561299 2018] [suexec:notice] [pid 69] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 09 07:36:28.565587 2018] [ssl:warn] [pid 69] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 09 07:36:28.565755 2018] [ssl:warn] [pid 69] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 09 07:36:28.651893 2018] [auth_digest:notice] [pid 69] AH01757: generating secret for digest authentication ...
+[Mon Apr 09 07:36:28.653128 2018] [lbmethod_heartbeat:notice] [pid 69] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 09 07:36:28.655536 2018] [ssl:warn] [pid 69] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 09 07:36:28.655764 2018] [ssl:warn] [pid 69] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 09 07:36:28.874149 2018] [mpm_prefork:notice] [pid 69] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 09 07:36:28.874194 2018] [core:notice] [pid 69] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 09 08:46:41.339464 2018] [suexec:notice] [pid 74] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 09 08:46:41.345098 2018] [ssl:warn] [pid 74] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 09 08:46:41.345265 2018] [ssl:warn] [pid 74] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 09 08:46:41.448258 2018] [auth_digest:notice] [pid 74] AH01757: generating secret for digest authentication ...
+[Mon Apr 09 08:46:41.449558 2018] [lbmethod_heartbeat:notice] [pid 74] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 09 08:46:41.451890 2018] [ssl:warn] [pid 74] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 09 08:46:41.452058 2018] [ssl:warn] [pid 74] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 09 08:46:41.753269 2018] [mpm_prefork:notice] [pid 74] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 09 08:46:41.753311 2018] [core:notice] [pid 74] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 09 13:21:25.960236 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 09 13:21:25.968963 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 09 13:21:25.969172 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 09 13:21:26.084713 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Mon Apr 09 13:21:26.086061 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 09 13:21:26.088680 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 09 13:21:26.088863 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 09 13:21:26.346443 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 09 13:21:26.346485 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 09 20:52:16.811224 2018] [suexec:notice] [pid 73] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 09 20:52:16.829315 2018] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 09 20:52:16.829487 2018] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 09 20:52:17.064164 2018] [auth_digest:notice] [pid 73] AH01757: generating secret for digest authentication ...
+[Mon Apr 09 20:52:17.065484 2018] [lbmethod_heartbeat:notice] [pid 73] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 09 20:52:17.087815 2018] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 09 20:52:17.088290 2018] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 09 20:52:17.434128 2018] [mpm_prefork:notice] [pid 73] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 09 20:52:17.434167 2018] [core:notice] [pid 73] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Apr 10 08:53:49.579337 2018] [suexec:notice] [pid 65] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 10 08:53:49.590427 2018] [ssl:warn] [pid 65] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 10 08:53:49.590571 2018] [ssl:warn] [pid 65] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 10 08:53:49.848101 2018] [auth_digest:notice] [pid 65] AH01757: generating secret for digest authentication ...
+[Tue Apr 10 08:53:49.849337 2018] [lbmethod_heartbeat:notice] [pid 65] AH02282: No slotmem from mod_heartmonitor
+[Tue Apr 10 08:53:49.855757 2018] [ssl:warn] [pid 65] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 10 08:53:49.855984 2018] [ssl:warn] [pid 65] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Apr 10 08:53:50.862746 2018] [mpm_prefork:notice] [pid 65] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Tue Apr 10 08:53:50.862809 2018] [core:notice] [pid 65] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Apr 10 10:21:57.904260 2018] [mpm_prefork:notice] [pid 65] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Apr 10 10:22:05.321998 2018] [suexec:notice] [pid 68] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 10 10:22:05.324847 2018] [ssl:warn] [pid 68] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 10 10:22:05.324994 2018] [ssl:warn] [pid 68] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 10 10:22:05.511898 2018] [auth_digest:notice] [pid 68] AH01757: generating secret for digest authentication ...
+[Tue Apr 10 10:22:05.514787 2018] [lbmethod_heartbeat:notice] [pid 68] AH02282: No slotmem from mod_heartmonitor
+[Tue Apr 10 10:22:05.520162 2018] [ssl:warn] [pid 68] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 10 10:22:05.520328 2018] [ssl:warn] [pid 68] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Apr 10 10:22:05.735756 2018] [mpm_prefork:notice] [pid 68] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Tue Apr 10 10:22:05.735799 2018] [core:notice] [pid 68] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Apr 10 22:10:34.265323 2018] [suexec:notice] [pid 68] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 10 22:10:34.280619 2018] [ssl:warn] [pid 68] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 10 22:10:34.280793 2018] [ssl:warn] [pid 68] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 10 22:10:34.573251 2018] [auth_digest:notice] [pid 68] AH01757: generating secret for digest authentication ...
+[Tue Apr 10 22:10:34.574614 2018] [lbmethod_heartbeat:notice] [pid 68] AH02282: No slotmem from mod_heartmonitor
+[Tue Apr 10 22:10:34.581132 2018] [ssl:warn] [pid 68] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 10 22:10:34.584100 2018] [ssl:warn] [pid 68] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Apr 10 22:10:34.983125 2018] [mpm_prefork:notice] [pid 68] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Tue Apr 10 22:10:34.983175 2018] [core:notice] [pid 68] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Apr 11 11:46:57.439254 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Apr 11 11:46:57.444779 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 11 11:46:57.444941 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 11 11:46:57.580567 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Wed Apr 11 11:46:57.581846 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Wed Apr 11 11:46:57.588849 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 11 11:46:57.589001 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Apr 11 11:46:58.037913 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Wed Apr 11 11:46:58.037976 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Apr 11 22:16:42.579921 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Apr 11 22:16:42.668578 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 11 22:16:42.668754 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 11 22:16:44.118851 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Wed Apr 11 22:16:44.120203 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Wed Apr 11 22:16:44.142750 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 11 22:16:44.144089 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Apr 11 22:16:44.575184 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Wed Apr 11 22:16:44.575237 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Apr 12 10:13:53.452581 2018] [suexec:notice] [pid 61] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Apr 12 10:13:53.486320 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 12 10:13:53.491189 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 12 10:13:53.718676 2018] [auth_digest:notice] [pid 61] AH01757: generating secret for digest authentication ...
+[Thu Apr 12 10:13:53.720107 2018] [lbmethod_heartbeat:notice] [pid 61] AH02282: No slotmem from mod_heartmonitor
+[Thu Apr 12 10:13:53.734843 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 12 10:13:53.735086 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Apr 12 10:13:54.719608 2018] [mpm_prefork:notice] [pid 61] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Thu Apr 12 10:13:54.719679 2018] [core:notice] [pid 61] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Apr 13 13:55:25.529133 2018] [suexec:notice] [pid 65] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Apr 13 13:55:25.584630 2018] [ssl:warn] [pid 65] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Apr 13 13:55:25.584819 2018] [ssl:warn] [pid 65] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Apr 13 13:55:26.399932 2018] [auth_digest:notice] [pid 65] AH01757: generating secret for digest authentication ...
+[Fri Apr 13 13:55:26.401214 2018] [lbmethod_heartbeat:notice] [pid 65] AH02282: No slotmem from mod_heartmonitor
+[Fri Apr 13 13:55:26.405259 2018] [ssl:warn] [pid 65] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Apr 13 13:55:26.405439 2018] [ssl:warn] [pid 65] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Apr 13 13:55:26.913484 2018] [mpm_prefork:notice] [pid 65] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Fri Apr 13 13:55:26.913525 2018] [core:notice] [pid 65] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Apr 13 15:42:49.375019 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Fri Apr 13 15:42:49.389929 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Apr 13 15:42:49.390089 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Fri Apr 13 15:42:49.677219 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Fri Apr 13 15:42:49.678455 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Fri Apr 13 15:42:49.686737 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Fri Apr 13 15:42:49.686918 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Fri Apr 13 15:42:50.257818 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Fri Apr 13 15:42:50.259069 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 16 08:39:41.672782 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 16 08:39:41.701681 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 16 08:39:41.702169 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 16 08:39:42.081002 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Mon Apr 16 08:39:42.092960 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 16 08:39:42.098290 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 16 08:39:42.098693 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 16 08:39:43.165777 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 16 08:39:43.165901 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 16 22:08:41.847905 2018] [suexec:notice] [pid 63] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 16 22:08:41.872804 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 16 22:08:41.872966 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 16 22:08:42.175497 2018] [auth_digest:notice] [pid 63] AH01757: generating secret for digest authentication ...
+[Mon Apr 16 22:08:42.177148 2018] [lbmethod_heartbeat:notice] [pid 63] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 16 22:08:42.183757 2018] [ssl:warn] [pid 63] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 16 22:08:42.185390 2018] [ssl:warn] [pid 63] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 16 22:08:42.913077 2018] [mpm_prefork:notice] [pid 63] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Mon Apr 16 22:08:42.913214 2018] [core:notice] [pid 63] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 16 22:16:50.097329 2018] [access_compat:error] [pid 88] [client 10.5.0.1:35490] AH01797: client denied by server configuration: /var/www/html/orangehrm71/symfony/web/installer/images/dummy.jpg, referer: https://orangehrm71:9056/installerUI.php
+[Tue Apr 17 06:02:08.200597 2018] [suexec:notice] [pid 61] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 17 06:02:08.214444 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 17 06:02:08.214546 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 17 06:02:08.260927 2018] [auth_digest:notice] [pid 61] AH01757: generating secret for digest authentication ...
+[Tue Apr 17 06:02:08.261867 2018] [lbmethod_heartbeat:notice] [pid 61] AH02282: No slotmem from mod_heartmonitor
+[Tue Apr 17 06:02:08.263424 2018] [ssl:warn] [pid 61] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 17 06:02:08.263515 2018] [ssl:warn] [pid 61] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Apr 17 06:02:08.569379 2018] [mpm_prefork:notice] [pid 61] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Tue Apr 17 06:02:08.569416 2018] [core:notice] [pid 61] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Apr 17 09:10:21.351836 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 17 09:10:21.373283 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 17 09:10:21.373460 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 17 09:10:22.512089 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Tue Apr 17 09:10:22.533466 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Tue Apr 17 09:10:22.565596 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 17 09:10:22.565762 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Apr 17 09:10:23.666043 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Tue Apr 17 09:10:23.666110 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Apr 17 21:47:31.828379 2018] [suexec:notice] [pid 64] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 17 21:47:31.881436 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 17 21:47:31.884208 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 17 21:47:32.216444 2018] [auth_digest:notice] [pid 64] AH01757: generating secret for digest authentication ...
+[Tue Apr 17 21:47:32.217717 2018] [lbmethod_heartbeat:notice] [pid 64] AH02282: No slotmem from mod_heartmonitor
+[Tue Apr 17 21:47:32.220108 2018] [ssl:warn] [pid 64] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Tue Apr 17 21:47:32.220284 2018] [ssl:warn] [pid 64] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Tue Apr 17 21:47:32.921646 2018] [mpm_prefork:notice] [pid 64] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Tue Apr 17 21:47:32.921686 2018] [core:notice] [pid 64] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Apr 18 08:14:38.997797 2018] [suexec:notice] [pid 66] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Apr 18 08:14:39.015291 2018] [ssl:warn] [pid 66] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 18 08:14:39.015480 2018] [ssl:warn] [pid 66] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 18 08:14:39.306724 2018] [auth_digest:notice] [pid 66] AH01757: generating secret for digest authentication ...
+[Wed Apr 18 08:14:39.308028 2018] [lbmethod_heartbeat:notice] [pid 66] AH02282: No slotmem from mod_heartmonitor
+[Wed Apr 18 08:14:39.310341 2018] [ssl:warn] [pid 66] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 18 08:14:39.310489 2018] [ssl:warn] [pid 66] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Apr 18 08:14:39.820311 2018] [mpm_prefork:notice] [pid 66] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Wed Apr 18 08:14:39.820359 2018] [core:notice] [pid 66] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Apr 18 21:31:05.746369 2018] [suexec:notice] [pid 69] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Apr 18 21:31:05.778651 2018] [ssl:warn] [pid 69] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 18 21:31:05.778883 2018] [ssl:warn] [pid 69] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 18 21:31:06.315000 2018] [auth_digest:notice] [pid 69] AH01757: generating secret for digest authentication ...
+[Wed Apr 18 21:31:06.327137 2018] [lbmethod_heartbeat:notice] [pid 69] AH02282: No slotmem from mod_heartmonitor
+[Wed Apr 18 21:31:06.350022 2018] [ssl:warn] [pid 69] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 18 21:31:06.350278 2018] [ssl:warn] [pid 69] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Apr 18 21:31:07.236011 2018] [mpm_prefork:notice] [pid 69] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.34 SVN/1.9.7 configured -- resuming normal operations
+[Wed Apr 18 21:31:07.236067 2018] [core:notice] [pid 69] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Apr 18 22:34:20.793333 2018] [suexec:notice] [pid 100] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Apr 18 22:34:20.799230 2018] [ssl:warn] [pid 100] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 18 22:34:20.799326 2018] [ssl:warn] [pid 100] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 18 22:34:20.841714 2018] [auth_digest:notice] [pid 100] AH01757: generating secret for digest authentication ...
+[Wed Apr 18 22:34:20.842602 2018] [lbmethod_heartbeat:notice] [pid 100] AH02282: No slotmem from mod_heartmonitor
+[Wed Apr 18 22:34:20.844196 2018] [ssl:warn] [pid 100] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Wed Apr 18 22:34:20.844318 2018] [ssl:warn] [pid 100] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed Apr 18 22:34:21.035437 2018] [mpm_prefork:notice] [pid 100] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Wed Apr 18 22:34:21.035479 2018] [core:notice] [pid 100] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Apr 19 06:12:10.795699 2018] [suexec:notice] [pid 73] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Apr 19 06:12:10.806602 2018] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 19 06:12:10.807534 2018] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 19 06:12:11.057180 2018] [auth_digest:notice] [pid 73] AH01757: generating secret for digest authentication ...
+[Thu Apr 19 06:12:11.058323 2018] [lbmethod_heartbeat:notice] [pid 73] AH02282: No slotmem from mod_heartmonitor
+[Thu Apr 19 06:12:11.064920 2018] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 19 06:12:11.065102 2018] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Apr 19 06:12:11.478222 2018] [mpm_prefork:notice] [pid 73] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Thu Apr 19 06:12:11.478263 2018] [core:notice] [pid 73] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Apr 19 08:43:27.589145 2018] [suexec:notice] [pid 62] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Apr 19 08:43:27.697747 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 19 08:43:27.700461 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 19 08:43:30.076691 2018] [auth_digest:notice] [pid 62] AH01757: generating secret for digest authentication ...
+[Thu Apr 19 08:43:30.078011 2018] [lbmethod_heartbeat:notice] [pid 62] AH02282: No slotmem from mod_heartmonitor
+[Thu Apr 19 08:43:30.208599 2018] [ssl:warn] [pid 62] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Thu Apr 19 08:43:30.228781 2018] [ssl:warn] [pid 62] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Thu Apr 19 08:43:33.590197 2018] [mpm_prefork:notice] [pid 62] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.7 configured -- resuming normal operations
+[Thu Apr 19 08:43:33.590257 2018] [core:notice] [pid 62] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
