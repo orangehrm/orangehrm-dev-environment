@@ -38,7 +38,7 @@ class WebContainer71Cest
     public function kernalSHMValue(AcceptanceTester $I)
     {
         $I->comment("Checking the shmmax value");
-        $I->runShellCommand('docker exec dev_web_70 bash -c "cat /proc/sys/kernel/shmmax"');
+        $I->runShellCommand('docker exec dev_web_71 bash -c "cat /proc/sys/kernel/shmmax"');
         $I->seeInShellOutput('67371264');
     }
 }
