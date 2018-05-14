@@ -147,7 +147,7 @@ class WebContainerCest
         $I->seeInShellOutput('stats');
     }
 
-    public function checkStatsPHPmodule(UnitTester $I){
+    public function checkmcryptPHPmodule(UnitTester $I){
         $I->wantTo("verify stats module");
         $I->runShellCommand("docker exec dev_web bash -c 'php -m | grep mcrypt'");
         $I->seeInShellOutput('mcrypt');
