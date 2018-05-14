@@ -31,7 +31,7 @@ class DevEnvironmentForOSCest
         $I->lookForwardTo('access to orangehrm application');
         $I->amOnPage('https://orangehrm');
         $I->fillField('txtUsername', 'Admin');
-        $I->fillField('txtPassword', 'admin');
+        $I->fillField('txtPassword', 'Ohrm@1423');
         $I->click('Submit');
         $I->see('Dashboard');
     }
