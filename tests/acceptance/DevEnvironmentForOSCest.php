@@ -57,7 +57,7 @@ class DevEnvironmentForOSCest
         $I->lookForwardTo('access to orangehrm application and add 3 ess users');
         $I->amOnPage('https://orangehrm');
         $I->fillField('txtUsername','admin');
-        $I->fillField('txtPassword','admin');
+        $I->fillField('txtPassword','Ohrm@1423');
         $I->click('Submit');
         $I->amOnPage('https://orangehrm/symfony/web/index.php/pim/addEmployee');
         $I->fillField('firstName',$example['empname']);
@@ -117,7 +117,7 @@ class DevEnvironmentForOSCest
         $I->lookForwardTo('add new casual leave type');
         $I->amOnPage('https://orangehrm');
         $I->fillField('txtUsername', 'Admin');
-        $I->fillField('txtPassword', 'admin');
+        $I->fillField('txtPassword', 'Ohrm@1423');
         $I->click('Submit');
         $I->see('Dashboard');
         $I->amOnPage('https://orangehrm/symfony/web/index.php/leave/defineLeaveType');
