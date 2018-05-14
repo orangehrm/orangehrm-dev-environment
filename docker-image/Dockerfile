@@ -56,15 +56,15 @@ RUN pear channel-discover pear.phing.info && \
 COPY supervisord.conf /etc/supervisord.conf
 
 #Installing php-ast using PECL
-RUN pecl install ast
-RUN echo "extension=/usr/lib64/php/modules/ast.so" >> /etc/php.ini
+#RUN pecl install ast
+#RUN echo "extension=/usr/lib64/php/modules/ast.so" >> /etc/php.ini
 
 #Installing phan using composer
 RUN cd /var/lib && composer require --dev phan/phan
 RUN ln -s /var/lib/vendor/bin/phan /usr/bin/phan
 
 #Installing apt-stat module
-RUN pecl install stats-2.0.3
-RUN echo "extension=stats.so" >> /etc/php.ini
+#RUN pecl install stats-2.0.3
+#RUN echo "extension=stats.so" >> /etc/php.ini
 
 

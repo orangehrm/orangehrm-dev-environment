@@ -33,7 +33,7 @@ install:
   - composer install
   - docker-compose up -d
 
-script: php vendor/bin/codecept run $TEST
+script: php vendor/bin/codecept run --debug $TEST
 
 jobs:
   include:
