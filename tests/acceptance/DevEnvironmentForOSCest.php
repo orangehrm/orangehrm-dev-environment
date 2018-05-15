@@ -12,8 +12,7 @@ class DevEnvironmentForOSCest
         $I->runShellCommand('docker exec dev_web bash -c "mkdir -p orangehrm/symfony/web"');
         $I->runShellCommand('docker exec dev_web bash -c "cd orangehrm/symfony/web && git clone https://github.com/orangehrm/orangehrm.git "');
         $I->runShellCommand('docker exec dev_web bash -c "cd orangehrm/symfony/web/orangehrm && mv * ../"');
-        $I->runShellCommand('docker exec dev_web bash -c "cd orangehrm/symfony/web && bash fix_permissions.sh"');
-       // $I->runShellCommand('docker exec dev_web bash -c "yes | cp -rf config.ini orangehrm/symfony/web/installer/config.ini"');
+        $I->runShellCommand('docker exec dev_web bash -c "yes | cp -rf config.ini orangehrm/symfony/web/installer/config.ini"');
         $I->runShellCommand('docker exec dev_web bash -c "cd orangehrm/symfony/web; composer install -d symfony/lib"');
         $I->runShellCommand('docker exec dev_web bash -c "cd orangehrm/symfony/web/symfony; php symfony cc"');
         $I->runShellCommand('docker exec dev_web bash -c "cd orangehrm/symfony/web; php installer/cli_install.php 0"');
