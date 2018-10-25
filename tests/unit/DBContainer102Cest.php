@@ -30,7 +30,7 @@ class DBContainer102Cest
         $I->seeInShellOutput("event_scheduler	ON");
         $I->seeInShellOutput("innodb_log_buffer_size	8388608");
         $I->seeInShellOutput("innodb_buffer_pool_size	2147483648");
-        $I->seeInShellOutput("max_allowed_packet	100663296");
+        $I->seeInShellOutput("max_allowed_packet	67108864");
     }
 
 
