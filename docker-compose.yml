@@ -152,7 +152,7 @@ services:
       - ./config/web72/apache2/cert:/etc/httpd/cert
       - ./logs/apache_logs/web72:/var/log/httpd
       - /etc/localtime:/etc/localtime
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro  
     privileged: true
     sysctls:
       - kernel.shmmax=67371264
