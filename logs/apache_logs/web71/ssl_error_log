@@ -1,0 +1,23 @@
+[Sun Nov 04 06:35:40.492543 2018] [suexec:notice] [pid 72] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sun Nov 04 06:35:40.497786 2018] [ssl:warn] [pid 72] AH01909: RSA certificate configured for 10.5.0.71:443 does NOT include an ID which matches the server name
+[Sun Nov 04 06:35:40.497850 2018] [ssl:warn] [pid 72] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.71. Set the 'ServerName' directive globally to suppress this message
+[Sun Nov 04 06:35:40.555890 2018] [auth_digest:notice] [pid 72] AH01757: generating secret for digest authentication ...
+[Sun Nov 04 06:35:40.556564 2018] [lbmethod_heartbeat:notice] [pid 72] AH02282: No slotmem from mod_heartmonitor
+[Sun Nov 04 06:35:40.557673 2018] [ssl:warn] [pid 72] AH01909: RSA certificate configured for 10.5.0.71:443 does NOT include an ID which matches the server name
+[Sun Nov 04 06:35:40.557739 2018] [ssl:warn] [pid 72] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Sun Nov 04 06:35:40.922452 2018] [mpm_prefork:notice] [pid 72] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.16 SVN/1.9.7 configured -- resuming normal operations
+[Sun Nov 04 06:35:40.922481 2018] [core:notice] [pid 72] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Nov 04 06:36:36.745619 2018] [mpm_prefork:notice] [pid 72] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Nov 05 10:40:48.214330 2018] [suexec:notice] [pid 67] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Nov 05 10:40:48.218010 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.71:443 does NOT include an ID which matches the server name
+[Mon Nov 05 10:40:48.218091 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.71. Set the 'ServerName' directive globally to suppress this message
+[Mon Nov 05 10:40:48.285110 2018] [auth_digest:notice] [pid 67] AH01757: generating secret for digest authentication ...
+[Mon Nov 05 10:40:48.285744 2018] [lbmethod_heartbeat:notice] [pid 67] AH02282: No slotmem from mod_heartmonitor
+[Mon Nov 05 10:40:48.286872 2018] [ssl:warn] [pid 67] AH01909: RSA certificate configured for 10.5.0.71:443 does NOT include an ID which matches the server name
+[Mon Nov 05 10:40:48.286944 2018] [ssl:warn] [pid 67] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Nov 05 10:40:48.752897 2018] [mpm_prefork:notice] [pid 67] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.16 SVN/1.9.7 configured -- resuming normal operations
+[Mon Nov 05 10:40:48.752932 2018] [core:notice] [pid 67] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+
+
