@@ -4,8 +4,6 @@
 class DevEnvironmentForOSCest
 {
 
-
-
     public function installApp(AcceptanceTester $I)
     {
         $I->comment("Cloning project into /var/www/html");
