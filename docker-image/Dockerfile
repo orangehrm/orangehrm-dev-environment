@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:prod-7.2
+FROM orangehrm/orangehrm-environment-images:test-7.2
 
 MAINTAINER orangehrm
 LABEL authors = "Thulana Kannangara <thulana@orangehrm.us.com> , Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
@@ -14,13 +14,7 @@ RUN touch /etc/yum.repos.d/wandisco-svn.repo
 RUN echo $'[WandiscoSVN] \nname=Wandisco SVN Repo \nbaseurl=http://opensource.wandisco.com/centos/7/svn-1.9/RPMS/$basearch/ \nenabled=1 \ngpgcheck=0 ' > /etc/yum.repos.d/wandisco-svn.repo
 #installing nodejs
 RUN yum -y install \
-    bzip2 \
-    git \
     nano \
-    nodejs \
-    sendmail \
-    subversion mod_dav_svn \
-    vim \
     && yum -y update bash \
     && rm -rf /var/cache/yum/* \
     && yum clean all
@@ -53,4 +47,3 @@ RUN pear channel-discover pear.phing.info && \
 
 # Add supervisor conf
 COPY supervisord.conf /etc/supervisord.conf
-
