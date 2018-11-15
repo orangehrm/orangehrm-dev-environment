@@ -11,7 +11,7 @@ env:
   matrix:
   - TEST=unit
   - TEST=functional
-  - TEST=acceptance
+  #- TEST=acceptance
 services:
   - docker
 addons:
