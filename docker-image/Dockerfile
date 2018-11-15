@@ -3,7 +3,7 @@ FROM orangehrm/orangehrm-environment-images:prod-7.1
 MAINTAINER orangehrm
 LABEL authors = "Thulana Kannangara <thulana@orangehrm.us.com> , Ridwan Shariffdeen <ridwan@orangehrmlive.com>"
 
-# Our user in the container
+# Our user in the container#
 USER root
 WORKDIR /var/www/html/
 
