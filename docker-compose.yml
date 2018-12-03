@@ -162,6 +162,25 @@ services:
     restart: always
     container_name: dev_web_72
 
+  ubuntuweb71:
+    image: orangehrm/orangehrm-environment-images:dev-7.1-ubuntu-18.04
+    ports:
+      - "9100:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./config/ubuntuweb71/apache2/sites-enabled:/etc/apache2/sites-enabled
+      - ./config/ubuntuweb71/apache2/cert:/etc/apache2/cert
+      - ./config/ubuntuweb71/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
+      - ./logs/apache_logs/ubuntuweb71:/var/log/apache2
+      - /etc/localtime:/etc/localtime
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.100
+    restart: always
+    container_name: dev_ubuntu_web_71
+
 volumes:
   mysql55:
   mysql57:
