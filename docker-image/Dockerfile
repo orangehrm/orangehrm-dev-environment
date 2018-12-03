@@ -7,7 +7,7 @@ LABEL authors = "Nipuna Sankalpa <nipuna@orangehrm.com>"
 USER root
 RUN apt-get -y install gcc g++ make
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 #installing nodejs
 RUN apt-get -y install \
