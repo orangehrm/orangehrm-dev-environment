@@ -89,6 +89,23 @@ services:
     restart: always
     container_name: dev_mysql_55
 
+  db56:
+    image: mysql:5.6
+    expose:
+    - "3306"
+    volumes:
+    - ./config/db56:/etc/mysql
+    - ./logs/mysql_logs/db56:/var/log
+    - /etc/localtime:/etc/localtime
+    - mysql56:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.4
+    restart: always
+    container_name: dev_mysql_56
+
   db57:
     image: mysql:5.7
     expose:
@@ -114,7 +131,7 @@ services:
     ports:
       - "9092:80"
     environment:
-      PMA_HOSTS: db55,db57,db102
+      PMA_HOSTS: db55,db56,db57,db102
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.20
@@ -183,6 +200,7 @@ services:
 
 volumes:
   mysql55:
+  mysql56:
   mysql57:
   mariadb102:
   oracle11:
