@@ -21,25 +21,19 @@ class WebContainer71Cest
     public function checkPHPVersion(UnitTester $I){
         $I->wantTo("verify php 7.1 is installed in the container");
         $I->runShellCommand("docker exec dev_web_71 php --version");
-        $I->seeInShellOutput('PHP 7.1');
+        $I->seeInShellOutput('7.1.14');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
-        $I->runShellCommand("docker exec dev_web_71 service apache2 status");
-        $I->seeInShellOutput('apache2 is running');
+        $I->runShellCommand("docker exec dev_web_71 service httpd status");
+        $I->seeInShellOutput('active (running)');
     }
 
     public function checkCronServiceIsRunning(UnitTester $I){
         $I->wantTo("verify cron is installed in the container");
-        $I->runShellCommand("docker exec dev_web_71 apt list --installed | grep cron");
-        $I->seeInShellOutput('cron/now 3.0');
-    }
-
-    public function checkMemcacheServiceIsRunning(UnitTester $I){
-        $I->wantTo("verify apache is up and running in the container");
-        $I->runShellCommand("docker exec dev_web_56 service supervisor status");
-        $I->seeInShellOutput('supervisord is running');
+        $I->runShellCommand("docker exec dev_web_71 yum list installed | grep cron");
+        $I->seeInShellOutput('crontabs.noarch');
     }
 
     public function checkPHPUnitVersion(UnitTester $I){
@@ -51,31 +45,31 @@ class WebContainer71Cest
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
         $I->runShellCommand("docker exec dev_web_71 git --version");
-        $I->seeInShellOutput('git version 2.1.4');
+        $I->seeInShellOutput('git version 1.8.3.1');
     }
 
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web_71 curl --version");
-        $I->seeInShellOutput('curl 7.38');
+        $I->seeInShellOutput('7.29.0');
     }
 
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v4 is installed in the container");
         $I->runShellCommand("docker exec dev_web_71 node -v");
-        $I->seeInShellOutput('v4');
+        $I->seeInShellOutput('v6.13.0');
     }
 
     public function checkNPMVersion(UnitTester $I){
         $I->wantTo("verify npm is installed in the container");
         $I->runShellCommand("docker exec dev_web_71 npm --version");
-        $I->seeInShellOutput("2");
+        $I->seeInShellOutput("3.10.10");
     }
 
     public function checkNodemonInstallation(UnitTester $I){
         $I->wantTo("verify nodemon is installed in the container");
-        $I->runShellCommand("docker exec dev_web_71 nodemon");
-        $I->seeInShellOutput('Usage: nodemon');
+        $I->runShellCommand("docker exec dev_web_71 nodemon -v");
+        $I->seeInShellOutput('1.17.1');
     }
 
     public function checkBowerVersion(UnitTester $I){

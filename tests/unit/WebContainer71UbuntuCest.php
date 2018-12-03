@@ -6,16 +6,13 @@
  * Time: 6:53 PM
  */
 
-namespace tests\functional;
-
-
 class WebContainer71UbuntuCest
 {
-    public function _before(FunctionalTester $I)
+    public function _before(UnitTester $I)
     {
     }
 
-    public function _after(FunctionalTester $I)
+    public function _after(UnitTester $I)
     {
     }
 
@@ -34,13 +31,13 @@ class WebContainer71UbuntuCest
     public function checkApacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
         $I->runShellCommand("docker exec dev_ubuntu_web_71 service apache2 status");
-        $I->seeInShellOutput('apache2 is running');
+        $I->seeInShellOutput('active (running)');
     }
 
     public function checkCronServiceIsRunning(UnitTester $I){
         $I->wantTo("verify cron is installed in the container");
         $I->runShellCommand("docker exec dev_ubuntu_web_71 apt list --installed | grep cron");
-        $I->seeInShellOutput('cron/now 3.0');
+        $I->seeInShellOutput('cron/bionic,now');
     }
 
 
@@ -105,20 +102,20 @@ class WebContainer71UbuntuCest
     }
 
     public function CheckMariaDBVariables(FunctionalTester $I){
-        $I->wantTo("verify open ldap container is linked with php 7.1 ubuntu container properly");
-        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e show global variables like 'connect_timeout'");
+        $I->wantTo("verify MariaDB values");
+        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e \"show global variables like 'connect_timeout'\"");
         $I->seeInShellOutput('10');
-        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e show global variables like 'delayed_insert_timeout'");
+        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e \"show global variables like 'delayed_insert_timeout'\"");
         $I->seeInShellOutput('300');
-        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e show global variables like 'interactive_timeout'");
+        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e \"show global variables like 'interactive_timeout'\"");
         $I->seeInShellOutput('600');
-        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e show global variables like 'net_read_timeout'");
+        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e \"show global variables like 'net_read_timeout'\"");
         $I->seeInShellOutput('30');
-        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e show global variables like 'net_write_timeout'");
+        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e \"show global variables like 'net_write_timeout'\"");
         $I->seeInShellOutput('60');
-        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e show global variables like 'wait_timeout'");
+        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e \"show global variables like 'wait_timeout'\"");
         $I->seeInShellOutput('600');
-        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e show global variables like 'max_allowed_packet'");
+        $I->runShellCommand("docker exec dev_ubuntu_web_71 mysql -uroot -hdb102 -p1234 -e \"show global variables like 'max_allowed_packet'\"");
         $I->seeInShellOutput('67108864');
     }
 

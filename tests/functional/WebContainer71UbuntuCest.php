@@ -6,9 +6,6 @@
  * Time: 6:53 PM
  */
 
-namespace tests\functional;
-
-
 class WebContainer71UbuntuCest
 {
     public function _before(FunctionalTester $I)

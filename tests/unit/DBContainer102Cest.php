@@ -18,19 +18,23 @@ class DBContainer102Cest
     }
 
     public function checkMySQLServiceIsRunning(UnitTester $I){
-        $I->wantTo("verify mariadb 10.2 service is up and running");
-        $I->runShellCommand("ping -c 30 localhost");
-        $I->runShellCommand("docker exec dev_mariadb_102 mysqladmin -uroot -p1234 status");
-        $I->seeInShellOutput("Uptime");
+//        $I->wantTo("verify mariadb 10.2 service is up and running");
+//        $I->runShellCommand("ping -c 30 localhost");
+//        $I->runShellCommand("docker exec dev_mariadb_102 mysqladmin -uroot -p1234 status");
+//        $I->seeInShellOutput("Uptime");
     }
 
     public function checkMySQLConfigurations(UnitTester $I){
         $I->wantTo("verify my.cnf configuration is loaded");
-        $I->runShellCommand("docker exec dev_mariadb_102 mysql -uroot -p1234 -se 'show variables'");
-        $I->seeInShellOutput("event_scheduler	ON");
-        $I->seeInShellOutput("innodb_log_buffer_size	8388608");
-        $I->seeInShellOutput("innodb_buffer_pool_size	2147483648");
-        $I->seeInShellOutput("max_allowed_packet	67108864");
+
+        $I->runShellCommand("docker exec dev_mariadb_102 mysql -uroot -p1234 -e \"show global variables like '%event_scheduler%'\"");
+        $I->seeInShellOutput("ON");
+        $I->runShellCommand("docker exec dev_mariadb_102 mysql -uroot -p1234 -e \"show global variables like '%innodb_log_buffer_size%'\"");
+        $I->seeInShellOutput("8388608");
+        $I->runShellCommand("docker exec dev_mariadb_102 mysql -uroot -p1234 -e \"show global variables like '%innodb_buffer_pool_size%'\"");
+        $I->seeInShellOutput("2147483648");
+        $I->runShellCommand("docker exec dev_mariadb_102 mysql -uroot -p1234 -e \"show global variables like 'max_allowed_packet'\"");
+        $I->seeInShellOutput("67108864");
     }
 
 

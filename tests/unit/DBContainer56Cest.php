@@ -18,21 +18,22 @@ class DBContainer56Cest
     }
 
     public function checkMySQLServiceIsRunning(UnitTester $I){
-        $I->wantTo("verify mysql 5.6 service is up and running");
-        $I->runShellCommand("ping -c 30 localhost");
-        $I->runShellCommand("docker exec dev_mysql_56 mysqladmin -uroot -p1234 status");
-        $I->seeInShellOutput("Uptime");
+//        $I->wantTo("verify mysql 5.6 service is up and running");
+//        $I->runShellCommand("ping -c 30 localhost");
+//        $I->runShellCommand("docker exec dev_mysql_56 mysqladmin -uroot -p1234 status");
+//        $I->seeInShellOutput("Uptime");
     }
 
     public function checkMySQLConfigurations(UnitTester $I){
         $I->wantTo("verify my.cnf configuration is loaded");
-        $I->runShellCommand("docker exec dev_mysql_56 mysql -uroot -p1234 -se 'show variables'");
-        $I->seeInShellOutput("event_scheduler	ON");
-        $I->seeInShellOutput("innodb_log_buffer_size	8388608");
-        $I->seeInShellOutput("innodb_buffer_pool_size	2147483648");
-        $I->seeInShellOutput("max_allowed_packet	100663296");
+        $I->runShellCommand("docker exec dev_mysql_56 mysql -uroot -p1234 -e \"show global variables like '%event_scheduler%'\"");
+        $I->seeInShellOutput("ON");
+        $I->runShellCommand("docker exec dev_mysql_56 mysql -uroot -p1234 -e \"show global variables like '%innodb_log_buffer_size%'\"");
+        $I->seeInShellOutput("8388608");
+        $I->runShellCommand("docker exec dev_mysql_56 mysql -uroot -p1234 -e \"show global variables like '%innodb_buffer_pool_size%'\"");
+        $I->seeInShellOutput("2147483648");
+        $I->runShellCommand("docker exec dev_mysql_56 mysql -uroot -p1234 -e \"show global variables like 'max_allowed_packet'\"");
+        $I->seeInShellOutput("67108864");
     }
-
-
 
 }
