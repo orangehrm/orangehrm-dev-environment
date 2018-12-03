@@ -13,6 +13,7 @@ RUN apt-get -y install \
     nano \
     nodejs \
     sendmail \
+    npm \
     subversion \
     vim
 #install bower and gulp
@@ -28,8 +29,6 @@ RUN pear channel-discover pear.phing.info && \
     pear install VersionControl_SVN-alpha && \
     pear install phing/phing-2.16.0
 
-#remove php 7.2 additional modules
-RUN apt-get remove -y php7.2-*
 
 #Installing phan using composer
 RUN cd /var/lib && composer require --dev phan/phan
@@ -37,7 +36,7 @@ RUN ln -s /var/lib/vendor/bin/phan /usr/bin/phan
 
 
 # Enable and configure xdebug
-RUN apt-get -y install php7.1-dev npm
+RUN apt-get -y install php7.1-dev
 RUN pecl install Xdebug-2.6.1
 RUN echo "zend_extension=xdebug.so" > /etc/php/7.1/mods-available/xdebug.ini
 RUN ln -s /etc/php/7.1/mods-available/xdebug.ini /etc/php/7.1/cli/conf.d/00-xdebug.ini
@@ -47,3 +46,5 @@ RUN ln -s /etc/php/7.1/mods-available/xdebug.ini /etc/php/7.1/apache2/conf.d/00-
 COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.conf
 RUN a2ensite orangehrm.conf default-ssl.conf
 RUN service apache2 restart
+
+RUN apt-get -y install npm

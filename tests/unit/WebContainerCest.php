@@ -19,7 +19,7 @@ class WebContainerCest
     }
 
     public function checkPHPVersion(UnitTester $I){
-        $I->wantTo("verify php 5.6 is installed in the container");
+        $I->wantTo("verify php 7.1 is installed in the container");
         $I->runShellCommand("docker exec dev_web php --version");
         $I->seeInShellOutput('PHP 7.1');
     }
@@ -44,19 +44,6 @@ class WebContainerCest
         $I->seeInShellOutput('active (running)');
     }
 
-
-//    public function checkSupervisorServiceIsRunning(UnitTester $I){
-//        $I->wantTo("verify supervisor is up and running in the container");
-//        $I->runShellCommand("docker exec dev_web service supervisor status");
-//        $I->seeInShellOutput('supervisord is running');
-//    }
-
-    public function checkMemcacheServiceIsRunning(UnitTester $I){
-        $I->wantTo("verify memcache is up and running in the container");
-        $I->runShellCommand("docker exec dev_web service memcached status");
-        $I->seeInShellOutput('active (running)');
-    }
-
     public function checkPHPUnit3Version(UnitTester $I){
         $I->wantTo("verify phpunit library is installed in the container");
         $I->runShellCommand("docker exec dev_web phpunit3 --version");
@@ -72,62 +59,60 @@ class WebContainerCest
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
         $I->runShellCommand("docker exec dev_web git --version");
-        $I->seeInShellOutput('git version 1.8.3.1');
+        $I->seeInShellOutput('git version 2.17.1');
     }
     public function checkSVNInstallation(UnitTester $I){
         $I->wantTo("verify svn is installed in the container");
         $I->runShellCommand("docker exec dev_web svn --version");
-        $I->seeInShellOutput('version 1.9');
+        $I->seeInShellOutput('version 1.9.7');
     }
 
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web curl --version");
-        $I->seeInShellOutput('curl 7.29.0');
+        $I->seeInShellOutput('curl 7.58.0');
     }
 
     public function checkNanoInstallation(UnitTester $I){
         $I->wantTo("verify nano is installed in the container");
         $I->runShellCommand("docker exec dev_web nano --version");
-        $I->seeInShellOutput('nano version 2.3.1');
+        $I->seeInShellOutput('version 2.9.3');
     }
 
 
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v6 is installed in the container");
         $I->runShellCommand("docker exec dev_web node -v");
-        $I->seeInShellOutput('v6');
+        $I->seeInShellOutput('v8.10.0');
     }
 
     public function checkNPMVersion(UnitTester $I){
         $I->wantTo("verify npm is installed in the container");
         $I->runShellCommand("docker exec dev_web npm --version");
-        $I->seeInShellOutput("3.10.10");
+        $I->seeInShellOutput("3.5.2");
     }
 
     public function checkSendMailVersion(UnitTester $I){
         $I->wantTo("verify sendmail is installed in the container");
-        $I->runShellCommand("docker exec dev_web rpm -qa | grep -i sendmail");
-        $I->seeInShellOutput("sendmail-8");
+        $I->runShellCommand("docker exec dev_web dpkg -l | grep -i sendmail");
+        $I->seeInShellOutput("sendmail");
+        $I->seeInShellOutput("sendmail-base");
+        $I->seeInShellOutput("sendmail-bin");
+        $I->seeInShellOutput("sendmail-cf");
     }
 
     public function checkNodemonInstallation(UnitTester $I){
         $I->wantTo("verify nodemon is installed in the container");
-        $I->runShellCommand("docker exec dev_web nodemon");
-        $I->seeInShellOutput('Usage: nodemon');
+        $I->runShellCommand("docker exec dev_web which nodemon");
+        $I->seeInShellOutput('1.18.7');
     }
 
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
         $I->runShellCommand("docker exec dev_web bower --version");
-        $I->seeInShellOutput('1');
+        $I->seeInShellOutput('1.8.4');
     }
 
-    public function checkOci8PHPmodule(UnitTester $I){
-        $I->wantTo("verify php module oci8 is installed in the container");
-        $I->runShellCommand("docker exec dev_web php -m");
-        $I->seeInShellOutput('oci8');
-    }
 
     public function checkAstExtention(UnitTester $I){
         $I->wantTo("verify ast extention");
@@ -138,7 +123,7 @@ class WebContainerCest
     public function checkPhanExtention(UnitTester $I){
         $I->wantTo('Verify the phan');
         $I->runShellCommand("docker exec dev_web bash -c 'phan -v | grep Phan'");
-        $I->seeInShellOutput('Phan');
+        $I->seeInShellOutput('Phan 1.1.5');
     }
 
     public function checkStatsPHPmodule(UnitTester $I){
