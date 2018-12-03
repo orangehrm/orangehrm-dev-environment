@@ -58,7 +58,7 @@ class WebContainer56Cest
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v4 is installed in the container");
         $I->runShellCommand("docker exec dev_web_56 node -v");
-        $I->seeInShellOutput('v6.12.2');
+        $I->seeInShellOutput('v6.14.1');
     }
 
     public function checkNPMVersion(UnitTester $I){
@@ -70,13 +70,13 @@ class WebContainer56Cest
     public function checkNodemonInstallation(UnitTester $I){
         $I->wantTo("verify nodemon is installed in the container");
         $I->runShellCommand("docker exec dev_web_56 nodemon -v");
-        $I->seeInShellOutput('1.14.11');
+        $I->seeInShellOutput('1.17.3');
     }
 
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
         $I->runShellCommand("docker exec dev_web_56 bower --version");
-        $I->seeInShellOutput('1.8.2');
+        $I->seeInShellOutput('1.8.4');
     }
 
 }

@@ -21,7 +21,7 @@ class WebContainer71Cest
     public function checkPHPVersion(UnitTester $I){
         $I->wantTo("verify php 7.1 is installed in the container");
         $I->runShellCommand("docker exec dev_web_71 php --version");
-        $I->seeInShellOutput('7.1.14');
+        $I->seeInShellOutput('7.1.23');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
@@ -57,7 +57,7 @@ class WebContainer71Cest
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v4 is installed in the container");
         $I->runShellCommand("docker exec dev_web_71 node -v");
-        $I->seeInShellOutput('v6.13.0');
+        $I->seeInShellOutput('v6.14.4');
     }
 
     public function checkNPMVersion(UnitTester $I){
@@ -69,7 +69,7 @@ class WebContainer71Cest
     public function checkNodemonInstallation(UnitTester $I){
         $I->wantTo("verify nodemon is installed in the container");
         $I->runShellCommand("docker exec dev_web_71 nodemon -v");
-        $I->seeInShellOutput('1.17.1');
+        $I->seeInShellOutput('1.18.6');
     }
 
     public function checkBowerVersion(UnitTester $I){
