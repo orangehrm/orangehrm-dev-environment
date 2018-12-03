@@ -5,17 +5,21 @@ LABEL authors = "Nipuna Sankalpa <nipuna@orangehrm.com>"
 
 # Our user in the container#
 USER root
+RUN apt-get -y install gcc g++ make
+
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 
 #installing nodejs
 RUN apt-get -y install \
     bzip2 \
+    build-essential \
     git \
     nano \
     nodejs \
     sendmail \
-    npm \
     subversion \
     vim
+
 #install bower and gulp
 RUN npm install bower gulp nodemon node-sass pm2 -g
 
