@@ -24,6 +24,7 @@ install:
   - composer install
   - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d
   - docker ps
+  - docker exec dev_web_56 bash /etc/mysql/db-check.sh
 
 #script:
 #  - php vendor/bin/codecept run acceptance
