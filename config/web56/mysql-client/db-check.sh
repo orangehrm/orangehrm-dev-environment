@@ -10,3 +10,5 @@ while true; do
  sleep 5
  echo "waiting for connection"
 done
+
+echo "DONEEEEEEEEEEEEEE"
