@@ -19,7 +19,7 @@ class DBContainer55Cest
 
     public function checkMySQLServiceIsRunning(UnitTester $I){
         $I->wantTo("verify mysql 5.5 service is up and running");
-        $I->runShellCommand("ping -c 30 localhost");
+        $I->runShellCommand("ping -c 60 localhost");
         $I->runShellCommand("docker exec dev_mysql_55 mysqladmin -uroot -p1234 status");
         $I->seeInShellOutput("Uptime");
     }

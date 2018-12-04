@@ -19,7 +19,7 @@ class DBContainer102Cest
 
     public function checkMySQLServiceIsRunning(UnitTester $I){
         $I->wantTo("verify mariadb 10.2 service is up and running");
-        $I->runShellCommand("ping -c 30 localhost");
+        $I->runShellCommand("ping -c 60 localhost");
         $I->runShellCommand("docker exec dev_mariadb_102 mysqladmin -uroot -p1234 status");
         $I->seeInShellOutput("Uptime");
     }

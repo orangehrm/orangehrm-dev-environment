@@ -19,7 +19,7 @@ class DBContainer11Cest
 
     public function checkMySQLServiceIsRunning(UnitTester $I){
         $I->wantTo("verify Oracle service is up and running");
-        $I->runShellCommand("ping -c 30 localhost");
+        $I->runShellCommand("ping -c 60 localhost");
         $I->runShellCommand("docker exec dev_oracle_11 ps aux | grep pmon");
         $I->seeInShellOutput("xe_pmon_XE");
     }
