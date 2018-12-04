@@ -7,6 +7,6 @@ while true; do
     break
  fi
 
- sleep 5
+ sleep 150
  echo "waiting for connection"
 done
