@@ -23,11 +23,12 @@ before_install:
 install:
   - composer install
   - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d
+  - docker ps
 
-script:
-  - php vendor/bin/codecept run acceptance
-  - php vendor/bin/codecept run functional
-  - php vendor/bin/codecept run unit
+#script:
+#  - php vendor/bin/codecept run acceptance
+#  - php vendor/bin/codecept run functional
+#  - php vendor/bin/codecept run unit
 
 
 
