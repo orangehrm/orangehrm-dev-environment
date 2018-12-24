@@ -19,7 +19,6 @@ before_install:
   - docker version
   - composer self-update
 
-
 install:
   - composer install
   - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d
