@@ -198,6 +198,17 @@ services:
     restart: always
     container_name: dev_ubuntu_web_71
 
+  mailcatcher:
+    image: dockage/mailcatcher:0.6.5
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.23
+    restart: always
+    container_name: dev_mailcatcher
+
 volumes:
   mysql55:
   mysql56:

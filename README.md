@@ -37,6 +37,7 @@ Make sure mentioned prerequisites are there in your host machine.
 | dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.20  | 9090       |
 | dev_openldap   | openldap                           | openldap    | 10.5.0.22  | 700,701    |
 |dev_phpldapadmin| phpldapadmin                       | ldapadmin   | 10.5.0.21  | 9093       |
+| dev_mailcatcher| mailcatcher                        | mailcatcher | 10.5.0.23  | 1080,1025  |
 ## Install orangehrm eagle-core inside the container 
 1. Get a checkout from svn to ohrm_dev directory.
 2. To get the named virtual hosts to work, add the project folder name to /etc/hosts file (`127.0.0.1 folderName`).
@@ -110,3 +111,6 @@ More about phpmyadmin container can find in docker hub [phpmyadmin image](https:
 5. web 7.0 container doesn't include memcache,ereg and stats PHP modules due to compatibility issues.
 6. In web 5.6 container, port 3000 is mapped to 3000 port locally.
 7. In web 7.0 container, port 3000 is mapped to 3001 port locally.
+8. To catch any emails from the system using mailcatcher set the email configuration as follows.
+`SMTP Host : dev_mailcatcher, SMTP Port : 1025, Use SMTP Authentication : No, Use Secure Connection : No`
+9. View mailcatcher from http://localhost:1080/
