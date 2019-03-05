@@ -1,9 +1,32 @@
 version: '2.1'
 services:
+  nginx:
+    image: nginx:1.14
+    ports:
+      - "443:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/nginx/virtual-servers:/etc/nginx/conf.d/virtual-servers
+      - ./config/nginx/cert:/etc/nginx/cert
+      - ./config/nginx/ssl:/etc/nginx/ssl
+      - ./logs/nginx_logs/web56:/var/log/nginx/web56
+      - ./logs/nginx_logs/web70:/var/log/nginx/web70
+      - ./logs/nginx_logs/web71:/var/log/nginx/web71
+      - ./logs/nginx_logs/web72:/var/log/nginx/web72
+      - ./logs/nginx_logs/webubuntu71:/var/log/nginx/webubuntu71
+      - ./logs/nginx_logs/phpmyadmin:/var/log/nginx/phpmyadmin
+      - /etc/localtime:/etc/localtime
+    privileged: true
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.90
+    restart: always
+    container_name: dev_nginx
+
   web56:
     image: orangehrm/orangehrm-environment-images:dev-5.6-centos
     ports:
-      - "9056:443"
       - "3000:3000"
     volumes:
       - ./html:/var/www/html
@@ -25,8 +48,6 @@ services:
 
   web71:
     image: orangehrm/orangehrm-environment-images:dev-7.1-centos
-    ports:
-      - "9071:443"
     volumes:
       - ./html:/var/www/html
       - ./config/web71/php/php.ini:/etc/php.ini
@@ -50,7 +71,6 @@ services:
   web70:
       image: orangehrm/orangehrm-environment-images:dev-7.0-centos
       ports:
-        - "9070:443"
         - "3001:3000"
       volumes:
         - ./html:/var/www/html
@@ -127,9 +147,6 @@ services:
     image: phpmyadmin/phpmyadmin
     volumes:
       - /etc/localtime:/etc/localtime
-
-    ports:
-      - "9092:80"
     environment:
       PMA_HOSTS: db55,db56,db57,db102
     networks:
@@ -157,8 +174,6 @@ services:
 
   web72:
     image: orangehrm/orangehrm-environment-images:dev-7.2-centos
-    ports:
-      - "9072:443"
     volumes:
       - ./html:/var/www/html
       - ./config/web72/php/php.ini:/etc/php.ini
@@ -181,8 +196,6 @@ services:
 
   ubuntuweb71:
     image: orangehrm/orangehrm-environment-images:dev-7.1-ubuntu-18.04
-    ports:
-      - "9100:443"
     volumes:
       - ./html:/var/www/html
       - ./config/ubuntuweb71/apache2/sites-enabled:/etc/apache2/sites-enabled
