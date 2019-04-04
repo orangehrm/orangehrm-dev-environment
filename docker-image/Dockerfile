@@ -46,7 +46,7 @@ RUN yum -y install \
 #RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Enable and configure xdebug
-RUN pecl install Xdebug-2.6.0
+#RUN pecl install Xdebug-2.6.0
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
 #install oci8 php module
