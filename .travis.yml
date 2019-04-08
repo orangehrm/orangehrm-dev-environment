@@ -6,7 +6,7 @@ stage: test
 env:
   global:
   - REPO=orangehrm/orangehrm-environment-images
-  - TAG=dev-7.1-centos
+  - TAG=nginx
 
   matrix:
   - TEST=unit
@@ -39,8 +39,8 @@ jobs:
   include:
     - stage: push to dockerhub
       env:
-#      script: skip
-#      after_script:
-#        - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-#        - docker push $REPO:$TAG
+      script: skip
+      after_script:
+        - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+        - docker push $REPO:$TAG
            
