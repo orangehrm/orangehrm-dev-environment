@@ -9,4 +9,4 @@ services:
     privileged: true
     restart: always
     hostname: orangehrm-dev-web
-    container_name: dev_web
+    container_name: dev_nginx

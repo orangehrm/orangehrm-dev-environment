@@ -8,8 +8,8 @@ env:
   - REPO=orangehrm/orangehrm-environment-images
   - TAG=nginx
 
-#  matrix:
-#  - TEST=unit
+  matrix:
+  - TEST=unit
 #  - TEST=functional
 #  - TEST=acceptance
 services:
@@ -33,7 +33,7 @@ install:
   - composer install
   - docker-compose up -d
 
-#script: php vendor/bin/codecept run --debug $TEST
+script: php vendor/bin/codecept run --debug $TEST
 
 jobs:
   include:
