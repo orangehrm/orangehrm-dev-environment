@@ -25,7 +25,7 @@ services:
     container_name: dev_nginx
 
   web56:
-    image: orangehrm/orangehrm-environment-images:dev-5.6-centos
+    image: orangehrm/orangehrm-environment-images:dev-5.6-centos-orange
     ports:
       - "3000:3000"
     volumes:
@@ -47,7 +47,7 @@ services:
     container_name: dev_web_56
 
   web71:
-    image: orangehrm/orangehrm-environment-images:dev-7.1-centos
+    image: orangehrm/orangehrm-environment-images:dev-7.1-centos-orange
     volumes:
       - ./html:/var/www/html
       - ./config/web71/php/php.ini:/etc/php.ini
@@ -173,7 +173,7 @@ services:
     container_name: dev_mariadb_102
 
   web72:
-    image: orangehrm/orangehrm-environment-images:dev-7.2-centos
+    image: orangehrm/orangehrm-environment-images:dev-7.2-centos-orange
     volumes:
       - ./html:/var/www/html
       - ./config/web72/php/php.ini:/etc/php.ini
