@@ -40,10 +40,7 @@ RUN yum -y install \
     && rm -rf /var/cache/yum/* \
     && yum clean all
 
-# Enable and configure xdebug
-RUN pecl install Xdebug-2.5.5
 RUN pecl config-set preferred_state beta
-RUN pecl install xhprof
 RUN echo "extension=xhprof.so" >>/etc/php.ini
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
