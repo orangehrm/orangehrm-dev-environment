@@ -261,3 +261,16 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 [Mon Mar 04 10:44:30.042887 2019] [ssl:warn] [pid 84] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
 [Mon Mar 04 10:44:43.570090 2019] [mpm_prefork:notice] [pid 84] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.16 SVN/1.9.7 configured -- resuming normal operations
 [Mon Mar 04 10:44:43.640103 2019] [core:notice] [pid 84] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 15 10:49:57.599149 2019] [suexec:notice] [pid 4080] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 15 10:49:57.601652 2019] [ssl:warn] [pid 4080] AH01909: RSA certificate configured for 10.5.0.71:443 does NOT include an ID which matches the server name
+[Mon Apr 15 10:49:57.602415 2019] [ssl:warn] [pid 4080] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00112: Warning: DocumentRoot [/var/www/html/OHRMStandalone/OPENSOURCE/] does not exist
+AH00112: Warning: DocumentRoot [/var/www/html/OHRMStandalone/TEST/] does not exist
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.71. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 15 10:49:57.706239 2019] [auth_digest:notice] [pid 4080] AH01757: generating secret for digest authentication ...
+[Mon Apr 15 10:49:57.707150 2019] [lbmethod_heartbeat:notice] [pid 4080] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 15 10:49:57.708901 2019] [ssl:warn] [pid 4080] AH01909: RSA certificate configured for 10.5.0.71:443 does NOT include an ID which matches the server name
+[Mon Apr 15 10:49:57.709021 2019] [ssl:warn] [pid 4080] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+PHP Warning:  Module 'mcrypt' already loaded in Unknown on line 0
+[Mon Apr 15 10:50:02.519083 2019] [mpm_prefork:notice] [pid 4080] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.26 SVN/1.9.9 configured -- resuming normal operations
+[Mon Apr 15 10:50:02.520651 2019] [core:notice] [pid 4080] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'

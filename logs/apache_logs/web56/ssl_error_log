@@ -274,3 +274,15 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 [Mon Mar 04 10:44:01.629061 2019] [ssl:warn] [pid 31] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
 [Mon Mar 04 10:44:18.048841 2019] [mpm_prefork:notice] [pid 31] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.35 SVN/1.9.7 configured -- resuming normal operations
 [Mon Mar 04 10:44:19.676395 2019] [core:notice] [pid 31] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 15 10:49:52.423517 2019] [suexec:notice] [pid 73] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 15 10:49:52.426956 2019] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 15 10:49:52.427059 2019] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00112: Warning: DocumentRoot [/var/www/html/OHRMStandalone/OPENSOURCE/] does not exist
+AH00112: Warning: DocumentRoot [/var/www/html/OHRMStandalone/TEST/] does not exist
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.56. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 15 10:49:52.520350 2019] [auth_digest:notice] [pid 73] AH01757: generating secret for digest authentication ...
+[Mon Apr 15 10:49:52.521376 2019] [lbmethod_heartbeat:notice] [pid 73] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 15 10:49:52.527630 2019] [ssl:warn] [pid 73] AH01909: RSA certificate configured for 10.5.0.56:443 does NOT include an ID which matches the server name
+[Mon Apr 15 10:49:52.527769 2019] [ssl:warn] [pid 73] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 15 10:50:02.148378 2019] [mpm_prefork:notice] [pid 73] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.33 SVN/1.9.9 configured -- resuming normal operations
+[Mon Apr 15 10:50:02.148429 2019] [core:notice] [pid 73] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'

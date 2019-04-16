@@ -30,7 +30,6 @@ services:
       - "3000:3000"
     volumes:
       - ./html:/var/www/html
-      - ./config/web56/php/php.ini:/etc/php.ini
       - ./config/web56/mysql-client:/etc/mysql
       - ./config/web56/apache2/sites-available:/etc/httpd/sites-available
       - ./config/web56/apache2/sites-enabled:/etc/httpd/sites-enabled
@@ -50,7 +49,6 @@ services:
     image: orangehrm/orangehrm-environment-images:dev-7.1-centos-orange
     volumes:
       - ./html:/var/www/html
-      - ./config/web71/php/php.ini:/etc/php.ini
       - ./config/web71/mysql-client:/etc/mysql
       - ./config/web71/apache2/sites-available:/etc/httpd/sites-available
       - ./config/web71/apache2/sites-enabled:/etc/httpd/sites-enabled
@@ -74,7 +72,6 @@ services:
         - "3001:3000"
       volumes:
         - ./html:/var/www/html
-        - ./config/web70/php/php.ini:/etc/php.ini
         - ./config/web70/mysql-client:/etc/mysql
         - ./config/web70/apache2/sites-available:/etc/httpd/sites-available
         - ./config/web70/apache2/sites-enabled:/etc/httpd/sites-enabled

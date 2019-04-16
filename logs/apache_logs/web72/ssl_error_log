@@ -306,3 +306,15 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 [Mon Mar 04 10:44:01.632556 2019] [ssl:warn] [pid 32] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
 [Mon Mar 04 10:44:21.970199 2019] [mpm_prefork:notice] [pid 32] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.9.7 configured -- resuming normal operations
 [Mon Mar 04 10:44:21.980719 2019] [core:notice] [pid 32] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Apr 15 10:49:52.938453 2019] [suexec:notice] [pid 3876] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Apr 15 10:49:52.983368 2019] [ssl:warn] [pid 3876] AH01909: RSA certificate configured for 10.5.0.72:443 does NOT include an ID which matches the server name
+[Mon Apr 15 10:49:52.983475 2019] [ssl:warn] [pid 3876] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+AH00112: Warning: DocumentRoot [/var/www/html/OHRMStandalone/OPENSOURCE/] does not exist
+AH00112: Warning: DocumentRoot [/var/www/html/OHRMStandalone/TEST/] does not exist
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 10.5.0.72. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 15 10:49:53.261163 2019] [auth_digest:notice] [pid 3876] AH01757: generating secret for digest authentication ...
+[Mon Apr 15 10:49:53.262035 2019] [lbmethod_heartbeat:notice] [pid 3876] AH02282: No slotmem from mod_heartmonitor
+[Mon Apr 15 10:49:53.263685 2019] [ssl:warn] [pid 3876] AH01909: RSA certificate configured for 10.5.0.72:443 does NOT include an ID which matches the server name
+[Mon Apr 15 10:49:53.263782 2019] [ssl:warn] [pid 3876] AH02292: Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Mon Apr 15 10:50:02.117583 2019] [mpm_prefork:notice] [pid 3876] AH00163: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.9.9 configured -- resuming normal operations
+[Mon Apr 15 10:50:02.118475 2019] [core:notice] [pid 3876] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
