@@ -14,35 +14,6 @@ services:
       - /etc/localtime:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
-    links:
-      - db
     restart: always
     hostname: orangehrm-dev-web
     container_name: dev_web
-
-  db:
-    image: mysql:5.5
-    expose:
-      - "3306"
-    volumes:
-      - ./config/mysql-server:/etc/mysql
-      - ./logs/mysql_logs:/var/log
-      - /etc/localtime:/etc/localtime
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    restart: always
-    hostname: orangehrm-dev-db
-    container_name: dev_mysql
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    volumes:
-      - /etc/localtime:/etc/localtime
-    links:
-      - db
-    ports:
-      - "9090:80"
-    environment:
-      PMA_HOST: db
-    restart: always
-    container_name: dev_phpmyadmin
