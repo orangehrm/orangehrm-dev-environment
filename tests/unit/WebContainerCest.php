@@ -44,13 +44,6 @@ class WebContainerCest
         $I->seeInShellOutput('active (running)');
     }
 
-
-//    public function checkSupervisorServiceIsRunning(UnitTester $I){
-//        $I->wantTo("verify supervisor is up and running in the container");
-//        $I->runShellCommand("docker exec dev_web service supervisor status");
-//        $I->seeInShellOutput('supervisord is running');
-//    }
-
     public function checkMemcacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify memcache is up and running in the container");
         $I->runShellCommand("docker exec dev_web service memcached status");
