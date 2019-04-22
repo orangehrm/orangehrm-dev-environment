@@ -39,7 +39,6 @@ class WebContainerCest
 
     public function checkApacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
-        //$I->runShellCommand("ping -c 10 localhost");
         $I->runShellCommand("docker exec dev_web service httpd status");
         $I->seeInShellOutput('active (running)');
     }
@@ -51,13 +50,6 @@ class WebContainerCest
         $I->seeInShellOutput('active (running)');
     }
 
-
-//    public function checkSupervisorServiceIsRunning(UnitTester $I){
-//        $I->wantTo("verify supervisor is up and running in the container");
-//        $I->runShellCommand("docker exec dev_web service supervisor status");
-//        $I->seeInShellOutput('supervisord is running');
-//    }
-
     public function checkMemcacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify memcache is up and running in the container");
         $I->runShellCommand("docker exec dev_web service memcached status");
@@ -68,12 +60,6 @@ class WebContainerCest
         $I->wantTo("verify phpunit library is installed in the container");
         $I->runShellCommand("docker exec dev_web phpunit3 --version");
         $I->seeInShellOutput('PHPUnit 3.7.28');
-    }
-
-    public function checkPHPUnitVersion(UnitTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec dev_web phpunit --version");
-        $I->seeInShellOutput('PHPUnit 5.7.21');
     }
 
     public function checkGitInstallation(UnitTester $I){
@@ -104,37 +90,6 @@ class WebContainerCest
         $I->wantTo("verify Xhprof is installed in the container");
         $I->runShellCommand("docker exec dev_web php --ri xhprof");
         $I->seeInShellOutput('xhprof');
-    }
-
-
-    public function checkNodeVersion(UnitTester $I){
-        $I->wantTo("verify node v6 is installed in the container");
-        $I->runShellCommand("docker exec dev_web node -v");
-        $I->seeInShellOutput('v6');
-    }
-
-    public function checkNPMVersion(UnitTester $I){
-        $I->wantTo("verify npm is installed in the container");
-        $I->runShellCommand("docker exec dev_web npm --version");
-        $I->seeInShellOutput("3.10");
-    }
-
-    public function checkSendMailVersion(UnitTester $I){
-        $I->wantTo("verify sendmail is installed in the container");
-        $I->runShellCommand("docker exec dev_web rpm -qa | grep -i sendmail");
-        $I->seeInShellOutput("sendmail-8");
-    }
-
-    public function checkNodemonInstallation(UnitTester $I){
-        $I->wantTo("verify nodemon is installed in the container");
-        $I->runShellCommand("docker exec dev_web nodemon");
-        $I->seeInShellOutput('Usage: nodemon');
-    }
-
-    public function checkBowerVersion(UnitTester $I){
-        $I->wantTo("verify bower is installed in the container");
-        $I->runShellCommand("docker exec dev_web bower --version");
-        $I->seeInShellOutput('1');
     }
 
     public function checkOci8PHPmodule(UnitTester $I){

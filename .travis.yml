@@ -9,8 +9,7 @@ env:
   - TAG=dev-5.6-centos-orange
   matrix:
   - TEST=unit
-  - TEST=functional
-  - TEST=acceptance
+
 services:
   - docker
 
