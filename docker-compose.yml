@@ -127,11 +127,10 @@ services:
     image: phpmyadmin/phpmyadmin
     volumes:
       - /etc/localtime:/etc/localtime
-
     ports:
       - "9092:80"
     environment:
-      PMA_HOSTS: db55,db56,db57,db102
+      PMA_HOSTS: db55,db56,db57,db102, db103
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.20
@@ -154,6 +153,23 @@ services:
         ipv4_address: 10.5.0.7
     restart: always
     container_name: dev_mariadb_102
+
+  db103:
+    image: mariadb:10.3
+    expose:
+      - "3306"
+    volumes:
+      - ./config/db103:/etc/mysql
+      - ./logs/mariadb_logs/db103:/var/log
+      - /etc/localtime:/etc/localtime
+      - mariadb103:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.8
+    restart: always
+    container_name: dev_mariadb_103
 
   web72:
     image: orangehrm/orangehrm-environment-images:dev-7.2-centos
@@ -204,6 +220,7 @@ volumes:
   mysql57:
   mariadb102:
   oracle11:
+  mariadb103:
 
 networks:
   ohrmdevnet:
