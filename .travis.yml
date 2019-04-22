@@ -6,12 +6,11 @@ stage: test
 env:
   global:
   - REPO=orangehrm/orangehrm-environment-images
-  - TAG=dev-7.0-centos
+  - TAG=dev-7.0-centos-orange
 
   matrix:
   - TEST=unit
-  - TEST=functional
-  - TEST=acceptance
+  
 services:
   - docker
 addons:
