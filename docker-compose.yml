@@ -130,7 +130,7 @@ services:
     ports:
       - "9092:80"
     environment:
-      PMA_HOSTS: db55,db56,db57,db102, db103
+      PMA_HOSTS: db55,db56,db57,db102,db103
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.0.20
@@ -167,7 +167,7 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.8
+        ipv4_address: 10.5.0.9
     restart: always
     container_name: dev_mariadb_103
 
