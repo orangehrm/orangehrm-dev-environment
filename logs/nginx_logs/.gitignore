@@ -1,0 +1,11 @@
+# Ignore everything in this directory
+*
+# Except this file
+!phpmyadmin/
+!rabbitmq/
+!web56/
+!web70/
+!web71/
+!web72/
+!webubuntu71/
+!.gitignore
