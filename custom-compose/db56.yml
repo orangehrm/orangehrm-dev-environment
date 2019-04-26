@@ -1,0 +1,20 @@
+version: '2.1'
+services:
+  db56:
+    image: orangehrm/orangehrm-db-images:mysql-5.6
+    expose:
+      - "3306"
+    volumes:
+      - ./logs/mysql_logs/db56:/var/log
+      - /etc/localtime:/etc/localtime
+      - mysql56:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.56
+    restart: always
+    container_name: dev_mysql_56
+
+volumes:
+  mysql56:

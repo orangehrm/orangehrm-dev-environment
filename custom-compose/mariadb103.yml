@@ -1,0 +1,32 @@
+version: '2.1'
+services:
+  db103:
+    image: orangehrm/orangehrm-db-images:mariadb-10.3
+    expose:
+    - "3306"
+    volumes:
+    - ./logs/mysql_logs/db103:/var/log
+    - /etc/localtime:/etc/localtime
+    - mariadb103:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.103
+    restart: always
+    container_name: dev_mariadb_103
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    volumes:
+    - /etc/localtime:/etc/localtime
+    environment:
+      PMA_HOSTS: db55,db102,db103
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.2.2
+    restart: always
+    container_name: dev_phpmyadmin
+
+volumes:
+  mariadb103:

@@ -1,0 +1,72 @@
+version: '2.1'
+services:
+  ubuntuweb71:
+    image: orangehrm/orangehrm-environment-images:dev-7.1-ubuntu-18.04
+    volumes:
+    - ./html:/var/www/html
+    - ./config/ubuntuweb71/apache2/sites-enabled:/etc/apache2/sites-enabled
+    - ./config/ubuntuweb71/apache2/cert:/etc/apache2/cert
+    - ./config/ubuntuweb71/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
+    - ./logs/apache_logs/ubuntuweb71:/var/log/apache2
+    - /etc/localtime:/etc/localtime
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.171
+    restart: always
+    container_name: dev_ubuntu_web_71
+
+  db56:
+    image: orangehrm/orangehrm-db-images:mysql-5.6
+    expose:
+    - "3306"
+    volumes:
+    - ./logs/mysql_logs/db56:/var/log
+    - /etc/localtime:/etc/localtime
+    - mysql56:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.56
+    restart: always
+    container_name: dev_mysql_56
+
+  db57:
+    image: mysql:5.7
+    expose:
+      - "3306"
+    volumes:
+      - ./config/db57:/etc/mysql
+      - ./logs/mysql_logs/db57:/var/log
+      - /etc/localtime:/etc/localtime
+      - mysql57:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.57
+    restart: always
+    container_name: dev_mysql_57
+
+  db103:
+    image: orangehrm/orangehrm-db-images:mariadb-10.3
+    expose:
+    - "3306"
+    volumes:
+    - ./logs/mysql_logs/db103:/var/log
+    - /etc/localtime:/etc/localtime
+    - mariadb103:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.103
+    restart: always
+    container_name: dev_mariadb_103
+
+volumes:
+  mysql56:
+  mysql57:
+  mariadb103:

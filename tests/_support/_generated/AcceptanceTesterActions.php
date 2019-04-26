@@ -1433,7 +1433,7 @@ trait AcceptanceTesterActions
      *
      * ``` php
      * <?php
-     * $I->selectOption('Which OS do you use?', array('Windows','Linux'));
+     * $I->selectOption('Which opensource do you use?', array('Windows','Linux'));
      * ?>
      * ```
      *
@@ -1441,8 +1441,8 @@ trait AcceptanceTesterActions
      *
      * ``` php
      * <?php
-     * $I->selectOption('Which OS do you use?', array('text' => 'Windows')); // Only search by text 'Windows'
-     * $I->selectOption('Which OS do you use?', array('value' => 'windows')); // Only search by value 'windows'
+     * $I->selectOption('Which opensource do you use?', array('text' => 'Windows')); // Only search by text 'Windows'
+     * $I->selectOption('Which opensource do you use?', array('value' => 'windows')); // Only search by value 'windows'
      * ?>
      * ```
      *
