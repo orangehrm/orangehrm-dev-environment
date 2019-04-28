@@ -2,9 +2,15 @@
 [![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=master)](https://travis-ci.org/orangehrm/orangehrm-dev-environment) [![BCH compliance](https://bettercodehub.com/edge/badge/orangehrm/orangehrm-dev-environment?branch=master)](https://bettercodehub.com/)
 
 ## Introduction
-orangehrm-dev-environment is a dockerized development environment for OrangeHRM. Usually it will take hours to configure and prepare the development environment for orangehrm system. This project will save the developers time.
+orangehrm-dev-environment is a dockerized development environment for [OrangeHRM](https://www.orangehrm.com/). This dev environment mainly contains three layers as follows,
 
-This environment will depends on containers of [orangehrm-dev-image](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/),[mysql](https://hub.docker.com/_/mysql/) and [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/).
+- Proxy Layer 
+- Web Layer
+- Database Layer
+
+Configuration of each layer has been added according to the OrangeHRM requirements.
+
+
 ## Prerequisites
 - Docker engine installed.([Get docker](https://docs.docker.com/engine/installation/))
 - Minimum docker version 17.3
@@ -14,17 +20,35 @@ This environment will depends on containers of [orangehrm-dev-image](https://hub
 ![OrangeHRM Dev Environment Architecture](./utils/doc-helpers/architecture_diagram.png)
 
 ## How to use ?
-Make sure mentioned prerequisites are there in your host machine.
 
-1. go to release tab and download the latest release.
-2. open terminal and go to the cloned directory
-3. run the command `docker-compose up -d` - this command will only create three web containers and mysql 5.5 and 5.7 containers only.
-4. To start complete development environment run the command `docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d`
-5. Moving from complete version to basic version - `docker-compose up -d --remove-orphans`  
-6. run `docker ps` and make sure all the containers are up and running.
-7. Your web root will be _/ohrm_dev_ directory and make sure to put your project in that folder.
+The Dev environment has been configured to use 443 post as the default web port. So make sure the 443 port of your host machine is not been used by any service prior to the installation. 
+##### Installation
 
-**Note** : [Video Tutorial](https://www.youtube.com/watch?v=fURFe-tARyk)
+1. Download the zip
+2. Extract the zip anywhere you want
+3. run the command `docker-compose up -d` - this will up the basic development environment which has PHP 5.6, PHP 7.1, PHP 7.2, nginx, phpmyadmin, RabbitMQ, MySQL 5.5 and MariaDB 10.2 containers.
+
+##### Host an instance
+After the installation add below URLs to your /etc/hosts file.
+- phpmyadmin.orangehrmdev.com
+- rabbitmq.orangehrmdev.com
+
+###### Enterprise Hosting
+- Document Root: /var/www/html/OHRMStandalone/TEST
+- Naming Conventions
+  - web56: <NAME>-test-web56.orangehrmdev.com
+  - web71: <NAME>-test-web71.orangehrmdev.com
+  - web72: <NAME>-test-web72.orangehrmdev.com
+  
+###### Opensource Hosting
+- Document Root: /var/www/html/OHRMStandalone/OPENSOURCE
+- Naming Conventions
+  - web56: <NAME>-os-web56.orangehrmdev.com
+  - web71: <NAME>-os-web71.orangehrmdev.com
+  - web72: <NAME>-os-web72.orangehrmdev.com
+
+Replace the <NAME> with any name you want for your instance.
+ 
 
 ## Containers
 
