@@ -10,6 +10,8 @@ This environment will depends on containers of [orangehrm-dev-image](https://hub
 - Minimum docker version 17.3
 - Minimum docker-compose version 1.12. ([Get docker compose](https://docs.docker.com/compose/install/))
 
+## Architecture
+![alt text](https://raw.githubusercontent.com/orangehrm/orangehrm-test-environment/master-nginx/utils/doc-helpers/architecture_diagram.png)
 
 ## How to use ?
 Make sure mentioned prerequisites are there in your host machine.
