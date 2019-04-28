@@ -36,18 +36,18 @@ After the installation add below URLs to your /etc/hosts file.
 ###### Enterprise Hosting
 - Document Root: /var/www/html/OHRMStandalone/TEST
 - Naming Conventions
-  - web56: <NAME>-test-web56.orangehrmdev.com
-  - web71: <NAME>-test-web71.orangehrmdev.com
-  - web72: <NAME>-test-web72.orangehrmdev.com
+  - web56: **NAME**-test-web56.orangehrmdev.com
+  - web71: **NAME**-test-web71.orangehrmdev.com
+  - web72: **NAME**-test-web72.orangehrmdev.com
   
 ###### Opensource Hosting
 - Document Root: /var/www/html/OHRMStandalone/OPENSOURCE
 - Naming Conventions
-  - web56: <NAME>-os-web56.orangehrmdev.com
-  - web71: <NAME>-os-web71.orangehrmdev.com
-  - web72: <NAME>-os-web72.orangehrmdev.com
+  - web56: **NAME**-os-web56.orangehrmdev.com
+  - web71: **NAME**-os-web71.orangehrmdev.com
+  - web72: **NAME**-os-web72.orangehrmdev.com
 
-Replace the <NAME> with any name you want for your instance.
+Replace the **NAME** with any name you want for your instance.
 
 
 ## Containers
