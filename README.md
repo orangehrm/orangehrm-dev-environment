@@ -48,91 +48,32 @@ After the installation add below URLs to your /etc/hosts file.
   - web72: <NAME>-os-web72.orangehrmdev.com
 
 Replace the <NAME> with any name you want for your instance.
- 
+
 
 ## Containers
 
-| Container Name | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
-|----------------|------------------------------------|-------------|------------|------------|
-| dev_web_70     | web70                              | PHP 7.0     | 10.5.0.70  | 9070,3000  |
-| dev_web_56     | web56                              | PHP 5.6     | 10.5.0.56  | 9056,3001  |
-| dev_web_71     | web71                              | PHP 7.1     | 10.5.0.71  | 9071       |
-| dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.0.5   | 3306       |
-| dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.0.6   | 3306       |
-| dev_mariadb_101| db10                               | MariaDB 10.1| 10.5.0.7   | 3306       |
-| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.20  | 9090       |
-| dev_openldap   | openldap                           | openldap    | 10.5.0.22  | 700,701    |
-|dev_phpldapadmin| phpldapadmin                       | ldapadmin   | 10.5.0.21  | 9093       |
-## Install orangehrm eagle-core inside the container 
-1. Get a checkout from svn to ohrm_dev directory.
-2. To get the named virtual hosts to work, add the project folder name to /etc/hosts file (`127.0.0.1 folderName`).
-3. access from your browser (`https://folderName`). If you have changed the default port configuration in dev_web container then you can access using `htttps://folderName:portNumber`
-4. Continue installation by installing system as normal way. (you can have access to inside of dev_web_56 container by running the command `docker exec -it dev_web_56 bash`)
+| Container Name | Service Name in docker-compose.yml | Description | IP Address | Ports (Inside the Container) | Ports (Host Machine)|
+|----------------|------------------------------------|-------------|------------|------------|---------------------|
+| nginx          | web56                              | PHP 5.6     | 10.5.2.1   | 443        | 443
+| dev_web_56     | web56                              | PHP 5.6     | 10.5.0.56  | 443        | - |
+| dev_web_71     | web71                              | PHP 7.1     | 10.5.0.71  | 443        | - |
+| dev_web_72     | web72                              | PHP 7.2     | 10.5.0.72  | 443        | - |
+| dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.1.55  | 3306       | - |
+| dev_mariadb_102| db102                              | MariaDB 10.2| 10.5.1.102 | 3306       | - |
+| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.2.2   | 80         | - |
+| dev_rabbitmq   | rabbitmq                           | RabbitMQ 3.6| 10.5.2.3   | 15671,5671 | 15671 |
 
-## Default configurations
-Developer can override the default configurations if they want by simply adding a docker-compose.override.yml file.It is better to have some knowledge on docker-compose file. ([docker-compose file reference](https://docs.docker.com/compose/compose-file/))
-### Default configurations in dev_web_56 container
-```
-ports:
-  - "443:443"
-volumes:
-  - ./ohrm_dev:/var/www/html
-  - ./config/php5/apache2/php.ini:/etc/php5/apache2/php.ini
-  - ./config/php5/cli/php.ini:/etc/php5/cli/php.ini
-  - ./config/mysql-client:/etc/mysql
-  - ./config/apache2/sites-available:/etc/apache2/sites-available
-  - ./config/apache2/cert:/etc/apache2/cert
-  - ./logs/web_logs/55:/var/log/apache2
-  - /etc/localtime:/etc/localtime
-  - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
-```
-#### Example - Overriding port and web root
-* Sets apache port to 8080
-* Changes web root directory to /home/john/web (from default of ./ohrm_dev)
-```
-services:
-  web56:
-    ports:
-      - "8080:443"
-    volumes:
-      - /home/john/web:/var/www/html
-```
-
-If you want to change any default apache or php configurations you can find them under _/config_ folder.
-
-### Default configurations in dev_mysql container
-```
-expose:
-  - "3306"
-volumes:
-  - ./config/mysql-server:/etc/mysql
-  - ./logs/mysql_logs:/var/log
-  - /etc/localtime:/etc/localtime
-  - mysql:/var/lib/mysql
-environment:
-  MYSQL_ROOT_PASSWORD: 1234
-```
-You can change exposed port as mentioned in dev_web_55 container configuration. For more information about this container refer into [mysql official image](https://hub.docker.com/_/mysql/).
-### Default configurations in dev_phpmyadmin container
-```
-volumes:
-  - /etc/localtime:/etc/localtime
-links:
-  - db
-ports:
-  - "9090:80"
-environment:
-  PMA_HOST: db
-```
-More about phpmyadmin container can find in docker hub [phpmyadmin image](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
-
-### Additional information
-1. Can access a shell inside of any containers by running `docker exec -it <containerID or ContainerName> /bin/bash  -c "TERM=$TERM; exec bash"`
-2. Can restart containers using `docker-compose restart`
-3. Can stop containers using `docker-compose stop`
-2. Developer can find log files for each container from _/logs_ directory. ( Also possible to get logs of containers by running the command `docker logs <container ID>`)
-3. Developer can find configurations for apache, php, mysql-client, mysql-server, etc from _/config directory.
-4. If user is using Linux, the docker commands may require sudo permissions. This can be fixed by adding the user to the docker user group.`sudo usermod -aG docker <username>`
-5. web 7.0 container doesn't include memcache,ereg and stats PHP modules due to compatibility issues.
-6. In web 5.6 container, port 3000 is mapped to 3000 port locally.
-7. In web 7.0 container, port 3000 is mapped to 3001 port locally.
+## How to use custom containers?
+- run `docker-compose -f docker-compose.yml -f custom-compose/<FILE_NAME> -f custom-compose/<FILE_NAME> ... up -d`. check ./custom-compose directory for available custom containers. Available list of custom containers are as follows
+  
+  - db56 - MySQL 5.6
+  - db57 - MySQL 5.7
+  - ldap - openldap and phpldapadmin
+  - mariadb103 - MariaDB 10.3
+  - mongodb - mongo DB Database
+  - oracle11 - Oracle 11 Database
+  - ubuntuweb71 - Ubuntu 18.04 PHP 7.1 container
+  - web 70 - CentOS 7 PHP 7.0 container
+  - xhgui - XhGUI profiling tool
+  
+- Moving from custom version to basic version -  `docker-compose up -d --remove-orphans`
