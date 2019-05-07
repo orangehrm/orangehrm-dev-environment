@@ -22,7 +22,7 @@ before_install:
 
 install:
   - composer install
-  - php env-start.php
+  - docker-compose up -d
 
 script:
   - docker ps
