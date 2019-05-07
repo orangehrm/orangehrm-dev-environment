@@ -21,12 +21,15 @@ Configuration of each layer has been added according to the OrangeHRM requiremen
 
 ## How to use ?
 
-The Dev environment has been configured to use 443 post as the default web port. So make sure the 443 port of your host machine is not been used by any service prior to the installation. 
+The Dev environment has been configured to use **443** port as the default web port. So make sure that the 443 port of your host machine is been used by none of the other services (eg:- apache, tomcat, nginx, etc). 
 ##### Installation
 
 1. Download the zip
 2. Extract the zip anywhere you want
-3. run the command `docker-compose up -d` - this will up the basic development environment which has PHP 5.6, PHP 7.1, PHP 7.2, nginx, phpmyadmin, RabbitMQ, MySQL 5.5 and MariaDB 10.2 containers.
+3. run the command `php start.php`
+4. Select the environment type you want (Use <ARROW_KEYS> to do the selection, and press <ENTER> to select)
+   - **Basic environment** - PHP 5.6, PHP 7.1, PHP 7.2, nginx, phpmyadmin, RabbitMQ, MySQL 5.5 and MariaDB 10.2 containers.
+   - **Custom environment** - You can select available custom container as your requirement
 
 ##### Host an instance
 After the installation add below URLs to your /etc/hosts file.
@@ -64,16 +67,17 @@ Replace the **NAME** with any name you want for your instance.
 | dev_rabbitmq   | rabbitmq                           | RabbitMQ 3.6| 10.5.2.3   | 15671,5671 | 15671 |
 
 ## How to use custom containers?
-- run `docker-compose -f docker-compose.yml -f custom-compose/<FILE_NAME> -f custom-compose/<FILE_NAME> ... up -d`. check ./custom-compose directory for available custom containers. Available list of custom containers are as follows
-  
-  - db56 - MySQL 5.6
-  - db57 - MySQL 5.7
-  - ldap - openldap and phpldapadmin
-  - mariadb103 - MariaDB 10.3
-  - mongodb - mongo DB Database
-  - oracle11 - Oracle 11 Database
-  - ubuntuweb71 - Ubuntu 18.04 PHP 7.1 container
-  - web 70 - CentOS 7 PHP 7.0 container
-  - xhgui - XhGUI profiling tool
+- Compose files for custom containers have been located under ./custom-compose directory. Run `php env-start.php` and select the "Custom Environment" option. Then select the containers you need as you wish (Use **<ARROW_KEYS>** to move up and down and press **<SPACE>** to do the selection. And press **<ENTER>** to continue.).
+ 
+- Available custom containers
+   - db56 - MySQL 5.6
+   - db57 - MySQL 5.7
+   - ldap - openldap and phpldapadmin
+   - mariadb103 - MariaDB 10.3
+   - mongodb - mongo DB Database
+   - oracle11 - Oracle 11 Database
+   - ubuntuweb71 - Ubuntu 18.04 PHP 7.1 container
+   - web 70 - CentOS 7 PHP 7.0 container
+   - xhgui - XhGUI profiling tool
   
 - Moving from custom version to basic version -  `docker-compose up -d --remove-orphans`
