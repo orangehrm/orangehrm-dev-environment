@@ -27,7 +27,7 @@ The Dev environment has been configured to use **443** port as the default web p
 1. Download the zip
 2. Extract the zip anywhere you want
 3. run the command `php start.php`
-4. Select the environment type you want (Use <ARROW_KEYS> to do the selection, and press <ENTER> to select)
+4. Select the environment type you want (Use **ARROW_KEYS** to change the selection, and press **ENTER** to continue)
    - **Basic environment** - PHP 5.6, PHP 7.1, PHP 7.2, nginx, phpmyadmin, RabbitMQ, MySQL 5.5 and MariaDB 10.2 containers.
    - **Custom environment** - You can select available custom container as your requirement
 
@@ -67,7 +67,7 @@ Replace the **NAME** with any name you want for your instance.
 | dev_rabbitmq   | rabbitmq                           | RabbitMQ 3.6| 10.5.2.3   | 15671,5671 | 15671 |
 
 ## How to use custom containers?
-- Compose files for custom containers have been located under ./custom-compose directory. Run `php env-start.php` and select the "Custom Environment" option. Then select the containers you need as you wish (Use **<ARROW_KEYS>** to move up and down and press **<SPACE>** to do the selection. And press **<ENTER>** to continue.).
+- Compose files for custom containers have been located under ./custom-compose directory. Run `php env-start.php` and select the "Custom Environment" option. Then select the containers you need as you wish (Use **ARROW_KEYS** to move up and down and press **SPACE** to do the selection. And press **ENTER** to continue.).
  
 - Available custom containers
    - db56 - MySQL 5.6
