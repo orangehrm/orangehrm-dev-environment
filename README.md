@@ -26,7 +26,7 @@ The Dev environment has been configured to use **443** port as the default web p
 
 1. Download the zip
 2. Extract the zip anywhere you want
-3. run the command `php start.php`
+3. run the command `php env-start.php`
 4. Select the environment type you want (Use **ARROW_KEYS** to change the selection, and press **ENTER** to continue)
    - **Basic environment** - PHP 5.6, PHP 7.1, PHP 7.2, nginx, phpmyadmin, RabbitMQ, MySQL 5.5 and MariaDB 10.2 containers.
    - **Custom environment** - You can select available custom container as your requirement
