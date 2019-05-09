@@ -37,18 +37,20 @@ After the installation add below URLs to your /etc/hosts file.
 - rabbitmq.orangehrmdev.com
 
 ###### Enterprise Hosting
+- You can **NAME** your instance directory as you like (Please do not use **SPACES**)
 - Document Root: /var/www/html/OHRMStandalone/TEST
-- Naming Conventions
-  - web56: **NAME**-test-web56.orangehrmdev.com
-  - web71: **NAME**-test-web71.orangehrmdev.com
-  - web72: **NAME**-test-web72.orangehrmdev.com
+- Use different environments 
+  - web56: **NAME**.test-web56.orangehrmdev.com
+  - web71: **NAME**.test-web71.orangehrmdev.com
+  - web72: **NAME**.test-web72.orangehrmdev.com
   
 ###### Opensource Hosting
+- You can **NAME** your instance directory as you like (Please do not use **SPACES**)
 - Document Root: /var/www/html/OHRMStandalone/OPENSOURCE
-- Naming Conventions
-  - web56: **NAME**-os-web56.orangehrmdev.com
-  - web71: **NAME**-os-web71.orangehrmdev.com
-  - web72: **NAME**-os-web72.orangehrmdev.com
+- Use different environments 
+  - web56: **NAME**.os-web56.orangehrmdev.com
+  - web71: **NAME**.os-web71.orangehrmdev.com
+  - web72: **NAME**.os-web72.orangehrmdev.com
 
 Replace the **NAME** with any name you want for your instance.
 
