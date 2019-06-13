@@ -1,3 +1,6 @@
+# SUPPORT DEPRECATION NOTICE - 15th June 2019
+Hi all, please be noted that, this branch will not receive any updates after 15th June 2019. To continue with the OrangeHRM dev environment please upgrade your environment to the branch "master-nginx".  
+
 # OrangeHRM Development Environment
 [![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=master)](https://travis-ci.org/orangehrm/orangehrm-dev-environment) [![BCH compliance](https://bettercodehub.com/edge/badge/orangehrm/orangehrm-dev-environment?branch=master)](https://bettercodehub.com/)
 
