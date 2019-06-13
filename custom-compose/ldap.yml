@@ -35,7 +35,7 @@ services:
     volumes:
       - openldap-data:/var/lib/ldap
       - openldap-config:/etc/ldap/slapd.d
-      - ./config/openldap/certs:/container/service/slapd/assets/certs/
+      - ./custom-compose/config/openldap/certs:/container/service/slapd/assets/certs/
 
     ports:
       - "700:389"

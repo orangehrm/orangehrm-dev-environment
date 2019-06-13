@@ -6,10 +6,10 @@ services:
       - "9100:443"
     volumes:
       - ./html:/var/www/html
-      - ./config/ubuntuweb71/apache2/sites-enabled:/etc/apache2/sites-enabled
-      - ./config/ubuntuweb71/apache2/cert:/etc/apache2/cert
-      - ./config/ubuntuweb71/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
-      - ./logs/apache_logs/ubuntuweb71:/var/log/apache2
+      - ./custom-compose/config/ubuntuweb71/apache2/sites-enabled:/etc/apache2/sites-enabled
+      - ./custom-compose/config/ubuntuweb71/apache2/cert:/etc/apache2/cert
+      - ./custom-compose/config/ubuntuweb71/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
+      - ./custom-compose/logs/apache_logs/ubuntuweb71:/var/log/apache2
       - /etc/localtime:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true

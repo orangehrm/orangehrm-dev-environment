@@ -5,8 +5,8 @@ services:
     expose:
       - "3306"
     volumes:
-      - ./config/db57:/etc/mysql
-      - ./logs/mysql_logs/db57:/var/log
+      - ./custom-compose/config/db57:/etc/mysql
+      - ./custom-compose/logs/mysql_logs/db57:/var/log
       - /etc/localtime:/etc/localtime
       - mysql57:/var/lib/mysql
     environment:

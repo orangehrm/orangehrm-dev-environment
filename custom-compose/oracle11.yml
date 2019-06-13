@@ -6,7 +6,7 @@ services:
     - "1521"
     - "22"
     volumes:
-    - ./logs/mysql_logs/oracle11:/var/log
+    - ./custom-compose/logs/mysql_logs/oracle11:/var/log
     - /etc/localtime:/etc/localtime
     - oracle11:/u01/app/oracle/oradata
     environment:
