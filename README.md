@@ -26,10 +26,8 @@ The Dev environment has been configured to use **443** port as the default web p
 
 1. Download the zip
 2. Extract the zip anywhere you want
-3. run the command `php env-start.php`
-4. Select the environment type you want (Use **ARROW_KEYS** to change the selection, and press **ENTER** to continue)
-   - **Basic environment** - PHP 5.6, PHP 7.1, PHP 7.2, nginx, phpmyadmin, RabbitMQ, MySQL 5.5 and MariaDB 10.2 containers.
-   - **Custom environment** - You can select available custom container as your requirement
+3. run the command `docker-compose up -d`. This will up the basic OrangeHRM dev environment (PHP 5.6, PHP 7.1, PHP 7.2, nginx, phpmyadmin, RabbitMQ, MySQL 5.5 and MariaDB 10.2 containers).
+4. For a customized docker development environment, See the section "How to use custom containers?".
 
 ##### Host an instance
 After the installation add below URLs to your /etc/hosts file.
