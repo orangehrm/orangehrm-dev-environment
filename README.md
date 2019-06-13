@@ -8,7 +8,7 @@ orangehrm-dev-environment is a dockerized development environment for [OrangeHRM
 - Web Layer
 - Database Layer
 
-Configuration of each layer has been added according to the OrangeHRM requirements.
+Configurations in each layer have been added according to the OrangeHRM application requirements.
 
 
 ## Prerequisites
