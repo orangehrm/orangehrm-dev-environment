@@ -29,6 +29,7 @@ services:
     image: orangehrm/orangehrm-environment-images:dev-5.6-centos-orange
     volumes:
       - ./html:/var/www/html
+      - ./config/web56/php/custom_php.ini:/etc/php.d/custom_php.ini
       - ./config/web56/mysql-client:/etc/mysql
       - ./config/web56/apache2/sites-available:/etc/httpd/sites-available
       - ./config/web56/apache2/sites-enabled:/etc/httpd/sites-enabled
@@ -48,6 +49,7 @@ services:
     image: orangehrm/orangehrm-environment-images:dev-7.1-centos-orange
     volumes:
       - ./html:/var/www/html
+      - ./config/web71/php/custom_php.ini:/etc/php.d/custom_php.ini
       - ./config/web71/mysql-client:/etc/mysql
       - ./config/web71/apache2/sites-available:/etc/httpd/sites-available
       - ./config/web71/apache2/sites-enabled:/etc/httpd/sites-enabled
@@ -69,6 +71,7 @@ services:
     image: orangehrm/orangehrm-environment-images:dev-7.2-centos-orange
     volumes:
     - ./html:/var/www/html
+    - ./config/web72/php/custom_php.ini:/etc/php.d/custom_php.ini
     - ./config/web72/mysql-client:/etc/mysql
     - ./config/web72/apache2/sites-available:/etc/httpd/sites-available
     - ./config/web72/apache2/sites-enabled:/etc/httpd/sites-enabled
