@@ -66,6 +66,15 @@ Replace the **NAME** with any name you want for your instance.
 | dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.2.2   | 80         | - |
 | dev_rabbitmq   | rabbitmq                           | RabbitMQ 3.6| 10.5.2.3   | 15671,5671 | 15671 |
 
+## How to add custom PHP configurations
+- Add custom PHP configurations to the file **./config/<WEB_CONTAINER>/php/custom_php.ini**. And then reload the apache service (inside the relevant container). **WEB_CONTAINER** can be web71, web72, web56 ,etc.
+
+## How to run composer update - inside a web container
+Use following command if you want to run composer install/update
+
+`php -d allow_url_fopen=on /usr/local/bin/composer install`
+
+
 ## How to use custom containers?
 - Compose files for custom containers have been located under ./custom-compose directory. Run `php env-start.php` and select the "Custom Environment" option. Then select the containers you need as you wish (Use **ARROW_KEYS** to move up and down and press **SPACE** to do the selection. And press **ENTER** to continue.).
  
