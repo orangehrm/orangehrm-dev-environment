@@ -1,45 +1,39 @@
 language: php
 sudo: required
-dist: trusty 
 
-stage: test
 env:
   global:
   - REPO=orangehrm/orangehrm-environment-images
   - TAG=dev-7.1-centos-orange
 
-  matrix:
-  - TEST=unit
+matrix:
+  include:
+  - os: linux
+    dist: trusty
 
 services:
-  - docker
-addons:
-  hosts:
-  - orangehrm
+- docker
+
 cache:
-    directories:
-        - vendor
-        - $HOME/.composer/cache
+  directories:
+  - vendor
+  - $HOME/.composer/cache
 
 before_install:
-  - uname -a
-  - php --version
-  - docker version
-  - composer self-update
-  - docker build -t $REPO:$TAG docker-image
+- uname -a
+- php --version
+- docker version
+- composer self-update
+- docker build -t $REPO:$TAG docker-image
 
 install:
-  - composer install
-  - docker-compose up -d
+- composer install
+- docker-compose up -d
 
-script: php vendor/bin/codecept run --debug $TEST
+script:
+- php vendor/bin/codecept run unit
 
-jobs:
-  include:
-    - stage: push to dockerhub
-      env:
-      script: skip
-      after_script:
-        - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-        - docker push $REPO:$TAG  
+after_success:
+- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- docker push $REPO:$TAG
            
