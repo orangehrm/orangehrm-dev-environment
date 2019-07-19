@@ -76,5 +76,11 @@ class WebContainerCest
         $I->seeInShellOutput('Phan');
     }
 
+    public function checkInfectionIsInstalled(UnitTester $I){
+        $I->wantTo('Verify the infection installation');
+        $I->runShellCommand("infection --version");
+        $I->seeInShellOutput('0.13.0');
+    }
+
 
 }
