@@ -27,7 +27,7 @@ class WebContainerCest
     public function checkXdebugStatus(UnitTester $I){
         $I->wantTo("verify Xdebug is installed in the container");
         $I->runShellCommand("docker exec dev_web php --version");
-        $I->seeInShellOutput('Xdebug v2.7');
+        $I->seeInShellOutput('Xdebug v2.6.1');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
@@ -78,7 +78,7 @@ class WebContainerCest
 
     public function checkInfectionIsInstalled(UnitTester $I){
         $I->wantTo('Verify the infection installation');
-        $I->runShellCommand("infection --version");
+        $I->runShellCommand("docker exec dev_web infection --version");
         $I->seeInShellOutput('0.13.0');
     }
 
