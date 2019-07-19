@@ -1,21 +1,19 @@
 language: php
 sudo: required
-dist: trusty 
 
-stage: test
 env:
   global:
   - REPO=orangehrm/orangehrm-environment-images
   - TAG=dev-7.0-centos-orange
 
-  matrix:
-  - TEST=unit
-  
+matrix:
+  include:
+  - os: linux
+    dist: trusty
+
 services:
   - docker
-addons:
-  hosts:
-  - orangehrm
+
 cache:
     directories:
         - vendor
@@ -32,7 +30,8 @@ install:
   - composer install
   - docker-compose up -d
 
-script: php vendor/bin/codecept run $TEST
+script:
+  - php vendor/bin/codecept run unit
 
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
