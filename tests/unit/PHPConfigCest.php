@@ -77,8 +77,8 @@ class PHPConfigCest
     }
 
     public function checkPHPConfig_date_timezone(UnitTester $I){
-        $I->wantTo("verify the config - date.timezone = America/New_York");
+        $I->wantTo("verify the config - date.timezone = Asia/Colombo");
         $I->runShellCommand("docker exec dev_web php -r \"echo ini_get('date.timezone');\"");
-        $I->canSeeInShellOutput("America/New_York");
+        $I->canSeeInShellOutput("Asia/Colombo");
     }
 }
