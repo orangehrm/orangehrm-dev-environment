@@ -89,22 +89,21 @@ services:
     restart: always
     container_name: dev_web_72
 
-  db55:
-    image: orangehrm/orangehrm-db-images:mysql-5.5
+  db57:
+    image: orangehrm/orangehrm-db-images:mysql-5.7
     expose:
-      - "3306"
+    - "3306"
     volumes:
-      - ./config/db55:/etc/mysql
-      - ./logs/mysql_logs/db55:/var/log
-      - /etc/localtime:/etc/localtime
-      - mysql55:/var/lib/mysql
+    - ./logs/mysql_logs/db55:/var/log
+    - /etc/localtime:/etc/localtime
+    - mysql57:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.1.55
+        ipv4_address: 10.5.1.57
     restart: always
-    container_name: dev_mysql_55
+    container_name: dev_mysql_57
 
   db102:
     image: orangehrm/orangehrm-db-images:mariadb-10.2
@@ -146,9 +145,10 @@ services:
       RABBITMQ_SSL_FAIL_IF_NO_PEER_CERT: 'false'
       RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: '-rabbit ssl_listeners [{"::",5671}] -rabbit ssl_options [{certfile,"/cert_rabbitmq/cert.pem"},{keyfile,"/cert_rabbitmq/key.pem"},{cacertfile,"/cert_rabbitmq/cacert.pem"},{verify,verify_peer},{depth,3},{fail_if_no_peer_cert,false}] -rabbit tcp_listeners [{"::",5672}]'
     ports:
-    - "15672:15672"
-    - "5672:5672"
-    - "5671:5671"
+      - "15672:15672"
+      - "5672:5672"
+      - "5671:5671"
+    restart: always
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.2.3
