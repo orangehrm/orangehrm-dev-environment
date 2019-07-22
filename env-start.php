@@ -24,7 +24,7 @@ if (strpos($docker_status, 'active (running)') !== false) {
             './custom-compose/web70.yml' => 'PHP 7.0',
             './custom-compose/ubuntuweb71.yml' => 'Ubuntu 18.04 - PHP 7.1',
             './custom-compose/db56.yml' => 'MySQL 5.6',
-            './custom-compose/db55.yml' => 'MySQL 5.7',
+            './custom-compose/db55.yml' => 'MySQL 5.5',
             './custom-compose/mariadb103.yml' => 'MariaDB 10.3',
         ];
         $inputCustomContainerSelection    = $climate->br()->checkboxes('Please select custom containers you need', $CustomOptions);
