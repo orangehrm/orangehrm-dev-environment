@@ -154,7 +154,7 @@ services:
         ipv4_address: 10.5.2.3
 
 volumes:
-  mysql55:
+  mysql57:
   mariadb102:
 
 networks:
