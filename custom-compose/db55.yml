@@ -1,6 +1,6 @@
 version: '2.1'
 services:
-  db57:
+  db55:
     image: orangehrm/orangehrm-db-images:mysql-5.5
     expose:
       - "3306"
@@ -8,7 +8,7 @@ services:
       - ./custom-compose/config/db55:/etc/mysql
       - ./custom-compose/logs/mysql_logs/db55:/var/log
       - /etc/localtime:/etc/localtime
-      - mysql57:/var/lib/mysql
+      - mysql55:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     networks:
@@ -18,4 +18,4 @@ services:
     container_name: dev_mysql_55
 
 volumes:
-  mysql57:
+  mysql55:
