@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2.2'
 services:
   web70:
     image: orangehrm/orangehrm-environment-images:dev-7.0-centos
