@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2.2'
 services:
   ubuntuweb71:
     image: orangehrm/orangehrm-environment-images:dev-7.1-ubuntu-18.04
