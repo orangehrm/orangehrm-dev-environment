@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2.2'
 services:
   db55:
     image: orangehrm/orangehrm-db-images:mysql-5.5
