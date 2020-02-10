@@ -19,15 +19,15 @@ class WebContainerCest
     }
 
     public function checkPHPVersion(UnitTester $I){
-        $I->wantTo("verify php 7.2 is installed in the container");
+        $I->wantTo("verify php 7.4 is installed in the container");
         $I->runShellCommand("docker exec dev_web php --version");
-        $I->seeInShellOutput('PHP 7.2');
+        $I->seeInShellOutput('PHP 7.4');
     }
 
     public function checkXdebugStatus(UnitTester $I){
         $I->wantTo("verify Xdebug is installed in the container");
         $I->runShellCommand("docker exec dev_web php --version");
-        $I->seeInShellOutput('Xdebug v2.6.1');
+        $I->seeInShellOutput('Xdebug v2');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
@@ -116,11 +116,11 @@ class WebContainerCest
         $I->seeInShellOutput('1');
     }
 
-    public function checkOci8PHPmodule(UnitTester $I){
-        $I->wantTo("verify php module oci8 is installed in the container");
-        $I->runShellCommand("docker exec dev_web php -m");
-        $I->seeInShellOutput('oci8');
-    }
+    // public function checkOci8PHPmodule(UnitTester $I){
+    //     $I->wantTo("verify php module oci8 is installed in the container");
+    //     $I->runShellCommand("docker exec dev_web php -m");
+    //     $I->seeInShellOutput('oci8');
+    // }
 
     public function checkInfectionFrameworkInstallation(UnitTester $I){
         $I->wantTo("verify infection framework is installed in the container");
