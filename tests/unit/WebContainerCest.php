@@ -122,10 +122,10 @@ class WebContainerCest
     //     $I->seeInShellOutput('oci8');
     // }
 
-    public function checkInfectionFrameworkInstallation(UnitTester $I){
-        $I->wantTo("verify infection framework is installed in the container");
-        $I->runShellCommand("docker exec dev_web infection --version");
-        $I->seeInShellOutput('0.13.0');
-    }
+    // public function checkInfectionFrameworkInstallation(UnitTester $I){
+    //     $I->wantTo("verify infection framework is installed in the container");
+    //     $I->runShellCommand("docker exec dev_web infection --version");
+    //     $I->seeInShellOutput('0.13.0');
+    // }
 
 }
