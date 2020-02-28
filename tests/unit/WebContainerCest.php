@@ -18,17 +18,17 @@ class WebContainerCest
         $I->seeInShellOutput("true");
     }
 
-    public function checkPHPVersion(UnitTester $I){
-        $I->wantTo("verify php 7.4 is installed in the container");
-        $I->runShellCommand("docker exec dev_web php --version");
-        $I->seeInShellOutput('PHP 7.4');
-    }
+    // public function checkPHPVersion(UnitTester $I){
+    //     $I->wantTo("verify php 7.4 is installed in the container");
+    //     $I->runShellCommand("docker exec dev_web php --version");
+    //     $I->seeInShellOutput('PHP 7.4');
+    // }
 
-    public function checkXdebugStatus(UnitTester $I){
-        $I->wantTo("verify Xdebug is installed in the container");
-        $I->runShellCommand("docker exec dev_web php --version");
-        $I->seeInShellOutput('Xdebug v2');
-    }
+    // public function checkXdebugStatus(UnitTester $I){
+    //     $I->wantTo("verify Xdebug is installed in the container");
+    //     $I->runShellCommand("docker exec dev_web php --version");
+    //     $I->seeInShellOutput('Xdebug v2');
+    // }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
@@ -50,17 +50,17 @@ class WebContainerCest
         $I->seeInShellOutput('active (running)');
     }
 
-    public function checkPHPUnit3Version(UnitTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec dev_web phpunit3 --version");
-        $I->seeInShellOutput('PHPUnit 3.7.28');
-    }
+    // public function checkPHPUnit3Version(UnitTester $I){
+    //     $I->wantTo("verify phpunit library is installed in the container");
+    //     $I->runShellCommand("docker exec dev_web phpunit3 --version");
+    //     $I->seeInShellOutput('PHPUnit 3.7.28');
+    // }
 
-    public function checkPHPUnitVersion(UnitTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec dev_web phpunit --version");
-        $I->seeInShellOutput('PHPUnit 5.7.21');
-    }
+    // public function checkPHPUnitVersion(UnitTester $I){
+    //     $I->wantTo("verify phpunit library is installed in the container");
+    //     $I->runShellCommand("docker exec dev_web phpunit --version");
+    //     $I->seeInShellOutput('PHPUnit 5.7.21');
+    // }
 
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
