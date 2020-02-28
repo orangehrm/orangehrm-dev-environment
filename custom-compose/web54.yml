@@ -4,12 +4,10 @@ services:
     image: orangehrm/orangehrm-environment-images:uat-5.4-debian
     volumes:
     - ./html:/var/www/html
-    - ./custom-compose/config/web54/mysql-client:/etc/mysql
-    - ./custom-compose/config/web54/apache2/sites-available:/etc/httpd/sites-available
-    - ./custom-compose/config/web54/apache2/sites-enabled:/etc/httpd/sites-enabled
-    - ./custom-compose/config/web54/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-    - ./custom-compose/config/web54/apache2/cert:/etc/httpd/cert
-    - ./custom-compose/logs/apache_logs/web54:/var/log/httpd
+    - ./custom-compose/config/web54/apache2/sites-enabled:/etc/apache2/sites-enabled
+    - ./custom-compose/config/web54/apache2/cert:/etc/apache2/cert
+    - ./custom-compose/config/web54/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
+    - ./custom-compose/logs/apache_logs/web54:/var/log/apache2
     - /etc/localtime:/etc/localtime
     - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
