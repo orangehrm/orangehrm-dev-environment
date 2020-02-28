@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-7.4-remi
+FROM orangehrm/orangehrm-environment-images:test-5.4-remi
 
 MAINTAINER orangehrm
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
@@ -13,15 +13,15 @@ RUN yum -y install \
     && rm -rf /var/cache/yum/* \
     && yum clean all
 
-RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
+# RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
 #install oci8 php module
 #RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8
 #RUN echo "extension=oci8.so" >>/etc/php.ini
 
 # Add infection
-COPY infection.phar /usr/bin/infection
-RUN  chmod +x /usr/bin/infection
+# COPY infection.phar /usr/bin/infection
+# RUN  chmod +x /usr/bin/infection
 
 # Enable virtual hosts
 COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
