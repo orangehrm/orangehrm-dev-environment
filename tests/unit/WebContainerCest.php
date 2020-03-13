@@ -104,12 +104,6 @@ class WebContainerCest
         $I->seeInShellOutput("sendmail-8");
     }
 
-    public function checkNodemonInstallation(UnitTester $I){
-        $I->wantTo("verify nodemon is installed in the container");
-        $I->runShellCommand("docker exec dev_web nodemon");
-        $I->seeInShellOutput('Usage: nodemon');
-    }
-
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
         $I->runShellCommand("docker exec dev_web bower --version");
