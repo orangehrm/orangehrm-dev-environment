@@ -41,6 +41,7 @@ After the installation add below URLs to your /etc/hosts file.
   - web56: **NAME**.test-web56.orangehrmdev.com
   - web71: **NAME**.test-web71.orangehrmdev.com
   - web72: **NAME**.test-web72.orangehrmdev.com
+  - web73: **NAME**.test-web73.orangehrmdev.com
   
 ###### Opensource Hosting
 - You can **NAME** your instance directory as you like (Please do not use **SPACES**)
@@ -49,6 +50,7 @@ After the installation add below URLs to your /etc/hosts file.
   - web56: **NAME**.os-web56.orangehrmdev.com
   - web71: **NAME**.os-web71.orangehrmdev.com
   - web72: **NAME**.os-web72.orangehrmdev.com
+  - web73: **NAME**.os-web73.orangehrmdev.com
 
 Replace the **NAME** with any name you want for your instance.
 
@@ -57,11 +59,12 @@ Replace the **NAME** with any name you want for your instance.
 
 | Container Name | Service Name in docker-compose.yml | Description | IP Address | Ports (Inside the Container) | Ports (Host Machine)|
 |----------------|------------------------------------|-------------|------------|------------|---------------------|
-| nginx          | web56                              | PHP 5.6     | 10.5.2.1   | 443        | 443
+| nginx          | nginx                              | PHP 5.6     | 10.5.2.1   | 443        | 443
 | dev_web_56     | web56                              | PHP 5.6     | 10.5.0.56  | 443        | - |
 | dev_web_71     | web71                              | PHP 7.1     | 10.5.0.71  | 443        | - |
 | dev_web_72     | web72                              | PHP 7.2     | 10.5.0.72  | 443        | - |
-| dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.1.55  | 3306       | - |
+| dev_web_73     | web73                              | PHP 7.3     | 10.5.0.73  | 443        | - |
+| dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.1.57  | 3306       | - |
 | dev_mariadb_102| db102                              | MariaDB 10.2| 10.5.1.102 | 3306       | - |
 | dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.2.2   | 80         | - |
 | dev_rabbitmq   | rabbitmq                           | RabbitMQ 3.6| 10.5.2.3   | 15671,5671 | 15671 |
@@ -79,14 +82,16 @@ Use following command if you want to run composer install/update
 - Compose files for custom containers have been located under ./custom-compose directory. Run `php env-start.php` and select the "Custom Environment" option. Then select the containers you need as you wish (Use **ARROW_KEYS** to move up and down and press **SPACE** to do the selection. And press **ENTER** to continue.).
  
 - Available custom containers
+   - db55 - MySQL 5.5
    - db56 - MySQL 5.6
-   - db57 - MySQL 5.7
    - ldap - openldap and phpldapadmin
    - mariadb103 - MariaDB 10.3
    - mongodb - mongo DB Database
    - oracle11 - Oracle 11 Database
    - ubuntuweb71 - Ubuntu 18.04 PHP 7.1 container
+   - web 54 - CentOS 7 PHP 5.4 container
    - web 70 - CentOS 7 PHP 7.0 container
+   - web 74 - CentOS 7 PHP 7.4 container
    - xhgui - XhGUI profiling tool
   
 - Moving from custom version to basic version -  `docker-compose up -d --remove-orphans`
