@@ -1,8 +1,4 @@
 # Ignore everything in this directory
 *
 # Except this file
-!web56/
-!web71/
-!web72/
-!web73/
 !.gitignore
