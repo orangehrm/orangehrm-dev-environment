@@ -87,9 +87,9 @@ class WebContainerCest
 
 
     public function checkNodeVersion(UnitTester $I){
-        $I->wantTo("verify node v12 is installed in the container");
+        $I->wantTo("verify node is installed in the container");
         $I->runShellCommand("docker exec dev_web node -v");
-        $I->seeInShellOutput('v12');
+        $I->seeInShellOutput('v6');
     }
 
     public function checkSendMailVersion(UnitTester $I){
