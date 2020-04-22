@@ -110,6 +110,28 @@ services:
         ipv4_address: 10.5.0.73
     restart: always
     container_name: dev_web_73
+
+  web74:
+    image: orangehrm/orangehrm-environment-images:dev-7.4-centos-remi
+    volumes:
+    - ./html:/var/www/html
+    - ./config/web74/php/custom_php.ini:/etc/php.d/custom_php.ini
+    - ./config/web74/mysql-client:/etc/mysql
+    - ./config/web74/apache2/sites-available:/etc/httpd/sites-available
+    - ./config/web74/apache2/sites-enabled:/etc/httpd/sites-enabled
+    - ./config/web74/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./config/web74/apache2/cert:/etc/httpd/cert
+    - ./logs/apache_logs/web74:/var/log/httpd
+    - /etc/localtime:/etc/localtime
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    sysctls:
+    - kernel.shmmax=67371264
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.74
+    restart: always
+    container_name: dev_web_74
     
   db57:
     image: orangehrm/orangehrm-db-images:mysql-5.7
