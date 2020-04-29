@@ -1,0 +1,19 @@
+version: '2.2'
+services:
+  mssql2017:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    expose:
+      - "1433"
+    volumes:
+      - mssql2017:/var/opt
+    environment:
+      SA_PASSWORD: "1234"
+      ACCEPT_EULA: "Y"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.20
+    restart: always
+    container_name: dev_mssql_2017
+
+volumes:
+  mssql2017:
