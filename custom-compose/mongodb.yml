@@ -1,0 +1,19 @@
+version: '2.2'
+services:
+  mongodb:
+    image: mongo:3.4
+    ports:
+    - "27017:27017"
+    restart: always
+    container_name: dev_mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+    volumes:
+    - mongodb:/data/db
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.34
+
+volumes:
+  mongodb:

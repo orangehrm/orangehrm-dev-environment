@@ -1,0 +1,8 @@
+[Fri Feb 28 12:25:32.224677 2020] [ssl:warn] [pid 77] AH01909: orangehrmdev.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 28 12:25:32.225080 2020] [ssl:warn] [pid 77] AH01909: orangehrm.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 28 12:25:32.225405 2020] [ssl:warn] [pid 77] AH01909: orangehrmdev.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 28 12:25:32.401856 2020] [ssl:warn] [pid 103] AH01909: orangehrmdev.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 28 12:25:32.402237 2020] [ssl:warn] [pid 103] AH01909: orangehrm.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 28 12:25:32.402569 2020] [ssl:warn] [pid 103] AH01909: orangehrmdev.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 28 12:25:32.407218 2020] [mpm_prefork:notice] [pid 103] AH00163: Apache/2.4.29 (Ubuntu) OpenSSL/1.1.1 configured -- resuming normal operations
+[Fri Feb 28 12:25:32.407265 2020] [core:notice] [pid 103] AH00094: Command line: '/usr/sbin/apache2'

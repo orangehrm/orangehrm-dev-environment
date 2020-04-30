@@ -1,0 +1,21 @@
+version: '2.2'
+services:
+  db11:
+    image: orangehrm/oracle-xe-11g
+    expose:
+    - "1521"
+    - "22"
+    volumes:
+    - ./custom-compose/logs/mysql_logs/oracle11:/var/log
+    - /etc/localtime:/etc/localtime
+    - oracle11:/u01/app/oracle/oradata
+    environment:
+      ORACLE_ALLOW_REMOTE: "true"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.11
+    restart: always
+    container_name: dev_oracle_11
+
+volumes:
+  oracle11:

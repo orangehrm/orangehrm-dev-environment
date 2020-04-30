@@ -1,0 +1,22 @@
+version: '2.2'
+services:
+  web74:
+    image: orangehrm/orangehrm-environment-images:dev-5.4-centos-remi
+    volumes:
+    - ./html:/var/www/html
+    - ./custom-compose/config/web54/mysql-client:/etc/mysql
+    - ./custom-compose/config/web54/apache2/sites-available:/etc/httpd/sites-available
+    - ./custom-compose/config/web54/apache2/sites-enabled:/etc/httpd/sites-enabled
+    - ./custom-compose/config/web54/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./custom-compose/config/web54/apache2/cert:/etc/httpd/cert
+    - ./custom-compose/logs/apache_logs/web54:/var/log/httpd
+    - /etc/localtime:/etc/localtime
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    sysctls:
+    - kernel.shmmax=67371264
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.54
+    restart: always
+    container_name: dev_web_54

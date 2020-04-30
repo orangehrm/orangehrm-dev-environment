@@ -1,0 +1,2 @@
+10.5.2.1 - - [26/Apr/2019:12:54:09 +0530] "GET / HTTP/1.0" 200 18 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36"
+10.5.2.1 - - [26/Apr/2019:12:54:10 +0530] "GET /favicon.ico HTTP/1.0" 404 209 "https://name1-test-web70.orangehrmdev.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36"

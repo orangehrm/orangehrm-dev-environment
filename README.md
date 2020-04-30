@@ -5,111 +5,96 @@ Hi all, please be noted that, this branch will not receive any updates after 15t
 [![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=master)](https://travis-ci.org/orangehrm/orangehrm-dev-environment) [![BCH compliance](https://bettercodehub.com/edge/badge/orangehrm/orangehrm-dev-environment?branch=master)](https://bettercodehub.com/)
 
 ## Introduction
-orangehrm-dev-environment is a dockerized development environment for OrangeHRM. Usually it will take hours to configure and prepare the development environment for orangehrm system. This project will save the developers time.
+orangehrm-dev-environment is a dockerized development environment for [OrangeHRM](https://www.orangehrm.com/). This dev environment mainly contains three layers as follows,
 
-This environment will depends on containers of [orangehrm-dev-image](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/),[mysql](https://hub.docker.com/_/mysql/) and [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/).
+- Proxy Layer 
+- Web Layer
+- Database Layer
+
+Configurations in each layer have been added according to the OrangeHRM application requirements.
+
+
 ## Prerequisites
 - Docker engine installed.([Get docker](https://docs.docker.com/engine/installation/))
 - Minimum docker version 17.3
 - Minimum docker-compose version 1.12. ([Get docker compose](https://docs.docker.com/compose/install/))
 
+## Architecture
+![OrangeHRM Dev Environment Architecture](./utils/doc-helpers/architecture_diagram.png)
 
 ## How to use ?
-Make sure mentioned prerequisites are there in your host machine.
 
-1. go to release tab and download the latest release.
-2. open terminal and go to the cloned directory
-3. run the command `docker-compose up -d` - this command will only create three web containers and mysql 5.5 and 5.7 containers only.
-4. To start complete development environment run the command `docker-compose -f docker-compose.yml -f docker-compose-all.yml up -d`
-5. Moving from complete version to basic version - `docker-compose up -d --remove-orphans`  
-6. run `docker ps` and make sure all the containers are up and running.
-7. Your web root will be _/ohrm_dev_ directory and make sure to put your project in that folder.
+The Dev environment has been configured to use **443** port as the default web port. So make sure that the 443 port of your host machine is been used by none of the other services (eg:- apache, tomcat, nginx, etc). 
+##### Installation
 
-**Note** : [Video Tutorial](https://www.youtube.com/watch?v=fURFe-tARyk)
+1. Download the zip
+2. Extract the zip anywhere you want
+3. run the command `docker-compose up -d`. This will up the basic OrangeHRM dev environment (PHP 5.6, PHP 7.1, PHP 7.2, nginx, phpmyadmin, RabbitMQ, MySQL 5.5 and MariaDB 10.2 containers).
+4. For a customized docker development environment, See the section "How to use custom containers?".
+
+##### Host an instance
+After the installation add below URLs to your /etc/hosts file.
+- phpmyadmin.orangehrmdev.com
+- rabbitmq.orangehrmdev.com
+
+###### Enterprise Hosting
+- You can **NAME** your instance directory as you like (Please do not use **SPACES**)
+- Document Root: /var/www/html/OHRMStandalone/TEST
+- Use different environments 
+  - web56: **NAME**.test-web56.orangehrmdev.com
+  - web71: **NAME**.test-web71.orangehrmdev.com
+  - web72: **NAME**.test-web72.orangehrmdev.com
+  - web73: **NAME**.test-web73.orangehrmdev.com
+  
+###### Opensource Hosting
+- You can **NAME** your instance directory as you like (Please do not use **SPACES**)
+- Document Root: /var/www/html/OHRMStandalone/OPENSOURCE
+- Use different environments 
+  - web56: **NAME**.os-web56.orangehrmdev.com
+  - web71: **NAME**.os-web71.orangehrmdev.com
+  - web72: **NAME**.os-web72.orangehrmdev.com
+  - web73: **NAME**.os-web73.orangehrmdev.com
+
+Replace the **NAME** with any name you want for your instance.
+
 
 ## Containers
 
-| Container Name | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
-|----------------|------------------------------------|-------------|------------|------------|
-| dev_web_70     | web70                              | PHP 7.0     | 10.5.0.70  | 9070,3000  |
-| dev_web_56     | web56                              | PHP 5.6     | 10.5.0.56  | 9056,3001  |
-| dev_web_71     | web71                              | PHP 7.1     | 10.5.0.71  | 9071       |
-| dev_mysql_55   | db55                               | MySQL 5.5   | 10.5.0.5   | 3306       |
-| dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.0.6   | 3306       |
-| dev_mariadb_101| db10                               | MariaDB 10.1| 10.5.0.7   | 3306       |
-| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.0.20  | 9090       |
-| dev_openldap   | openldap                           | openldap    | 10.5.0.22  | 700,701    |
-|dev_phpldapadmin| phpldapadmin                       | ldapadmin   | 10.5.0.21  | 9093       |
-## Install orangehrm eagle-core inside the container 
-1. Get a checkout from svn to ohrm_dev directory.
-2. To get the named virtual hosts to work, add the project folder name to /etc/hosts file (`127.0.0.1 folderName`).
-3. access from your browser (`https://folderName`). If you have changed the default port configuration in dev_web container then you can access using `htttps://folderName:portNumber`
-4. Continue installation by installing system as normal way. (you can have access to inside of dev_web_56 container by running the command `docker exec -it dev_web_56 bash`)
+| Container Name | Service Name in docker-compose.yml | Description | IP Address | Ports (Inside the Container) | Ports (Host Machine)|
+|----------------|------------------------------------|-------------|------------|------------|---------------------|
+| nginx          | nginx                              | PHP 5.6     | 10.5.2.1   | 443        | 443
+| dev_web_56     | web56                              | PHP 5.6     | 10.5.0.56  | 443        | - |
+| dev_web_71     | web71                              | PHP 7.1     | 10.5.0.71  | 443        | - |
+| dev_web_72     | web72                              | PHP 7.2     | 10.5.0.72  | 443        | - |
+| dev_web_73     | web73                              | PHP 7.3     | 10.5.0.73  | 443        | - |
+| dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.1.57  | 3306       | - |
+| dev_mariadb_102| db102                              | MariaDB 10.2| 10.5.1.102 | 3306       | - |
+| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.2.2   | 80         | - |
+| dev_rabbitmq   | rabbitmq                           | RabbitMQ 3.6| 10.5.2.3   | 15671,5671 | 15671 |
 
-## Default configurations
-Developer can override the default configurations if they want by simply adding a docker-compose.override.yml file.It is better to have some knowledge on docker-compose file. ([docker-compose file reference](https://docs.docker.com/compose/compose-file/))
-### Default configurations in dev_web_56 container
-```
-ports:
-  - "443:443"
-volumes:
-  - ./ohrm_dev:/var/www/html
-  - ./config/php5/apache2/php.ini:/etc/php5/apache2/php.ini
-  - ./config/php5/cli/php.ini:/etc/php5/cli/php.ini
-  - ./config/mysql-client:/etc/mysql
-  - ./config/apache2/sites-available:/etc/apache2/sites-available
-  - ./config/apache2/cert:/etc/apache2/cert
-  - ./logs/web_logs/55:/var/log/apache2
-  - /etc/localtime:/etc/localtime
-  - ./config/xhgui/config.php:/usr/local/src/xhgui/config/config.php
-```
-#### Example - Overriding port and web root
-* Sets apache port to 8080
-* Changes web root directory to /home/john/web (from default of ./ohrm_dev)
-```
-services:
-  web56:
-    ports:
-      - "8080:443"
-    volumes:
-      - /home/john/web:/var/www/html
-```
+## How to add custom PHP configurations
+- Add custom PHP configurations to the file **./config/<WEB_CONTAINER>/php/custom_php.ini**. And then reload the apache service (inside the relevant container). **WEB_CONTAINER** can be web71, web72, web56 ,etc.
 
-If you want to change any default apache or php configurations you can find them under _/config_ folder.
+## How to run composer update - inside a web container
+Use following command if you want to run composer install/update
 
-### Default configurations in dev_mysql container
-```
-expose:
-  - "3306"
-volumes:
-  - ./config/mysql-server:/etc/mysql
-  - ./logs/mysql_logs:/var/log
-  - /etc/localtime:/etc/localtime
-  - mysql:/var/lib/mysql
-environment:
-  MYSQL_ROOT_PASSWORD: 1234
-```
-You can change exposed port as mentioned in dev_web_55 container configuration. For more information about this container refer into [mysql official image](https://hub.docker.com/_/mysql/).
-### Default configurations in dev_phpmyadmin container
-```
-volumes:
-  - /etc/localtime:/etc/localtime
-links:
-  - db
-ports:
-  - "9090:80"
-environment:
-  PMA_HOST: db
-```
-More about phpmyadmin container can find in docker hub [phpmyadmin image](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
+`php -d allow_url_fopen=on /usr/local/bin/composer install`
 
-### Additional information
-1. Can access a shell inside of any containers by running `docker exec -it <containerID or ContainerName> /bin/bash  -c "TERM=$TERM; exec bash"`
-2. Can restart containers using `docker-compose restart`
-3. Can stop containers using `docker-compose stop`
-2. Developer can find log files for each container from _/logs_ directory. ( Also possible to get logs of containers by running the command `docker logs <container ID>`)
-3. Developer can find configurations for apache, php, mysql-client, mysql-server, etc from _/config directory.
-4. If user is using Linux, the docker commands may require sudo permissions. This can be fixed by adding the user to the docker user group.`sudo usermod -aG docker <username>`
-5. web 7.0 container doesn't include memcache,ereg and stats PHP modules due to compatibility issues.
-6. In web 5.6 container, port 3000 is mapped to 3000 port locally.
-7. In web 7.0 container, port 3000 is mapped to 3001 port locally.
+
+## How to use custom containers?
+- Compose files for custom containers have been located under ./custom-compose directory. Run `php env-start.php` and select the "Custom Environment" option. Then select the containers you need as you wish (Use **ARROW_KEYS** to move up and down and press **SPACE** to do the selection. And press **ENTER** to continue.).
+ 
+- Available custom containers
+   - db55 - MySQL 5.5
+   - db56 - MySQL 5.6
+   - ldap - openldap and phpldapadmin
+   - mariadb103 - MariaDB 10.3
+   - mongodb - mongo DB Database
+   - oracle11 - Oracle 11 Database
+   - ubuntuweb71 - Ubuntu 18.04 PHP 7.1 container
+   - web 54 - CentOS 7 PHP 5.4 container
+   - web 70 - CentOS 7 PHP 7.0 container
+   - web 74 - CentOS 7 PHP 7.4 container
+   - xhgui - XhGUI profiling tool
+  
+- Moving from custom version to basic version -  `docker-compose up -d --remove-orphans`
