@@ -112,7 +112,7 @@ services:
     container_name: dev_web_73
 
   web74:
-    image: orangehrm/orangehrm-environment-images:dev-7.4-centos-remi
+    image: orangehrm/orangehrm-environment-images:dev-7.4-centos-orange
     volumes:
     - ./html:/var/www/html
     - ./config/web74/php/custom_php.ini:/etc/php.d/custom_php.ini
