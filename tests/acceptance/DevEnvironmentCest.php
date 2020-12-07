@@ -22,4 +22,10 @@ class DevEnvironmentCest
         $I->runShellCommand("docker exec dev_web php /var/www/html/php-simple/app.php");
         $I->cantSeeInShellOutput("false");
     }
+
+    public function oci8Test(AcceptanceTester $I){
+        $I->wantTo("verify dev environment is working properly with a php application");
+        $I->runShellCommand("docker exec dev_web php -i | grep -i oci");
+        $I->seeInShellOutput('OCI8 Version => 2.2.0');
+    }
 }
