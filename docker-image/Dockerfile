@@ -27,7 +27,8 @@ RUN yum -y install \
     && yum clean all
 
 #install bower and gulp
-RUN npm install bower gulp nodemon node-sass pm2 -g
+RUN npm install bower gulp nodemon pm2 -g
+RUN npm install -f node-sass
 
 # installing composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
