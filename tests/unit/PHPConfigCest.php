@@ -34,6 +34,12 @@ class PHPConfigCest
         $I->canSeeInShellOutput("allow_url_include => Off");
     }
 
+    public function checkAvailabilityOfoci8(UnitTester $I){
+        $I->wantTo("check wether oci8 is installed");
+        $I->runShellCommand("docker exec dev_web php -i | grep -i oci");
+        $I->canSeeInShellOutput("OCI8 Version => 2.2.0");
+    }
+
     public function checkPHPConfig_display_errors(UnitTester $I){
         $I->wantTo("verify the config - display_errors = OFF");
         $I->runShellCommand("docker exec dev_web php -i | grep display_errors");
