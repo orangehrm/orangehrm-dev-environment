@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-7.2
+FROM orangehrm/orangehrm-environment-images:test-7.2-ius
 
 MAINTAINER orangehrm
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
