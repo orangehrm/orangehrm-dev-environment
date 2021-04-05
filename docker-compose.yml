@@ -112,7 +112,7 @@ services:
     container_name: dev_web_73
 
   web74:
-    image: orangehrm/orangehrm-environment-images:dev-7.4-centos-remi
+    image: orangehrm/orangehrm-environment-images:dev-7.4-centos-orange
     volumes:
     - ./html:/var/www/html
     - ./config/web74/php/custom_php.ini:/etc/php.d/custom_php.ini
@@ -178,7 +178,7 @@ services:
     container_name: dev_phpmyadmin
 
   rabbitmq:
-    image: rabbitmq:3.6-management
+    image: orangehrm/orangehrm-rabbitmq:3.8.4-management
     container_name: dev_rabbitmq
     volumes:
     - ./config/rabbitmq/certs:/cert_rabbitmq/
