@@ -1,5 +1,5 @@
 {
   "require": {
-    "codeception/codeception": "^2.2"
+    "codeception/codeception": "^3.1"
   }
 }
