@@ -132,7 +132,29 @@ services:
         ipv4_address: 10.5.0.74
     restart: always
     container_name: dev_web_74
-    
+
+  web_74_rh:
+    image: orangehrm/orangehrm-environment-images:dev-7.4-rhel-a1
+    volumes:
+    - ./html:/var/www/html
+    - ./config/web74rh/php/custom_php.ini:/etc/php.d/custom_php.ini
+    - ./config/web74rh/mysql-client:/etc/mysql
+    - ./config/web74rh/apache2/sites-available:/etc/httpd/sites-available
+    - ./config/web74rh/apache2/sites-enabled:/etc/httpd/sites-enabled
+    - ./config/web74rh/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./config/web74rh/apache2/cert:/etc/httpd/cert
+    - ./logs/apache_logs/web74rh:/var/log/httpd
+    - /etc/localtime:/etc/localtime
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    sysctls:
+    - kernel.shmmax=67371264
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.174
+    restart: always
+    container_name: dev_web_74_rh  
+
   db57:
     image: orangehrm/orangehrm-db-images:mysql-5.7
     expose:
@@ -165,12 +187,28 @@ services:
     restart: always
     container_name: dev_mariadb_102
 
+  db105:
+    image: orangehrm/orangehrm-db-images:mariadb-10.5.13-redhat-8.4
+    expose:
+    - "3306"
+    volumes:
+    - ./logs/mysql_logs/db105:/var/log
+    - /etc/localtime:/etc/localtime
+    - mariadb105:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.105
+    restart: always
+    container_name: dev_mariadb_105
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     volumes:
     - /etc/localtime:/etc/localtime
     environment:
-      PMA_HOSTS: db55,db102
+      PMA_HOSTS: db55,db102,db105
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.2.2
@@ -189,7 +227,7 @@ services:
       RABBITMQ_SSL_FAIL_IF_NO_PEER_CERT: 'false'
       RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: '-rabbit ssl_listeners [{"::",5671}] -rabbit ssl_options [{certfile,"/cert_rabbitmq/cert.pem"},{keyfile,"/cert_rabbitmq/key.pem"},{cacertfile,"/cert_rabbitmq/cacert.pem"},{verify,verify_peer},{depth,3},{fail_if_no_peer_cert,false}] -rabbit tcp_listeners [{"::",5672}]'
     ports:
-      - "15672:15672"
+      - "15671:15671"
       - "5672:5672"
       - "5671:5671"
     restart: always
@@ -197,9 +235,25 @@ services:
       ohrmdevnet:
         ipv4_address: 10.5.2.3
 
+  rabbitmq_rhel:
+    image: orangehrm/orangehrm-rabbitmq:rabbitmq-3.9.8-redhat-8.4
+    container_name: dev_rabbitmq_rhel
+    ports:
+      - "18671:15671"
+      - "8671:5671"
+    volumes:
+    - ./config/rabbitmq_398_rhel/certs:/cert_rabbitmq/
+    - ./config/rabbitmq_398_rhel/conf:/etc/rabbitmq
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.2.6
+    restart: always
+    hostname: dev-rabbitmq-rhel
+
 volumes:
   mysql57:
   mariadb102:
+  mariadb105:
 
 networks:
   ohrmdevnet:
