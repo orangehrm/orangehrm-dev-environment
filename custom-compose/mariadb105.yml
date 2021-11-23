@@ -1,0 +1,20 @@
+version: '2.2'
+services:
+  db105:
+    image: orangehrm/orangehrm-db-images:mariadb-10.5.13-redhat-8.4
+    expose:
+    - "3306"
+    volumes:
+    - ./custom-compose/logs/mysql_logs/db103:/var/log
+    - /etc/localtime:/etc/localtime
+    - mariadb105:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.105
+    restart: always
+    container_name: dev_mariadb_105
+
+volumes:
+  mariadb105:
