@@ -187,21 +187,36 @@ services:
     restart: always
     container_name: dev_mariadb_102
 
-  db105:
-    image: orangehrm/orangehrm-db-images:mariadb-10.5.13-redhat-8.4
+  # db105:
+  #   image: orangehrm/orangehrm-db-images:mariadb-10.5.13-redhat-8.4
+  #   expose:
+  #   - "3306"
+  #   volumes:
+  #   - ./logs/mysql_logs/db105:/var/log
+  #   - /etc/localtime:/etc/localtime
+  #   - mariadb105:/var/lib/mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: 1234
+  #   networks:
+  #     ohrmdevnet:
+  #       ipv4_address: 10.5.1.105
+  #   restart: always
+  #   container_name: dev_mariadb_105
+
+  db10422:
+    image: orangehrm/orangehrm-db-images:mariadb-10.4.22-redhat-8.4
     expose:
     - "3306"
     volumes:
-    - ./logs/mysql_logs/db105:/var/log
     - /etc/localtime:/etc/localtime
-    - mariadb105:/var/lib/mysql
+    - mariadb10422:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.1.105
+        ipv4_address: 10.5.1.122
     restart: always
-    container_name: dev_mariadb_105
+    container_name: dev_mariadb_10422
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -253,7 +268,8 @@ services:
 volumes:
   mysql57:
   mariadb102:
-  mariadb105:
+  mariadb10422:
+  # mariadb105:
 
 networks:
   ohrmdevnet:
