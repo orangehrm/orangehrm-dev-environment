@@ -15,6 +15,7 @@ services:
       - ./logs/nginx_logs/web71:/var/log/nginx/web71
       - ./logs/nginx_logs/web72:/var/log/nginx/web72
       - ./logs/nginx_logs/webubuntu71:/var/log/nginx/webubuntu71
+      - ./logs/nginx_logs/webubuntu74:/var/log/nginx/webubuntu74
       - ./logs/nginx_logs/phpmyadmin:/var/log/nginx/phpmyadmin
       - ./logs/nginx_logs/rabbitmq:/var/log/nginx/rabbitmq
       - /etc/localtime:/etc/localtime
@@ -223,7 +224,7 @@ services:
     volumes:
     - /etc/localtime:/etc/localtime
     environment:
-      PMA_HOSTS: db55,db102,db105
+      PMA_HOSTS: db55,db102,db10422
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.2.2
