@@ -1,0 +1,4 @@
+[Wed Jan 05 22:05:47.759353 2022] [ssl:warn] [pid 505] AH01909: orangehrmdev.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jan 05 22:05:50.054828 2022] [ssl:warn] [pid 506] AH01909: orangehrmdev.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jan 06 15:53:47.693090 2022] [ssl:warn] [pid 8] AH01909: orangehrmdev.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jan 06 15:54:11.207576 2022] [ssl:warn] [pid 8] AH01909: orangehrmdev.com:443:0 server certificate does NOT include an ID which matches the server name

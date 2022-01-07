@@ -1,0 +1,22 @@
+version: '2.2'
+services:
+  ubuntuweb74:
+    image: orangehrm/orangehrm-environment-images:dev-php-7.4-ubuntu-20.04
+    ports:
+      - "9200:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./custom-compose/config/ubuntuweb74/apache2/sites-enabled:/etc/apache2/sites-enabled
+      - ./custom-compose/config/ubuntuweb74/apache2/cert:/etc/apache2/cert
+      - ./custom-compose/config/ubuntuweb74/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
+      - ./custom-compose/logs/apache_logs/ubuntuweb74:/var/log/apache2
+      - /etc/localtime:/etc/localtime
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true    
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.172
+    restart: always
+    container_name: dev_ubuntu_web_74
+
+
