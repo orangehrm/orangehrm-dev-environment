@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-7.4-ius
+FROM orangehrm/orangehrm-environment-images:test-php-7.4-ubuntu-20.04
 
 MAINTAINER orangehrm
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
@@ -7,11 +7,10 @@ LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 USER root
 WORKDIR /var/www/html/
 
-RUN yum -y install \
+RUN apt-get -y install \
     nano \
-    && yum -y update bash \
-    && rm -rf /var/cache/yum/* \
-    && yum clean all
+    && apt-get install --only-upgrade bash \
+    && apt-get clean \
 
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
@@ -25,9 +24,9 @@ COPY infection.phar /usr/bin/infection
 RUN  chmod +x /usr/bin/infection
 
 # Enable virtual hosts
-COPY config/apache2-sites/orangehrm.conf /etc/httpd/sites-available/orangehrm.conf
-RUN rm /etc/httpd/sites-enabled/orangehrm.conf
-RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/orangehrm.conf
+COPY config/apache2-sites/orangehrm.conf /etc/apache2/sites-available/orangehrm.conf
+RUN rm /etc/apache2/sites-enabled/orangehrm.conf
+RUN ln -s /etc/apache2/sites-available/orangehrm.conf /etc/apache2/sites-enabled/orangehrm.conf
 
 RUN pear channel-discover pear.phing.info && \
     pear install VersionControl_SVN-alpha && \

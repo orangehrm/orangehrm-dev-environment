@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: orangehrm/orangehrm-environment-images:dev-7.4-centos-orange
+    image: orangehrm/orangehrm-environment-images:dev-php-7.4-ubuntu-20.04
     ports:
       - "443:443"
     volumes:
@@ -13,6 +13,7 @@ services:
       - /etc/localtime:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
+    tty: true
     restart: always
     hostname: orangehrm-dev-web
     container_name: dev_web
