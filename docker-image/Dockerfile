@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-7.4-remi
+FROM orangehrm/orangehrm-environment-images:test-php-latest-rhel-8
 
 MAINTAINER orangehrm
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
