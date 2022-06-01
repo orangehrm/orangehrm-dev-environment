@@ -7,11 +7,11 @@ LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 USER root
 WORKDIR /var/www/html/
 
-RUN yum -y install \
+RUN dnf -y install \
     nano \
-    && yum -y update bash \
-    && rm -rf /var/cache/yum/* \
-    && yum clean all
+    && dnf -y update bash \
+    && rm -rf /var/cache/dnf/* \
+    && dnf clean all
 
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
