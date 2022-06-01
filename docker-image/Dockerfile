@@ -34,4 +34,4 @@ RUN pear channel-discover pear.phing.info && \
     pear install phing/phing-2.16.0
 
 # Add supervisor conf
-COPY supervisord.conf /etc/supervisord.conf
+# COPY supervisord.conf /etc/supervisord.conf
