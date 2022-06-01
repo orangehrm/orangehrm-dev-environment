@@ -1,6 +1,6 @@
 FROM orangehrm/orangehrm-environment-images:test-php-latest-rhel-8
 
-MAINTAINER orangehrm
+LABEL maintainer = "orangehrm"
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 
 # Our user in the container#
