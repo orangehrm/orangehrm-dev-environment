@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: orangehrm/orangehrm-environment-images:dev-7.4-centos-remi
+    image: orangehrm/orangehrm-environment-images:dev-php-7.4-rhel-8
     ports:
       - "443:443"
     volumes:
@@ -14,5 +14,5 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
     restart: always
-    hostname: orangehrm-dev-web
-    container_name: dev_web
+    hostname: orangehrm-dev-web_rhel
+    container_name: dev_web_rhel
