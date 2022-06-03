@@ -41,10 +41,10 @@ jobs:
           docker-compose up -d
           docker ps -a
 
-      - name: Run unit test suite
-        run: |
-          sleep 10s
-          php vendor/bin/codecept run unit
+      # - name: Run unit test suite
+      #   run: |
+      #     sleep 10s
+      #     php vendor/bin/codecept run unit
 
       - name: Get installed php version
         run: echo "VERSION_TAG_NAME=dev-php-$(docker exec dev_web_rhel php -r 'echo PHP_VERSION;')-rhel-8" >> $GITHUB_ENV
