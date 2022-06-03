@@ -44,11 +44,11 @@ class WebContainerCest
         $I->seeInShellOutput('active (running)');
     }
 
-    public function checkMemcacheServiceIsRunning(UnitTester $I){
-        $I->wantTo("verify memcache is up and running in the container");
-        $I->runShellCommand("docker exec dev_web_rhel systemctl status memcached");
-        $I->seeInShellOutput('active (running)');
-    }
+    // public function checkMemcacheServiceIsRunning(UnitTester $I){
+    //     $I->wantTo("verify memcache is up and running in the container");
+    //     $I->runShellCommand("docker exec dev_web_rhel systemctl status memcached");
+    //     $I->seeInShellOutput('active (running)');
+    // }
 
     public function checkPHPUnit3Version(UnitTester $I){
         $I->wantTo("verify phpunit library is installed in the container");
@@ -67,11 +67,11 @@ class WebContainerCest
         $I->runShellCommand("docker exec dev_web_rhel git --version");
         $I->seeInShellOutput('git version 1.8.3.1');
     }
-    public function checkSVNInstallation(UnitTester $I){
-        $I->wantTo("verify svn is installed in the container");
-        $I->runShellCommand("docker exec dev_web_rhel svn --version");
-        $I->seeInShellOutput('version 1.9');
-    }
+    // public function checkSVNInstallation(UnitTester $I){
+    //     $I->wantTo("verify svn is installed in the container");
+    //     $I->runShellCommand("docker exec dev_web_rhel svn --version");
+    //     $I->seeInShellOutput('version 1.9');
+    // }
 
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
@@ -106,25 +106,25 @@ class WebContainerCest
 
     // public function checkNodemonInstallation(UnitTester $I){
     //     $I->wantTo("verify nodemon is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web nodemon");
+    //     $I->runShellCommand("docker exec dev_web_rhel nodemon");
     //     $I->seeInShellOutput('Usage: nodemon');
     // }
 
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
-        $I->runShellCommand("docker exec dev_web bower --version");
+        $I->runShellCommand('docker exec dev_web_rhel bash -c "export PATH=$PATH:/root/.nvm/versions/node/v6.17.1/bin && bower --version" ');
         $I->seeInShellOutput('1');
     }
 
     // public function checkOci8PHPmodule(UnitTester $I){
     //     $I->wantTo("verify php module oci8 is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web php -m");
+    //     $I->runShellCommand("docker exec dev_web_rhel php -m");
     //     $I->seeInShellOutput('oci8');
     // }
 
     // public function checkInfectionFrameworkInstallation(UnitTester $I){
     //     $I->wantTo("verify infection framework is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web infection --version");
+    //     $I->runShellCommand("docker exec dev_web_rhel infection --version");
     //     $I->seeInShellOutput('0.13.0');
     // }
 
