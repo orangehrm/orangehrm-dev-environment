@@ -30,7 +30,7 @@ RUN rm /etc/httpd/sites-enabled/orangehrm.conf
 RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/orangehrm.conf
 
 RUN pear channel-discover pear.phing.info && \
-    pear install VersionControl_SVN-alpha && \
+    # pear install VersionControl_SVN-alpha && \
     pear install phing/phing-2.16.0
 
 # Add supervisor conf
