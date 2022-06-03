@@ -26,7 +26,7 @@ class WebContainerCest
 
     public function checkXdebugVersion(AcceptanceTester $I){
         $I->wantTo("verify xdebug is installed in the image");
-        $I->runShellCommand("docker exec test_web_rhel bash -c 'dnf info php-pecl-xdebug | grep Version'");
+        $I->runShellCommand("docker exec dev_web_rhel bash -c 'dnf info php-pecl-xdebug | grep Version'");
         $I->seeInShellOutput('Version');
         $I->seeInShellOutput('2');
     }
@@ -66,7 +66,7 @@ class WebContainerCest
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
         $I->runShellCommand("docker exec dev_web_rhel git --version");
-        $I->seeInShellOutput('git version 1.8.3.1');
+        $I->seeInShellOutput('git');
     }
     // public function checkSVNInstallation(UnitTester $I){
     //     $I->wantTo("verify svn is installed in the container");
