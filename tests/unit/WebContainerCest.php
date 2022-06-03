@@ -24,10 +24,11 @@ class WebContainerCest
         $I->seeInShellOutput('PHP 7.4');
     }
 
-    public function checkXdebugStatus(UnitTester $I){
-        $I->wantTo("verify Xdebug is installed in the container");
-        $I->runShellCommand("docker exec dev_web_rhel php --version");
-        $I->seeInShellOutput('Xdebug v2');
+    public function checkXdebugVersion(AcceptanceTester $I){
+        $I->wantTo("verify xdebug is installed in the image");
+        $I->runShellCommand("docker exec test_web_rhel bash -c 'dnf info php-pecl-xdebug | grep Version'");
+        $I->seeInShellOutput('Version');
+        $I->seeInShellOutput('2');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
@@ -76,25 +77,25 @@ class WebContainerCest
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web_rhel curl --version");
-        $I->seeInShellOutput('curl 7.29.0');
+        $I->seeInShellOutput('curl');
     }
 
     public function checkNanoInstallation(UnitTester $I){
         $I->wantTo("verify nano is installed in the container");
         $I->runShellCommand("docker exec dev_web_rhel nano --version");
-        $I->seeInShellOutput('nano version 2.3.1');
+        $I->seeInShellOutput('nano');
     }
 
 
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v6 is installed in the container");
-        $I->runShellCommand("docker exec dev_web_rhel node -v");
+        $I->runShellCommand('docker exec dev_web_rhel bash -c "export PATH=$PATH:/root/.nvm/versions/node/v6.17.1/bin && node -v" ');
         $I->seeInShellOutput('v6');
     }
 
     public function checkNPMVersion(UnitTester $I){
         $I->wantTo("verify npm is installed in the container");
-        $I->runShellCommand("docker exec dev_web_rhel npm --version");
+        $I->runShellCommand('docker exec dev_web_rhel bash -c "export PATH=$PATH:/root/.nvm/versions/node/v6.17.1/bin && npm -version" ');
         $I->seeInShellOutput("3.10.10");
     }
 
