@@ -66,26 +66,19 @@ class WebContainerCest
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
         $I->runShellCommand("docker exec dev_web_rhel git --version");
-        $I->seeInShellOutput('git');
+        $I->seeInShellOutput('git version 2');
     }
-    // public function checkSVNInstallation(UnitTester $I){
-    //     $I->wantTo("verify svn is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web_rhel svn --version");
-    //     $I->seeInShellOutput('version 1.9');
-    // }
+    public function checkSVNInstallation(UnitTester $I){
+        $I->wantTo("verify svn is installed in the container");
+        $I->runShellCommand("docker exec dev_web_rhel svn --version");
+        $I->seeInShellOutput('version 1');
+    }
 
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web_rhel curl --version");
-        $I->seeInShellOutput('curl');
+        $I->seeInShellOutput('curl 7');
     }
-
-    public function checkNanoInstallation(UnitTester $I){
-        $I->wantTo("verify nano is installed in the container");
-        $I->runShellCommand("docker exec dev_web_rhel nano --version");
-        $I->seeInShellOutput('nano');
-    }
-
 
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v6 is installed in the container");
@@ -105,28 +98,16 @@ class WebContainerCest
         $I->seeInShellOutput("sendmail-8");
     }
 
-    // public function checkNodemonInstallation(UnitTester $I){
-    //     $I->wantTo("verify nodemon is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web_rhel nodemon");
-    //     $I->seeInShellOutput('Usage: nodemon');
-    // }
-
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
         $I->runShellCommand('docker exec dev_web_rhel bash -c "export PATH=$PATH:/root/.nvm/versions/node/v6.17.1/bin && bower --version" ');
         $I->seeInShellOutput('1');
     }
 
-    // public function checkOci8PHPmodule(UnitTester $I){
-    //     $I->wantTo("verify php module oci8 is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web_rhel php -m");
-    //     $I->seeInShellOutput('oci8');
-    // }
-
-    // public function checkInfectionFrameworkInstallation(UnitTester $I){
-    //     $I->wantTo("verify infection framework is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web_rhel infection --version");
-    //     $I->seeInShellOutput('0.13.0');
-    // }
+    public function checkInfectionFrameworkInstallation(UnitTester $I){
+        $I->wantTo("verify infection framework is installed in the container");
+        $I->runShellCommand("docker exec dev_web_rhel infection --version");
+        $I->seeInShellOutput('0.13.0');
+    }
 
 }
