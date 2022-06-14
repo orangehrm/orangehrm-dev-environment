@@ -174,9 +174,9 @@ services:
     - kernel.shmmax=67371264
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.174
+        ipv4_address: 10.5.0.175
     restart: always
-    container_name: dev_web_74_rh    
+    container_name: dev_web_74_rh_8    
 
   db57:
     image: orangehrm/orangehrm-db-images:mysql-5.7
