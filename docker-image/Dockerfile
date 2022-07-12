@@ -1,17 +1,17 @@
-FROM orangehrm/orangehrm-environment-images:test-7.4-ius
+FROM orangehrm/orangehrm-environment-images:test-php-latest-rhel-8
 
-MAINTAINER orangehrm
+LABEL maintainer = "orangehrm"
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 
 # Our user in the container#
 USER root
 WORKDIR /var/www/html/
 
-RUN yum -y install \
+RUN dnf -y install \
     nano \
-    && yum -y update bash \
-    && rm -rf /var/cache/yum/* \
-    && yum clean all
+    && dnf -y update bash \
+    && rm -rf /var/cache/dnf/* \
+    && dnf clean all
 
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
@@ -30,8 +30,8 @@ RUN rm /etc/httpd/sites-enabled/orangehrm.conf
 RUN ln -s /etc/httpd/sites-available/orangehrm.conf /etc/httpd/sites-enabled/orangehrm.conf
 
 RUN pear channel-discover pear.phing.info && \
-    pear install VersionControl_SVN-alpha && \
+    # pear install VersionControl_SVN-alpha && \
     pear install phing/phing-2.16.0
 
 # Add supervisor conf
-COPY supervisord.conf /etc/supervisord.conf
+# COPY supervisord.conf /etc/supervisord.conf
