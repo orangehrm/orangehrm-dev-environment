@@ -135,7 +135,7 @@ services:
     container_name: dev_web_74
 
   web_74_rh:
-    image: orangehrm/orangehrm-environment-images:dev-7.4-rhel-a1
+    image: orangehrm/orangehrm-environment-images:dev-7.4-rhel-8
     volumes:
     - ./html:/var/www/html
     - ./config/web74rh/php/custom_php.ini:/etc/php.d/custom_php.ini
@@ -154,7 +154,7 @@ services:
       ohrmdevnet:
         ipv4_address: 10.5.0.174
     restart: always
-    container_name: dev_web_74_rh  
+    container_name: dev_web_74_rh   
 
   db57:
     image: orangehrm/orangehrm-db-images:mysql-5.7
