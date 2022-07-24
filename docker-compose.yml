@@ -135,7 +135,7 @@ services:
     container_name: dev_web_74
 
   web_74_rh:
-    image: orangehrm/orangehrm-environment-images:dev-php-7.4.19-rhel-8
+    image: orangehrm/orangehrm-environment-images:dev-php-latest-rhel-8
     volumes:
     - ./html:/var/www/html
     - ./config/web74rh/php/custom_php.ini:/etc/php.d/custom_php.ini
