@@ -1,0 +1,20 @@
+version: '2.2'
+services:
+  db102:
+    image: orangehrm/orangehrm-db-images:mariadb-10.2
+    expose:
+      - "3306"
+    volumes:
+      - ./logs/mysql_logs/db102:/var/log
+      - /etc/localtime:/etc/localtime
+      - mariadb102:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.102
+    restart: always
+    container_name: dev_mariadb_102
+
+volumes:
+  mysql102:

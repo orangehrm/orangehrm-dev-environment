@@ -1,0 +1,21 @@
+version: '2.2'
+services:
+  web56:
+    image: orangehrm/orangehrm-environment-images:dev-5.6-centos-orange
+    volumes:
+      - ./html:/var/www/html
+      - ./config/web56/php/custom_php.ini:/etc/php.d/custom_php.ini
+      - ./config/web56/mysql-client:/etc/mysql
+      - ./config/web56/apache2/sites-available:/etc/httpd/sites-available
+      - ./config/web56/apache2/sites-enabled:/etc/httpd/sites-enabled
+      - ./config/web56/apache2/cert:/etc/httpd/cert
+      - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+      - ./logs/apache_logs/web56:/var/log/httpd
+      - /etc/localtime:/etc/localtime
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.56
+    restart: always
+    container_name: dev_web_56

@@ -26,92 +26,6 @@ services:
     restart: always
     container_name: dev_nginx
 
-  web56:
-    image: orangehrm/orangehrm-environment-images:dev-5.6-centos-orange
-    volumes:
-      - ./html:/var/www/html
-      - ./config/web56/php/custom_php.ini:/etc/php.d/custom_php.ini
-      - ./config/web56/mysql-client:/etc/mysql
-      - ./config/web56/apache2/sites-available:/etc/httpd/sites-available
-      - ./config/web56/apache2/sites-enabled:/etc/httpd/sites-enabled
-      - ./config/web56/apache2/cert:/etc/httpd/cert
-      - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-      - ./logs/apache_logs/web56:/var/log/httpd
-      - /etc/localtime:/etc/localtime
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.56
-    restart: always
-    container_name: dev_web_56
-
-  web71:
-    image: orangehrm/orangehrm-environment-images:dev-7.1-centos-orange
-    volumes:
-      - ./html:/var/www/html
-      - ./config/web71/php/custom_php.ini:/etc/php.d/custom_php.ini
-      - ./config/web71/mysql-client:/etc/mysql
-      - ./config/web71/apache2/sites-available:/etc/httpd/sites-available
-      - ./config/web71/apache2/sites-enabled:/etc/httpd/sites-enabled
-      - ./config/web56/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-      - ./config/web71/apache2/cert:/etc/httpd/cert
-      - ./logs/apache_logs/web71:/var/log/httpd
-      - /etc/localtime:/etc/localtime
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    sysctls:
-      - kernel.shmmax=67371264
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.71
-    restart: always
-    container_name: dev_web_71
-
-  web72:
-    image: orangehrm/orangehrm-environment-images:dev-7.2-centos-orange
-    volumes:
-    - ./html:/var/www/html
-    - ./config/web72/php/custom_php.ini:/etc/php.d/custom_php.ini
-    - ./config/web72/mysql-client:/etc/mysql
-    - ./config/web72/apache2/sites-available:/etc/httpd/sites-available
-    - ./config/web72/apache2/sites-enabled:/etc/httpd/sites-enabled
-    - ./config/web72/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-    - ./config/web72/apache2/cert:/etc/httpd/cert
-    - ./logs/apache_logs/web72:/var/log/httpd
-    - /etc/localtime:/etc/localtime
-    - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    sysctls:
-    - kernel.shmmax=67371264
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.72
-    restart: always
-    container_name: dev_web_72
-  
-  web73:
-    image: orangehrm/orangehrm-environment-images:dev-7.3-centos-orange
-    volumes:
-    - ./html:/var/www/html
-    - ./config/web73/php/custom_php.ini:/etc/php.d/custom_php.ini
-    - ./config/web73/mysql-client:/etc/mysql
-    - ./config/web73/apache2/sites-available:/etc/httpd/sites-available
-    - ./config/web73/apache2/sites-enabled:/etc/httpd/sites-enabled
-    - ./config/web73/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-    - ./config/web73/apache2/cert:/etc/httpd/cert
-    - ./logs/apache_logs/web73:/var/log/httpd
-    - /etc/localtime:/etc/localtime
-    - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    sysctls:
-    - kernel.shmmax=67371264
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.0.73
-    restart: always
-    container_name: dev_web_73
-
   web74:
     image: orangehrm/orangehrm-environment-images:dev-7.4-centos-orange
     volumes:
@@ -135,7 +49,7 @@ services:
     container_name: dev_web_74
 
   web_74_rh:
-    image: orangehrm/orangehrm-environment-images:dev-php-7.4.19-rhel-8
+    image: orangehrm/orangehrm-environment-images:dev-php-latest-rhel-8
     volumes:
     - ./html:/var/www/html
     - ./config/web74rh/php/custom_php.ini:/etc/php.d/custom_php.ini
@@ -155,54 +69,6 @@ services:
         ipv4_address: 10.5.0.174
     restart: always
     container_name: dev_web_74_rh   
-
-  db57:
-    image: orangehrm/orangehrm-db-images:mysql-5.7
-    expose:
-    - "3306"
-    volumes:
-    - ./logs/mysql_logs/db55:/var/log
-    - /etc/localtime:/etc/localtime
-    - mysql57:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.1.57
-    restart: always
-    container_name: dev_mysql_57
-
-  db102:
-    image: orangehrm/orangehrm-db-images:mariadb-10.2
-    expose:
-      - "3306"
-    volumes:
-      - ./logs/mysql_logs/db102:/var/log
-      - /etc/localtime:/etc/localtime
-      - mariadb102:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.1.102
-    restart: always
-    container_name: dev_mariadb_102
-
-  # db105:
-  #   image: orangehrm/orangehrm-db-images:mariadb-10.5.13-redhat-8.4
-  #   expose:
-  #   - "3306"
-  #   volumes:
-  #   - ./logs/mysql_logs/db105:/var/log
-  #   - /etc/localtime:/etc/localtime
-  #   - mariadb105:/var/lib/mysql
-  #   environment:
-  #     MYSQL_ROOT_PASSWORD: 1234
-  #   networks:
-  #     ohrmdevnet:
-  #       ipv4_address: 10.5.1.105
-  #   restart: always
-  #   container_name: dev_mariadb_105
 
   db10422:
     image: orangehrm/orangehrm-db-images:mariadb-10.4.22-redhat-8.4
@@ -224,7 +90,7 @@ services:
     volumes:
     - /etc/localtime:/etc/localtime
     environment:
-      PMA_HOSTS: db55,db102,db10422
+      PMA_HOSTS: db10422
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.2.2
@@ -267,10 +133,7 @@ services:
     hostname: dev-rabbitmq-rhel
 
 volumes:
-  mysql57:
-  mariadb102:
   mariadb10422:
-  # mariadb105:
 
 networks:
   ohrmdevnet:
