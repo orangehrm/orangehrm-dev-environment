@@ -5,7 +5,7 @@ services:
     expose:
       - "3306"
     volumes:
-      - ./logs/mysql_logs/db105:/var/log
+      - ./custom-compose/logs/mysql_logs/db105:/var/log
       - /etc/localtime:/etc/localtime
       - mariadb105:/var/lib/mysql
     environment:
