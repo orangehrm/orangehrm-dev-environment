@@ -17,4 +17,4 @@ services:
     container_name: dev_mariadb_102
 
 volumes:
-  mysql102:
+  mariadb102:
