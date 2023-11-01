@@ -13,7 +13,7 @@ services:
       ohrmdevnet:
         ipv4_address: 10.5.1.115
     restart: always
-    container_name: mariadb10115
+    container_name: dev_mariadb_10115
 
 volumes:
   mariadb10115:
