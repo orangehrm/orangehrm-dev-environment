@@ -38,7 +38,7 @@ jobs:
 
       - name: Spin up the container
         run: |
-          docker-compose up -d
+          docker compose up -d
           docker ps -a
 
       - name: Run unit test suite
