@@ -33,15 +33,15 @@ class WebContainerCest
     public function checkApacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify apache is up and running in the container");
         //$I->runShellCommand("ping -c 10 localhost");
-        $I->runShellCommand("docker exec dev_web service httpd status");
-        $I->seeInShellOutput('active (running)');
+        $I->runShellCommand("docker exec dev_web service apache2 status");
+        $I->seeInShellOutput('apache2 is running');
     }
 
 
     public function checkCronServiceIsRunning(UnitTester $I){
         $I->wantTo("verify cron is up and running in the container");
-        $I->runShellCommand("docker exec dev_web service crond status");
-        $I->seeInShellOutput('active (running)');
+        $I->runShellCommand("docker exec dev_web service cron status");
+        $I->seeInShellOutput('cron is running');
     }
 
     public function checkMemcacheServiceIsRunning(UnitTester $I){

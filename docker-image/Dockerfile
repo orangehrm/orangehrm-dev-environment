@@ -9,6 +9,7 @@ WORKDIR /var/www/html/
 
 RUN apt-get -y install \
     nano \
+    memcached \
     && apt-get install --only-upgrade bash \
     && apt-get clean \
 
