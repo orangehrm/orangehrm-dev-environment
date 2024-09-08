@@ -10,7 +10,7 @@ env:
   REGISTRY: hub.docker.com
   DOCKER_HUB_REPO: "orangehrm/orangehrm-environment-images"
   TAG_NAME: "dev-php-7.4.19-ubuntu-20.04"
-  LATEST_TAG_NAME: "dev-php-latest-rhel-8"
+  LATEST_TAG_NAME: "dev-php-latest-ubuntu-20.04"
   UPSTREAM_REPO: "orangehrm/orangehrm-dev-environment"
   UPSTREAM_BRANCH: "refs/heads/php-7.4-ubuntu-20.04"
 
@@ -47,7 +47,7 @@ jobs:
           php vendor/bin/codecept run unit
 
       - name: Get installed php version
-        run: echo "VERSION_TAG_NAME=dev-php-$(docker exec dev_web_rhel php -r 'echo PHP_VERSION;')-rhel-8" >> $GITHUB_ENV
+        run: echo "VERSION_TAG_NAME=dev-php-$(docker exec dev_web_ubuntu-20.04 php -r 'echo PHP_VERSION;')-ubuntu-20.04" >> $GITHUB_ENV
 
       - name: New image with a version tag & latest tag
         run: |
