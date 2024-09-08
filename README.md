@@ -1,4 +1,4 @@
-# OrangeHRM Production Environment for PHP 7.1 centos
+# OrangeHRM Production Environment for PHP 7.4 RHEL8
 [![Docker Automated](https://img.shields.io/docker/automated/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Status](https://img.shields.io/docker/build/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Docker Pulls](https://img.shields.io/docker/pulls/orangehrm/orangehrm-environment-images.svg)](https://hub.docker.com/r/orangehrm/orangehrm-environment-images/) [![Build Status](https://travis-ci.org/orangehrm/orangehrm-dev-environment.svg?branch=php-5.6)](https://travis-ci.org/orangehrm/orangehrm-dev-environment)
 
 ## Introduction
@@ -26,7 +26,7 @@ Make sure mentioned prerequisites are there in your host machine.
 
 | Container Name  | Service Name in docker-compose.yml | Description | IP Address | Used Ports |
 |-----------------|------------------------------------|-------------|------------|------------|
-| dev_web         | web                                | PHP 7.1     | 10.5.0.2   | 443        |
+| dev_web         | web                                | PHP 7.4     | 10.5.0.2   | 443        |
 | dev_mysql       | db                                 | MySQL 5.5   | 10.5.0.3   | 3306       |
 | dev_phpmyadmin  | phpmyadmin                         | phpMyAdmin  | 10.5.0.4   | 9090       |
 
