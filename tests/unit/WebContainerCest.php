@@ -46,8 +46,8 @@ class WebContainerCest
 
     public function checkMemcacheServiceIsRunning(UnitTester $I){
         $I->wantTo("verify memcache is up and running in the container");
-        $I->runShellCommand("docker exec dev_web service memcached status");
-        $I->seeInShellOutput('active (running)');
+        $I->runShellCommand("docker exec dev_web ps -U memcache | grep -v grep | grep memcached");
+        $I->seeInShellOutput('memcached');
     }
 
     public function checkPHPUnit3Version(UnitTester $I){

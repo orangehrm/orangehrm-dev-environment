@@ -7,6 +7,8 @@ LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 USER root
 WORKDIR /var/www/html/
 
+RUN apt-get update
+
 RUN apt-get -y install \
     nano \
     memcached \
