@@ -9,7 +9,7 @@ services:
       - ./config/mysql-client:/etc/mysql
       - ./config/apache2/sites-available:/etc/apache2/sites-available
       - ./config/apache2/cert:/etc/apache2/cert
-      - ./logs/apache_logs:/var/log/httpd
+      - ./logs/apache_logs:/var/log/apache
       - /etc/localtime:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
