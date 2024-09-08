@@ -43,7 +43,7 @@ jobs:
 
       - name: Run unit test suite
         run: |
-          sleep 10s
+          sleep 5s
           php vendor/bin/codecept run unit
 
       - name: Get installed php version
