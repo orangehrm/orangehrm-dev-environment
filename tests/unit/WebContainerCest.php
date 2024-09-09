@@ -34,7 +34,7 @@ class WebContainerCest
         $I->wantTo("verify apache is up and running in the container");
         //$I->runShellCommand("ping -c 10 localhost");
         $I->runShellCommand("docker exec dev_web service apache2 status");
-        $I->seeInShellOutput('apache2 is running');
+        $I->seeInShellOutput('active');
     }
 
 

@@ -15,7 +15,7 @@ RUN apt-get -y install \
     && apt-get install --only-upgrade bash \
     && apt-get clean \
 
-RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
+#RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >> /etc/php.ini
 
 # install oci8 php module
 # RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8
