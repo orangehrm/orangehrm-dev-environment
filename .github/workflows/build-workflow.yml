@@ -9,7 +9,7 @@ on:
 env:
   REGISTRY: hub.docker.com
   DOCKER_HUB_REPO: "orangehrm/orangehrm-environment-images"
-  TAG_NAME: "dev-php-7.4.19-ubuntu-20.04"
+  TAG_NAME: "dev-php-7.4-ubuntu-20.04"
   LATEST_TAG_NAME: "dev-php-latest-ubuntu-20.04"
   UPSTREAM_REPO: "orangehrm/orangehrm-dev-environment"
   UPSTREAM_BRANCH: "refs/heads/php-7.4-ubuntu-20.04"
