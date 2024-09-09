@@ -37,3 +37,5 @@ RUN pear channel-discover pear.phing.info && \
 
 # Add supervisor conf
 COPY supervisord.conf /etc/supervisord.conf
+
+ENTRYPOINT ["/lib/systemd/systemd"]
