@@ -41,7 +41,7 @@ class WebContainerCest
     public function checkCronServiceIsRunning(UnitTester $I){
         $I->wantTo("verify cron is up and running in the container");
         $I->runShellCommand("docker exec dev_web service cron status");
-        $I->seeInShellOutput('cron is running');
+        $I->seeInShellOutput('active');
     }
 
     public function checkMemcacheServiceIsRunning(UnitTester $I){
