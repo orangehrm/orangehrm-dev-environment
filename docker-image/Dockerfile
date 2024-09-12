@@ -7,6 +7,9 @@ LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 USER root
 WORKDIR /var/www/html/
 
+#disable the mariadb-maxscale repo
+RUN yum-config-manager --disable mariadb-maxscale
+
 RUN dnf -y install \
     nano \
     && dnf -y update bash \
