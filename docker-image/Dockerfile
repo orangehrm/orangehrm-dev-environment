@@ -1,4 +1,4 @@
-FROM rhel-test:latest
+FROM orangehrm/orangehrm-environment-images:test-php-latest-rhel-8
 
 LABEL maintainer = "orangehrm"
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
@@ -6,7 +6,6 @@ LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 # Our user in the container#
 USER root
 WORKDIR /var/www/html/
-
 
 RUN dnf -y install \
     nano \
@@ -37,5 +36,5 @@ RUN pear channel-discover pear.phing.info && \
 # Add supervisor conf
 # COPY supervisord.conf /etc/supervisord.conf
 
-#Added the Entrypoint command
+#Added the Entrypoint
 ENTRYPOINT ["/usr/sbin/init"]
