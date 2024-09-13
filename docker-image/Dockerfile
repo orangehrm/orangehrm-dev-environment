@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-php-latest-rhel-8
+FROM rhel-test:latest
 
 LABEL maintainer = "orangehrm"
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
@@ -7,8 +7,6 @@ LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 USER root
 WORKDIR /var/www/html/
 
-#disable the mariadb-maxscale repo
-RUN dnf config-manager --set-disabled mariadb-maxscale
 
 RUN dnf -y install \
     nano \
