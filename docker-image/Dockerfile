@@ -15,7 +15,6 @@ RUN dnf -y install \
 
 # Install wkhtmltopdf
 RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos8.x86_64.rpm
-RUN dnf localinstall wkhtmltox-0.12.6-1.centos8.x86_64.rpm
 
 #update OSLON Timezone DB
 RUN pecl install timezonedb
