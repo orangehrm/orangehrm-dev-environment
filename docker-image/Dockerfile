@@ -9,9 +9,22 @@ WORKDIR /var/www/html/
 
 RUN dnf -y install \
     nano \
+    xorg-x11-server-Xvfb \
+    xorg-x11-fonts-Type1 \
+    xorg-x11-fonts-75dpi \
+    dejavu-sans-fonts \
+    urw-fonts \
     && dnf -y update bash \
     && rm -rf /var/cache/dnf/* \
     && dnf clean all
+
+# Install wkhtmltopdf
+RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos8.x86_64.rpm
+RUN dnf localinstall wkhtmltox-0.12.6-1.centos8.x86_64.rpm
+
+#update OSLON Timezone DB
+RUN pecl install timezonedb
+RUN echo "extension=timezonedb.so" >> /etc/php.ini
 
 RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 
