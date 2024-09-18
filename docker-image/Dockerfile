@@ -9,7 +9,6 @@ WORKDIR /var/www/html/
 
 RUN dnf -y install \
     nano \
-    xorg-x11-server-Xvfb \
     xorg-x11-fonts-Type1 \
     xorg-x11-fonts-75dpi \
     dejavu-sans-fonts \
