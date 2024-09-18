@@ -109,4 +109,10 @@ class WebContainerCest
         $I->seeInShellOutput('0.13.0');
     }
 
+    public function checkOslonDBInstallation(UnitTester $I){
+        $I->wantTo("verify Oslon DB is installed in the container");
+        $I->runShellCommand("docker exec php -i | grep -i timezone");
+        $I->seeInShellOutput('Timezone Database Version => 2024');
+    }
+
 }
