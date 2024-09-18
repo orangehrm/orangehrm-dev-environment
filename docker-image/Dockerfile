@@ -7,12 +7,17 @@ LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 USER root
 WORKDIR /var/www/html/
 
+RUN apt-get update
+
 RUN apt-get -y install \
     nano \
+    memcached \
     && apt-get install --only-upgrade bash \
     && apt-get clean \
 
-RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
+RUN echo "zend_extension=xdebug" >> /etc/php/7.4/apache2/php.ini
+RUN echo "zend_extension=xdebug" >> /etc/php/7.4/cli/php.ini
+
 
 # install oci8 php module
 # RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8
@@ -34,3 +39,5 @@ RUN pear channel-discover pear.phing.info && \
 
 # Add supervisor conf
 COPY supervisord.conf /etc/supervisord.conf
+
+ENTRYPOINT ["/lib/systemd/systemd"]
