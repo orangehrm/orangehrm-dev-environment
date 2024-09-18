@@ -35,6 +35,3 @@ RUN pear channel-discover pear.phing.info && \
 
 # Add supervisor conf
 # COPY supervisord.conf /etc/supervisord.conf
-
-#Added the Entrypoint
-ENTRYPOINT ["/usr/sbin/init"]
