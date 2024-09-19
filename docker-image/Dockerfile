@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-php-7.4-ubuntu-20.04
+FROM orangehrm/orangehrm-environment-images:test-php-latest-ubuntu-20.04
 
 MAINTAINER orangehrm
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
