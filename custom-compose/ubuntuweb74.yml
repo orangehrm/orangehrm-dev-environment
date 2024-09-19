@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   ubuntuweb74:
-    image: orangehrm/orangehrm-environment-images:dev-php-7.4-ubuntu-20.04
+    image: orangehrm/orangehrm-environment-images:dev-php-latest-ubuntu-20.04
     ports:
       - "9200:443"
     volumes:
