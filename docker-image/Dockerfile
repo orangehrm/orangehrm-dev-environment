@@ -11,6 +11,7 @@ RUN apt-get update
 
 RUN apt-get -y install \
     nano \
+    supervisor \
     memcached \
     && apt-get install --only-upgrade bash \
     && apt-get clean \
