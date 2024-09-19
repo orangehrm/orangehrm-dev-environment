@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-php-7.4-ubuntu-20.04
+FROM orangehrm/orangehrm-environment-images:test-php-latest-ubuntu-20.04
 
 MAINTAINER orangehrm
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
@@ -11,6 +11,7 @@ RUN apt-get update
 
 RUN apt-get -y install \
     nano \
+    supervisor \
     memcached \
     && apt-get install --only-upgrade bash \
     && apt-get clean \
@@ -22,7 +23,6 @@ RUN echo "zend_extension=xdebug" >> /etc/php/7.4/cli/php.ini
 # install oci8 php module
 # RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8
 # RUN echo "extension=oci8.so" >>/etc/php.ini
-
 
 # Add infection
 COPY infection.phar /usr/bin/infection
@@ -38,6 +38,6 @@ RUN pear channel-discover pear.phing.info && \
     pear install phing/phing-2.16.0
 
 # Add supervisor conf
-COPY supervisord.conf /etc/supervisord.conf
+#COPY supervisord.conf /etc/supervisord.conf
 
-ENTRYPOINT ["/lib/systemd/systemd"]
+ENTRYPOINT ["/sbin/init"]

@@ -104,11 +104,11 @@ class WebContainerCest
         $I->seeInShellOutput("Version 8.15.2");
     }
 
-    // public function checkNodemonInstallation(UnitTester $I){
-    //     $I->wantTo("verify nodemon is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web nodemon");
-    //     $I->seeInShellOutput('Usage: nodemon');
-    // }
+    public function checkOslonDBInstallation(UnitTester $I){
+        $I->wantTo("verify Oslon DB is installed in the container");
+        $I->runShellCommand("docker exec dev_web php -i | grep -i timezone");
+        $I->seeInShellOutput('Timezone Database Version => 2024');
+    }
 
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
@@ -116,11 +116,11 @@ class WebContainerCest
         $I->seeInShellOutput('1');
     }
 
-    // public function checkOci8PHPmodule(UnitTester $I){
-    //     $I->wantTo("verify php module oci8 is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web php -m");
-    //     $I->seeInShellOutput('oci8');
-    // }
+    public function checkwkhtmltopdfVersion(UnitTester $I){
+        $I->wantTo("verify wkhtmltopdf is installed in the container");
+        $I->runShellCommand('docker exec dev_web wkhtmltopdf --version');
+        $I->seeInShellOutput('wkhtmltopdf 0.12');
+    }
 
     // public function checkInfectionFrameworkInstallation(UnitTester $I){
     //     $I->wantTo("verify infection framework is installed in the container");
