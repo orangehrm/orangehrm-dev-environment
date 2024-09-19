@@ -24,16 +24,6 @@ RUN echo "zend_extension=xdebug" >> /etc/php/7.4/cli/php.ini
 # RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8
 # RUN echo "extension=oci8.so" >>/etc/php.ini
 
-#update OSLON Timezone DB
-RUN pecl install timezonedb
-RUN echo "extension=timezonedb.so" >> /etc/php/7.4/apache2/php.ini
-RUN echo "extension=timezonedb.so" >> /etc/php/7.4/cli/php.ini
-
-# Install wkhtmltopdf
-RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
-RUN dpkg -i wkhtmltox_0.12.5-1.bionic_amd64.deb
-RUN apt install -f
-
 # Add infection
 COPY infection.phar /usr/bin/infection
 RUN  chmod +x /usr/bin/infection
