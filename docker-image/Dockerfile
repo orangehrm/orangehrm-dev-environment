@@ -14,7 +14,7 @@ RUN apt-get -y install \
     supervisor \
     memcached \
     && apt-get install --only-upgrade bash \
-    && apt-get clean \
+    && apt-get clean
 
 RUN echo "zend_extension=xdebug" >> /etc/php/7.4/apache2/php.ini
 RUN echo "zend_extension=xdebug" >> /etc/php/7.4/cli/php.ini
