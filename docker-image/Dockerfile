@@ -1,6 +1,5 @@
 FROM orangehrm/orangehrm-environment-images:test-php-latest-ubuntu-20.04
 
-MAINTAINER orangehrm
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 
 # Our user in the container#
