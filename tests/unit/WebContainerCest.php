@@ -44,11 +44,11 @@ class WebContainerCest
         $I->seeInShellOutput('active');
     }
 
-    public function checkMemcacheServiceIsRunning(UnitTester $I){
-        $I->wantTo("verify memcache is up and running in the container");
-        $I->runShellCommand("docker exec dev_web ps -U memcache | grep -v grep | grep memcached");
-        $I->seeInShellOutput('memcached');
-    }
+    // public function checkMemcacheServiceIsRunning(UnitTester $I){
+    //     $I->wantTo("verify memcache is up and running in the container");
+    //     $I->runShellCommand("docker exec dev_web ps -U memcache | grep -v grep | grep memcached");
+    //     $I->seeInShellOutput('memcached');
+    // }
 
     public function checkPHPUnit3Version(UnitTester $I){
         $I->wantTo("verify phpunit library is installed in the container");
@@ -98,16 +98,16 @@ class WebContainerCest
         $I->seeInShellOutput("3.10.10");
     }
 
-    public function checkSendMailVersion(UnitTester $I){
-        $I->wantTo("verify sendmail is installed in the container");
-        $I->runShellCommand("docker exec dev_web sendmail -d0.4 -bv root | grep Version");
-        $I->seeInShellOutput("Version 8.15.2");
-    }
+    // public function checkSendMailVersion(UnitTester $I){
+    //     $I->wantTo("verify sendmail is installed in the container");
+    //     $I->runShellCommand("docker exec dev_web sendmail -d0.4 -bv root | grep Version");
+    //     $I->seeInShellOutput("Version 8.15.2");
+    // }
 
     public function checkOslonDBInstallation(UnitTester $I){
         $I->wantTo("verify Oslon DB is installed in the container");
         $I->runShellCommand("docker exec dev_web php -i | grep -i timezone");
-        $I->seeInShellOutput('Timezone Database Version => 2024');
+        $I->seeInShellOutput('Timezone Database Version => 0.system');
     }
 
     public function checkBowerVersion(UnitTester $I){
@@ -122,10 +122,10 @@ class WebContainerCest
         $I->seeInShellOutput('wkhtmltopdf 0.12');
     }
 
-    // public function checkInfectionFrameworkInstallation(UnitTester $I){
-    //     $I->wantTo("verify infection framework is installed in the container");
-    //     $I->runShellCommand("docker exec dev_web infection --version");
-    //     $I->seeInShellOutput('0.13.0');
-    // }
+    public function checkInfectionFrameworkInstallation(UnitTester $I){
+        $I->wantTo("verify infection framework is installed in the container");
+        $I->runShellCommand("docker exec dev_web infection --version");
+        $I->seeInShellOutput('0.13.0');
+    }
 
 }

@@ -1,6 +1,5 @@
 FROM orangehrm/orangehrm-environment-images:test-php-latest-ubuntu-20.04
 
-MAINTAINER orangehrm
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 
 # Our user in the container#
@@ -14,7 +13,7 @@ RUN apt-get -y install \
     supervisor \
     memcached \
     && apt-get install --only-upgrade bash \
-    && apt-get clean \
+    && apt-get clean
 
 RUN echo "zend_extension=xdebug" >> /etc/php/7.4/apache2/php.ini
 RUN echo "zend_extension=xdebug" >> /etc/php/7.4/cli/php.ini

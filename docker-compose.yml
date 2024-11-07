@@ -1,4 +1,3 @@
-version: '2'
 services:
   web:
     image: orangehrm/orangehrm-environment-images:dev-php-7.4-ubuntu-20.04
