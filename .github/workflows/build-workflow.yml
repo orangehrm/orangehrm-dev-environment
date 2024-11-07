@@ -48,7 +48,7 @@ jobs:
           php vendor/bin/codecept run unit
 
       - name: Get installed php version
-        run: echo "VERSION_TAG_NAME=dev-php-$(docker exec dev_web php -r 'echo PHP_VERSION;')-ubuntu-20.04" >> $GITHUB_ENV
+        run: echo "VERSION_TAG_NAME=dev-php-$(docker exec dev_web php -r 'echo explode("-", PHP_VERSION)[0];')-ubuntu-20.04" >> $GITHUB_ENV
 
       - name: New image with a version tag & latest tag
         run: |
