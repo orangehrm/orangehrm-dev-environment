@@ -5,6 +5,7 @@ on:
     branches: [ php-7.4-ubuntu-20.04 ]
   schedule:
     - cron: '30 0 * * MON'  # 0030 in UTC, 0600 in IST
+  workflow_dispatch:
 
 env:
   REGISTRY: hub.docker.com
@@ -34,7 +35,7 @@ jobs:
         run: composer install
 
       - name: Build docker image
-        run: docker build -t ${{ env.DOCKER_HUB_REPO }}:${{ env.TAG_NAME }} --build-arg REDHAT_USERNAME=${{ secrets.REDHAT_USERNAME }} --build-arg REDHAT_PASSWORD=${{ secrets.REDHAT_PASSWORD }} docker-image
+        run: docker build -t ${{ env.DOCKER_HUB_REPO }}:${{ env.TAG_NAME }} docker-image
 
       - name: Spin up the container
         run: |
@@ -47,7 +48,7 @@ jobs:
           php vendor/bin/codecept run unit
 
       - name: Get installed php version
-        run: echo "VERSION_TAG_NAME=dev-php-$(docker exec dev_web php -r 'echo PHP_VERSION;')-ubuntu-20.04" >> $GITHUB_ENV
+        run: echo "VERSION_TAG_NAME=dev-php-$(docker exec dev_web php -r 'echo explode("-", PHP_VERSION)[0];')-ubuntu-20.04" >> $GITHUB_ENV
 
       - name: New image with a version tag & latest tag
         run: |
