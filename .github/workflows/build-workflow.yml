@@ -5,6 +5,7 @@ on:
     branches: [ php-7.4-ubuntu-20.04 ]
   schedule:
     - cron: '30 0 * * MON'  # 0030 in UTC, 0600 in IST
+  workflow_dispatch:
 
 env:
   REGISTRY: hub.docker.com
@@ -34,7 +35,7 @@ jobs:
         run: composer install
 
       - name: Build docker image
-        run: docker build -t ${{ env.DOCKER_HUB_REPO }}:${{ env.TAG_NAME }} --build-arg REDHAT_USERNAME=${{ secrets.REDHAT_USERNAME }} --build-arg REDHAT_PASSWORD=${{ secrets.REDHAT_PASSWORD }} docker-image
+        run: docker build -t ${{ env.DOCKER_HUB_REPO }}:${{ env.TAG_NAME }} docker-image
 
       - name: Spin up the container
         run: |
