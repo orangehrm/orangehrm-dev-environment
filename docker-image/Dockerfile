@@ -19,7 +19,6 @@ RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 # RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8
 # RUN echo "extension=oci8.so" >>/etc/php.ini
 
-
 # Add infection
 COPY infection.phar /usr/bin/infection
 RUN  chmod +x /usr/bin/infection
