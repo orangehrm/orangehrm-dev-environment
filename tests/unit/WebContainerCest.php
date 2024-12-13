@@ -49,16 +49,28 @@ class WebContainerCest
     //     $I->seeInShellOutput('active (running)');
     // }
 
-    public function checkPHPUnit3Version(UnitTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec dev_web_rhel phpunit3 --version");
-        $I->seeInShellOutput('PHPUnit 3.7.28');
+    public function checkPHPUnit8Version(UnitTester $I){
+        $I->wantTo("verify phpunit 8 library is installed in the container");
+        $I->runShellCommand("docker exec dev_web_rhel phpunit8 --version");
+        $I->seeInShellOutput('PHPUnit 8.5.41');
     }
 
-    public function checkPHPUnitVersion(UnitTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec dev_web_rhel phpunit --version");
-        $I->seeInShellOutput('PHPUnit 5.7.21');
+    public function checkPHPUnit9Version(UnitTester $I){
+        $I->wantTo("verify phpunit 9 library is installed in the container");
+        $I->runShellCommand("docker exec dev_web_rhel phpunit9 --version");
+        $I->seeInShellOutput('PHPUnit 9.6.22');
+    }
+
+    public function checkPHPUnit10Version(UnitTester $I){
+        $I->wantTo("verify phpunit 10 library is installed in the container");
+        $I->runShellCommand("docker exec dev_web_rhel phpunit10 --version");
+        $I->seeInShellOutput('PHPUnit 10.5.39');
+    }
+
+    public function checkPHPUnit11Version(UnitTester $I){
+        $I->wantTo("verify phpunit 11 library is installed in the container");
+        $I->runShellCommand("docker exec dev_web_rhel phpunit11 --version");
+        $I->seeInShellOutput('PHPUnit 11.5.1');
     }
 
     public function checkGitInstallation(UnitTester $I){
