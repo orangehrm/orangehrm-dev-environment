@@ -47,6 +47,9 @@ jobs:
           php vendor/bin/codecept run unit
 
       - name: Get installed php version
+        run: echo "PHP_VERSION=php-$(docker exec $(docker ps --format '{{.Names}}' | head -n 1) php -r 'echo PHP_VERSION;')" >> $GITHUB_ENV
+
+      - name: Get installed php version
         run: |
           CURRENT_DATE=$(date +'%d%m%y')
           echo VERSION_TAG_NAME="${{ env.PHP_VERSION }}-${CURRENT_DATE}" >> $GITHUB_ENV
