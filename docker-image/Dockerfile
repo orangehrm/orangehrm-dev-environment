@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-php-latest-rhel-8
+FROM orangehrm/test-environment-redhat9:php-8.2-latest
 
 LABEL maintainer = "orangehrm"
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
@@ -18,7 +18,6 @@ RUN echo "zend_extension=/usr/lib64/php/modules/xdebug.so" >>/etc/php.ini
 # install oci8 php module
 # RUN echo "instantclient,/opt/oracle/instantclient_11_2" | pecl install oci8
 # RUN echo "extension=oci8.so" >>/etc/php.ini
-
 
 # Add infection
 COPY infection.phar /usr/bin/infection
