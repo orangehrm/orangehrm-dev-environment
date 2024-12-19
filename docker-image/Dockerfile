@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-php-latest-ubuntu-20.04
+FROM orangehrm/test-environment:ubuntu24.04-php8.3-latest
 
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 
