@@ -40,4 +40,7 @@ RUN pear channel-discover pear.phing.info && \
 # Add supervisor conf
 #COPY supervisord.conf /etc/supervisord.conf
 
+# Generating the report of installed packages
+RUN apt list --installed > /var/log/installed_packages_detailed_report.txt
+
 ENTRYPOINT ["/sbin/init"]
