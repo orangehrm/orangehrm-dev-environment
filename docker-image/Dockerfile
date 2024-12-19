@@ -15,8 +15,9 @@ RUN apt-get -y install \
     && apt-get install --only-upgrade bash \
     && apt-get clean
 
-RUN echo "zend_extension=xdebug" >> /etc/php/7.4/apache2/php.ini
-RUN echo "zend_extension=xdebug" >> /etc/php/7.4/cli/php.ini
+RUN pecl install xdebug
+RUN echo "zend_extension=xdebug" >> /etc/php/8.3/apache2/php.ini
+RUN echo "zend_extension=xdebug" >> /etc/php/8.3/cli/php.ini
 
 
 # install oci8 php module
