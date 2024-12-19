@@ -19,15 +19,15 @@ class WebContainerCest
     }
 
     public function checkPHPVersion(UnitTester $I){
-        $I->wantTo("verify php 7.4 is installed in the container");
+        $I->wantTo("verify php 8.3 is installed in the container");
         $I->runShellCommand("docker exec dev_web php --version");
-        $I->seeInShellOutput('PHP 7.4');
+        $I->seeInShellOutput('PHP 8.3');
     }
 
     public function checkXdebugStatus(UnitTester $I){
         $I->wantTo("verify Xdebug is installed in the container");
-        $I->runShellCommand("docker exec dev_web php --version");
-        $I->seeInShellOutput('Xdebug');
+        $I->runShellCommand("docker exec dev_web pecl list | grep xdebug");
+        $I->seeInShellOutput('xdebug     3.4.0');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
@@ -50,41 +50,29 @@ class WebContainerCest
     //     $I->seeInShellOutput('memcached');
     // }
 
-    public function checkPHPUnit3Version(UnitTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec dev_web phpunit3 --version");
-        $I->seeInShellOutput('PHPUnit 3.7.28');
-    }
-
-    public function checkPHPUnitVersion(UnitTester $I){
-        $I->wantTo("verify phpunit library is installed in the container");
-        $I->runShellCommand("docker exec dev_web phpunit --version");
-        $I->seeInShellOutput('PHPUnit 5.7.21');
-    }
 
     public function checkGitInstallation(UnitTester $I){
         $I->wantTo("verify git is installed in the container");
         $I->runShellCommand("docker exec dev_web git --version");
-        $I->seeInShellOutput('2.25.1');
+        $I->seeInShellOutput('2.43.0');
     }
     public function checkSVNInstallation(UnitTester $I){
         $I->wantTo("verify svn is installed in the container");
         $I->runShellCommand("docker exec dev_web svn --version");
-        $I->seeInShellOutput('version 1.13.0');
+        $I->seeInShellOutput('version 1.14.3');
     }
 
     public function checkCurlInstallation(UnitTester $I){
         $I->wantTo("verify curl is installed in the container");
         $I->runShellCommand("docker exec dev_web curl --version");
-        $I->seeInShellOutput('curl 7.68.0');
+        $I->seeInShellOutput('curl 8.5.0');
     }
 
     public function checkNanoInstallation(UnitTester $I){
         $I->wantTo("verify nano is installed in the container");
         $I->runShellCommand("docker exec dev_web nano --version");
-        $I->seeInShellOutput('version 4.8');
+        $I->seeInShellOutput('version 7.2');
     }
-
 
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v6 is installed in the container");
@@ -107,7 +95,7 @@ class WebContainerCest
     public function checkOslonDBInstallation(UnitTester $I){
         $I->wantTo("verify Oslon DB is installed in the container");
         $I->runShellCommand("docker exec dev_web php -i | grep -i timezone");
-        $I->seeInShellOutput('Timezone Database Version => 0.system');
+        $I->seeInShellOutput('Timezone Database Version => 2024.2');
     }
 
     public function checkBowerVersion(UnitTester $I){
@@ -125,7 +113,7 @@ class WebContainerCest
     public function checkInfectionFrameworkInstallation(UnitTester $I){
         $I->wantTo("verify infection framework is installed in the container");
         $I->runShellCommand("docker exec dev_web infection --version");
-        $I->seeInShellOutput('0.13.0');
+        $I->seeInShellOutput('0.29.0');
     }
 
 }
