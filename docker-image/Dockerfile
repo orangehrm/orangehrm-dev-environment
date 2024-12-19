@@ -1,4 +1,4 @@
-FROM orangehrm/orangehrm-environment-images:test-php-latest-ubuntu-20.04
+FROM orangehrm/test-environment:ubuntu24.04-php8.3-latest
 
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
 
@@ -15,8 +15,9 @@ RUN apt-get -y install \
     && apt-get install --only-upgrade bash \
     && apt-get clean
 
-RUN echo "zend_extension=xdebug" >> /etc/php/7.4/apache2/php.ini
-RUN echo "zend_extension=xdebug" >> /etc/php/7.4/cli/php.ini
+RUN pecl install xdebug
+RUN echo "zend_extension=xdebug" >> /etc/php/8.3/apache2/php.ini
+RUN echo "zend_extension=xdebug" >> /etc/php/8.3/cli/php.ini
 
 
 # install oci8 php module
@@ -38,5 +39,8 @@ RUN pear channel-discover pear.phing.info && \
 
 # Add supervisor conf
 #COPY supervisord.conf /etc/supervisord.conf
+
+# Generating the report of installed packages
+RUN apt list --installed > /var/log/installed_packages_detailed_report.txt
 
 ENTRYPOINT ["/sbin/init"]
