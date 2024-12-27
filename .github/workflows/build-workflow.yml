@@ -9,10 +9,11 @@ on:
 
 env:
   REGISTRY: hub.docker.com
-  DOCKER_HUB_REPO: "orangehrm/dev-environment-redhat9"
-  LATEST_TAG_NAME: "php-8.2-latest"
+  DOCKER_HUB_REPO: "orangehrm/dev-environment"
+  LATEST_TAG_NAME: "rhel9-php8.2-latest"
   UPSTREAM_REPO: "orangehrm/orangehrm-dev-environment"
   UPSTREAM_BRANCH: "refs/heads/php-8.2-rhel-9"
+  OS_VERSION: "rhel9"
 
 jobs:
 
@@ -47,7 +48,7 @@ jobs:
           php vendor/bin/codecept run unit
 
       - name: Get installed php version
-        run: echo "PHP_VERSION=php-$(docker exec $(docker ps --format '{{.Names}}' | head -n 1) php -r 'echo PHP_VERSION;')" >> $GITHUB_ENV
+        run: echo "PHP_VERSION=${{ env.OS_VERSION }}-php$(docker exec $(docker ps --format '{{.Names}}' | head -n 1) php -r 'echo PHP_VERSION;')" >> $GITHUB_ENV
 
       - name: Set TAG_NAME with date
         run: |
