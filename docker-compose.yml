@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: orangehrm/dev-environment-redhat9:php-8.2-latest
+    image: orangehrm/dev-environment:rhel9-php8.2-latest
     ports:
       - "443:443"
     volumes:
