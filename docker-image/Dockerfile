@@ -1,4 +1,4 @@
-FROM orangehrm/test-environment-redhat9:php-8.2-latest
+FROM orangehrm/test-environment:rhel9-php8.2-latest
 
 LABEL maintainer = "orangehrm"
 LABEL authors = "OrangeHRM TechOps<techops@orangehrm.com>"
