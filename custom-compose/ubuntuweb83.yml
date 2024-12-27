@@ -11,7 +11,6 @@ services:
       - ./custom-compose/config/ubuntuweb83/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
       - ./custom-compose/logs/apache_logs/ubuntuweb83:/var/log/apache2
       - /etc/localtime:/etc/localtime
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true    
     networks:
       ohrmdevnet:
