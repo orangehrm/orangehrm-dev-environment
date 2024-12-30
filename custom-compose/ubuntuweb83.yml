@@ -6,6 +6,7 @@ services:
       - "9283:443"
     volumes:
       - ./html:/var/www/html
+      - ./custom-compose/config/ubuntuweb83/apache2/sites-available:/etc/apache2/sites-available
       - ./custom-compose/config/ubuntuweb83/apache2/sites-enabled:/etc/apache2/sites-enabled
       - ./custom-compose/config/ubuntuweb83/apache2/cert:/etc/apache2/cert
       - ./custom-compose/config/ubuntuweb83/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
