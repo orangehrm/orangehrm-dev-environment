@@ -10,7 +10,7 @@ services:
       - ./custom-compose/config/ubuntuweb83/apache2/sites-enabled:/etc/apache2/sites-enabled
       - ./custom-compose/config/ubuntuweb83/apache2/cert:/etc/apache2/cert
       - ./custom-compose/config/ubuntuweb83/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
-      - ./custom-compose/logs/apache_logs/ubuntuweb83:/var/log/apache2
+      - ./custom-compose/logs/apache_logs/ubuntuweb83:/var/log/apache2/ubuntuweb83
       - /etc/localtime:/etc/localtime
     privileged: true    
     networks:
