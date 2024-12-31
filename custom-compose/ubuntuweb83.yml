@@ -17,4 +17,4 @@ services:
       ohrmdevnet:
         ipv4_address: 10.5.0.183
     restart: always
-    container_name: dev_ubuntu_web_83
+    container_name: dev_web_83_ubuntu
