@@ -76,13 +76,13 @@ class WebContainerCest
 
     public function checkNodeVersion(UnitTester $I){
         $I->wantTo("verify node v6 is installed in the container");
-        $I->runShellCommand('docker exec dev_web bash -c \'export NVM_DIR="/usr/local/nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; node -v\' ');
+        $I->runShellCommand('docker exec dev_web bash -c \'export NVM_DIR="/root/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; node -v\' ');
         $I->seeInShellOutput('v6.17.1');
     }
 
     public function checkNPMVersion(UnitTester $I){
         $I->wantTo("verify npm is installed in the container");
-        $I->runShellCommand('docker exec dev_web bash -c \'export NVM_DIR="/usr/local/nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; npm -v\' ');
+        $I->runShellCommand('docker exec dev_web bash -c \'export NVM_DIR="/root/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; npm -v\' ');
         $I->seeInShellOutput("3.10.10");
     }
 
@@ -100,7 +100,7 @@ class WebContainerCest
 
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
-        $I->runShellCommand('docker exec dev_web bash -c \'export NVM_DIR="/usr/local/nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; bower -v\' ');
+        $I->runShellCommand('docker exec dev_web bash -c \'export NVM_DIR="/root/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; bower -v\' ');
         $I->seeInShellOutput('1');
     }
 
