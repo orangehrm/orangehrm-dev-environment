@@ -1,9 +1,10 @@
-# Ignore everything in this directory
-*
+*log
+
 # Except this file
 !web56/
 !web71/
 !web72/
 !web73/
 !web74/
+!web82rh/
 !.gitignore
