@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   web_82_rh:
-    image: orangehrm/prod-environment:rhel9-php8.2-latest
+    image: orangehrm/dev-environment:rhel9-php8.2-latest
     volumes:
     - ./html:/var/www/html
     - ./config/web82rh/php/custom_php.ini:/etc/php.d/custom_php.ini

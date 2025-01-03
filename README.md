@@ -57,17 +57,21 @@ Replace the **NAME** with any name you want for your instance.
 
 ## Containers
 
-| Container Name | Service Name in docker-compose.yml | Description | IP Address | Ports (Inside the Container) | Ports (Host Machine)|
-|----------------|------------------------------------|-------------|------------|------------|---------------------|
-| nginx          | nginx                              | PHP 5.6     | 10.5.2.1   | 443        | 443
-| dev_web_56     | web56                              | PHP 5.6     | 10.5.0.56  | 443        | - |
-| dev_web_71     | web71                              | PHP 7.1     | 10.5.0.71  | 443        | - |
-| dev_web_72     | web72                              | PHP 7.2     | 10.5.0.72  | 443        | - |
-| dev_web_73     | web73                              | PHP 7.3     | 10.5.0.73  | 443        | - |
-| dev_mysql_57   | db57                               | MySQL 5.7   | 10.5.1.57  | 3306       | - |
-| dev_mariadb_102| db102                              | MariaDB 10.2| 10.5.1.102 | 3306       | - |
-| dev_phpmyadmin | phpmyadmin                         | phpMyAdmin  | 10.5.2.2   | 80         | - |
-| dev_rabbitmq   | rabbitmq                           | RabbitMQ 3.6| 10.5.2.3   | 15671,5671 | 15671 |
+| Container Name   | Service Name in docker-compose.yml | Description    | IP Address | Ports (Inside the Container) | Ports (Host Machine)|
+|------------------|------------------------------------|----------------|------------|------------------------------|---------------------|
+| nginx            | nginx                              | PHP 5.6        | 10.5.2.1   | 443                          | 443                 |
+| dev_web_56       | web56                              | PHP 5.6        | 10.5.0.56  | 443                          | -                   |
+| dev_web_71       | web71                              | PHP 7.1        | 10.5.0.71  | 443                          | -                   |
+| dev_web_72       | web72                              | PHP 7.2        | 10.5.0.72  | 443                          | -                   |
+| dev_web_73       | web73                              | PHP 7.3        | 10.5.0.73  | 443                          | -                   |
+| dev_web_74       | web74                              | PHP 7.4        | 10.5.0.74  | 443                          | -                   |
+| dev_web_74_rh    | web74rh                            | PHP 7.4        | 10.5.0.174 | 443                          | -                   |
+| dev_mysql_57     | db57                               | MySQL 5.7      | 10.5.1.57  | 3306                         | -                   |
+| dev_mariadb_102  | db102                              | MariaDB 10.2   | 10.5.1.102 | 3306                         | -                   |
+| dev_mariadb_10114| db10114                            | MariaDB 10.11.4| 10.5.1.122 | 3306                         | -                   |
+| dev_mariadb_10117| db10117                            | MariaDB 10.11.7| 10.5.1.117 | 3306                         | -                   |
+| dev_phpmyadmin   | phpmyadmin                         | phpMyAdmin     | 10.5.2.2   | 80                           | -                   |
+| dev_rabbitmq     | rabbitmq                           | RabbitMQ 3.6   | 10.5.2.3   | 15671,5671                   | 15671               |
 
 ## How to add custom PHP configurations
 - Add custom PHP configurations to the file **./config/<WEB_CONTAINER>/php/custom_php.ini**. And then reload the apache service (inside the relevant container). **WEB_CONTAINER** can be web71, web72, web56 ,etc.
@@ -92,6 +96,7 @@ Use following command if you want to run composer install/update
    - web 54 - CentOS 7 PHP 5.4 container
    - web 70 - CentOS 7 PHP 7.0 container
    - web 74 - CentOS 7 PHP 7.4 container
+   - web 74 rh - RedHat 8 PHP 7.4 container
    - xhgui - XhGUI profiling tool
   
 - Moving from custom version to basic version -  `docker-compose up -d --remove-orphans`
