@@ -1,0 +1,21 @@
+version: '2.2'
+services:
+  rabbitmq3121:
+    image: rabbitmq:3.12.1-management
+    ports:
+      - "17671:15671"
+      - "7672:5672"
+      - "7671:5671"
+    volumes:
+      - ./custom-compose/config/rabbitmq3121/certs/:/cert_rabbitmq/
+      - ./custom-compose/config/rabbitmq3121/config/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./custom-compose/config/rabbitmq3121/config/enabled_plugins:/etc/rabbitmq/enabled_plugins
+      - ./custom-compose/config/rabbitmq3121/plugins/rabbitmq_delayed_message_exchange-3.12.0.ez:/plugins/rabbitmq_delayed_message_exchange-3.12.0.ez
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.3.12
+    restart: always
+    container_name: dev_rabbitmq_3121
