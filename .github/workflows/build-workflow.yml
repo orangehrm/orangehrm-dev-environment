@@ -35,7 +35,7 @@ jobs:
         run: composer install
 
       - name: Build docker image
-        run: docker build -t ${{ env.DOCKER_HUB_REPO }}:${{ env.TAG_NAME }} --build-arg REDHAT_USERNAME=${{ secrets.REDHAT_USERNAME }} --build-arg REDHAT_PASSWORD=${{ secrets.REDHAT_PASSWORD }} docker-image
+        run: docker build -t ${{ env.DOCKER_HUB_REPO }}:${{ env.LATEST_TAG_NAME }} --build-arg REDHAT_USERNAME=${{ secrets.REDHAT_USERNAME }} --build-arg REDHAT_PASSWORD=${{ secrets.REDHAT_PASSWORD }} docker-image
 
       - name: Spin up the container
         run: |
