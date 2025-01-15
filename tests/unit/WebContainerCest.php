@@ -26,9 +26,8 @@ class WebContainerCest
 
     public function checkXdebugVersion(AcceptanceTester $I){
         $I->wantTo("verify xdebug is installed in the image");
-        $I->runShellCommand("docker exec dev_web_rhel bash -c 'dnf info php-pecl-xdebug | grep Version'");
-        $I->seeInShellOutput('Version');
-        $I->seeInShellOutput('2');
+        $I->runShellCommand("docker exec dev_web_rhel bash -c 'pecl list | grep xdebug'");
+        $I->seeInShellOutput('xdebug     3.4.0');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
@@ -106,7 +105,7 @@ class WebContainerCest
     public function checkInfectionFrameworkInstallation(UnitTester $I){
         $I->wantTo("verify infection framework is installed in the container");
         $I->runShellCommand("docker exec dev_web_rhel infection --version");
-        $I->seeInShellOutput('0.13.0');
+        $I->seeInShellOutput('0.29.0');
     }
 
 }
