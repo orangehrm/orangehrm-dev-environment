@@ -2,18 +2,18 @@ name: OrangeHRM DEV Image Build Workflow
 
 on:
   push:
-    branches: [ php-7.4-rhel-8 ]
+    branches: [ php-8.2-rhel-8 ]
   schedule:
     - cron: '30 0 * * MON'  # 0030 in UTC, 0600 in IST
   workflow_dispatch:
 
 env:
   REGISTRY: hub.docker.com
-  DOCKER_HUB_REPO: "orangehrm/orangehrm-environment-images"
-  TAG_NAME: "dev-php-7.4.33-rhel-8"
-  LATEST_TAG_NAME: "dev-php-latest-rhel-8"
+  DOCKER_HUB_REPO: "orangehrm/dev-environment"
+  LATEST_TAG_NAME: "rhel8-php8.2-latest"
   UPSTREAM_REPO: "orangehrm/orangehrm-dev-environment"
-  UPSTREAM_BRANCH: "refs/heads/php-7.4-rhel-8"
+  UPSTREAM_BRANCH: "refs/heads/php-8.2-rhel-8"
+  OS_VERSION: "rhel8"
 
 jobs:
 
@@ -35,7 +35,7 @@ jobs:
         run: composer install
 
       - name: Build docker image
-        run: docker build -t ${{ env.DOCKER_HUB_REPO }}:${{ env.TAG_NAME }} --build-arg REDHAT_USERNAME=${{ secrets.REDHAT_USERNAME }} --build-arg REDHAT_PASSWORD=${{ secrets.REDHAT_PASSWORD }} docker-image
+        run: docker build -t ${{ env.DOCKER_HUB_REPO }}:${{ env.LATEST_TAG_NAME }} --build-arg REDHAT_USERNAME=${{ secrets.REDHAT_USERNAME }} --build-arg REDHAT_PASSWORD=${{ secrets.REDHAT_PASSWORD }} docker-image
 
       - name: Spin up the container
         run: |
@@ -48,12 +48,16 @@ jobs:
           php vendor/bin/codecept run unit
 
       - name: Get installed php version
-        run: echo "VERSION_TAG_NAME=dev-php-$(docker exec dev_web_rhel php -r 'echo PHP_VERSION;')-rhel-8" >> $GITHUB_ENV
+        run: echo "PHP_VERSION=${{ env.OS_VERSION }}-php$(docker exec $(docker ps --format '{{.Names}}' | head -n 1) php -r 'echo PHP_VERSION;')" >> $GITHUB_ENV
+
+      - name: Set TAG_NAME with date
+        run: |
+          CURRENT_DATE=$(date +'%d%m%y')
+          echo VERSION_TAG_NAME="${{ env.PHP_VERSION }}-${CURRENT_DATE}" >> $GITHUB_ENV
 
       - name: New image with a version tag & latest tag
         run: |
-          docker tag ${{ env.DOCKER_HUB_REPO }}:${{ env.TAG_NAME }} ${{ env.DOCKER_HUB_REPO }}:${{ env.VERSION_TAG_NAME }}
-          docker tag ${{ env.DOCKER_HUB_REPO }}:${{ env.TAG_NAME }} ${{ env.DOCKER_HUB_REPO }}:${{ env.LATEST_TAG_NAME }}
+          docker tag ${{ env.DOCKER_HUB_REPO }}:${{ env.LATEST_TAG_NAME }} ${{ env.DOCKER_HUB_REPO }}:${{ env.VERSION_TAG_NAME }}
           
       - name: Docker hub login
         if: ${{ github.repository == env.UPSTREAM_REPO && github.ref == env.UPSTREAM_BRANCH }}

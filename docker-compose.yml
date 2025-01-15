@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: orangehrm/orangehrm-environment-images:dev-php-7.4.33-rhel-8
+    image: orangehrm/dev-environment:rhel8-php8.2-latest
     ports:
       - "443:443"
     volumes:
