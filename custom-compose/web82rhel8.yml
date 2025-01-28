@@ -1,6 +1,6 @@
 version: '2.2'
 services:
-  web_82_rh:
+  web_82_rhel:
     image: orangehrm/dev-environment:rhel8-php8.2-latest
     volumes:
     - ./html:/var/www/html
