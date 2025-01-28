@@ -17,6 +17,6 @@ services:
     - kernel.shmmax=67371264
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.182
+        ipv4_address: 10.5.0.192
     restart: always
     container_name: dev_web_82_rhel8   
