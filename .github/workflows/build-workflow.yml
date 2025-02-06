@@ -83,6 +83,15 @@ jobs:
         if: ${{ github.repository == env.UPSTREAM_REPO && github.ref == env.UPSTREAM_BRANCH }}
         run: docker logout
 
+      - name: Check for the attachment availability
+        if: always()
+        run: |
+          if [ -f "./installed_packages_detailed_report.txt" ]; then
+            echo "ATTACHMENT=installed_packages_detailed_report.txt" >> $GITHUB_ENV
+          else
+            echo "ATTACHMENT=" >> $GITHUB_ENV
+          fi
+
       - name: Send the email notification
         if: always()
         uses: dawidd6/action-send-mail@v2
@@ -101,4 +110,4 @@ jobs:
           to: ${{ vars.EMAIL_RECIPIENTS }}
           # from email name
           from: DockHRM Automator
-          attachments : installed_packages_detailed_report.txt
+          attachments : ${{ env.ATTACHMENT }}
