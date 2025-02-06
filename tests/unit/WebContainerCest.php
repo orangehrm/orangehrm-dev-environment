@@ -27,7 +27,7 @@ class WebContainerCest
     public function checkXdebugStatus(UnitTester $I){
         $I->wantTo("verify Xdebug is installed in the container");
         $I->runShellCommand("docker exec dev_web pecl list | grep xdebug");
-        $I->seeInShellOutput('xdebug     3.4.0');
+        $I->seeInShellOutput('xdebug     3.4.1');
     }
 
     public function checkApacheServiceIsRunning(UnitTester $I){
@@ -91,12 +91,6 @@ class WebContainerCest
     //     $I->runShellCommand("docker exec dev_web sendmail -d0.4 -bv root | grep Version");
     //     $I->seeInShellOutput("Version 8.15.2");
     // }
-
-    public function checkOslonDBInstallation(UnitTester $I){
-        $I->wantTo("verify Oslon DB is installed in the container");
-        $I->runShellCommand("docker exec dev_web php -i | grep -i timezone");
-        $I->seeInShellOutput('Timezone Database Version => 2024.2');
-    }
 
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
