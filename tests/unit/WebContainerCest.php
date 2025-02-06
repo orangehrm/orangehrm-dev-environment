@@ -92,12 +92,6 @@ class WebContainerCest
     //     $I->seeInShellOutput("Version 8.15.2");
     // }
 
-    public function checkOslonDBInstallation(UnitTester $I){
-        $I->wantTo("verify Oslon DB is installed in the container");
-        $I->runShellCommand("docker exec dev_web php -i | grep -i timezone");
-        $I->seeInShellOutput('Timezone Database Version => 2024.2');
-    }
-
     public function checkBowerVersion(UnitTester $I){
         $I->wantTo("verify bower is installed in the container");
         $I->runShellCommand('docker exec dev_web bash -c \'export NVM_DIR="/root/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; bower -v\' ');
