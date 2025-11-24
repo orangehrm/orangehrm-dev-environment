@@ -26,6 +26,103 @@ services:
     restart: always
     container_name: dev_nginx
 
+  web_82_rhel:
+    image: orangehrm/dev-environment:rhel8-php8.2-latest
+    volumes:
+    - ./html:/var/www/html
+    - ./config/web82rhel8/php/custom_php.ini:/etc/php.d/custom_php.ini
+    - ./config/web82rhel8/mysql-client:/etc/mysql
+    - ./config/web82rhel8/apache2/sites-available:/etc/httpd/sites-available
+    - ./config/web82rhel8/apache2/sites-enabled:/etc/httpd/sites-enabled
+    - ./config/web82rhel8/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./config/web82rhel8/apache2/cert:/etc/httpd/cert
+    - ./logs/apache_logs/web82rhel8:/var/log/httpd
+    - /etc/localtime:/etc/localtime
+    privileged: true
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.192
+    restart: always
+    container_name: dev_web_82_rhel8 
+
+  web_82_rh:
+    image: orangehrm/dev-environment:rhel9-php8.2-latest
+    volumes:
+    - ./html:/var/www/html
+    - ./config/web82rh/php/custom_php.ini:/etc/php.d/custom_php.ini
+    - ./config/web82rh/mysql-client:/etc/mysql
+    - ./config/web82rh/apache2/sites-available:/etc/httpd/sites-available
+    - ./config/web82rh/apache2/sites-enabled:/etc/httpd/sites-enabled
+    - ./config/web82rh/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./config/web82rh/apache2/cert:/etc/httpd/cert
+    - ./logs/apache_logs/web82rh:/var/log/httpd
+    - /etc/localtime:/etc/localtime
+    privileged: true
+    sysctls:
+    - kernel.shmmax=67371264
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.182
+    restart: always
+    container_name: dev_web_82_rh
+
+  ubuntuweb83:
+    image: orangehrm/dev-environment:ubuntu24.04-php8.3-latest
+    ports:
+      - "9283:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./config/ubuntuweb83/apache2/sites-available:/etc/apache2/sites-available
+      - ./config/ubuntuweb83/apache2/sites-enabled:/etc/apache2/sites-enabled
+      - ./config/ubuntuweb83/apache2/cert:/etc/apache2/cert
+      - ./config/ubuntuweb83/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
+      - ./logs/apache_logs/ubuntuweb83:/var/log/apache2/ubuntuweb83
+      - ./config/ubuntuweb83/php/cli-php.ini:/etc/php/8.3/cli/php.ini
+      - ./config/ubuntuweb83/php/apache2-php.ini:/etc/php/8.3/apache2/php.ini
+      - /etc/localtime:/etc/localtime
+    privileged: true    
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.183
+    restart: always
+    container_name: dev_web_83_ubuntu
+
+  db101110:
+    image: orangehrm/orangehrm-db-images:mariadb-10.11.10-ubuntu-22.04
+    expose:
+      - "3306"
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - mariadb101110:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.125
+    restart: always
+    container_name: dev_mariadb_101110
+
+  rabbitmq405:
+    image: rabbitmq:4.0.5-management
+    ports:
+      - "16671:15671"
+      - "6672:5672"
+      - "6671:5671"
+    volumes:
+      - ./config/rabbitmq405/certs/:/cert_rabbitmq/
+      - ./config/rabbitmq405/config/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./config/rabbitmq405/config/enabled_plugins:/etc/rabbitmq/enabled_plugins
+      - ./config/rabbitmq405/plugins/rabbitmq_delayed_message_exchange-4.0.2.ez:/plugins/rabbitmq_delayed_message_exchange-4.0.2.ez
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.4.5
+    restart: always
+    container_name: dev_rabbitmq_405
+
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     volumes:
@@ -37,6 +134,10 @@ services:
         ipv4_address: 10.5.2.2
     restart: always
     container_name: dev_phpmyadmin
+
+
+volumes:
+  mariadb101110:
 
 networks:
   ohrmdevnet:
