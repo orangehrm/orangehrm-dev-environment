@@ -1,0 +1,15 @@
+services: '3.9'
+rabbitmq398_rhel:
+  image: orangehrm/orangehrm-rabbitmq:rabbitmq-3.9.8-redhat-8.4
+  container_name: dev_rabbitmq_rhel
+  ports:
+    - "18671:15671"
+    - "8671:5671"
+  volumes:
+  - ./custom-compose/config/rabbitmq_398_rhel/certs:/cert_rabbitmq/
+  - ./custom-compose/config/rabbitmq_398_rhel/conf:/etc/rabbitmq
+  networks:
+    ohrmdevnet:
+      ipv4_address: 10.5.2.6
+  restart: always
+  hostname: dev-rabbitmq-rhel
