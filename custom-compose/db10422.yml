@@ -15,5 +15,5 @@ services:
     container_name: dev_mariadb_10422
 
 
-  volumes:
-    mariadb10422:
+volumes:
+  mariadb10422:
