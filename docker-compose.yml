@@ -25,7 +25,7 @@ services:
     restart: always
     container_name: dev_nginx
 
-  web_82_rhel:
+  web_82_rhel8:
     image: orangehrm/dev-environment:rhel8-php8.2-latest
     volumes:
     - ./html:/var/www/html
@@ -44,7 +44,7 @@ services:
     restart: always
     container_name: dev_web_82_rhel8 
 
-  web_82_rh:
+  web_82_rhel9:
     image: orangehrm/dev-environment:rhel9-php8.2-latest
     volumes:
     - ./html:/var/www/html
@@ -63,7 +63,7 @@ services:
       ohrmdevnet:
         ipv4_address: 10.5.0.182
     restart: always
-    container_name: dev_web_82_rh
+    container_name: dev_web_82_rhel9
 
   ubuntuweb83:
     image: orangehrm/dev-environment:ubuntu24.04-php8.3-latest
