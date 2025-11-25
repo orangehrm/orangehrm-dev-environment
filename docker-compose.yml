@@ -1,4 +1,3 @@
-version: '2.2'
 services:
   nginx:
     image: nginx:1.14
@@ -26,79 +25,102 @@ services:
     restart: always
     container_name: dev_nginx
 
-  web74:
-    image: orangehrm/orangehrm-environment-images:dev-7.4-centos-orange
+  web_82_rhel8:
+    image: orangehrm/dev-environment:rhel8-php8.2-latest
     volumes:
     - ./html:/var/www/html
-    - ./config/web74/php/custom_php.ini:/etc/php.d/custom_php.ini
-    - ./config/web74/mysql-client:/etc/mysql
-    - ./config/web74/apache2/sites-available:/etc/httpd/sites-available
-    - ./config/web74/apache2/sites-enabled:/etc/httpd/sites-enabled
-    - ./config/web74/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-    - ./config/web74/apache2/cert:/etc/httpd/cert
-    - ./logs/apache_logs/web74:/var/log/httpd
+    - ./config/web82rhel8/php/custom_php.ini:/etc/php.d/custom_php.ini
+    - ./config/web82rhel8/mysql-client:/etc/mysql
+    - ./config/web82rhel8/apache2/sites-available:/etc/httpd/sites-available
+    - ./config/web82rhel8/apache2/sites-enabled:/etc/httpd/sites-enabled
+    - ./config/web82rhel8/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./config/web82rhel8/apache2/cert:/etc/httpd/cert
+    - ./logs/apache_logs/web82rhel8:/var/log/httpd
     - /etc/localtime:/etc/localtime
-    # - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.0.192
+    restart: always
+    container_name: dev_web_82_rhel8 
+
+  web_82_rhel9:
+    image: orangehrm/dev-environment:rhel9-php8.2-latest
+    volumes:
+    - ./html:/var/www/html
+    - ./config/web82rh/php/custom_php.ini:/etc/php.d/custom_php.ini
+    - ./config/web82rh/mysql-client:/etc/mysql
+    - ./config/web82rh/apache2/sites-available:/etc/httpd/sites-available
+    - ./config/web82rh/apache2/sites-enabled:/etc/httpd/sites-enabled
+    - ./config/web82rh/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./config/web82rh/apache2/cert:/etc/httpd/cert
+    - ./logs/apache_logs/web82rh:/var/log/httpd
+    - /etc/localtime:/etc/localtime
     privileged: true
     sysctls:
     - kernel.shmmax=67371264
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.74
+        ipv4_address: 10.5.0.182
     restart: always
-    container_name: dev_web_74
+    container_name: dev_web_82_rhel9
 
-  web_74_rh:
-    image: orangehrm/orangehrm-environment-images:dev-php-latest-rhel-8
+  ubuntuweb83:
+    image: orangehrm/dev-environment:ubuntu24.04-php8.3-latest
+    ports:
+      - "9283:443"
     volumes:
-    - ./html:/var/www/html
-    - ./config/web74rh/php/custom_php.ini:/etc/php.d/custom_php.ini
-    - ./config/web74rh/mysql-client:/etc/mysql
-    - ./config/web74rh/apache2/sites-available:/etc/httpd/sites-available
-    - ./config/web74rh/apache2/sites-enabled:/etc/httpd/sites-enabled
-    - ./config/web74rh/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-    - ./config/web74rh/apache2/cert:/etc/httpd/cert
-    - ./logs/apache_logs/web74rh:/var/log/httpd
-    - /etc/localtime:/etc/localtime
-    # - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    sysctls:
-    - kernel.shmmax=67371264
+      - ./html:/var/www/html
+      - ./config/ubuntuweb83/apache2/sites-available:/etc/apache2/sites-available
+      - ./config/ubuntuweb83/apache2/sites-enabled:/etc/apache2/sites-enabled
+      - ./config/ubuntuweb83/apache2/cert:/etc/apache2/cert
+      - ./config/ubuntuweb83/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
+      - ./logs/apache_logs/ubuntuweb83:/var/log/apache2/ubuntuweb83
+      - ./config/ubuntuweb83/php/cli-php.ini:/etc/php/8.3/cli/php.ini
+      - ./config/ubuntuweb83/php/apache2-php.ini:/etc/php/8.3/apache2/php.ini
+      - /etc/localtime:/etc/localtime
+    privileged: true    
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.0.174
+        ipv4_address: 10.5.0.183
     restart: always
-    container_name: dev_web_74_rh   
+    container_name: dev_web_83_ubuntu
 
-  db10422:
-    image: orangehrm/orangehrm-db-images:mariadb-10.4.22-redhat-8.4
+  db101110:
+    image: orangehrm/orangehrm-db-images:mariadb-10.11.10-ubuntu-22.04
     expose:
-    - "3306"
+      - "3306"
     volumes:
-    - /etc/localtime:/etc/localtime
-    - mariadb10422:/var/lib/mysql
+      - /etc/localtime:/etc/localtime
+      - mariadb101110:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.1.122
+        ipv4_address: 10.5.1.125
     restart: always
-    container_name: dev_mariadb_10422
+    container_name: dev_mariadb_101110
 
-  db10117:
-    image: orangehrm/orangehrm-db-images:mariadb-10.11.7-ubuntu-22.04
-    expose:
-    - "3306"
+  rabbitmq405:
+    image: rabbitmq:4.0.5-management
+    ports:
+      - "16671:15671"
+      - "6672:5672"
+      - "6671:5671"
     volumes:
-    - /etc/localtime:/etc/localtime
-    - mariadb10117:/var/lib/mysql
+      - ./config/rabbitmq405/certs/:/cert_rabbitmq/
+      - ./config/rabbitmq405/config/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./config/rabbitmq405/config/enabled_plugins:/etc/rabbitmq/enabled_plugins
+      - ./config/rabbitmq405/plugins/rabbitmq_delayed_message_exchange-4.0.2.ez:/plugins/rabbitmq_delayed_message_exchange-4.0.2.ez
     environment:
-      MYSQL_ROOT_PASSWORD: 1234
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
     networks:
       ohrmdevnet:
-        ipv4_address: 10.5.1.117
+        ipv4_address: 10.5.4.5
     restart: always
-    container_name: dev_mariadb_10117
+    container_name: dev_rabbitmq_405
+
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -112,44 +134,9 @@ services:
     restart: always
     container_name: dev_phpmyadmin
 
-  rabbitmq:
-    image: orangehrm/orangehrm-rabbitmq:3.8.4-management
-    container_name: dev_rabbitmq
-    volumes:
-    - ./config/rabbitmq/certs:/cert_rabbitmq/
-    environment:
-      RABBITMQ_SSL_CERTFILE: /cert_rabbitmq/cert.pem
-      RABBITMQ_SSL_KEYFILE: /cert_rabbitmq/key.pem
-      RABBITMQ_SSL_CACERTFILE: /cert_rabbitmq/cacert.pem
-      RABBITMQ_SSL_FAIL_IF_NO_PEER_CERT: 'false'
-      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: '-rabbit ssl_listeners [{"::",5671}] -rabbit ssl_options [{certfile,"/cert_rabbitmq/cert.pem"},{keyfile,"/cert_rabbitmq/key.pem"},{cacertfile,"/cert_rabbitmq/cacert.pem"},{verify,verify_peer},{depth,3},{fail_if_no_peer_cert,false}] -rabbit tcp_listeners [{"::",5672}]'
-    ports:
-      - "15671:15671"
-      - "5672:5672"
-      - "5671:5671"
-    restart: always
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.2.3
-
-  rabbitmq_rhel:
-    image: orangehrm/orangehrm-rabbitmq:rabbitmq-3.9.8-redhat-8.4
-    container_name: dev_rabbitmq_rhel
-    ports:
-      - "18671:15671"
-      - "8671:5671"
-    volumes:
-    - ./config/rabbitmq_398_rhel/certs:/cert_rabbitmq/
-    - ./config/rabbitmq_398_rhel/conf:/etc/rabbitmq
-    networks:
-      ohrmdevnet:
-        ipv4_address: 10.5.2.6
-    restart: always
-    hostname: dev-rabbitmq-rhel
 
 volumes:
-  mariadb10422:
-  mariadb10117:
+  mariadb101110:
 
 networks:
   ohrmdevnet:

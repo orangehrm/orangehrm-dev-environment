@@ -1,0 +1,19 @@
+services:
+  db10422:
+    image: orangehrm/orangehrm-db-images:mariadb-10.4.22-redhat-8.4
+    expose:
+    - "3306"
+    volumes:
+    - /etc/localtime:/etc/localtime
+    - mariadb10422:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.122
+    restart: always
+    container_name: dev_mariadb_10422
+
+
+volumes:
+  mariadb10422:

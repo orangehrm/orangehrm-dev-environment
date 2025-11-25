@@ -4,12 +4,12 @@ services:
     image: orangehrm/orangehrm-environment-images:dev-7.2-centos-orange
     volumes:
     - ./html:/var/www/html
-    - ./config/web72/php/custom_php.ini:/etc/php.d/custom_php.ini
-    - ./config/web72/mysql-client:/etc/mysql
-    - ./config/web72/apache2/sites-available:/etc/httpd/sites-available
-    - ./config/web72/apache2/sites-enabled:/etc/httpd/sites-enabled
-    - ./config/web72/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
-    - ./config/web72/apache2/cert:/etc/httpd/cert
+    - ./custom-compose/config/web72/php/custom_php.ini:/etc/php.d/custom_php.ini
+    - ./custom-compose/config/web72/mysql-client:/etc/mysql
+    - ./custom-compose/config/web72/apache2/sites-available:/etc/httpd/sites-available
+    - ./custom-compose/config/web72/apache2/sites-enabled:/etc/httpd/sites-enabled
+    - ./custom-compose/config/web72/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./custom-compose/config/web72/apache2/cert:/etc/httpd/cert
     - ./logs/apache_logs/web72:/var/log/httpd
     - /etc/localtime:/etc/localtime
     - /sys/fs/cgroup:/sys/fs/cgroup:ro

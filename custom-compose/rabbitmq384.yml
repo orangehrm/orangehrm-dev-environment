@@ -1,0 +1,21 @@
+
+services:
+  rabbitmq398:
+    image: orangehrm/orangehrm-rabbitmq:3.8.4-management
+    container_name: dev_rabbitmq
+    volumes:
+    - ./custom-compose/config/rabbitmq_384/certs:/cert_rabbitmq/
+    environment:
+      RABBITMQ_SSL_CERTFILE: /cert_rabbitmq/cert.pem
+      RABBITMQ_SSL_KEYFILE: /cert_rabbitmq/key.pem
+      RABBITMQ_SSL_CACERTFILE: /cert_rabbitmq/cacert.pem
+      RABBITMQ_SSL_FAIL_IF_NO_PEER_CERT: 'false'
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: '-rabbit ssl_listeners [{"::",5671}] -rabbit ssl_options [{certfile,"/cert_rabbitmq/cert.pem"},{keyfile,"/cert_rabbitmq/key.pem"},{cacertfile,"/cert_rabbitmq/cacert.pem"},{verify,verify_peer},{depth,3},{fail_if_no_peer_cert,false}] -rabbit tcp_listeners [{"::",5672}]'
+    ports:
+      - "15671:15671"
+      - "5672:5672"
+      - "5671:5671"
+    restart: always
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.2.3
