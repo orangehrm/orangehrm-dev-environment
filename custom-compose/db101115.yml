@@ -1,6 +1,6 @@
 version: '2.2'
 services:
-  db101110:
+  db101115:
     image: orangehrm/orangehrm-db-images:mariadb-10.11.15-ubuntu-22.04
     expose:
       - "3306"
