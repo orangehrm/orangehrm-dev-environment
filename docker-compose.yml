@@ -127,7 +127,7 @@ services:
     volumes:
     - /etc/localtime:/etc/localtime
     environment:
-      PMA_HOSTS: db101110
+      PMA_HOSTS: db10422,db101110
     networks:
       ohrmdevnet:
         ipv4_address: 10.5.2.2
