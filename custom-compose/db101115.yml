@@ -1,0 +1,19 @@
+version: '2.2'
+services:
+  db101115:
+    image: orangehrm/orangehrm-db-images:mariadb-10.11.15-ubuntu-22.04
+    expose:
+      - "3306"
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - mariadb101115:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.1.126
+    restart: always
+    container_name: dev_mariadb_101115
+
+volumes:
+  mariadb101115:
