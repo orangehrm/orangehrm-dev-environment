@@ -1,0 +1,21 @@
+version: '2.2'
+services:
+  rabbitmq420:
+    image: rabbitmq:4.2.0-management
+    ports:
+      - "17671:15671"
+      - "7672:5672"
+      - "7671:5671"
+    volumes:
+      - ./custom-compose/config/rabbitmq420/certs/:/cert_rabbitmq/
+      - ./custom-compose/config/rabbitmq420/config/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./custom-compose/config/rabbitmq420/config/enabled_plugins:/etc/rabbitmq/enabled_plugins
+      - ./custom-compose/config/rabbitmq420/plugins/rabbitmq_delayed_message_exchange-4.2.0.ez:/plugins/rabbitmq_delayed_message_exchange-4.2.0.ez
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.4.15
+    restart: always
+    container_name: dev_rabbitmq_420
