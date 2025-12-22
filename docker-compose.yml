@@ -134,6 +134,16 @@ services:
     restart: always
     container_name: dev_phpmyadmin
 
+  ai_service_helpers:
+    image: gitlab.orangehrm.com:5005/enterprise/utilities/ai-service-helpers:latest
+    ports:
+      - "8002:8002"
+    networks:
+      ohrmdevnet:
+        ipv4_address: 10.5.2.3
+    restart: always
+    container_name: dev_ohrm_ai_service_helpers
+
 
 volumes:
   mariadb101110:
