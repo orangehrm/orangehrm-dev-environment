@@ -34,6 +34,7 @@ services:
     - ./config/web82rhel8/apache2/sites-available:/etc/httpd/sites-available
     - ./config/web82rhel8/apache2/sites-enabled:/etc/httpd/sites-enabled
     - ./config/web82rhel8/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./config/web82rhel8/apache2/conf.d/ohrm-trusted-proxies.conf:/etc/httpd/conf.d/ohrm-trusted-proxies.conf
     - ./config/web82rhel8/apache2/cert:/etc/httpd/cert
     - ./logs/apache_logs/web82rhel8:/var/log/httpd
     - /etc/localtime:/etc/localtime
@@ -53,6 +54,7 @@ services:
     - ./config/web82rh/apache2/sites-available:/etc/httpd/sites-available
     - ./config/web82rh/apache2/sites-enabled:/etc/httpd/sites-enabled
     - ./config/web82rh/apache2/conf.d/ssl.conf:/etc/httpd/conf.d/ssl.conf
+    - ./config/web82rh/apache2/conf.d/ohrm-trusted-proxies.conf:/etc/httpd/conf.d/ohrm-trusted-proxies.conf
     - ./config/web82rh/apache2/cert:/etc/httpd/cert
     - ./logs/apache_logs/web82rh:/var/log/httpd
     - /etc/localtime:/etc/localtime
@@ -75,6 +77,7 @@ services:
       - ./config/ubuntuweb83/apache2/sites-enabled:/etc/apache2/sites-enabled
       - ./config/ubuntuweb83/apache2/cert:/etc/apache2/cert
       - ./config/ubuntuweb83/apache2/conf.d/apache2.conf:/etc/apache2/apache2.conf
+      - ./config/ubuntuweb83/apache2/conf.d/ohrm-trusted-proxies.conf:/etc/apache2/conf-enabled/ohrm-trusted-proxies.conf
       - ./logs/apache_logs/ubuntuweb83:/var/log/apache2/ubuntuweb83
       - ./config/ubuntuweb83/php/cli-php.ini:/etc/php/8.3/cli/php.ini
       - ./config/ubuntuweb83/php/apache2-php.ini:/etc/php/8.3/apache2/php.ini
